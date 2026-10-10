@@ -1,3 +1,33 @@
+# Release V2 external blocker checkpoint
+
+Local time: 2026-10-10 18:24:04 America/Chicago (23:24:04 UTC). Operational cutoff: 2026-10-11 08:00 America/Chicago; 13h35m56s remaining here. Organizer-specific deadline/timezone confirmation remains unknown.
+
+Current gate: G4 organizer-approved judge/code access and G6 actual portal/team/tracks/form/Submit/receipt blocked by missing information and user-deferred authorization. Quality READY_WITH_DISCLOSED_LIMITATIONS; submission NOT_SUBMITTED. The full goal is unachieved. This is the third consecutive goal turn with the same external condition.
+
+Previous goal turn: PROGRESS, not a verified wait. Actual commits 78c0ddd (presenter/attribution/document corrections) and a5b433e (documentation pin); private origin/master independently matched a5b433e. Those changes completed independent preparation. No live process or scheduled job is being waited on now.
+
+Audit of remaining requirements:
+
+| Requirement | Current evidence / disposition |
+|---|---|
+| Original USDA/rules/baseline distinction | Original supplied source and RULES_CHECK.md inspected; baseline runtime-to-doc source diff empty. Organizer/team-specific details UNKNOWN. |
+| Minimal zero-alert fix and strict fallback | AI_INCIDENT.md, regression before/after, e5f7801 strict allowed-ID contract, three consecutive active KC smokes. Historical exact failure cause remains NOT VERIFIED; no universal AI-success claim. |
+| Real point/time/source and natural recommendation | Timestamped KC and fixed-site Watch evidence. Watch applicable at capture, unsupported/low/no candidate; synthetic override disclosed. Old Warning REPLAY only; no current supported-warning/high-wind/high-AQ claim. |
+| Exact-image tests/source freeze | Actual Windows 65/8.69s and exact-image Linux 65/6.29s logs inspected; no app/tests/scripts/dependencies/deployment-code change after e5f7801. No new test execution here. |
+| Draft roster, authenticated UI, persistence and restore | ACCEPTANCE_REPORT.md, native exports, restart comparisons and restore-restarted.txt: six restored in separate container/volume, changed current bindings, actual HTTP, zero forbidden calls. Eight production bundles preserved; latest eight-record backup not separately restored. |
+| Runtime/Cloud Manager/security/recovery | Release manifest and native proof; last actual remote health read 23:16:01 UTC. e5f7801 / sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184, loopback SSH tunnel. No new runtime claim based on this file audit. |
+| Timed demo and English/Vietnamese preparation | Agent UI 86.005/123.789s, DEMO_SCRIPT.md / DEMO_PRESENTER_NOTES.md / PITCH_QA.md. Human speech unverified and user-owned. |
+| Artifact integrity and secrets | Rechecked 33 release + 3 follow-up artifact hashes and all 6 supplied source/package bytes. Earlier actual scans retain their scope/date; checkpoint diff must be checked before approved private push. Hashes prove integrity only. |
+| Judge access, portal/team/form and actual submission | Missing/user-deferred. Private localhost/repo is not judge access; no portal write, accepted attestations or receipt. Completion contradicted by NOT_SUBMITTED and UNKNOWN_USER_DEFERRED. |
+
+Runtime source e5f7801829aaa1f7cfd326e02e415f8389fa3dde; reviewed documentation 78c0ddd0c36603b25a2f45104e149b94a6f0ff2a; original evidence 2a98f48d40009beeec560e3c3da304755aeffd9c. Metadata HEAD/push is resolved independently by git log -1 / git ls-remote and the ignored push receipt.
+
+Approved scope unchanged: same private progress repository/VM/providers, synthetic draft operations. No public exposure/access grant/firewall/DNS/cost/real notice/portal upload/Submit authorization. User expressly deferred these external steps; do not repeat the question or invent another route.
+
+Next smallest action belongs to the user: rehearse the prepared narration and handle organizer/access/form/Submit, or supply information/authorization to resume those gates. No independently executable technical requirement remains; repeated live tests, model calls, rewrites or status loops would not move the full objective forward. Stop autonomous continuation with goal status blocked after saving/pushing this checkpoint. Do not mark complete or create a reminder/automation.
+
+Budget unchanged: one bounded frozen-input diagnosis, four live evaluations; no additional run in this audit. Source/image/env/database/original backups and supplied package remain preserved. Earlier checkpoints follow unchanged.
+
 # Release V2 documentation follow-up
 
 Local time: 2026-10-10 18:18:52 America/Chicago (23:18:52 UTC). Operational cutoff remains 2026-10-11 08:00 America/Chicago; 13h41m8s remaining at this checkpoint. Organizer-specific confirmation remains unknown.

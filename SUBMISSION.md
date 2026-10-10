@@ -16,7 +16,7 @@ For Akamai, the real application runs in Docker on the existing Ubuntu 24.04 Lin
 
 Application source: `e5f7801829aaa1f7cfd326e02e415f8389fa3dde`; exact tested local OCI image ID `sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184`. Windows: 65 passed in 8.69s; exact image Linux: 65 passed in 6.29s. These test results do not establish weather/model reliability or eligibility. Two agent UI rehearsals took 86.005/123.789 seconds; human spoken rehearsal is pending. We claim no aggregate latency or impact measurement.
 
-Fresh source observations are timestamped historical evidence after capture. The original Flash Flood Warning expired 22:30 UTC October 10 and is never advertised as current LIVE. The newer fixed-site Flood Watch collection was 22:56:36 UTC; it had no automatic action mapping. Live high-wind/high-AQ triggers were not observed at these fixed sites. Synthetic tests cover relevant boundaries.
+Fresh source observations are timestamped historical evidence after capture. The original Flash Flood Warning expired 22:30 UTC October 10 and is never advertised as current LIVE. The newer fixed-site Flood Watch NWS fetch was 22:56:35.991537 UTC; it had no automatic action mapping. Live high-wind/high-AQ triggers were not observed at these fixed sites. Synthetic tests cover relevant boundaries.
 
 Code/evidence: [private repository](https://github.com/anle0429/ClosureCall), master. Operator URL http://127.0.0.1:8081/ is an SSH tunnel, not a public/judge URL. Judge access is not granted or tested. Team name/members/contributions, track eligibility, real portal fields/assets and required access method are UNKNOWN until supplied by the user/organizer. Do not invent them or submit this draft as a complete form.
 

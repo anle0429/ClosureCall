@@ -37,7 +37,7 @@
 - [x] G1 minimal allowed-reference prompt clarification; regression before/after; strict validation retained; three fresh consecutive KC active results.
 - [x] G2 fixed point/current Actual Watch and modeled AQ; explicit unsupported/incomplete state and labeled test override; old warning historical only.
 - [x] G3 65 Windows + 65 exact-image Linux; backup/deploy/health; six originals plus two new bundles unchanged after actual restart; separate-container/volume restore after actual restart/current-binding changes/no external calls.
-- [x] G4 actual Cloud Manager VM label/Chicago/RUNNING screenshot; private app operation; approved private GitHub progress push independently verified (34e50c3; later post-push status metadata may follow).
+- [x] G4 evidence subgate: actual Cloud Manager VM label/Chicago/RUNNING screenshot; private app operation; approved private GitHub progress push independently verified. Full G4 judge/code access remains NOT VERIFIED and user-deferred.
 - [x] G5 two timed agent UI rehearsals, demo/pitch/limits/recovery, full draft roster checks, real downloads, auth/error/reload/double-click/width checks.
 - [x] G6 offline truthful submission draft/handoff; no portal writes or Submit.
 - [ ] Human spoken rehearsal; optional outside feedback; live high-wind/high-AQ remain unverified (not expanded scope).
@@ -49,3 +49,9 @@
 - [x] Inspect eight installed direct distribution metadata entries for an attribution inventory; no project license assigned or full licensing review claimed.
 - [x] Read actual remote health/image/start/loopback at 23:16:01 UTC; same frozen e5f7801 application. No new deployment, tests or model/source calls required for documentation-only changes.
 - [ ] User-owned access/portal/Submit/receipt remains deferred; do not mark full release goal complete.
+
+## External release blocker audit
+- [x] Previous goal turn classified PROGRESS: committed presenter/attribution corrections and verified private remote a5b433e; application unchanged.
+- [x] Same user-deferred G4/G6 access/portal/Submit condition persists for three consecutive goal turns. Current audit confirms no remaining independently executable technical gate within approved scope.
+- [x] Original 33 release artifacts, three follow-up artifacts and all six supplied source/package files match their recorded hashes; source/tests/deployment files unchanged after e5f7801. This is integrity verification, not new tests or a new LIVE evaluation.
+- [ ] Organizer-approved judge/code access; actual team/tracks/portal/fields and Submit permission; actual Submitted state/receipt. User will handle later; no new question or autonomous publish/upload/Submit.

@@ -2,6 +2,8 @@
 
 Trạng thái: **READY_WITH_DISCLOSED_LIMITATIONS / NOT_SUBMITTED**. Phần kỹ thuật đã được kiểm tra trong phạm vi dưới đây. Bạn sẽ tự xử lý portal, team, quyền giám khảo và Submit sau khi chuẩn bị xong; chưa có bản nộp hay receipt. Goal đầy đủ chưa đạt bước nộp được xác nhận.
 
+Goal bị chặn ở G4/G6: chưa có phương án judge/code access được BTC chấp nhận, thông tin portal/team/tracks và quyền Submit cho bản cụ thể. Điểm chặn này giữ nguyên qua ba lượt goal; các bước kỹ thuật độc lập đã xong. Dừng continuation tự động tại đây, giữ app/dữ liệu/backups. Khi bạn sẵn sàng xử lý phần nộp, dùng draft và bằng chứng hiện có; không cần khởi tạo lại hay chạy thêm model chỉ để làm báo cáo.
+
 Tài liệu demo đã bổ sung `DEMO_PRESENTER_NOTES.md` bằng tiếng Việt để đi cùng lời nói tiếng Anh trong `DEMO_SCRIPT.md`; `ATTRIBUTIONS.md` lưu nguồn dữ liệu/SDK và metadata tám dependencies trực tiếp, chưa phải audit licensing đầy đủ. README/runbook đã sửa thông tin deployment cũ. Read-only SSH lúc 23:16:01 UTC xác nhận image/health/bind giữ nguyên; lần bổ sung này không chạy lại tests, gọi model hay redeploy.
 
 Bản đang chạy private: source `e5f7801829aaa1f7cfd326e02e415f8389fa3dde`, image `sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184`, container closurecall-app-1 trên Linode 172.234.201.174. Restart thực tế 2026-10-10T22:59:42.908771Z. Checkpoint bằng chứng gốc `2a98f48d40009beeec560e3c3da304755aeffd9c` và checkpoint tài liệu đã review được pin riêng trong RELEASE_MANIFEST.json; commit metadata sau đó không deploy lại app. HEAD cuối và remote được kiểm tra khi push.

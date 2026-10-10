@@ -1,6 +1,8 @@
 # ClosureCall current V2 state
 
-Updated 2026-10-10 18:18 America/Chicago. READY_WITH_DISCLOSED_LIMITATIONS; NOT_SUBMITTED. User deferred portal/team/judge access/Submit until technical preparation is complete. Do not claim the full submission goal achieved.
+Updated 2026-10-10 18:24 America/Chicago. READY_WITH_DISCLOSED_LIMITATIONS; NOT_SUBMITTED. User deferred portal/team/judge access/Submit until technical preparation is complete. Do not claim the full submission goal achieved.
+
+External release audit: G4 judge/code access and G6 portal/team/tracks/Submit/receipt remain user-deferred through three consecutive goal turns. Independent technical preparation is complete within approved scope; stop autonomous continuation at this blocker. Quality remains READY_WITH_DISCLOSED_LIMITATIONS, actual submission NOT_SUBMITTED. Human spoken rehearsal is still unverified. No new source/test/config/deploy change, test execution or live/model call in this audit.
 
 Documentation follow-up: corrected stale runtime/test references in README/runbook/verification, added Vietnamese DEMO_PRESENTER_NOTES.md alongside the English script and an observed ATTRIBUTIONS.md inventory. SSH read at 23:16:01 UTC confirmed the same healthy image, original restart time and loopback binding; evidence/release-followup records this read. No application/policy/dependency changes, rebuild/redeploy, extra tests or live evaluation in this follow-up. Existing 65-test results remain dated release evidence, not new executions.
 

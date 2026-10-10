@@ -56,3 +56,7 @@
 - Correct top-level entry points to e5f7801 / 65 actual tests, with dates and separate evidence/runtime identities. Keep older evidence intact; do not rerun tests or rebuild the frozen image for Markdown changes.
 - Add Vietnamese presenter guidance required by the release goal alongside the English pitch, without inventing a human rehearsal. Attribution inventory reports local distribution metadata only; license selection, member attestations and portal terms remain user-owned.
 - Actual read-only SSH health check at 23:16:01 UTC confirmed the same source/image/start/loopback. External access/Submit still deferred, with no new credential blocker; no further permission prompts or autonomous publishing.
+
+## External gate audit
+- Previous continuation made concrete documentation progress (78c0ddd and a5b433e). The same user-owned access/portal/Submit condition nevertheless remains unresolved through three goal turns; independent technical work is exhausted within approved scope. Mark the full goal blocked, preserve READY_WITH_DISCLOSED_LIMITATIONS / NOT_SUBMITTED, and stop autonomous continuation.
+- User explicitly deferred portal/team/judge/Submit. Do not replace that decision with public exposure, collaborator grants, a guessed portal, accepted attestations, repeated weather/model runs or a manufactured receipt. Resume external release work only when the user supplies the needed information/authorization or asks to proceed.
