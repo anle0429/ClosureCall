@@ -1,10 +1,10 @@
 # Release V2 checkpoint
 
-Local time: 2026-10-10 18:07:43 America/Chicago (23:07:43 UTC). Operating cutoff: 2026-10-11 08:00 America/Chicago; 13h52m17 remaining at this checkpoint. Public source confirms 08:00 October 11; team-specific organizer timezone remains unconfirmed.
+Local time: 2026-10-10 18:11:49 America/Chicago (23:11:49 UTC). Operating cutoff: 2026-10-11 08:00 America/Chicago; 13h48m11 remaining at this checkpoint. Public source confirms 08:00 October 11; team-specific organizer timezone remains unconfirmed.
 
 Current gate: independent technical release gates complete; G6 external submission/access deferred to user. Release quality READY_WITH_DISCLOSED_LIMITATIONS; submission NOT_SUBMITTED. Full goal is not achieved without permitted judge access and actual receipt.
 
-Runtime source e5f7801829aaa1f7cfd326e02e415f8389fa3dde; current reviewed docs commit pending metadata pin; baseline documentation 6076307. Image sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184. Deployed 22:50:51 UTC, actual restart 22:59:42, final health 23:07:43. Appuser/read-only/dropped caps/no-new-privileges/loopback remain verified. Dependencies/policy unchanged.
+Runtime source e5f7801829aaa1f7cfd326e02e415f8389fa3dde; reviewed documentation/evidence commit 2a98f48d40009beeec560e3c3da304755aeffd9c; baseline documentation 6076307. Image sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184. Deployed 22:50:51 UTC, actual restart 22:59:42, final health 23:07:43. Appuser/read-only/dropped caps/no-new-privileges/loopback remain verified. Dependencies/policy unchanged.
 
 Just verified:
 
@@ -18,6 +18,6 @@ Open failure / limitations: no remaining application blocking defect observed in
 
 Approved scope: existing private VM/backend/API credentials and synthetic drafts/tests/restore; reviewed progress pushes to the same private GitHub master. No public/firewall/DNS/sharing/cost/real notice/Submit. User will handle portal/team/registration/judge access/Submit afterward; no further portal prompts now.
 
-Next smallest action: scan reviewed new artifacts/history, pin documentation commit and push private progress; then user handoff. External next step is user-owned portal/access/form/receipt, not an autonomous publish/Submit.
+Next smallest action: push reviewed private progress checkpoint and independently compare remote SHA; then user handoff. New tree/history scans passed; all supplied package/source bytes and evidence hashes were checked. Snapshot differs from the prior report only in its private-GitHub progress row. External next step is user-owned portal/access/form/receipt, not an autonomous publish/Submit.
 
 Budget: one diagnostic hypothesis round/new model call on frozen input; four of suggested maximum six live evaluations. Investigation completed within 90-minute limit. No extra live runs needed merely to refresh reports. Preserve all supplied user files and existing data. No agents/framework/architecture expansion.

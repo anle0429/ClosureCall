@@ -2,7 +2,7 @@
 
 Trạng thái: **READY_WITH_DISCLOSED_LIMITATIONS / NOT_SUBMITTED**. Phần kỹ thuật đã được kiểm tra trong phạm vi dưới đây. Bạn sẽ tự xử lý portal, team, quyền giám khảo và Submit sau khi chuẩn bị xong; chưa có bản nộp hay receipt. Goal đầy đủ chưa đạt bước nộp được xác nhận.
 
-Bản đang chạy private: source `e5f7801829aaa1f7cfd326e02e415f8389fa3dde`, image `sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184`, container closurecall-app-1 trên Linode 172.234.201.174. Restart thực tế 2026-10-10T22:59:42.908771Z. SHA tài liệu được theo dõi riêng trong RELEASE_MANIFEST.json và Git; push tài liệu không deploy lại app.
+Bản đang chạy private: source `e5f7801829aaa1f7cfd326e02e415f8389fa3dde`, image `sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184`, container closurecall-app-1 trên Linode 172.234.201.174. Restart thực tế 2026-10-10T22:59:42.908771Z. Checkpoint tài liệu/bằng chứng `2a98f48d40009beeec560e3c3da304755aeffd9c` được pin riêng trong RELEASE_MANIFEST.json; commit metadata sau đó không deploy lại app. HEAD cuối và remote được kiểm tra khi push.
 
 Đã xác minh:
 

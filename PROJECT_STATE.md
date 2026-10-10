@@ -1,8 +1,8 @@
 # ClosureCall current V2 state
 
-Updated 2026-10-10 18:05 America/Chicago. READY_WITH_DISCLOSED_LIMITATIONS; NOT_SUBMITTED. User deferred portal/team/judge access/Submit until technical preparation is complete. Do not claim the full submission goal achieved.
+Updated 2026-10-10 18:11 America/Chicago. READY_WITH_DISCLOSED_LIMITATIONS; NOT_SUBMITTED. User deferred portal/team/judge access/Submit until technical preparation is complete. Do not claim the full submission goal achieved.
 
-Runtime source e5f7801829aaa1f7cfd326e02e415f8389fa3dde; image sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184. Exact Linux 65 passed/6.29s, Windows 65 passed/8.69s. Actual backup/restart at 22:59:42 UTC, healthy and private loopback, appuser/read-only/capabilities dropped. Dependencies remain locked, Strands 1.59.0. Git master advances with documentation independently of this frozen application source.
+Runtime source e5f7801829aaa1f7cfd326e02e415f8389fa3dde; image sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184. Exact Linux 65 passed/6.29s, Windows 65 passed/8.69s. Actual backup/restart at 22:59:42 UTC, healthy and private loopback, appuser/read-only/capabilities dropped. Dependencies remain locked, Strands 1.59.0. Reviewed documentation/evidence commit 2a98f48d40009beeec560e3c3da304755aeffd9c is pinned in RELEASE_MANIFEST.json. Git master may advance with metadata independently of this frozen application source.
 
 Prompt-reference clarification preserves strict allowed IDs/authority/budgets. Three new consecutive KC empty-feed runs active; one actual repeated tool within limits. Fixed-site new Actual Flood Watch is unsupported_hazard/low/no candidate; explicit synthetic closure override only. Two new browser decisions, all 12 drafts checked, downloaded exports exact. All six originals and two new bundles exact after restart. Six-record backup restored in separate container/volume after changed current bindings; zero external/recompute calls. New eight-record backup not independently restored.
 
