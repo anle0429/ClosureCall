@@ -22,7 +22,7 @@ Current writer: Codex local, single writer.
 - Runtime evidence and backups ignored. No Git remote publish or public app endpoint.
 
 ## In progress
-- Ubuntu package upgrades completed; reboot scheduled for 21:11:26 UTC before first app deployment. Verify completion.
+- Ubuntu package upgrades completed; reboot completed; fresh strict SSH confirms kernel 6.8.0-134-generic, active Docker/SSH/UFW and key-only authentication. No reboot-required flag.
 - Export verified commit, configure private remote env, test Linux image before loopback-only deployment.
 - Then SSH tunnel full remote workflow, backup/restart/replay, resource and browser proof.
 

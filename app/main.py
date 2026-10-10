@@ -59,7 +59,7 @@ def index():
 @api.get('/config')
 def config():
     return {'environment':settings.environment,'deployment':settings.deployment,'build':settings.build,
-            'ai_mode':'configured_not_yet_verified' if settings.ai_available else 'unavailable',
+            'ai_mode':'configured' if settings.ai_available else 'unavailable',
             'notification_mode':'outbox_only', 'prototype':True}
 
 @api.get('/facilities')
