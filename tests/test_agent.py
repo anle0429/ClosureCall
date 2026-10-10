@@ -115,3 +115,37 @@ def test_sdk_stops_repeated_model_calls(snapshot,monkeypatch):
     result=run(snapshot)
     assert result['status']=='degraded'
     assert result['model_calls']==2
+
+@pytest.mark.parametrize('alert_ids',[[],['urn:synthetic-warning']])
+def test_prompt_scopes_model_references_to_frozen_contract(snapshot,monkeypatch,alert_ids):
+    import json
+    import app.agent.worker as worker
+    snapshot['nws']['alerts']=[{'alert_id':value} for value in alert_ids]
+    captured=[]
+    def agent(prompt):
+        captured.append(prompt)
+        return json.dumps({'snapshot_id':snapshot['snapshot_id'],'policy_version':snapshot['policy']['version'],
+            'evidence_ids':[snapshot['snapshot_id']],'review_focus':['LOCAL_ACCESS']})
+    budget=SimpleNamespace(trace=[{'tool_name':name,'status':'success'} for name in (
+        'read_facility_context','read_nws_evidence','read_air_quality_evidence',
+        'run_policy_assessment','preview_employee_impact')],exhausted=False,model_calls=2,tool_calls=5)
+    monkeypatch.setattr(worker,'make_agent',lambda frozen:(agent,budget))
+    result=worker.run(snapshot)
+    assert result['status']=='active'
+    marker='Allowed evidence_ids: '
+    assert marker in captured[0], 'The model needs an explicit list when a valid NWS feed has no alert IDs.'
+    allowed=json.loads(captured[0].split(marker,1)[1].split('\n',1)[0])
+    assert set(allowed)=={snapshot['snapshot_id'],snapshot['air_quality']['source_url'],*alert_ids}
+    assert snapshot['nws']['source_url'] not in allowed
+
+def test_zero_alert_nws_url_still_rejected_and_snapshot_reference_accepted(snapshot):
+    import json
+    from app.agent.brief import grounded_brief
+    snapshot['nws']['alerts']=[]
+    selected={'snapshot_id':snapshot['snapshot_id'],'policy_version':snapshot['policy']['version'],
+        'evidence_ids':[snapshot['nws']['source_url']],'review_focus':['LOCAL_ACCESS']}
+    with pytest.raises(ValueError,match='Unknown evidence reference'):
+        grounded_brief(json.dumps(selected),snapshot)
+    selected['evidence_ids']=[snapshot['snapshot_id']]
+    narrative,_=grounded_brief(json.dumps(selected),snapshot)
+    assert '12 employees' in narrative

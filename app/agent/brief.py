@@ -13,11 +13,15 @@ class ReviewSelection(BaseModel):
     evidence_ids: list[str] = Field(min_length=1,max_length=100)
     review_focus: list[Focus] = Field(min_length=1,max_length=4)
 
+def allowed_evidence_ids(snapshot):
+    allowed={snapshot['snapshot_id'],snapshot['air_quality']['source_url']}
+    allowed.update(item['alert_id'] for item in snapshot['nws']['alerts'])
+    return allowed
+
 def grounded_brief(text, snapshot):
     selection=ReviewSelection.model_validate(json.loads(text))
     a=snapshot['assessment']
-    allowed={snapshot['snapshot_id'],snapshot['air_quality']['source_url']}
-    allowed.update(item['alert_id'] for item in snapshot['nws']['alerts'])
+    allowed=allowed_evidence_ids(snapshot)
     if selection.snapshot_id!=snapshot['snapshot_id'] or selection.policy_version!=snapshot['policy']['version']:
         raise ValueError('Brief outside frozen run')
     if not set(selection.evidence_ids)<=allowed:

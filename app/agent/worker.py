@@ -4,7 +4,7 @@ import sys
 from pydantic import BaseModel, Field
 from app.agent.factory import make_agent
 from app.settings import settings
-from app.agent.brief import grounded_brief
+from app.agent.brief import grounded_brief, allowed_evidence_ids
 
 class BriefResult(BaseModel):
     status: str
@@ -22,7 +22,10 @@ def run(snapshot, on_trace=None):
     try:
         result=str(agent(f"Read all five tools and summarize this run. facility_id={snapshot['facility']['facility_id']}; "
             f"snapshot_id={snapshot['snapshot_id']}; policy_version={snapshot['policy']['version']}; "
-            f"posture={snapshot['assessment']['recommended_posture'] or 'incomplete'}"))
+            f"posture={snapshot['assessment']['recommended_posture'] or 'incomplete'}\n"
+            f"Allowed evidence_ids: {json.dumps(sorted(allowed_evidence_ids(snapshot)))}\n"
+            "Choose evidence_ids only from that exact list. Cite this snapshot_id for the NWS collection, "
+            "including a valid empty alert feed; the NWS request URL is provenance, not an allowed reference ID."))
         successful={x['tool_name'] for x in budget.trace if x['status']=='success'}
         complete=len(successful)==5 and not budget.exhausted
         narrative,selection=grounded_brief(result,snapshot) if complete else ('',None)
