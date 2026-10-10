@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-10-10T23:18:52Z",
+  "updated_at": "2026-10-10T23:20:58Z",
   "quality_status": "READY_WITH_DISCLOSED_LIMITATIONS",
   "submission_status": "NOT_SUBMITTED",
   "runtime_source_commit": "e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
-  "documentation_commit": "2a98f48d40009beeec560e3c3da304755aeffd9c",
+  "documentation_commit": "78c0ddd0c36603b25a2f45104e149b94a6f0ff2a",
   "candidate_source_commit": "e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
   "image_id": "sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184",
   "image_tag": "closurecall-verified:e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
@@ -53,7 +53,7 @@
     "secret_scan": "evidence/release/secret-scan.json"
   },
   "cutoff": "2026-10-11T08:00:00-05:00",
-  "documentation_commit_resolution": "Reviewed full documentation/evidence checkpoint. Later metadata checkpoint records this pin; application source/image remain independently frozen.",
+  "documentation_commit_resolution": "Reviewed documentation follow-up including Vietnamese presenter notes and attribution metadata; original release evidence separately pinned at evidence_checkpoint_commit. Later metadata commits do not redeploy the frozen application.",
   "baseline_documentation_commit": "607630726fc0004bb2890fe0bff293ee67fecfdc",
   "image_digest": "sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184",
   "image_digest_kind": "Docker local OCI image ID and locally observed RepoDigest; no external registry publication",
