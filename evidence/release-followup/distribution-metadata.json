@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-10T23:18:52Z",
+  "scope": "Existing Windows virtualenv direct distribution metadata; not a licensing compliance review",
+  "method": "importlib.metadata.version / metadata License-Expression or License",
+  "distributions": [
+    {
+      "distribution": "fastapi",
+      "version": "0.143.0",
+      "license_metadata": "MIT"
+    },
+    {
+      "distribution": "uvicorn",
+      "version": "0.54.0",
+      "license_metadata": "BSD-3-Clause"
+    },
+    {
+      "distribution": "httpx",
+      "version": "0.28.1",
+      "license_metadata": "BSD-3-Clause"
+    },
+    {
+      "distribution": "pydantic",
+      "version": "2.14.0",
+      "license_metadata": "MIT"
+    },
+    {
+      "distribution": "python-dotenv",
+      "version": "1.2.4",
+      "license_metadata": "BSD-3-Clause"
+    },
+    {
+      "distribution": "strands-agents",
+      "version": "1.59.0",
+      "license_metadata": "Apache-2.0"
+    },
+    {
+      "distribution": "tzdata",
+      "version": "2026.5",
+      "license_metadata": "Apache-2.0"
+    },
+    {
+      "distribution": "shapely",
+      "version": "2.2.0",
+      "license_metadata": "BSD-3-Clause"
+    }
+  ]
+}

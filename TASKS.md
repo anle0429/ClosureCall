@@ -42,3 +42,10 @@
 - [x] G6 offline truthful submission draft/handoff; no portal writes or Submit.
 - [ ] Human spoken rehearsal; optional outside feedback; live high-wind/high-AQ remain unverified (not expanded scope).
 - [ ] User-owned portal/team/tracks/judge/code-access decision, Submit and actual receipt; NOT_SUBMITTED. No further portal requests while user defers.
+
+## Documentation follow-up — 2026-10-10 23:18 UTC
+- [x] Correct stale README/runbook runtime/test references; preserve historical verification evidence with its original build/date.
+- [x] Add Vietnamese presenter annotations, branch-transition lines and exact historical timestamp caveats; human spoken rehearsal remains NOT VERIFIED.
+- [x] Inspect eight installed direct distribution metadata entries for an attribution inventory; no project license assigned or full licensing review claimed.
+- [x] Read actual remote health/image/start/loopback at 23:16:01 UTC; same frozen e5f7801 application. No new deployment, tests or model/source calls required for documentation-only changes.
+- [ ] User-owned access/portal/Submit/receipt remains deferred; do not mark full release goal complete.

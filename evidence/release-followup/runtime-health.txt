@@ -1,0 +1,3 @@
+2026-10-10T23:16:01+00:00
+health=healthy source=closurecall-verified:e5f7801829aaa1f7cfd326e02e415f8389fa3dde image=sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184 started=2026-10-10T22:59:42.908771858Z ports={"8000/tcp":[{"HostIp":"127.0.0.1","HostPort":"8000"}]}
+{"status":"ok","product":"ClosureCall","prototype":true}

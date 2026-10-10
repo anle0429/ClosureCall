@@ -2,6 +2,8 @@
 
 Use the already signed-in private browser at http://127.0.0.1:8081/. No slides. This is an English speaking script; the presenter still needs to rehearse it. Agent UI runs took 86.005 and 123.789 seconds, excluding a human spoken pitch.
 
+Vietnamese presenter annotations and exact branch-transition lines: [DEMO_PRESENTER_NOTES.md](DEMO_PRESENTER_NOTES.md). This is preparation, not a completed human rehearsal.
+
 Before presenting: confirm healthy e5f7801 runtime/tunnel, keep secrets off screen, choose the actual facility/date/timezone and a future-ending work period. Weekends require the explicitly synthetic special shift checkbox. Never reuse an old work period for a new LIVE decision. Test connectivity early; check current NWS warning validity if choosing the fixed synthetic site. Its old name “Flash Flood Warning” is historical context, not current weather.
 
 | Time | Actual UI action | Say |

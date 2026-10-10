@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T23:11:49Z",
+  "updated_at": "2026-10-10T23:18:52Z",
   "quality_status": "READY_WITH_DISCLOSED_LIMITATIONS",
   "submission_status": "NOT_SUBMITTED",
   "runtime_source_commit": "e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
@@ -18,7 +18,7 @@
   },
   "policy_version": "prototype-v1",
   "observed_container_started_at": "2026-10-10T22:59:42.908771858Z",
-  "runtime_verified_at": "2026-10-10T23:07:43Z",
+  "runtime_verified_at": "2026-10-10T23:16:01Z",
   "access": {
     "mode": "PRIVATE_SSH_TUNNEL",
     "server": "172.234.201.174",
@@ -69,5 +69,13 @@
   "access_mode": "PRIVATE_SSH_TUNNEL",
   "backup_ref": "/app/data/backups/closurecall-20261010T225942Z.sqlite3",
   "observed_repo_digest": "closurecall-verified@sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184",
-  "user_source_integrity": "All six supplied goal/source files match PACKAGE_MANIFEST.json; retained locally untracked."
+  "user_source_integrity": "All six supplied goal/source files match PACKAGE_MANIFEST.json; retained locally untracked.",
+  "evidence_checkpoint_commit": "2a98f48d40009beeec560e3c3da304755aeffd9c",
+  "documentation_followup": {
+    "scope": "Documentation only; app/image/policy/dependencies unchanged; no new tests/live calls/redeploy",
+    "presenter_notes": "DEMO_PRESENTER_NOTES.md",
+    "attributions": "ATTRIBUTIONS.md",
+    "runtime_read": "evidence/release-followup/runtime-health.txt",
+    "distribution_metadata": "evidence/release-followup/distribution-metadata.json"
+  }
 }

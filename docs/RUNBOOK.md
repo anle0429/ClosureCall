@@ -55,4 +55,4 @@ Latest verified operator documentation is also copied to /opt/closurecall/operat
 
 ## Current acceptance release
 
-Application 75300d4ef4b86f8175be9f17f1fa291b00f9d7b9 is the frozen healthy release; current commands are in [../DEMO_RECOVERY.md](../DEMO_RECOVERY.md). All original records and old code images remain preserved. See [../ACCEPTANCE_REPORT.md](../ACCEPTANCE_REPORT.md) for fresh evidence, 62 Windows/Linux tests and remaining failures.
+Application e5f7801829aaa1f7cfd326e02e415f8389fa3dde is the verified private V2 release; current commands are in [../DEMO_RECOVERY.md](../DEMO_RECOVERY.md). All original records and old code images remain preserved. See [../RELEASE_MANIFEST.json](../RELEASE_MANIFEST.json) for source/image identity and [../ACCEPTANCE_REPORT.md](../ACCEPTANCE_REPORT.md) for the actual 65 Windows/exact-image Linux tests, live observations and remaining limits. Historical evidence retains its original build/date.

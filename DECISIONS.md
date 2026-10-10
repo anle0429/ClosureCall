@@ -51,3 +51,8 @@
 - Restore with distinct volume/container/internal network/random test auth and no inference key. Read-only Docker cp failure fixed by stdin/tmpfs verification, without weakened isolation. Actual Uvicorn HTTP ran inside container; host port 8002 was unreachable. Stop drill container; retain original backups/data/resources.
 - Code/policy/dependencies frozen at e5f7801; docs commit tracked separately. Existing explicit private progress-push authorization covers reviewed checkpoints on same origin/master, no force/public/access grants. User package files preserved and not auto-staged.
 - User handles portal/team/judge access/Submit after technical readiness. No fabricated receipt or completed-goal status; finish independent technical work and handoff.
+
+## Documentation follow-up — 2026-10-10 23:18 UTC
+- Correct top-level entry points to e5f7801 / 65 actual tests, with dates and separate evidence/runtime identities. Keep older evidence intact; do not rerun tests or rebuild the frozen image for Markdown changes.
+- Add Vietnamese presenter guidance required by the release goal alongside the English pitch, without inventing a human rehearsal. Attribution inventory reports local distribution metadata only; license selection, member attestations and portal terms remain user-owned.
+- Actual read-only SSH health check at 23:16:01 UTC confirmed the same source/image/start/loopback. External access/Submit still deferred, with no new credential blocker; no further permission prompts or autonomous publishing.

@@ -1,3 +1,19 @@
+# Release V2 documentation follow-up
+
+Local time: 2026-10-10 18:18:52 America/Chicago (23:18:52 UTC). Operational cutoff remains 2026-10-11 08:00 America/Chicago; 13h41m8s remaining at this checkpoint. Organizer-specific confirmation remains unknown.
+
+Current gate: independent technical preparation and documentation follow-up complete; user-owned judge/code access, portal/team/registration and actual Submit/receipt remain deferred. READY_WITH_DISCLOSED_LIMITATIONS / NOT_SUBMITTED. Full submission goal is not complete.
+
+Just verified: actual SSH read at 23:16:01 UTC, same e5f7801 source / sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184 image, healthy, original 22:59:42 restart and 127.0.0.1:8000 binding. Captured in evidence/release-followup/runtime-health.txt. Corrected stale README/runbook/verification references; added Vietnamese presenter annotations and eight observed direct distribution metadata entries. No licensing-compliance or human-rehearsal claim. Original evidence checkpoint 2a98f48 is preserved separately.
+
+This continuation made concrete documentation corrections. No app/test/policy/dependency change, rebuild, deploy or new live/model call. The previous 65 Windows / 65 exact-image Linux tests and four live observations retain their original timestamps; they are not newly executed checks. Historical ValueError and unsupported/live-data limitations remain disclosed.
+
+Approved scope: reviewed progress checkpoints on the same private origin/master; no force/public sharing/firewall/DNS/cost/real notification/Submit. New artifacts and intended staged content must pass secret checks before push. Supplied user package/source files remain untouched and untracked.
+
+Next smallest external action: user spoken rehearsal, then user-owned organizer/access/form/Submit/receipt steps when ready. No portal question is reopened and no credential is presently missing for the completed private technical work. Git HEAD/push equality is resolved with git log -1 / git ls-remote and the ignored data/release-github-push-receipt.json, not a self-referential committed SHA.
+
+Budget: prior one bounded frozen-input diagnosis and four live evaluations unchanged. Stop technical expansion; preserve app/data/backups. The retained earlier checkpoint follows.
+
 # Release V2 checkpoint
 
 Local time: 2026-10-10 18:11:49 America/Chicago (23:11:49 UTC). Operating cutoff: 2026-10-11 08:00 America/Chicago; 13h48m11 remaining at this checkpoint. Public source confirms 08:00 October 11; team-specific organizer timezone remains unconfirmed.

@@ -35,4 +35,4 @@ Organizer deadline/timezone, eligibility and judging access; public repository/d
 
 ## Acceptance checkpoint after the original MVP verification
 
-Current application 75300d4ef4b86f8175be9f17f1fa291b00f9d7b9 has fresh exact-image tests and browser/remote evidence in [../ACCEPTANCE_REPORT.md](../ACCEPTANCE_REPORT.md) and `evidence/acceptance/`. This dated baseline remains historical proof, not a claim that every requirement passed or its NWS snapshots are live now.
+Earlier application 75300d4ef4b86f8175be9f17f1fa291b00f9d7b9 has dated exact-image tests and browser/remote evidence in `evidence/acceptance/`. This baseline remains historical proof, not a claim that every requirement passed or its NWS snapshots are live now. Current V2 source/image and 65-test evidence are recorded separately in [../RELEASE_MANIFEST.json](../RELEASE_MANIFEST.json) and [../ACCEPTANCE_REPORT.md](../ACCEPTANCE_REPORT.md).

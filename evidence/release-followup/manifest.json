@@ -1,0 +1,9 @@
+{
+  "generated_at": "2026-10-10T23:20:11.990963+00:00",
+  "scope": "Documentation follow-up evidence only; original evidence/release preserved",
+  "sha256": {
+    "distribution-metadata.json": "ed4ab4dd66589eac426ba44c20ed25e2a0290eceae636c0c25cc50cfc87ee13d",
+    "runtime-health.txt": "fb9f150b4bc8d342c90261fd305964464684a23f1e0e0ea9380247175d334bc2",
+    "secret-scan.json": "28c269e03bf65744c0e42dfcd07853bdfb46c2e7c6c7e3191ab9ecbd769d5781"
+  }
+}
