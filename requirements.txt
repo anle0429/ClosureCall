@@ -1,0 +1,9 @@
+# Direct dependency versions verified on Windows/Python 3.13.9. Linux lock pending.
+fastapi==0.143.0
+uvicorn==0.54.0
+httpx==0.28.1
+pydantic==2.14.0
+python-dotenv==1.2.4
+strands-agents[openai]==1.59.0
+tzdata==2026.5
+shapely==2.2.0

@@ -1,0 +1,29 @@
+name: closurecall
+services:
+  app:
+    image: closurecall-verified:${BUILD_COMMIT:-local}
+    build: .
+    init: true
+    env_file: .env
+    environment:
+      APP_ENV: production
+      DATABASE_PATH: /app/data/closurecall.sqlite3
+      DEPLOYMENT_LABEL: Akamai Linode 172.234.201.174 (SSH verified)
+      BUILD_COMMIT: ${BUILD_COMMIT:-no-commit-yet}
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - closurecall-data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+volumes:
+  closurecall-data:

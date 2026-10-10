@@ -1,0 +1,3 @@
+# ClosureCall working agreement
+
+Read the starter kit and current PROJECT_STATE.md before editing. One writer only; no subagents. Preserve .env, database and existing work. Python/FastAPI/static JS/SQLite; one Strands agent with read-only tools. Do not invent LIVE evidence or claim tests/deployment passed without running them. Prototype thresholds are not USDA/OPM policy. All business APIs require manager authentication. Never commit secrets or expose raw provider errors. Ask before paid provisioning, publishing/public exposure, unapproved providers or destructive actions. Update TASKS, DECISIONS and PROJECT_STATE after verified gates. UI and submission are English; handoff is Vietnamese.
