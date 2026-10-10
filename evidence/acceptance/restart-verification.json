@@ -1,0 +1,69 @@
+{
+  "status": "VERIFIED",
+  "checked_at_utc": "2026-10-10T21:59:19.894100+00:00",
+  "actual_container_restart": true,
+  "all_bundles_exact_equal": true,
+  "original_demo_unchanged": true,
+  "decisions": [
+    {
+      "decision_id": "fc569eb8-54bd-4989-b9b7-fedcc46b3896",
+      "bundle_hash": "a5ff2acb07cc6f8e22cf038ca0a5301995af7c2f16b7ab6ff30695907ff8bb41",
+      "exact_equal": true,
+      "counts": {
+        "deferred": 1,
+        "excluded": 2,
+        "included": 9
+      }
+    },
+    {
+      "decision_id": "2efe6988-a638-4887-a15a-abc3319e5879",
+      "bundle_hash": "4b5b9b42c30069005c51bdc0c2cc963f21c61c9fefcd46bc03ea84edc56039a0",
+      "exact_equal": true,
+      "counts": {
+        "deferred": 1,
+        "excluded": 2,
+        "included": 9
+      }
+    },
+    {
+      "decision_id": "4542c699-e59f-4f1f-ae5d-54b82c915333",
+      "bundle_hash": "89bc46643aa450b817bee6dc3aebefe72051f7bf58627d5782cc445de4bb9644",
+      "exact_equal": true,
+      "counts": {
+        "deferred": 1,
+        "excluded": 2,
+        "included": 9
+      }
+    },
+    {
+      "decision_id": "9c022ef8-90ac-4f06-848f-24b232c35180",
+      "bundle_hash": "0f7eb679fd1d217690cb07a6cd141ce419f2d30a5dfc7c0faefa6a8073c53e28",
+      "exact_equal": true,
+      "counts": {
+        "deferred": 1,
+        "excluded": 2,
+        "included": 9
+      }
+    },
+    {
+      "decision_id": "8cfdc9a8-6daa-4576-b901-a93c8a7a1a25",
+      "bundle_hash": "24f30574cb8effc110d38f62bd820a55d47f5770ebcd187784a32643a744902a",
+      "exact_equal": true,
+      "counts": {
+        "deferred": 1,
+        "excluded": 2,
+        "included": 9
+      }
+    },
+    {
+      "decision_id": "cf6d7432-7246-49d0-96ce-cb3da56d7f89",
+      "bundle_hash": "ec8f0456b3a4ff15be12a815e0526ad1892d7e7f6267d49903cf3e483ccb3705",
+      "exact_equal": true,
+      "counts": {
+        "deferred": 1,
+        "excluded": 2,
+        "included": 9
+      }
+    }
+  ]
+}

@@ -55,10 +55,10 @@ WARNING: Running pip as the 'root' user can result in broken permissions and con
 ..............................................................           [100%]
 62 passed in 5.36s
 SQLite backup created: /app/data/backups/closurecall-20261010T215057Z.sqlite3
- Container closurecall-app-1 Recreate 
- Container closurecall-app-1 Recreated 
- Container closurecall-app-1 Starting 
- Container closurecall-app-1 Started 
+ Container closurecall-app-1 Recreate
+ Container closurecall-app-1 Recreated
+ Container closurecall-app-1 Starting
+ Container closurecall-app-1 Started
 NAME                IMAGE                                                           COMMAND                  SERVICE   CREATED         STATUS                            PORTS
 closurecall-app-1   closurecall-verified:69a7738f1eb4eb087404254a2cec8859c4c35b79   "python -m uvicorn a…"   app       3 seconds ago   Up 2 seconds (health: starting)   127.0.0.1:8000->8000/tcp
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current

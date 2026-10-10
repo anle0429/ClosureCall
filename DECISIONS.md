@@ -27,3 +27,13 @@
 
 - Private MVP verified on Linode, commit 8316a0ca896362f0dbe11b5b6c61ff6371a62902; retain source release and named SQLite data volume. Documentation checkpoints can advance local Git HEAD separately from deployed application commit. No application code change follows the verified freeze. Public exposure and submission stay external authorization steps.
 - Existing local 8080 service preserved; use 8081 for the private SSH tunnel and constrained verification scripts.
+
+## Acceptance decisions (2026-10-10)
+- User authorized acceptance/demo checks and fixes that block correctness or presentation, without architecture expansion. Reopened the earlier code freeze only for observed gaps; final application freeze is 75300d4. Existing code, databases, old images/releases and backups are preserved; documentation HEAD can advance separately.
+- Keep both saved sites fixed. Natural warning candidate is closure, with unsupported Flood Watch requiring review; explicit synthetic manager override acknowledges unverified access. KC approves natural normal with honest empty live feed. Do not engineer a nicer hazard result.
+- Deferred is informational app inbox with explicit manual supervisor review before shift/immediately if ongoing; onsite reassignment requires new evaluation/decision. Do not add a scheduler/send integration. New fields do not rewrite historical bundles.
+- Fix actual browser horizontal overflow, validation JSON readability, prior reason/timing retention and old evidence remaining during new LIVE collection. Clear only when run ID changes; preserve input during polling of that same run. No refactor/framework/agent expansion.
+- Real zero-alert KC runs degraded after successful tools due to rejected model output (safe ValueError). Exact selection/cause is not logged; do not guess a root cause, relax validation, add unproven retries or claim all AI responses succeed. Retain as FAILED in acceptance.
+- Use isolated SQLite/imported historical copy and changed current provider files for replay mutation test; external/recompute traps enforce zero calls. Never mutate production roster/rules or original backups for proof.
+- Fresh exact-image Linux tests precede every private source release. Final backup/restart compares every stored bundle/draft and independently reads Docker identity, loopback ports and database counters. Evidence totals are not blanket proof of challenge requirements.
+- Public/organizer-dependent items remain NOT VERIFIED. Official Akamai guide's Cloud Manager VM view is not replaced with an application footer label; SSH/runtime evidence is kept separately. Submission remains a draft.

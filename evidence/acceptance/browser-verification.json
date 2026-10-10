@@ -1,0 +1,29 @@
+{
+  "checked_at_utc": "2026-10-10T22:01:21.922038+00:00",
+  "JSON_browser_export_exact_equal": true,
+  "draft_export_employee_id": "demo-03",
+  "routing_channel": "voice_accessible",
+  "decoded_EML_exact_equal": true,
+  "decoded_no_send_notice": true,
+  "note": "Raw MIME text wraps/encodes long lines; verification uses the decoded body, not substring matching raw bytes.",
+  "screen_checks": [
+    {
+      "viewport": 1280,
+      "document_width": 1265
+    },
+    {
+      "viewport": 720,
+      "document_width": 705
+    },
+    {
+      "viewport": 920,
+      "document_width": 905
+    }
+  ],
+  "viewport_restored": true,
+  "new_run_manager_inputs_empty": true,
+  "current_collection_previous_evidence_cleared": true,
+  "actual_browser_double_click_evaluate": true,
+  "actual_browser_double_click_decision": true,
+  "active_job_reload_verified_run_id": "47ba5569-4800-4161-b7fb-dd2899dc6c25"
+}

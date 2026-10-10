@@ -47,8 +47,12 @@ Ubuntu security package upgrades completed on 2026-10-10; reboot completed befor
 
 Local port 8080 is occupied by an existing AgentService.exe; it was preserved. Use scripts/open_tunnel.ps1 (foreground, default 8081) or the equivalent Git OpenSSH command. Tunnel access is private; no public judging URL.
 
-## Current verified service
+## Prior baseline service (8316a0c, retained)
 
 Active release /opt/closurecall/releases/8316a0ca896362f0dbe11b5b6c61ff6371a62902; container closurecall-app-1 healthy, Python 3.12.15. The private tunnel is http://127.0.0.1:8081. Database/backup are in named volume closurecall_closurecall-data. The remote decision cf6d7432-7246-49d0-96ce-cb3da56d7f89 replay remained exactly identical in parsed JSON content after actual container restart (hash ec8f0456b3a4ff15be12a815e0526ad1892d7e7f6267d49903cf3e483ccb3705). See PROJECT_STATE.md and docs/VERIFICATION.md for the complete record.
 
 Latest verified operator documentation is also copied to /opt/closurecall/operator-docs. The application source release remains tied to its tested commit.
+
+## Current acceptance release
+
+Application 75300d4ef4b86f8175be9f17f1fa291b00f9d7b9 is the frozen healthy release; current commands are in [../DEMO_RECOVERY.md](../DEMO_RECOVERY.md). All original records and old code images remain preserved. See [../ACCEPTANCE_REPORT.md](../ACCEPTANCE_REPORT.md) for fresh evidence, 62 Windows/Linux tests and remaining failures.

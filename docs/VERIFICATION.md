@@ -32,3 +32,7 @@ These are executed results. Synthetic unit fixtures and prototype manager tests 
 
 ## External verification pending
 Organizer deadline/timezone, eligibility and judging access; public repository/domain/HTTPS and actual submission. Region/resource console label not inspected. Private MVP operation is verified; localhost tunnel is not a public judging URL.
+
+## Acceptance checkpoint after the original MVP verification
+
+Current application 75300d4ef4b86f8175be9f17f1fa291b00f9d7b9 has fresh exact-image tests and browser/remote evidence in [../ACCEPTANCE_REPORT.md](../ACCEPTANCE_REPORT.md) and `evidence/acceptance/`. This dated baseline remains historical proof, not a claim that every requirement passed or its NWS snapshots are live now.

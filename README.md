@@ -42,4 +42,6 @@ See [runbook](docs/RUNBOOK.md), [limitations](docs/LIMITATIONS.md), [demo](docs/
 
 ## Verified private deployment
 
-Application commit `8316a0ca896362f0dbe11b5b6c61ff6371a62902` runs healthy on the authorized Linode. Open http://127.0.0.1:8081 while the SSH tunnel is active; restart the foreground tunnel with `scripts/open_tunnel.ps1` if needed. Login credentials are in ignored `.env`. Windows and the final Linux image each passed 59 tests. A real five-tool Strands/NWS/AQ/manager/outbox workflow and exact replay after container restart were verified; see docs/VERIFICATION.md. Public judging URL and repository publishing remain subject to authorization.
+Application commit `75300d4ef4b86f8175be9f17f1fa291b00f9d7b9` runs healthy on the existing authorized Linode, via private SSH tunnel http://127.0.0.1:8081. Use `scripts/open_tunnel.ps1` to reopen it; credentials stay in ignored `.env`. Windows and this exact Linux image each passed 62 tests. Real NWS/AQ/Strands tools, manager test approve/override, drafts and unchanged historical replay after restart were checked separately.
+
+Read [acceptance report](ACCEPTANCE_REPORT.md), [180-second demo](DEMO_SCRIPT.md), [submission draft](SUBMISSION.md), [limits](KNOWN_LIMITATIONS.md) and [private recovery](DEMO_RECOVERY.md). Observed KC AI validation degradation, unavailable original organizer rubric/Cloud Manager screenshot and private judging access remain explicit limitations. No messages or submission were sent; public publication needs authorization.

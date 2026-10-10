@@ -1,0 +1,13 @@
+{
+  "checked_at_utc": "2026-10-10T21:59:51.528239+00:00",
+  "status": "VERIFIED",
+  "local_historical_records_unchanged": 2,
+  "local_config": {
+    "environment": "development",
+    "deployment": "Local development",
+    "build": "75300d4ef4b86f8175be9f17f1fa291b00f9d7b9",
+    "ai_mode": "configured",
+    "notification_mode": "outbox_only",
+    "prototype": true
+  }
+}

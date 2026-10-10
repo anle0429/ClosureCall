@@ -1,0 +1,19 @@
+# ClosureCall — submission draft
+
+ClosureCall helps facility managers turn live weather and operational evidence into a reviewed operating decision, targeted employee instructions and a reconstructable record.
+
+For the USDA Closure Call challenge, the prototype collects actual NWS point alerts and a same-point modeled Open-Meteo/CAMS air-quality signal. Explicit rules propose normal, telework or closure; manager-selected delay/dismissal require confirmed timing. Evidence references, validity windows, policy/rule versions, confidence basis and change conditions accompany the proposal. Action mappings are prototype assumptions, not USDA/OPM policy.
+
+An authenticated manager approves a valid candidate or records a reasoned override. Twelve synthetic employees cover onsite, essential, telework, offsite, no-shift and accessibility cases. Notification packages preserve routing reasons, channels and individual drafts. Deferred telework drafts have a manual supervisor follow-up step. No email, SMS or voice notification has been delivered.
+
+For Strands, one actual `strands-agents` 1.59.0 agent uses the workshop `hackathon-chat` alias through the approved OpenAI-compatible endpoint. Five read-only tools expose the frozen facility, NWS, modeled AQ, deterministic assessment and employee-impact preview. The model selects validated references/review focus; factual text is rendered from stored evidence. Only the manager can record a decision. Calls and deadlines are bounded. Live warning runs produced two model calls and five successful tool events; a live zero-alert KC run produced a degraded AI selection, which is disclosed rather than replaced.
+
+For Akamai, the app runs in Docker on the user's existing Ubuntu 24.04 Linode at 172.234.201.174. Remote source collection, real Strands calls, manager test approval/override, draft outbox and replay were exercised through a private SSH tunnel. The SQLite volume persists across container recreation/restart. An isolated copy of an actual historical export remains byte-equivalent in canonical content after current roster/rules changes, with zero source/model calls. This is prototype audit protection, not compliance certification.
+
+Verified records include warning run b24192b3-49bc-4a9d-9cec-110488d674da and subsequent run 47ba5569-4800-4161-b7fb-dd2899dc6c25 after active-job browser reload. The latter captured NWS at 21:52:36 UTC on 2026-10-10, proposed closure with explicit unsupported Flood Watch review, and produced manager test decision 4542c699-e59f-4f1f-ae5d-54b82c915333. That record is historical after capture; it must never be presented as current live evidence.
+
+All source/SDK/runtime/test evidence is in `evidence/acceptance/`; detailed VERIFIED/FAILED/NOT VERIFIED mappings are in [ACCEPTANCE_REPORT.md](ACCEPTANCE_REPORT.md). Windows and the exact deployed Linux image test results are separate from live integration observations. Measured durations are individual observations only; we make no aggregate latency, impact, avoided-injury or delivery claims.
+
+Application release and deployment details: [PROJECT_STATE.md](PROJECT_STATE.md). Private operator URL: http://127.0.0.1:8081. It is not a public judging URL. Local Git history exists; no repository has been published. This file is a draft and has not been submitted.
+
+Before submission, confirm the original USDA/Strands/Akamai rubric, deadline/timezone, eligibility, repository/license/video requirements and judge access with organizers. Add an inspected secret-free Cloud Manager VM screenshot showing resource identity/region. Public access, repository publication and actual submission require explicit authorization. Limitations are in [KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md); demonstration and recovery are in [DEMO_SCRIPT.md](DEMO_SCRIPT.md) and [DEMO_RECOVERY.md](DEMO_RECOVERY.md).

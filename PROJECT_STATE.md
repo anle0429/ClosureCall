@@ -1,50 +1,46 @@
 # ClosureCall — Project State
-Updated: 2026-10-10T21:20:18+00:00 (UTC; America/Chicago UTC-05)
-Repo: C:\Projects\ClosureCall; branch master; single writer Codex local.
-Deployed application commit: 8316a0ca896362f0dbe11b5b6c61ff6371a62902
-Documentation checkpoint: subsequent local Git commit; see git log. No remote Git publish.
+Updated: 2026-10-10T22:03:59.649072+00:00 (UTC; America/Chicago UTC-05)
+Repo: C:\Projects\ClosureCall; branch master; existing checkout preserved; one writer.
+Deployed application commit: 75300d4ef4b86f8175be9f17f1fa291b00f9d7b9
+Documentation/evidence checkpoint: subsequent local Git HEAD; see git log. No Git remote/publication.
 
-## Outcome
-MVP private deployment complete: real NWS + modeled Open-Meteo/CAMS -> explicit prototype policy -> real Strands read-only tools -> authenticated manager test override -> targeted notification outbox -> immutable historical replay after restart.
+## Current outcome
+Private MVP and acceptance audit complete within the starter-kit scope. Fresh remote business/browser workflows were checked separately from synthetic tests. ACCEPTANCE_REPORT.md assigns VERIFIED / FAILED / NOT VERIFIED per deliverable. No blanket challenge-compliance claim. One unresolved observed AI validation failure remains in zero-alert KC runs; deterministic recommendation, manager approval and drafts worked.
 
-## Deployment and access
-- Existing authorized Akamai Linode: 172.234.201.174; Ubuntu 24.04.4; 1 CPU / about 2 GB RAM; region/Cloud Manager label not independently inspected.
-- Docker 29.9.0; Compose 5.6.0; Python 3.12.15. Active release /opt/closurecall/releases/8316a0ca896362f0dbe11b5b6c61ff6371a62902.
-- Container closurecall-app-1 healthy; appuser uid 10001, read-only root, all capabilities dropped, no-new-privileges; /app/data named persistent volume.
-- Backend only 127.0.0.1:8000 on VM. Public port 8000 connection test failed as intended; verified listener and UFW SSH-only rules.
-- Windows remote UI: http://127.0.0.1:8081 through active SSH tunnel; PID in ignored data/tunnel.pid. Port 8080 belongs to existing AgentService.exe and was preserved. Use scripts/open_tunnel.ps1 to reopen.
-- Local UI: http://127.0.0.1:8000; separate hidden process PID in data/server.pid.
-- Manager username manager; password in local .env and remote private /opt/closurecall/config/.env. Do not print or commit credentials. Remote env mode 600, parent 700. Key passphrase stays out of files/arguments; Git agent identity lifetime two hours, established tunnel continues while connected.
-- Ubuntu packages upgraded and reboot completed. Kernel 6.8.0-134-generic; Docker/SSH/UFW active after fresh strict SSH. Password/keyboard-interactive/X11 disabled; root key-only recovery retained. Config backups /root/closurecall-config-backups.
+## Runtime and access
+- Existing authorized Akamai Linode 172.234.201.174, Ubuntu 24.04.4; deploy user closurecall, root key-only recovery. Region/resource label/Cloud Manager screenshot NOT VERIFIED.
+- Docker 29.9.0 / Compose 5.6.0 / Python 3.12.15. Release /opt/closurecall/releases/75300d4ef4b86f8175be9f17f1fa291b00f9d7b9.
+- Exact tested image sha256:6d89b1918e312c8b4f9dbd427dc0be0718016bf01cdecdfd461e6cc72dc9fc81. Container healthy after actual final restart; started 2026-10-10T21:59:17Z, rechecked 22:03 UTC.
+- Appuser, read-only root, capabilities dropped, no-new-privileges; database in persistent named volume closurecall_closurecall-data. Backend binds VM loopback 127.0.0.1:8000. UFW active, SSH only.
+- Remote operator UI http://127.0.0.1:8081 through existing pinned SSH tunnel. Use scripts/open_tunnel.ps1; passphrase entered directly in terminal. Existing unrelated port 8080 preserved. No public endpoint or judging URL.
+- Local app http://127.0.0.1:8000 restarted with the same verified source/build; prior two local historical records exactly unchanged. Local .venv Python 3.13.9.
+- Secrets remain ignored local .env / private remote /opt/closurecall/config/.env (600; parent 700). No credentials printed in acceptance logs or committed. Manager credentials in tab memory only; reload requires sign-in.
 
-## Remote workflow proof
-- Synthetic point-confirmed office: site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6, 33.3400/-82.08478125, NWS-verified America/New_York.
-- Evaluation 49395bae-6b9f-4ec8-b267-7d0902f72212, collected 2026-10-10T21:15:19.606431+00:00; NWS HTTP 200, 3 actual alerts (Severe Flash Flood Warning, Flood Advisory, Flood Watch); modeled AQ HTTP 200, US AQI 46 valid 21:00 UTC.
-- Work period 21:30–23:30 UTC, explicit synthetic weekend shift. Prototype closure candidate; additional Advisory/Watch categories require manager review.
-- AI active: Strands 1.59.0, hackathon-chat, 2 model calls / 5 successful scoped tools. Strict model reference/focus selection validated; factual prose rendered from frozen data.
-- Measured single evaluation: 29763.77 ms; 2 source HTTP attempts. No extrapolated impact/performance claim.
-- Authenticated prototype manager test override: cf6d7432-7246-49d0-96ce-cb3da56d7f89, 21:16:06 UTC, explicit test reason. 9 included / 2 excluded / 1 deferred, all 12 explained; accessible voice draft and essential supervisor instructions retained. No real employee action or message sent.
-- Historical bundle hash ec8f0456b3a4ff15be12a815e0526ad1892d7e7f6267d49903cf3e483ccb3705. Baseline exactly equals post-container-restart replay, including evidence, rules, brief, decision and drafts. Browser replay/re-login/export verified after restart.
-- Reload during active job resumed same run and work period; API verified exactly one run/decision at this checkpoint.
-- Remote SQLite backup /app/data/backups/closurecall-20261010T211630Z.sqlite3 is in persistent data volume. Local checkpoints/backups preserved separately.
+## Fresh acceptance workflows
+- Fixed synthetic warning site 33.3400/-82.08478125, America/New_York, unchanged from baseline. Actual NWS Flash Flood Warning ID urn:oid:2.49.0.1.840.0.9e5ffc208914d848114373f0eabd11c9fbd68cfe.002.1; expires 2026-10-10T22:30Z. Captured records become historical; site name does not imply a current warning.
+- Final warning run 8fac2108-0e09-492b-be31-8e41ad97b50a, NWS fetched 21:56:15 UTC/200/2 alerts. Selected synthetic shift 22:11–00:11 UTC intersects warning until 22:30; modeled AQI 48, valid 21:00 UTC. Natural closure candidate, unsupported Flood Watch review, low confidence rubric, prototype-v1 / FLOOD_WARNING version 1.
+- Final warning AI active: real Strands 1.59.0 / hackathon-chat, 2 model calls / 5 successful scoped tools. Elapsed 57607.79 ms for this one run only.
+- Manager test override 2efe6988-a638-4887-a15a-abc3319e5879 explicitly acknowledges missing local checks; drafts only. Bundle hash 4b5b9b42c30069005c51bdc0c2cc963f21c61c9fefcd46bc03ea84edc56039a0.
+- Final KC run 9f0eeb64-a9f3-4660-881e-e9ffd36e2192: real empty NWS feed + fresh modeled AQ, natural normal/ready_for_manager. AI degraded ValueError after 5 successful tools / 2 model calls; no substituted historical AI success. Manager approval fc569eb8-54bd-4989-b9b7-fedcc46b3896; hash a5ff2acb07cc6f8e22cf038ca0a5301995af7c2f16b7ab6ff30695907ff8bb41.
+- Actual packages explain all 12 synthetic people: 9 included / 2 excluded / 1 deferred for the saved roster. Included means queued_demo drafts, not delivery. Variant synthetic assignments produce 10/2/0; counts are not hardcoded. Deferred has explicit manual supervisor review/reassignment follow-up; essential and accessible voice instructions inspected.
+- Before earlier run 47ba5569 finished, browser reload/re-login restored the same run and period; it completed with active five-tool AI and test override. Direct read-only SQLite counters show one decision/outbox batch per each of the five acceptance runs, despite browser double-clicks.
 
-## Tests and evidence
-- Windows Python 3.13.9: 59 tests passed in 7.99s; private .venv; pip check passed.
-- First Linux Python 3.12 image: 59 tests in 5.77s; captured actual dependency lock. Final locked image: 59 tests in 6.16s before deployment; pip check passed.
-- Image identity sha256:64386106d97f124f0d30645cb9b920ff1ee4a195edcda0c553536bee87ac19c7; tested Docker base digest pinned in Dockerfile.
-- Real workshop smoke passed locally and inside remote container: 2 model calls / 1 verified smoke tool using random returned token.
-- Secret scan: 73 tracked source files + 7 remote authenticated API responses passed with configured secrets; final documentation scan next.
-- Evidence: docs/VERIFICATION.md; ignored data/remote-*.json; artifacts/linode-verification.txt; artifacts/closurecall-linode-replay.png and closurecall-linode-outbox.png.
+## Persistence, isolated changes and UI
+- Original 8316a0c demo cf6d7432-7246-49d0-96ce-cb3da56d7f89 hash ec8f0456b3a4ff15be12a815e0526ad1892d7e7f6267d49903cf3e483ccb3705 remains exact across all acceptance deployments/restart. Original backups preserved.
+- Isolated real historical export imported into separate ignored DB. Persisted current roster/rules changed; two API replay reads across lifespan restart remain identical, with zero NWS/AQ/model/assessment/routing calls. No demo DB or original backup edited.
+- Final remote backup /app/data/backups/closurecall-20261010T215916Z.sqlite3. Actual container restart: all six remote historical bundles and drafts exactly equal baselines. Browser Refresh/replay/JSON export exact match; decoded accessible .eml body matches the frozen draft/no-send notice.
+- Minimal acceptance fixes: deferred manual follow-up; matched rule version; concise validation errors; long-text wrapping; clear prior manager inputs for a new run; clear previous evidence/brief/timeline during current source collection. No architecture expansion.
+- UI widths verified: 1280 ->1265, 720 ->705/single column, default 920 ->905; viewport reset. Empty override reason rejected, retry worked. Loading/active reload/double-click/history refresh/replay/export exercised.
 
-## Remaining external steps
-- No current deployment/credential blocker. Public repository, HTTPS/domain/judging URL and actual submission need explicit publication authorization and organizer requirements.
-- NWS contact email was not provided; honest product User-Agent works, contact recommended.
-- Deadline/event timezone/eligibility not independently confirmed. G6 optional simulation UI intentionally omitted.
+## Tests and review artifacts
+- Windows Python 3.13.9: 62 tests in 7.67s, named results evidence/acceptance/windows-tests-final.txt; pip check passed.
+- Exact frozen Linux image Python 3.12.15: 62 tests in 4.96s before service change, evidence/acceptance/linux-deploy-tests-frozen.txt.
+- Live source/model observations are separate JSON traces, not inferred from totals. Evidence under evidence/acceptance includes runtime/security/counters/restart/isolation/browser records, native screenshots, secret scan and hash manifest.
+- Root documents: ACCEPTANCE_REPORT.md, DEMO_SCRIPT.md (180 seconds), SUBMISSION.md (unsubmitted draft), KNOWN_LIMITATIONS.md, DEMO_RECOVERY.md. Older docs now point to current handoff; docs/VERIFICATION.md retains dated baseline evidence.
 
-## Data honesty and limits
-Synthetic offices/roster/shift and prototype manager tests; not official USDA operations. Rules/confidence are engineering assumptions, not USDA/OPM policy or probabilities. Unsupported categories stay visible for human review. Modeled AQ is not indoor sensing. Outbox drafts only, no send integration. HTTP Basic via private SSH; no enterprise login or public app endpoint. Hashes/immutable tables detect changes but are not compliance certification or absolute tamper resistance.
-
-## Next actions if authorized
-1. Confirm organizer deadline, access and submission requirements.
-2. If public demo requested, obtain controlled domain/HTTPS/publication authorization; keep backend loopback and manager auth.
-3. Rehearse using LIVE evidence when fresh and labeled historical replay when warnings have expired; preserve database/backups.
+## Remaining limits and information
+- FAILED: observed KC AI validation degradation; exact rejected model selection/cause not logged, so cause NOT VERIFIED. Validation was not weakened to produce an active label.
+- NOT VERIFIED: original USDA/Strands/Akamai organizer rubric, deadline/event timezone, eligibility, public judge access, Cloud Manager VM screenshot/region/resource label; live high-wind/high-AQ trigger; real local conditions/USDA authority; full accessibility certification; timed human rehearsal; full backup restoration into a separate live container.
+- No current SSH/inference credential blocker. NWS contact email not supplied; unique honest product User-Agent works.
+- Publication/HTTPS/domain/public repo/submission need explicit authorization and organizer requirements. No paid resources, external messages or notifications were sent.
+- Synthetic staff/facilities/shifts; prototype mappings/confidence, modeled AQ, manual follow-up, drafts only. No compliance certification or statistical latency/impact claim.

@@ -1,0 +1,12 @@
+Sat Oct 10 09:55:44 PM UTC 2026
+closurecall-app-1 closurecall-verified:75300d4ef4b86f8175be9f17f1fa291b00f9d7b9 Up About a minute (healthy) 127.0.0.1:8000->8000/tcp
+sha256:6d89b1918e312c8b4f9dbd427dc0be0718016bf01cdecdfd461e6cc72dc9fc81
+user=appuser readonly=true capdrop=["ALL"] security=["no-new-privileges:true"] ports={"8000/tcp":[{"HostIp":"127.0.0.1","HostPort":"8000"}]}
+closurecall-verified:75300d4ef4b86f8175be9f17f1fa291b00f9d7b9 6d89b1918e31
+closurecall-verified:69a7738f1eb4eb087404254a2cec8859c4c35b79 ee3deb4efbdc
+closurecall-verified:22dd11ac843fcc0052a92b7a84c69ef72712e932 0bcf36f24980
+closurecall-verified:8316a0ca896362f0dbe11b5b6c61ff6371a62902 64386106d97f
+closurecall-verified:a49f8e2bac7e5d1dabebe12c6f634e0dce13b3fc 9582a9156a19
+hello-world:latest 5e2309035332
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+LISTEN 0      4096       127.0.0.1:8000      0.0.0.0:*

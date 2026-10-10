@@ -1,0 +1,2 @@
+SQLite backup created: /app/data/backups/closurecall-20261010T215916Z.sqlite3
+closurecall-app-1

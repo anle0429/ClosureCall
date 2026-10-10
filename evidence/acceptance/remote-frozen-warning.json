@@ -1,0 +1,1134 @@
+{
+  "mode": "REPLAY",
+  "bundle_hash": "4b5b9b42c30069005c51bdc0c2cc963f21c61c9fefcd46bc03ea84edc56039a0",
+  "ai": {
+    "model_alias": "hackathon-chat",
+    "model_calls": 2,
+    "narrative": "Strands reviewed the five frozen tools for Synthetic site — Flash Flood Warning.\nAffected period: 2026-10-10T22:11:00Z → 2026-10-11T00:11:00Z; facility timezone America/New_York.\nPrototype candidate: closure; unsupported_hazard. Unsupported hazard — manager review: Flood Watch\nSynthetic routing preview: 12 employees; 1 deferred, 2 excluded, 9 included.\nModel-selected evidence references: urn:oid:2.49.0.1.840.0.9e5ffc208914d848114373f0eabd11c9fbd68cfe.002.1, urn:oid:2.49.0.1.840.0.45c518d06640190ce0331ea66f91925d1858fbba.001.1, https://air-quality-api.open-meteo.com/v1/air-quality?latitude=33.34&longitude=-82.08478124999999&current=us_aqi%2Cpm2_5&hourly=us_aqi&forecast_days=2&timezone=UTC.\nManager should verify local access, facility conditions and timing.\nAdditional alert categories require explicit manager review; no automatic action mapping is supplied.\nEssential personnel reporting requires supervisor direction.\nAir quality is an Open-Meteo/CAMS modeled grid estimate, not an indoor measurement.\nFacts and routing above are rendered from frozen records. The human manager makes the decision; no notification is sent.",
+    "review_selection": {
+      "evidence_ids": [
+        "urn:oid:2.49.0.1.840.0.9e5ffc208914d848114373f0eabd11c9fbd68cfe.002.1",
+        "urn:oid:2.49.0.1.840.0.45c518d06640190ce0331ea66f91925d1858fbba.001.1",
+        "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=33.34&longitude=-82.08478124999999&current=us_aqi%2Cpm2_5&hourly=us_aqi&forecast_days=2&timezone=UTC"
+      ],
+      "policy_version": "prototype-v1",
+      "review_focus": [
+        "LOCAL_ACCESS",
+        "UNMAPPED_HAZARDS",
+        "ESSENTIAL_DIRECTIONS",
+        "MODELED_AQ_LIMITS"
+      ],
+      "snapshot_id": "8fac2108-0e09-492b-be31-8e41ad97b50a"
+    },
+    "safe_error_code": null,
+    "status": "active",
+    "tool_calls": 5
+  },
+  "decision": {
+    "actor": "manager",
+    "approved_at": "2026-10-10T21:57:38.967909+00:00",
+    "decision_id": "2efe6988-a638-4887-a15a-abc3319e5879",
+    "effective_window": {
+      "end": "2026-10-11T00:11:00Z",
+      "operating_context": "before_open",
+      "selected_work_date": "2026-10-10",
+      "special_shift": true,
+      "start": "2026-10-10T22:11:00Z",
+      "timezone": "America/New_York"
+    },
+    "evaluation_id": "8fac2108-0e09-492b-be31-8e41ad97b50a",
+    "posture": "closure",
+    "reason": "Final private acceptance test: retain natural protective closure at the unchanged saved point. Flood Watch mapping and local access remain unverified and require supervisor review. Synthetic office and roster; prepare drafts only.",
+    "snapshot_hash": "0e9b5f85a9ca6723aae727680596b26a56b3bca4274b957b2bb8070e51e792e7",
+    "stale_or_superseded_override": false,
+    "status": "overridden",
+    "timing_at": null,
+    "timing_basis": ""
+  },
+  "metrics": {
+    "elapsed_ms": 57607.79,
+    "model_calls": 2,
+    "source_http_attempts": 2,
+    "successful_tool_calls": 5
+  },
+  "notifications": {
+    "batch_id": "2efe6988-a638-4887-a15a-abc3319e5879",
+    "counts": {
+      "deferred": 1,
+      "excluded": 2,
+      "included": 9
+    },
+    "mode": "outbox_only",
+    "recipients": [
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "channel": "app_inbox",
+        "email": "employee1@example.com",
+        "employee_id": "demo-01",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "Routine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.",
+        "message": "Avery Hart,\nRoutine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.\nWork period: 2026-10-10T22:11:00Z to 2026-10-11T00:11:00Z\nConfirmed timing: Not applicable\nManager reason: Final private acceptance test: retain natural protective closure at the unchanged saved point. Flood Watch mapping and local access remain unverified and require supervisor review. Synthetic office and roster; prepare drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Avery Hart",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure — Synthetic site — Flash Flood Warning",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "channel": "app_inbox",
+        "email": "employee2@example.com",
+        "employee_id": "demo-02",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "Routine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.",
+        "message": "Blair Reed,\nRoutine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.\nWork period: 2026-10-10T22:11:00Z to 2026-10-11T00:11:00Z\nConfirmed timing: Not applicable\nManager reason: Final private acceptance test: retain natural protective closure at the unchanged saved point. Flood Watch mapping and local access remain unverified and require supervisor review. Synthetic office and roster; prepare drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Blair Reed",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure — Synthetic site — Flash Flood Warning",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "channel": "voice_accessible",
+        "email": "employee3@example.com",
+        "employee_id": "demo-03",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "Routine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.",
+        "message": "Casey Brook,\nRoutine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.\nWork period: 2026-10-10T22:11:00Z to 2026-10-11T00:11:00Z\nConfirmed timing: Not applicable\nManager reason: Final private acceptance test: retain natural protective closure at the unchanged saved point. Flood Watch mapping and local access remain unverified and require supervisor review. Synthetic office and roster; prepare drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Casey Brook",
+        "notification_status": "queued_demo",
+        "preferred_channel": "voice_accessible",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure — Synthetic site — Flash Flood Warning",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "channel": "app_inbox",
+        "email": "employee4@example.com",
+        "employee_id": "demo-04",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "Routine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.",
+        "message": "Drew Vale,\nRoutine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.\nWork period: 2026-10-10T22:11:00Z to 2026-10-11T00:11:00Z\nConfirmed timing: Not applicable\nManager reason: Final private acceptance test: retain natural protective closure at the unchanged saved point. Flood Watch mapping and local access remain unverified and require supervisor review. Synthetic office and roster; prepare drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Drew Vale",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure — Synthetic site — Flash Flood Warning",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "channel": "app_inbox",
+        "email": "employee5@example.com",
+        "employee_id": "demo-05",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "Routine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.",
+        "message": "Ellis Lane,\nRoutine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.\nWork period: 2026-10-10T22:11:00Z to 2026-10-11T00:11:00Z\nConfirmed timing: Not applicable\nManager reason: Final private acceptance test: retain natural protective closure at the unchanged saved point. Flood Watch mapping and local access remain unverified and require supervisor review. Synthetic office and roster; prepare drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Ellis Lane",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure — Synthetic site — Flash Flood Warning",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "channel": "app_inbox",
+        "email": "employee6@example.com",
+        "employee_id": "demo-06",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "Routine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.",
+        "message": "Finley Stone,\nRoutine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.\nWork period: 2026-10-10T22:11:00Z to 2026-10-11T00:11:00Z\nConfirmed timing: Not applicable\nManager reason: Final private acceptance test: retain natural protective closure at the unchanged saved point. Flood Watch mapping and local access remain unverified and require supervisor review. Synthetic office and roster; prepare drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Finley Stone",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure — Synthetic site — Flash Flood Warning",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "channel": "app_inbox",
+        "email": "employee7@example.com",
+        "employee_id": "demo-07",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "Routine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.",
+        "message": "Gray Morgan,\nRoutine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.\nWork period: 2026-10-10T22:11:00Z to 2026-10-11T00:11:00Z\nConfirmed timing: Not applicable\nManager reason: Final private acceptance test: retain natural protective closure at the unchanged saved point. Flood Watch mapping and local access remain unverified and require supervisor review. Synthetic office and roster; prepare drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Gray Morgan",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure — Synthetic site — Flash Flood Warning",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "channel": "app_inbox",
+        "email": "employee8@example.com",
+        "employee_id": "demo-08",
+        "essential": true,
+        "follow_up": null,
+        "instruction": "Essential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.",
+        "message": "Harper Quinn,\nEssential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.\nWork period: 2026-10-10T22:11:00Z to 2026-10-11T00:11:00Z\nConfirmed timing: Not applicable\nManager reason: Final private acceptance test: retain natural protective closure at the unchanged saved point. Flood Watch mapping and local access remain unverified and require supervisor review. Synthetic office and roster; prepare drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Harper Quinn",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure — Synthetic site — Flash Flood Warning",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "channel": "app_inbox",
+        "email": "employee9@example.com",
+        "employee_id": "demo-09",
+        "essential": true,
+        "follow_up": null,
+        "instruction": "Essential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.",
+        "message": "Indigo Ray,\nEssential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.\nWork period: 2026-10-10T22:11:00Z to 2026-10-11T00:11:00Z\nConfirmed timing: Not applicable\nManager reason: Final private acceptance test: retain natural protective closure at the unchanged saved point. Flood Watch mapping and local access remain unverified and require supervisor review. Synthetic office and roster; prepare drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Indigo Ray",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure — Synthetic site — Flash Flood Warning",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "telework",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "channel": "app_inbox",
+        "email": "employee10@example.com",
+        "employee_id": "demo-10",
+        "essential": false,
+        "follow_up": "Supervisor reviews the informational draft before the assigned shift starts, or immediately if the shift is already underway. If the employee is reassigned onsite, re-evaluate the updated assignment and record a new manager decision; otherwise continue scheduled telework. This is a manual follow-up step, not an automatic send or scheduled job.",
+        "instruction": "Informational update only; continue scheduled telework unless your supervisor directs otherwise.",
+        "message": "Jordan Lake,\nInformational update only; continue scheduled telework unless your supervisor directs otherwise.\nFollow-up: Supervisor reviews the informational draft before the assigned shift starts, or immediately if the shift is already underway. If the employee is reassigned onsite, re-evaluate the updated assignment and record a new manager decision; otherwise continue scheduled telework. This is a manual follow-up step, not an automatic send or scheduled job.\nWork period: 2026-10-10T22:11:00Z to 2026-10-11T00:11:00Z\nConfirmed timing: Not applicable\nManager reason: Final private acceptance test: retain natural protective closure at the unchanged saved point. Flood Watch mapping and local access remain unverified and require supervisor review. Synthetic office and roster; prepare drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Jordan Lake",
+        "notification_status": "draft",
+        "preferred_channel": "app_inbox",
+        "reason": "Already scheduled for telework; informational inbox only",
+        "roster_version": "synthetic-v1",
+        "routing_status": "deferred",
+        "subject": "ClosureCall prototype: closure — Synthetic site — Flash Flood Warning",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "other-demo-site",
+        "assignment": "offsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "channel": null,
+        "email": "employee11@example.com",
+        "employee_id": "demo-11",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "No urgent instruction for this site assignment.",
+        "message": "Kai Rowan,\nNo urgent instruction for this site assignment.\nWork period: 2026-10-10T22:11:00Z to 2026-10-11T00:11:00Z\nConfirmed timing: Not applicable\nManager reason: Final private acceptance test: retain natural protective closure at the unchanged saved point. Flood Watch mapping and local access remain unverified and require supervisor review. Synthetic office and roster; prepare drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Kai Rowan",
+        "notification_status": "draft",
+        "preferred_channel": "app_inbox",
+        "reason": "Current detail/assignment is at another site",
+        "roster_version": "synthetic-v1",
+        "routing_status": "excluded",
+        "subject": "ClosureCall prototype: closure — Synthetic site — Flash Flood Warning",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "no_shift",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "channel": null,
+        "email": "employee12@example.com",
+        "employee_id": "demo-12",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "No urgent instruction for this site assignment.",
+        "message": "Logan Fern,\nNo urgent instruction for this site assignment.\nWork period: 2026-10-10T22:11:00Z to 2026-10-11T00:11:00Z\nConfirmed timing: Not applicable\nManager reason: Final private acceptance test: retain natural protective closure at the unchanged saved point. Flood Watch mapping and local access remain unverified and require supervisor review. Synthetic office and roster; prepare drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Logan Fern",
+        "notification_status": "draft",
+        "preferred_channel": "app_inbox",
+        "reason": "No assigned shift during affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "excluded",
+        "subject": "ClosureCall prototype: closure — Synthetic site — Flash Flood Warning",
+        "synthetic": true,
+        "telework_eligible": false
+      }
+    ]
+  },
+  "snapshot": {
+    "air_quality": {
+      "attribution": "Open-Meteo / Copernicus Atmosphere Monitoring Service (CAMS)",
+      "fetched_at_utc": "2026-10-10T21:56:16.133028+00:00",
+      "hourly_forecast": [
+        {
+          "us_aqi": 78,
+          "valid_at_utc": "2026-10-10T00:00:00+00:00"
+        },
+        {
+          "us_aqi": 76,
+          "valid_at_utc": "2026-10-10T01:00:00+00:00"
+        },
+        {
+          "us_aqi": 74,
+          "valid_at_utc": "2026-10-10T02:00:00+00:00"
+        },
+        {
+          "us_aqi": 72,
+          "valid_at_utc": "2026-10-10T03:00:00+00:00"
+        },
+        {
+          "us_aqi": 71,
+          "valid_at_utc": "2026-10-10T04:00:00+00:00"
+        },
+        {
+          "us_aqi": 69,
+          "valid_at_utc": "2026-10-10T05:00:00+00:00"
+        },
+        {
+          "us_aqi": 68,
+          "valid_at_utc": "2026-10-10T06:00:00+00:00"
+        },
+        {
+          "us_aqi": 66,
+          "valid_at_utc": "2026-10-10T07:00:00+00:00"
+        },
+        {
+          "us_aqi": 65,
+          "valid_at_utc": "2026-10-10T08:00:00+00:00"
+        },
+        {
+          "us_aqi": 63,
+          "valid_at_utc": "2026-10-10T09:00:00+00:00"
+        },
+        {
+          "us_aqi": 62,
+          "valid_at_utc": "2026-10-10T10:00:00+00:00"
+        },
+        {
+          "us_aqi": 60,
+          "valid_at_utc": "2026-10-10T11:00:00+00:00"
+        },
+        {
+          "us_aqi": 58,
+          "valid_at_utc": "2026-10-10T12:00:00+00:00"
+        },
+        {
+          "us_aqi": 57,
+          "valid_at_utc": "2026-10-10T13:00:00+00:00"
+        },
+        {
+          "us_aqi": 55,
+          "valid_at_utc": "2026-10-10T14:00:00+00:00"
+        },
+        {
+          "us_aqi": 54,
+          "valid_at_utc": "2026-10-10T15:00:00+00:00"
+        },
+        {
+          "us_aqi": 52,
+          "valid_at_utc": "2026-10-10T16:00:00+00:00"
+        },
+        {
+          "us_aqi": 51,
+          "valid_at_utc": "2026-10-10T17:00:00+00:00"
+        },
+        {
+          "us_aqi": 51,
+          "valid_at_utc": "2026-10-10T18:00:00+00:00"
+        },
+        {
+          "us_aqi": 50,
+          "valid_at_utc": "2026-10-10T19:00:00+00:00"
+        },
+        {
+          "us_aqi": 49,
+          "valid_at_utc": "2026-10-10T20:00:00+00:00"
+        },
+        {
+          "us_aqi": 48,
+          "valid_at_utc": "2026-10-10T21:00:00+00:00"
+        },
+        {
+          "us_aqi": 46,
+          "valid_at_utc": "2026-10-10T22:00:00+00:00"
+        },
+        {
+          "us_aqi": 45,
+          "valid_at_utc": "2026-10-10T23:00:00+00:00"
+        },
+        {
+          "us_aqi": 43,
+          "valid_at_utc": "2026-10-11T00:00:00+00:00"
+        },
+        {
+          "us_aqi": 40,
+          "valid_at_utc": "2026-10-11T01:00:00+00:00"
+        },
+        {
+          "us_aqi": 37,
+          "valid_at_utc": "2026-10-11T02:00:00+00:00"
+        },
+        {
+          "us_aqi": 34,
+          "valid_at_utc": "2026-10-11T03:00:00+00:00"
+        },
+        {
+          "us_aqi": 31,
+          "valid_at_utc": "2026-10-11T04:00:00+00:00"
+        },
+        {
+          "us_aqi": 27,
+          "valid_at_utc": "2026-10-11T05:00:00+00:00"
+        },
+        {
+          "us_aqi": 26,
+          "valid_at_utc": "2026-10-11T06:00:00+00:00"
+        },
+        {
+          "us_aqi": 26,
+          "valid_at_utc": "2026-10-11T07:00:00+00:00"
+        },
+        {
+          "us_aqi": 26,
+          "valid_at_utc": "2026-10-11T08:00:00+00:00"
+        },
+        {
+          "us_aqi": 25,
+          "valid_at_utc": "2026-10-11T09:00:00+00:00"
+        },
+        {
+          "us_aqi": 25,
+          "valid_at_utc": "2026-10-11T10:00:00+00:00"
+        },
+        {
+          "us_aqi": 24,
+          "valid_at_utc": "2026-10-11T11:00:00+00:00"
+        },
+        {
+          "us_aqi": 24,
+          "valid_at_utc": "2026-10-11T12:00:00+00:00"
+        },
+        {
+          "us_aqi": 25,
+          "valid_at_utc": "2026-10-11T13:00:00+00:00"
+        },
+        {
+          "us_aqi": 26,
+          "valid_at_utc": "2026-10-11T14:00:00+00:00"
+        },
+        {
+          "us_aqi": 27,
+          "valid_at_utc": "2026-10-11T15:00:00+00:00"
+        },
+        {
+          "us_aqi": 29,
+          "valid_at_utc": "2026-10-11T16:00:00+00:00"
+        },
+        {
+          "us_aqi": 31,
+          "valid_at_utc": "2026-10-11T17:00:00+00:00"
+        },
+        {
+          "us_aqi": 33,
+          "valid_at_utc": "2026-10-11T18:00:00+00:00"
+        },
+        {
+          "us_aqi": 35,
+          "valid_at_utc": "2026-10-11T19:00:00+00:00"
+        },
+        {
+          "us_aqi": 37,
+          "valid_at_utc": "2026-10-11T20:00:00+00:00"
+        },
+        {
+          "us_aqi": 38,
+          "valid_at_utc": "2026-10-11T21:00:00+00:00"
+        },
+        {
+          "us_aqi": 39,
+          "valid_at_utc": "2026-10-11T22:00:00+00:00"
+        },
+        {
+          "us_aqi": 39,
+          "valid_at_utc": "2026-10-11T23:00:00+00:00"
+        }
+      ],
+      "http_attempts": 1,
+      "modeled": true,
+      "pm2_5": 3.1,
+      "raw_response_sha256": "3340f5baab1eba46159111df07684eeb4c4e27542da176f8ba8b3e0667d2ac51",
+      "request_started_at_utc": "2026-10-10T21:56:15.639110+00:00",
+      "requested_location": {
+        "latitude": 33.34,
+        "longitude": -82.08478124999999
+      },
+      "response_status": 200,
+      "returned_grid_location": {
+        "latitude": 33.300003,
+        "longitude": -82.1
+      },
+      "source_id": "aq",
+      "source_url": "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=33.34&longitude=-82.08478124999999&current=us_aqi%2Cpm2_5&hourly=us_aqi&forecast_days=2&timezone=UTC",
+      "status": "available",
+      "units": {
+        "interval": "seconds",
+        "pm2_5": "μg/m³",
+        "time": "iso8601",
+        "us_aqi": "USAQI"
+      },
+      "us_aqi": 48,
+      "valid_at_utc": "2026-10-10T21:00:00+00:00"
+    },
+    "assessment": {
+      "assumptions": [
+        "Prototype action mappings for synthetic administrative offices; not USDA, OPM, NOAA or AirNow closure policy.",
+        "Fetch freshness and AQ age budgets are engineering assumptions.",
+        "Delay and early dismissal are manager-selectable with verified timing; not automatic recommendations."
+      ],
+      "confidence_basis": [
+        "Completeness/applicability rubric, not probability of correctness",
+        "Modeled AQ does not establish indoor conditions"
+      ],
+      "confidence_label": "low",
+      "evidence_ids": [
+        "urn:oid:2.49.0.1.840.0.9e5ffc208914d848114373f0eabd11c9fbd68cfe.002.1",
+        "urn:oid:2.49.0.1.840.0.45c518d06640190ce0331ea66f91925d1858fbba.001.1",
+        "aq"
+      ],
+      "matched_rules": [
+        {
+          "categorical_match_reason": "Severe / Likely / Immediate; Work-period overlap checked",
+          "comparator": "category",
+          "conditions": "Actual Severe/Extreme Flood or Flash Flood Warning, point confirmed, unexpired, overlaps work period",
+          "evidence_id": "urn:oid:2.49.0.1.840.0.9e5ffc208914d848114373f0eabd11c9fbd68cfe.002.1",
+          "exceedance": null,
+          "hazard_type": "flooding",
+          "id": "FLOOD_WARNING",
+          "limitations": "Does not prove building inundation or mandate evacuation.",
+          "observed_value": "Flash Flood Warning",
+          "proposed_posture": "closure",
+          "prototype_mapping_reason": "Avoid routine onsite reporting in a warning area pending manager review.",
+          "reference_claim": "NWS supplies alert categories and instructions, not this prototype closure mapping.",
+          "reference_source_url": "https://www.weather.gov/documentation/services-web-api",
+          "required_context": "Before opening; during an ongoing shift require local emergency procedure review.",
+          "threshold": null,
+          "units": null,
+          "version": "1"
+        }
+      ],
+      "missing_inputs": [],
+      "policy_version": "prototype-v1",
+      "protective_action_notice": "Closure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.",
+      "rationale_text": "Unsupported hazard — manager review: Flood Watch",
+      "recommended_posture": "closure",
+      "review_status": "unsupported_hazard",
+      "what_would_change": [
+        "New NWS warning/update or point applicability",
+        "AQ valid time / forecast changes",
+        "Manager verifies local access, timing or facility conditions"
+      ]
+    },
+    "collected_at_utc": "2026-10-10T21:56:16.133700+00:00",
+    "facility": {
+      "closing_time_local": "17:00",
+      "display_name": "Synthetic site — Flash Flood Warning",
+      "facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+      "latitude": 33.34,
+      "location_verification": "NWS point endpoint confirmed",
+      "longitude": -82.08478124999999,
+      "minimum_notice_minutes": 30,
+      "opening_time_local": "08:00",
+      "source_alert_id": "urn:oid:2.49.0.1.840.0.26dc00bc166d39d7a3259fdccec35ec99f0c8d8e.001.1",
+      "supervisor_contact_label": "Demo facility supervisor",
+      "synthetic": true,
+      "telework_supported": true,
+      "timezone": "America/New_York",
+      "working_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "mode": "LIVE",
+    "nws": {
+      "alerts": [
+        {
+          "affected_zones": [
+            "https://api.weather.gov/zones/county/GAC245",
+            "https://api.weather.gov/zones/county/SCC003",
+            "https://api.weather.gov/zones/county/SCC037"
+          ],
+          "alert_id": "urn:oid:2.49.0.1.840.0.9e5ffc208914d848114373f0eabd11c9fbd68cfe.002.1",
+          "applicability_reason": "Returned by NWS point endpoint",
+          "applicability_status": "point_confirmed",
+          "area_desc": "Richmond, GA; Aiken, SC; Edgefield, SC",
+          "certainty": "Likely",
+          "description": "At 533 PM EDT, Doppler radar indicated thunderstorms producing heavy\nrain across the warned area. Between 3 and 4.5 inches of rain have\nfallen. Additional rainfall amounts of 1 to 2 inches are possible in\nthe warned area. Flash flooding is ongoing or expected to begin\nshortly.\n\nHAZARD...Flash flooding caused by thunderstorms.\n\nSOURCE...Radar indicated.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\nSome locations that will experience flash flooding include...\nNorth Augusta, Augusta, Fort Gordon, Clearwater, Belvedere,\nHephzibah, South Augusta, Glendale, Daniel Field, Summerville,\nMidtown, Augusta Mall, Augusta Regional Airport, Augusta National\nGolf Club, Village Plaza Shopping Center, McBean, Gloverville and\nBurnettown.\n\nThis includes the following highways...\nInterstate 520 in South Carolina between mile markers 16 and 23.\nInterstate 20 in South Carolina between mile markers 0 and 7.\nInterstate 20 in Georgia between mile markers 195 and 201. Interstate\n520 in Georgia between mile markers 1 and 15.",
+          "effective": "2026-10-10T17:33:00-04:00",
+          "ends": "2026-10-10T18:30:00-04:00",
+          "event": "Flash Flood Warning",
+          "expires": "2026-10-10T18:30:00-04:00",
+          "geometry": {
+            "coordinates": [
+              [
+                [
+                  -82.29,
+                  33.27
+                ],
+                [
+                  -82.2,
+                  33.43
+                ],
+                [
+                  -82.03,
+                  33.54
+                ],
+                [
+                  -82.05,
+                  33.56
+                ],
+                [
+                  -82.09,
+                  33.58
+                ],
+                [
+                  -82.03,
+                  33.61
+                ],
+                [
+                  -81.85,
+                  33.57
+                ],
+                [
+                  -81.82,
+                  33.52
+                ],
+                [
+                  -81.99,
+                  33.23
+                ],
+                [
+                  -82.06,
+                  33.24
+                ],
+                [
+                  -82.1,
+                  33.23
+                ],
+                [
+                  -82.13,
+                  33.25
+                ],
+                [
+                  -82.13,
+                  33.28
+                ],
+                [
+                  -82.17,
+                  33.3
+                ],
+                [
+                  -82.27,
+                  33.27
+                ],
+                [
+                  -82.29,
+                  33.27
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          },
+          "headline": "Flash Flood Warning issued October 10 at 5:33PM EDT until October 10 at 6:30PM EDT by NWS Columbia SC",
+          "instruction": "Most flooding deaths occur in vehicles. Never drive through a flooded\nroadway or around barricades. Turn around, don't drown.\n\nBe aware of your surroundings and do not drive on flooded roads.",
+          "message_type": "Update",
+          "onset": "2026-10-10T17:33:00-04:00",
+          "references": [
+            {
+              "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.26dc00bc166d39d7a3259fdccec35ec99f0c8d8e.001.1",
+              "identifier": "urn:oid:2.49.0.1.840.0.26dc00bc166d39d7a3259fdccec35ec99f0c8d8e.001.1",
+              "sender": "w-nws.webmaster@noaa.gov",
+              "sent": "2026-10-10T16:36:00-04:00"
+            }
+          ],
+          "sent": "2026-10-10T17:33:00-04:00",
+          "severity": "Severe",
+          "status": "Actual",
+          "urgency": "Immediate"
+        },
+        {
+          "affected_zones": [
+            "https://api.weather.gov/zones/forecast/GAZ040",
+            "https://api.weather.gov/zones/forecast/GAZ063",
+            "https://api.weather.gov/zones/forecast/GAZ064",
+            "https://api.weather.gov/zones/forecast/GAZ065",
+            "https://api.weather.gov/zones/forecast/GAZ077",
+            "https://api.weather.gov/zones/forecast/SCZ018",
+            "https://api.weather.gov/zones/forecast/SCZ025",
+            "https://api.weather.gov/zones/forecast/SCZ030",
+            "https://api.weather.gov/zones/forecast/SCZ035",
+            "https://api.weather.gov/zones/forecast/SCZ041",
+            "https://api.weather.gov/zones/forecast/SCZ135",
+            "https://api.weather.gov/zones/forecast/SCZ136",
+            "https://api.weather.gov/zones/forecast/SCZ137"
+          ],
+          "alert_id": "urn:oid:2.49.0.1.840.0.45c518d06640190ce0331ea66f91925d1858fbba.001.1",
+          "applicability_reason": "Returned by NWS point endpoint",
+          "applicability_status": "point_confirmed",
+          "area_desc": "Lincoln; McDuffie; Columbia; Richmond; Burke; McCormick; Edgefield; Aiken; Barnwell; Bamberg; Northwestern Orangeburg; Central Orangeburg; Southeastern Orangeburg",
+          "certainty": "Possible",
+          "description": "* WHAT...Flash flooding caused by excessive rainfall continues to be\npossible.\n\n* WHERE...Portions of east central Georgia, including the following\nareas, Burke, Columbia, Lincoln, McDuffie and Richmond and central\nSouth Carolina, including the following areas, Aiken, Bamberg,\nBarnwell, Central Orangeburg, Edgefield, McCormick, Northwestern\nOrangeburg and Southeastern Orangeburg.\n\n* WHEN...Through Sunday morning.\n\n* IMPACTS...Excessive runoff may result in flooding of rivers,\ncreeks, streams, and other low-lying and flood-prone locations.\nCreeks and streams may rise out of their banks. Flooding may occur\nin poor drainage and urban areas.\n\n* ADDITIONAL DETAILS...\n- Periods of heavy rainfall are possible today, with highest\namounts expected in the CSRA and southern Midlands. Rainfall\ntotals of 3-6\" are possible from this morning through tonight.\n- http://www.weather.gov/safety/flood",
+          "effective": "2026-10-10T08:39:00-04:00",
+          "ends": "2026-10-11T08:00:00-04:00",
+          "event": "Flood Watch",
+          "expires": "2026-10-11T08:00:00-04:00",
+          "geometry": null,
+          "headline": "Flood Watch issued October 10 at 8:39AM EDT until October 11 at 8:00AM EDT by NWS Columbia SC",
+          "instruction": "You should monitor later forecasts and be prepared to take action\nshould Flash Flood Warnings be issued.",
+          "message_type": "Update",
+          "onset": "2026-10-10T08:39:00-04:00",
+          "references": [
+            {
+              "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.21681b4d0453cf40726a6edfd7740f8205dc0638.001.1",
+              "identifier": "urn:oid:2.49.0.1.840.0.21681b4d0453cf40726a6edfd7740f8205dc0638.001.1",
+              "sender": "w-nws.webmaster@noaa.gov",
+              "sent": "2026-10-10T01:32:00-04:00"
+            },
+            {
+              "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.21681b4d0453cf40726a6edfd7740f8205dc0638.002.1",
+              "identifier": "urn:oid:2.49.0.1.840.0.21681b4d0453cf40726a6edfd7740f8205dc0638.002.1",
+              "sender": "w-nws.webmaster@noaa.gov",
+              "sent": "2026-10-10T01:32:00-04:00"
+            }
+          ],
+          "sent": "2026-10-10T08:39:00-04:00",
+          "severity": "Severe",
+          "status": "Actual",
+          "urgency": "Future"
+        }
+      ],
+      "fetched_at_utc": "2026-10-10T21:56:15.851005+00:00",
+      "http_attempts": 1,
+      "location_verified": true,
+      "raw_response_sha256": "0a3f72396815ec7b7ea7a09023529b109ab0751752189ca5bfa90e2f7986585e",
+      "request_location": {
+        "latitude": 33.34,
+        "longitude": -82.08478124999999
+      },
+      "request_started_at_utc": "2026-10-10T21:56:15.629872+00:00",
+      "response_status": 200,
+      "source_id": "nws",
+      "source_url": "https://api.weather.gov/alerts/active?point=33.34%2C-82.08478124999999",
+      "status": "available"
+    },
+    "policy": {
+      "disclaimer": "Prototype action mappings for synthetic administrative offices; not USDA, OPM, NOAA or AirNow closure policy.",
+      "rules": [
+        {
+          "comparator": "category",
+          "conditions": "Actual Severe/Extreme Flood or Flash Flood Warning, point confirmed, unexpired, overlaps work period",
+          "hazard_type": "flooding",
+          "id": "FLOOD_WARNING",
+          "limitations": "Does not prove building inundation or mandate evacuation.",
+          "proposed_posture": "closure",
+          "prototype_mapping_reason": "Avoid routine onsite reporting in a warning area pending manager review.",
+          "reference_claim": "NWS supplies alert categories and instructions, not this prototype closure mapping.",
+          "reference_source_url": "https://www.weather.gov/documentation/services-web-api",
+          "required_context": "Before opening; during an ongoing shift require local emergency procedure review.",
+          "threshold": null,
+          "units": null,
+          "version": "1"
+        },
+        {
+          "comparator": "category",
+          "conditions": "Actual High Wind Warning, point confirmed, unexpired, overlaps work period, telework supported",
+          "hazard_type": "high_wind",
+          "id": "WIND_WARNING",
+          "limitations": "No invented wind speed exceedance; no route safety guarantee.",
+          "proposed_posture": "telework",
+          "prototype_mapping_reason": "Reduce routine commute exposure subject to manager review.",
+          "reference_claim": "Warning category is NWS evidence; telework is a prototype mapping.",
+          "reference_source_url": "https://www.weather.gov/documentation/services-web-api",
+          "required_context": "Facility supports telework",
+          "threshold": null,
+          "units": null,
+          "version": "1"
+        },
+        {
+          "comparator": ">=",
+          "conditions": "Fresh modeled AQ valid for the selected window and US AQI >=151",
+          "hazard_type": "poor_air_quality",
+          "id": "AQ_151",
+          "limitations": "Modeled grid estimate; not indoor or building sensor reading.",
+          "proposed_posture": "telework",
+          "prototype_mapping_reason": "Use telework candidate to reduce routine outdoor exposure; manager validates local context.",
+          "reference_claim": "AQI 151–200 is the unhealthy category. This does not prescribe office closure.",
+          "reference_source_url": "https://www.airnow.gov/aqi/aqi-basics/",
+          "required_context": "Fresh valid-time evidence, telework supported",
+          "threshold": 151,
+          "units": "US AQI points",
+          "version": "1"
+        }
+      ],
+      "version": "prototype-v1"
+    },
+    "roster": [
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "email": "employee1@example.com",
+        "employee_id": "demo-01",
+        "essential": false,
+        "name": "Avery Hart",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "email": "employee2@example.com",
+        "employee_id": "demo-02",
+        "essential": false,
+        "name": "Blair Reed",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "email": "employee3@example.com",
+        "employee_id": "demo-03",
+        "essential": false,
+        "name": "Casey Brook",
+        "preferred_channel": "voice_accessible",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "email": "employee4@example.com",
+        "employee_id": "demo-04",
+        "essential": false,
+        "name": "Drew Vale",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "email": "employee5@example.com",
+        "employee_id": "demo-05",
+        "essential": false,
+        "name": "Ellis Lane",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "email": "employee6@example.com",
+        "employee_id": "demo-06",
+        "essential": false,
+        "name": "Finley Stone",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "email": "employee7@example.com",
+        "employee_id": "demo-07",
+        "essential": false,
+        "name": "Gray Morgan",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "email": "employee8@example.com",
+        "employee_id": "demo-08",
+        "essential": true,
+        "name": "Harper Quinn",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "email": "employee9@example.com",
+        "employee_id": "demo-09",
+        "essential": true,
+        "name": "Indigo Ray",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "telework",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "email": "employee10@example.com",
+        "employee_id": "demo-10",
+        "essential": false,
+        "name": "Jordan Lake",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "other-demo-site",
+        "assignment": "offsite",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "email": "employee11@example.com",
+        "employee_id": "demo-11",
+        "essential": false,
+        "name": "Kai Rowan",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+        "assignment": "no_shift",
+        "assignment_end": "2026-10-11T00:11:00Z",
+        "assignment_start": "2026-10-10T22:11:00Z",
+        "email": "employee12@example.com",
+        "employee_id": "demo-12",
+        "essential": false,
+        "name": "Logan Fern",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      }
+    ],
+    "roster_version": "synthetic-v1",
+    "snapshot_id": "8fac2108-0e09-492b-be31-8e41ad97b50a",
+    "work_period": {
+      "end": "2026-10-11T00:11:00Z",
+      "operating_context": "before_open",
+      "selected_work_date": "2026-10-10",
+      "special_shift": true,
+      "start": "2026-10-10T22:11:00Z",
+      "timezone": "America/New_York"
+    }
+  },
+  "snapshot_hash": "0e9b5f85a9ca6723aae727680596b26a56b3bca4274b957b2bb8070e51e792e7",
+  "trace": [
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 4.08,
+      "ended_at": "2026-10-10T21:56:47.097320+00:00",
+      "evidence_ids": [
+        "8fac2108-0e09-492b-be31-8e41ad97b50a"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "8fac2108-0e09-492b-be31-8e41ad97b50a",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T21:56:47.085983+00:00",
+      "status": "success",
+      "step_number": 1,
+      "tool_name": "read_facility_context",
+      "validated_arguments": {
+        "facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6"
+      }
+    },
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 2.08,
+      "ended_at": "2026-10-10T21:56:47.105379+00:00",
+      "evidence_ids": [
+        "8fac2108-0e09-492b-be31-8e41ad97b50a"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "8fac2108-0e09-492b-be31-8e41ad97b50a",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T21:56:47.097987+00:00",
+      "status": "success",
+      "step_number": 2,
+      "tool_name": "read_nws_evidence",
+      "validated_arguments": {
+        "snapshot_id": "8fac2108-0e09-492b-be31-8e41ad97b50a"
+      }
+    },
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 0.55,
+      "ended_at": "2026-10-10T21:56:47.111901+00:00",
+      "evidence_ids": [
+        "8fac2108-0e09-492b-be31-8e41ad97b50a"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "8fac2108-0e09-492b-be31-8e41ad97b50a",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T21:56:47.106015+00:00",
+      "status": "success",
+      "step_number": 3,
+      "tool_name": "read_air_quality_evidence",
+      "validated_arguments": {
+        "snapshot_id": "8fac2108-0e09-492b-be31-8e41ad97b50a"
+      }
+    },
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 2.04,
+      "ended_at": "2026-10-10T21:56:47.119147+00:00",
+      "evidence_ids": [
+        "8fac2108-0e09-492b-be31-8e41ad97b50a"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "8fac2108-0e09-492b-be31-8e41ad97b50a",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T21:56:47.114162+00:00",
+      "status": "success",
+      "step_number": 4,
+      "tool_name": "run_policy_assessment",
+      "validated_arguments": {
+        "policy_version": "prototype-v1",
+        "snapshot_id": "8fac2108-0e09-492b-be31-8e41ad97b50a"
+      }
+    },
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 2.59,
+      "ended_at": "2026-10-10T21:56:47.126725+00:00",
+      "evidence_ids": [
+        "8fac2108-0e09-492b-be31-8e41ad97b50a"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "8fac2108-0e09-492b-be31-8e41ad97b50a",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T21:56:47.119635+00:00",
+      "status": "success",
+      "step_number": 5,
+      "tool_name": "preview_employee_impact",
+      "validated_arguments": {
+        "posture": "closure",
+        "snapshot_id": "8fac2108-0e09-492b-be31-8e41ad97b50a"
+      }
+    }
+  ]
+}
