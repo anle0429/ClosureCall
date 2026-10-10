@@ -1,0 +1,687 @@
+{
+  "id": "99f46678-7a8f-44cd-b4e6-82c777421fc4",
+  "facility_id": "kc-demo",
+  "status": "ready",
+  "created_at": "2026-10-10T22:51:02.951855+00:00",
+  "request": {
+    "end": "2026-10-11T00:51:02.882899Z",
+    "facility_id": "kc-demo",
+    "special_shift": true,
+    "start": "2026-10-10T22:49:02.882899Z"
+  },
+  "error": null,
+  "request_key": "release-c1b06206-2502-4c15-9ab5-4e3fc7e6e23d",
+  "snapshot": {
+    "air_quality": {
+      "attribution": "Open-Meteo / Copernicus Atmosphere Monitoring Service (CAMS)",
+      "fetched_at_utc": "2026-10-10T22:51:03.673412+00:00",
+      "hourly_forecast": [
+        {
+          "us_aqi": 63,
+          "valid_at_utc": "2026-10-10T00:00:00+00:00"
+        },
+        {
+          "us_aqi": 62,
+          "valid_at_utc": "2026-10-10T01:00:00+00:00"
+        },
+        {
+          "us_aqi": 55,
+          "valid_at_utc": "2026-10-10T02:00:00+00:00"
+        },
+        {
+          "us_aqi": 48,
+          "valid_at_utc": "2026-10-10T03:00:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-10T04:00:00+00:00"
+        },
+        {
+          "us_aqi": 41,
+          "valid_at_utc": "2026-10-10T05:00:00+00:00"
+        },
+        {
+          "us_aqi": 38,
+          "valid_at_utc": "2026-10-10T06:00:00+00:00"
+        },
+        {
+          "us_aqi": 35,
+          "valid_at_utc": "2026-10-10T07:00:00+00:00"
+        },
+        {
+          "us_aqi": 34,
+          "valid_at_utc": "2026-10-10T08:00:00+00:00"
+        },
+        {
+          "us_aqi": 33,
+          "valid_at_utc": "2026-10-10T09:00:00+00:00"
+        },
+        {
+          "us_aqi": 33,
+          "valid_at_utc": "2026-10-10T10:00:00+00:00"
+        },
+        {
+          "us_aqi": 32,
+          "valid_at_utc": "2026-10-10T11:00:00+00:00"
+        },
+        {
+          "us_aqi": 31,
+          "valid_at_utc": "2026-10-10T12:00:00+00:00"
+        },
+        {
+          "us_aqi": 31,
+          "valid_at_utc": "2026-10-10T13:00:00+00:00"
+        },
+        {
+          "us_aqi": 30,
+          "valid_at_utc": "2026-10-10T14:00:00+00:00"
+        },
+        {
+          "us_aqi": 30,
+          "valid_at_utc": "2026-10-10T15:00:00+00:00"
+        },
+        {
+          "us_aqi": 30,
+          "valid_at_utc": "2026-10-10T16:00:00+00:00"
+        },
+        {
+          "us_aqi": 31,
+          "valid_at_utc": "2026-10-10T17:00:00+00:00"
+        },
+        {
+          "us_aqi": 34,
+          "valid_at_utc": "2026-10-10T18:00:00+00:00"
+        },
+        {
+          "us_aqi": 38,
+          "valid_at_utc": "2026-10-10T19:00:00+00:00"
+        },
+        {
+          "us_aqi": 43,
+          "valid_at_utc": "2026-10-10T20:00:00+00:00"
+        },
+        {
+          "us_aqi": 47,
+          "valid_at_utc": "2026-10-10T21:00:00+00:00"
+        },
+        {
+          "us_aqi": 56,
+          "valid_at_utc": "2026-10-10T22:00:00+00:00"
+        },
+        {
+          "us_aqi": 68,
+          "valid_at_utc": "2026-10-10T23:00:00+00:00"
+        },
+        {
+          "us_aqi": 74,
+          "valid_at_utc": "2026-10-11T00:00:00+00:00"
+        },
+        {
+          "us_aqi": 73,
+          "valid_at_utc": "2026-10-11T01:00:00+00:00"
+        },
+        {
+          "us_aqi": 65,
+          "valid_at_utc": "2026-10-11T02:00:00+00:00"
+        },
+        {
+          "us_aqi": 53,
+          "valid_at_utc": "2026-10-11T03:00:00+00:00"
+        },
+        {
+          "us_aqi": 47,
+          "valid_at_utc": "2026-10-11T04:00:00+00:00"
+        },
+        {
+          "us_aqi": 43,
+          "valid_at_utc": "2026-10-11T05:00:00+00:00"
+        },
+        {
+          "us_aqi": 40,
+          "valid_at_utc": "2026-10-11T06:00:00+00:00"
+        },
+        {
+          "us_aqi": 40,
+          "valid_at_utc": "2026-10-11T07:00:00+00:00"
+        },
+        {
+          "us_aqi": 40,
+          "valid_at_utc": "2026-10-11T08:00:00+00:00"
+        },
+        {
+          "us_aqi": 41,
+          "valid_at_utc": "2026-10-11T09:00:00+00:00"
+        },
+        {
+          "us_aqi": 41,
+          "valid_at_utc": "2026-10-11T10:00:00+00:00"
+        },
+        {
+          "us_aqi": 41,
+          "valid_at_utc": "2026-10-11T11:00:00+00:00"
+        },
+        {
+          "us_aqi": 41,
+          "valid_at_utc": "2026-10-11T12:00:00+00:00"
+        },
+        {
+          "us_aqi": 41,
+          "valid_at_utc": "2026-10-11T13:00:00+00:00"
+        },
+        {
+          "us_aqi": 41,
+          "valid_at_utc": "2026-10-11T14:00:00+00:00"
+        },
+        {
+          "us_aqi": 41,
+          "valid_at_utc": "2026-10-11T15:00:00+00:00"
+        },
+        {
+          "us_aqi": 41,
+          "valid_at_utc": "2026-10-11T16:00:00+00:00"
+        },
+        {
+          "us_aqi": 42,
+          "valid_at_utc": "2026-10-11T17:00:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-11T18:00:00+00:00"
+        },
+        {
+          "us_aqi": 47,
+          "valid_at_utc": "2026-10-11T19:00:00+00:00"
+        },
+        {
+          "us_aqi": 50,
+          "valid_at_utc": "2026-10-11T20:00:00+00:00"
+        },
+        {
+          "us_aqi": 59,
+          "valid_at_utc": "2026-10-11T21:00:00+00:00"
+        },
+        {
+          "us_aqi": 66,
+          "valid_at_utc": "2026-10-11T22:00:00+00:00"
+        },
+        {
+          "us_aqi": 70,
+          "valid_at_utc": "2026-10-11T23:00:00+00:00"
+        }
+      ],
+      "http_attempts": 1,
+      "modeled": true,
+      "pm2_5": 5.5,
+      "raw_response_sha256": "3b32e653fec169d97c244240acb607e214e71d5e38bb4678ba6f26214888ce17",
+      "request_started_at_utc": "2026-10-10T22:51:03.008498+00:00",
+      "requested_location": {
+        "latitude": 39.0997,
+        "longitude": -94.5786
+      },
+      "response_status": 200,
+      "returned_grid_location": {
+        "latitude": 39.100006,
+        "longitude": -94.6
+      },
+      "source_id": "aq",
+      "source_url": "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=39.0997&longitude=-94.5786&current=us_aqi%2Cpm2_5&hourly=us_aqi&forecast_days=2&timezone=UTC",
+      "status": "available",
+      "units": {
+        "interval": "seconds",
+        "pm2_5": "\u03bcg/m\u00b3",
+        "time": "iso8601",
+        "us_aqi": "USAQI"
+      },
+      "us_aqi": 56,
+      "valid_at_utc": "2026-10-10T22:00:00+00:00"
+    },
+    "assessment": {
+      "assumptions": [
+        "Prototype action mappings for synthetic administrative offices; not USDA, OPM, NOAA or AirNow closure policy.",
+        "Fetch freshness and AQ age budgets are engineering assumptions.",
+        "Delay and early dismissal are manager-selectable with verified timing; not automatic recommendations."
+      ],
+      "confidence_basis": [
+        "Completeness/applicability rubric, not probability of correctness",
+        "Modeled AQ does not establish indoor conditions"
+      ],
+      "confidence_label": "moderate",
+      "evidence_ids": [
+        "aq"
+      ],
+      "matched_rules": [],
+      "missing_inputs": [],
+      "policy_version": "prototype-v1",
+      "protective_action_notice": "Closure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.",
+      "rationale_text": "No supported trigger found in fetched evidence; this is not a safety guarantee.",
+      "recommended_posture": "normal",
+      "review_status": "ready_for_manager",
+      "what_would_change": [
+        "New NWS warning/update or point applicability",
+        "AQ valid time / forecast changes",
+        "Manager verifies local access, timing or facility conditions"
+      ]
+    },
+    "collected_at_utc": "2026-10-10T22:51:03.674309+00:00",
+    "facility": {
+      "closing_time_local": "17:00",
+      "display_name": "Kansas City \u2014 Synthetic Administrative Office",
+      "facility_id": "kc-demo",
+      "latitude": 39.0997,
+      "longitude": -94.5786,
+      "minimum_notice_minutes": 30,
+      "opening_time_local": "08:00",
+      "supervisor_contact_label": "Demo facility supervisor",
+      "synthetic": true,
+      "telework_supported": true,
+      "timezone": "America/Chicago",
+      "working_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "mode": "LIVE",
+    "nws": {
+      "alerts": [],
+      "fetched_at_utc": "2026-10-10T22:51:03.226330+00:00",
+      "http_attempts": 1,
+      "location_verified": true,
+      "raw_response_sha256": "08c4c118f9db945697b75c8bd1da7dbd0ab402ef11eae1290946a99396e3f870",
+      "request_location": {
+        "latitude": 39.0997,
+        "longitude": -94.5786
+      },
+      "request_started_at_utc": "2026-10-10T22:51:02.996299+00:00",
+      "response_status": 200,
+      "source_id": "nws",
+      "source_url": "https://api.weather.gov/alerts/active?point=39.0997%2C-94.5786",
+      "status": "available"
+    },
+    "policy": {
+      "disclaimer": "Prototype action mappings for synthetic administrative offices; not USDA, OPM, NOAA or AirNow closure policy.",
+      "rules": [
+        {
+          "comparator": "category",
+          "conditions": "Actual Severe/Extreme Flood or Flash Flood Warning, point confirmed, unexpired, overlaps work period",
+          "hazard_type": "flooding",
+          "id": "FLOOD_WARNING",
+          "limitations": "Does not prove building inundation or mandate evacuation.",
+          "proposed_posture": "closure",
+          "prototype_mapping_reason": "Avoid routine onsite reporting in a warning area pending manager review.",
+          "reference_claim": "NWS supplies alert categories and instructions, not this prototype closure mapping.",
+          "reference_source_url": "https://www.weather.gov/documentation/services-web-api",
+          "required_context": "Before opening; during an ongoing shift require local emergency procedure review.",
+          "threshold": null,
+          "units": null,
+          "version": "1"
+        },
+        {
+          "comparator": "category",
+          "conditions": "Actual High Wind Warning, point confirmed, unexpired, overlaps work period, telework supported",
+          "hazard_type": "high_wind",
+          "id": "WIND_WARNING",
+          "limitations": "No invented wind speed exceedance; no route safety guarantee.",
+          "proposed_posture": "telework",
+          "prototype_mapping_reason": "Reduce routine commute exposure subject to manager review.",
+          "reference_claim": "Warning category is NWS evidence; telework is a prototype mapping.",
+          "reference_source_url": "https://www.weather.gov/documentation/services-web-api",
+          "required_context": "Facility supports telework",
+          "threshold": null,
+          "units": null,
+          "version": "1"
+        },
+        {
+          "comparator": ">=",
+          "conditions": "Fresh modeled AQ valid for the selected window and US AQI >=151",
+          "hazard_type": "poor_air_quality",
+          "id": "AQ_151",
+          "limitations": "Modeled grid estimate; not indoor or building sensor reading.",
+          "proposed_posture": "telework",
+          "prototype_mapping_reason": "Use telework candidate to reduce routine outdoor exposure; manager validates local context.",
+          "reference_claim": "AQI 151\u2013200 is the unhealthy category. This does not prescribe office closure.",
+          "reference_source_url": "https://www.airnow.gov/aqi/aqi-basics/",
+          "required_context": "Fresh valid-time evidence, telework supported",
+          "threshold": 151,
+          "units": "US AQI points",
+          "version": "1"
+        }
+      ],
+      "version": "prototype-v1"
+    },
+    "roster": [
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:51:02.882899Z",
+        "assignment_start": "2026-10-10T22:49:02.882899Z",
+        "email": "employee1@example.com",
+        "employee_id": "demo-01",
+        "essential": false,
+        "name": "Avery Hart",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:51:02.882899Z",
+        "assignment_start": "2026-10-10T22:49:02.882899Z",
+        "email": "employee2@example.com",
+        "employee_id": "demo-02",
+        "essential": false,
+        "name": "Blair Reed",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:51:02.882899Z",
+        "assignment_start": "2026-10-10T22:49:02.882899Z",
+        "email": "employee3@example.com",
+        "employee_id": "demo-03",
+        "essential": false,
+        "name": "Casey Brook",
+        "preferred_channel": "voice_accessible",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:51:02.882899Z",
+        "assignment_start": "2026-10-10T22:49:02.882899Z",
+        "email": "employee4@example.com",
+        "employee_id": "demo-04",
+        "essential": false,
+        "name": "Drew Vale",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:51:02.882899Z",
+        "assignment_start": "2026-10-10T22:49:02.882899Z",
+        "email": "employee5@example.com",
+        "employee_id": "demo-05",
+        "essential": false,
+        "name": "Ellis Lane",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:51:02.882899Z",
+        "assignment_start": "2026-10-10T22:49:02.882899Z",
+        "email": "employee6@example.com",
+        "employee_id": "demo-06",
+        "essential": false,
+        "name": "Finley Stone",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:51:02.882899Z",
+        "assignment_start": "2026-10-10T22:49:02.882899Z",
+        "email": "employee7@example.com",
+        "employee_id": "demo-07",
+        "essential": false,
+        "name": "Gray Morgan",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:51:02.882899Z",
+        "assignment_start": "2026-10-10T22:49:02.882899Z",
+        "email": "employee8@example.com",
+        "employee_id": "demo-08",
+        "essential": true,
+        "name": "Harper Quinn",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:51:02.882899Z",
+        "assignment_start": "2026-10-10T22:49:02.882899Z",
+        "email": "employee9@example.com",
+        "employee_id": "demo-09",
+        "essential": true,
+        "name": "Indigo Ray",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "telework",
+        "assignment_end": "2026-10-11T00:51:02.882899Z",
+        "assignment_start": "2026-10-10T22:49:02.882899Z",
+        "email": "employee10@example.com",
+        "employee_id": "demo-10",
+        "essential": false,
+        "name": "Jordan Lake",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "other-demo-site",
+        "assignment": "offsite",
+        "assignment_end": "2026-10-11T00:51:02.882899Z",
+        "assignment_start": "2026-10-10T22:49:02.882899Z",
+        "email": "employee11@example.com",
+        "employee_id": "demo-11",
+        "essential": false,
+        "name": "Kai Rowan",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "no_shift",
+        "assignment_end": "2026-10-11T00:51:02.882899Z",
+        "assignment_start": "2026-10-10T22:49:02.882899Z",
+        "email": "employee12@example.com",
+        "employee_id": "demo-12",
+        "essential": false,
+        "name": "Logan Fern",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      }
+    ],
+    "roster_version": "synthetic-v1",
+    "snapshot_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4",
+    "work_period": {
+      "end": "2026-10-11T00:51:02.882899Z",
+      "operating_context": "open",
+      "selected_work_date": "2026-10-10",
+      "special_shift": true,
+      "start": "2026-10-10T22:49:02.882899Z",
+      "timezone": "America/Chicago"
+    }
+  },
+  "snapshot_hash": "c7f367dfa8b9191f607a6b4e5d1f238cbcd6c3eb7b783c0275adbeeb102d8acb",
+  "ai": {
+    "model_alias": "hackathon-chat",
+    "model_calls": 3,
+    "narrative": "Strands reviewed the five frozen tools for Kansas City \u2014 Synthetic Administrative Office.\nAffected period: 2026-10-10T22:49:02.882899Z \u2192 2026-10-11T00:51:02.882899Z; facility timezone America/Chicago.\nPrototype candidate: normal; ready_for_manager. No supported trigger found in fetched evidence; this is not a safety guarantee.\nSynthetic routing preview: 12 employees; 1 deferred, 2 excluded, 9 included.\nModel-selected evidence references: 99f46678-7a8f-44cd-b4e6-82c777421fc4, https://air-quality-api.open-meteo.com/v1/air-quality?latitude=39.0997&longitude=-94.5786&current=us_aqi%2Cpm2_5&hourly=us_aqi&forecast_days=2&timezone=UTC.\nManager should verify local access, facility conditions and timing.\nEssential personnel reporting requires supervisor direction.\nAir quality is an Open-Meteo/CAMS modeled grid estimate, not an indoor measurement.\nFacts and routing above are rendered from frozen records. The human manager makes the decision; no notification is sent.",
+    "review_selection": {
+      "evidence_ids": [
+        "99f46678-7a8f-44cd-b4e6-82c777421fc4",
+        "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=39.0997&longitude=-94.5786&current=us_aqi%2Cpm2_5&hourly=us_aqi&forecast_days=2&timezone=UTC"
+      ],
+      "policy_version": "prototype-v1",
+      "review_focus": [
+        "LOCAL_ACCESS",
+        "ESSENTIAL_DIRECTIONS",
+        "MODELED_AQ_LIMITS"
+      ],
+      "snapshot_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4"
+    },
+    "safe_error_code": null,
+    "status": "active",
+    "tool_calls": 6
+  },
+  "metrics": {
+    "elapsed_ms": 44739.85,
+    "model_calls": 3,
+    "source_http_attempts": 2,
+    "successful_tool_calls": 6
+  },
+  "trace": [
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 1.03,
+      "ended_at": "2026-10-10T22:51:26.817345+00:00",
+      "evidence_ids": [
+        "99f46678-7a8f-44cd-b4e6-82c777421fc4"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T22:51:26.814094+00:00",
+      "status": "success",
+      "step_number": 1,
+      "tool_name": "read_facility_context",
+      "validated_arguments": {
+        "facility_id": "kc-demo"
+      }
+    },
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 0.37,
+      "ended_at": "2026-10-10T22:51:26.820160+00:00",
+      "evidence_ids": [
+        "99f46678-7a8f-44cd-b4e6-82c777421fc4"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T22:51:26.817910+00:00",
+      "status": "success",
+      "step_number": 2,
+      "tool_name": "read_nws_evidence",
+      "validated_arguments": {
+        "snapshot_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4"
+      }
+    },
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 0.41,
+      "ended_at": "2026-10-10T22:51:26.822549+00:00",
+      "evidence_ids": [
+        "99f46678-7a8f-44cd-b4e6-82c777421fc4"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T22:51:26.820746+00:00",
+      "status": "success",
+      "step_number": 3,
+      "tool_name": "read_air_quality_evidence",
+      "validated_arguments": {
+        "snapshot_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4"
+      }
+    },
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 0.81,
+      "ended_at": "2026-10-10T22:51:26.825941+00:00",
+      "evidence_ids": [
+        "99f46678-7a8f-44cd-b4e6-82c777421fc4"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T22:51:26.823121+00:00",
+      "status": "success",
+      "step_number": 4,
+      "tool_name": "run_policy_assessment",
+      "validated_arguments": {
+        "policy_version": "prototype-v1",
+        "snapshot_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4"
+      }
+    },
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 0.75,
+      "ended_at": "2026-10-10T22:51:26.829773+00:00",
+      "evidence_ids": [
+        "99f46678-7a8f-44cd-b4e6-82c777421fc4"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T22:51:26.826925+00:00",
+      "status": "success",
+      "step_number": 5,
+      "tool_name": "preview_employee_impact",
+      "validated_arguments": {
+        "posture": "normal",
+        "snapshot_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4"
+      }
+    },
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 0.83,
+      "ended_at": "2026-10-10T22:51:30.294677+00:00",
+      "evidence_ids": [
+        "99f46678-7a8f-44cd-b4e6-82c777421fc4"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T22:51:30.291904+00:00",
+      "status": "success",
+      "step_number": 6,
+      "tool_name": "read_facility_context",
+      "validated_arguments": {
+        "facility_id": "kc-demo"
+      }
+    }
+  ]
+}

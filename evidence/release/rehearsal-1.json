@@ -1,0 +1,30 @@
+{
+  "started_at": "2026-10-10T22:54:44.454Z",
+  "start_ms": 1791672884455,
+  "steps": [
+    {
+      "at": "2026-10-10T22:54:45.437Z",
+      "action": "evaluate_double_click"
+    },
+    {
+      "at": "2026-10-10T22:55:14.550Z",
+      "action": "review_sources_rules_confidence_while_ai_pending"
+    },
+    {
+      "at": "2026-10-10T22:55:49.685Z",
+      "action": "natural_normal_ai_active_reviewed"
+    },
+    {
+      "at": "2026-10-10T22:55:57.688Z",
+      "action": "review_essential_and_deferred_drafts"
+    },
+    {
+      "at": "2026-10-10T22:56:10.460Z",
+      "action": "replay_and_export_download"
+    }
+  ],
+  "finished_at": "2026-10-10T22:56:10.460Z",
+  "elapsed_seconds": 86.005,
+  "run_id": "342a092d-402b-4bf8-8d75-a522aa3d05c2",
+  "decision_id": "a9cfe7dc-2336-4cde-8f55-694defe160ad"
+}

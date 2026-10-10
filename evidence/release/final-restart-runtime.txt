@@ -1,0 +1,38 @@
+2026-10-10T22:59:41+00:00
+{
+  "build": "e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
+  "candidate_evaluations": 4,
+  "total_decisions": 8,
+  "total_outbox_batches": 8,
+  "active_runs": 0,
+  "per_run_counts": [
+    {
+      "run_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4",
+      "decision_count": 0,
+      "outbox_batches": 0
+    },
+    {
+      "run_id": "532ce8de-91fd-4a76-88a4-f845a706249c",
+      "decision_count": 0,
+      "outbox_batches": 0
+    },
+    {
+      "run_id": "342a092d-402b-4bf8-8d75-a522aa3d05c2",
+      "decision_count": 1,
+      "outbox_batches": 1
+    },
+    {
+      "run_id": "6d55b860-3ca5-4986-b819-7347d14b8dca",
+      "decision_count": 1,
+      "outbox_batches": 1
+    }
+  ],
+  "budgets": {
+    "tool_calls": 8,
+    "model_calls": 6,
+    "deadline_seconds": 90
+  }
+}
+SQLite backup created: /app/data/backups/closurecall-20261010T225942Z.sqlite3
+closurecall-app-1
+{"status":"ok","product":"ClosureCall","prototype":true}image_id=sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184 source_tag=closurecall-verified:e5f7801829aaa1f7cfd326e02e415f8389fa3dde started=2026-10-10T22:59:42.908771858Z user=appuser readonly=true ports={"8000/tcp":[{"HostIp":"127.0.0.1","HostPort":"8000"}]}

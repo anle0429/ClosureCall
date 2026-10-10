@@ -1,0 +1,5 @@
+2026-10-10T22:52:04+00:00
+image_id=sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184 image_tag=closurecall-verified:e5f7801829aaa1f7cfd326e02e415f8389fa3dde user=appuser readonly=true caps=["ALL"] security=["no-new-privileges:true"] ports={"8000/tcp":[{"HostIp":"127.0.0.1","HostPort":"8000"}]} started=2026-10-10T22:50:51.763543705Z healthy=healthy
+{"build": "e5f7801829aaa1f7cfd326e02e415f8389fa3dde", "python": "3.12.15", "dependencies": {"strands-agents": "1.59.0", "fastapi": "0.143.0", "pydantic": "2.14.0", "httpx": "0.28.1"}, "policy_version": "prototype-v1"}
+/app/data/backups/closurecall-20261010T215916Z.sqlite3 bytes=618496 modified=2026-10-10 21:59:16.712511539 +0000
+{"status":"ok","product":"ClosureCall","prototype":true}

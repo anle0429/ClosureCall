@@ -1,0 +1,31 @@
+{
+  "started_at": "2026-10-10T22:56:29.162Z",
+  "start_ms": 1791672989162,
+  "steps": [
+    {
+      "at": "2026-10-10T22:56:35.825Z",
+      "action": "fresh_evaluate_fixed_site"
+    },
+    {
+      "at": "2026-10-10T22:57:28.450Z",
+      "action": "review_current_watch_and_low_confidence"
+    },
+    {
+      "at": "2026-10-10T22:58:05.667Z",
+      "action": "refresh_resumed_same_run_current_watch_incomplete_ai_active"
+    },
+    {
+      "at": "2026-10-10T22:58:10.265Z",
+      "action": "empty_reason_rejected"
+    },
+    {
+      "at": "2026-10-10T22:58:25.323Z",
+      "action": "drafts_and_override_export"
+    }
+  ],
+  "finished_at": "2026-10-10T22:58:32.951Z",
+  "elapsed_seconds": 123.789,
+  "run_id": "6d55b860-3ca5-4986-b819-7347d14b8dca",
+  "decision_id": "16a170c1-af9b-4950-86b2-a3eecf1ad26b",
+  "historical_degraded_replay": "fc569eb8-54bd-4989-b9b7-fedcc46b3896"
+}

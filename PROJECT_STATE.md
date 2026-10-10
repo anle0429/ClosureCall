@@ -1,3 +1,23 @@
+# ClosureCall current V2 state
+
+Updated 2026-10-10 18:05 America/Chicago. READY_WITH_DISCLOSED_LIMITATIONS; NOT_SUBMITTED. User deferred portal/team/judge access/Submit until technical preparation is complete. Do not claim the full submission goal achieved.
+
+Runtime source e5f7801829aaa1f7cfd326e02e415f8389fa3dde; image sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184. Exact Linux 65 passed/6.29s, Windows 65 passed/8.69s. Actual backup/restart at 22:59:42 UTC, healthy and private loopback, appuser/read-only/capabilities dropped. Dependencies remain locked, Strands 1.59.0. Git master advances with documentation independently of this frozen application source.
+
+Prompt-reference clarification preserves strict allowed IDs/authority/budgets. Three new consecutive KC empty-feed runs active; one actual repeated tool within limits. Fixed-site new Actual Flood Watch is unsupported_hazard/low/no candidate; explicit synthetic closure override only. Two new browser decisions, all 12 drafts checked, downloaded exports exact. All six originals and two new bundles exact after restart. Six-record backup restored in separate container/volume after changed current bindings; zero external/recompute calls. New eight-record backup not independently restored.
+
+Cloud Manager closurecall-hackmidwest RUNNING / Chicago inspected, cropped native proof. UI tests include loading/errors/reload/double-click/Refresh/replay/export and widths 1280/720/920. Agent rehearsals 86.005/123.789s; human speaking rehearsal pending. Actual tunnel script tested on temporary 8082; stopped only that temporary tunnel, preserved 8081.
+
+Access: existing 172.234.201.174, closurecall user, strict known-host/key. http://127.0.0.1:8081/ private SSH tunnel; no public app/judge access. Private repo https://github.com/anle0429/ClosureCall for approved progress tracking. Env/database/backups/key ignored. No new paid resource, firewall/DNS/public sharing, real message or Submit.
+
+Latest backup /app/data/backups/closurecall-20261010T225942Z.sqlite3 (8 decisions). Drill backup 225050Z (6), stopped isolated container closurecall-release-restore-v2-2252 retained. Actual production code rollback not executed. Recovery details in DEMO_RECOVERY.md / RESTORE_DRILL.md.
+
+Original USDA source now supplied/read; public rules checked. Operational cutoff 2026-10-11T08:00:00-05:00; organizer-specific confirmation/eligibility/access still unknown. Old Flash Flood Warning expired 22:30 UTC October 10: REPLAY only. High-wind/high-AQ LIVE, official thresholds, local safety, enterprise delivery/SSO/accessibility and human pitch rehearsal unverified.
+
+Current evidence under evidence/release; earlier evidence under evidence/acceptance is preserved with its build/timestamps. Acceptance report has a current superseding checkpoint, not blanket challenge PASS. Final handoff is Vietnamese; UI/pitch/submission are English. User-supplied V2 package/sources remain preserved locally, not staged automatically.
+
+The following is the retained earlier checkpoint; its unresolved statuses are superseded above where new evidence exists.
+
 # ClosureCall — Project State
 Updated: 2026-10-10T22:14:25+00:00 (UTC; America/Chicago UTC-05)
 Repo: C:\Projects\ClosureCall; branch master; existing checkout preserved; one writer.

@@ -1,0 +1,11 @@
+{
+  "host_pin": "strict existing deployment_known_hosts",
+  "temporary_tunnel_closed": true,
+  "verified_at": "2026-10-10T23:05:35.4131867Z",
+  "existing_8081_preserved": true,
+  "default_ui_width": 920,
+  "script": "scripts/open_tunnel.ps1 -LocalPort 8082",
+  "temporary_loopback_tunnel_worked": true,
+  "existing_8081_health": "ok",
+  "default_document_width": 905
+}

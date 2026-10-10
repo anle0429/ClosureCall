@@ -1,0 +1,38 @@
+{
+  "at": "2026-10-10T22:51:02.588151+00:00",
+  "build": "e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
+  "run_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4",
+  "status": "ready",
+  "collected_at": null,
+  "nws_status": "available",
+  "alert_count": 0,
+  "aq_status": "available",
+  "ai": {
+    "model_alias": "hackathon-chat",
+    "model_calls": 3,
+    "narrative": "Strands reviewed the five frozen tools for Kansas City \u2014 Synthetic Administrative Office.\nAffected period: 2026-10-10T22:49:02.882899Z \u2192 2026-10-11T00:51:02.882899Z; facility timezone America/Chicago.\nPrototype candidate: normal; ready_for_manager. No supported trigger found in fetched evidence; this is not a safety guarantee.\nSynthetic routing preview: 12 employees; 1 deferred, 2 excluded, 9 included.\nModel-selected evidence references: 99f46678-7a8f-44cd-b4e6-82c777421fc4, https://air-quality-api.open-meteo.com/v1/air-quality?latitude=39.0997&longitude=-94.5786&current=us_aqi%2Cpm2_5&hourly=us_aqi&forecast_days=2&timezone=UTC.\nManager should verify local access, facility conditions and timing.\nEssential personnel reporting requires supervisor direction.\nAir quality is an Open-Meteo/CAMS modeled grid estimate, not an indoor measurement.\nFacts and routing above are rendered from frozen records. The human manager makes the decision; no notification is sent.",
+    "review_selection": {
+      "evidence_ids": [
+        "99f46678-7a8f-44cd-b4e6-82c777421fc4",
+        "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=39.0997&longitude=-94.5786&current=us_aqi%2Cpm2_5&hourly=us_aqi&forecast_days=2&timezone=UTC"
+      ],
+      "policy_version": "prototype-v1",
+      "review_focus": [
+        "LOCAL_ACCESS",
+        "ESSENTIAL_DIRECTIONS",
+        "MODELED_AQ_LIMITS"
+      ],
+      "snapshot_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4"
+    },
+    "safe_error_code": null,
+    "status": "active",
+    "tool_calls": 6
+  },
+  "metrics": {
+    "elapsed_ms": 44739.85,
+    "model_calls": 3,
+    "source_http_attempts": 2,
+    "successful_tool_calls": 6
+  },
+  "assessment": null
+}

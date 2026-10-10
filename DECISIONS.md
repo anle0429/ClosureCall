@@ -42,3 +42,12 @@
 - User explicitly requested pushing to GitHub to track progress. Use a private repository in the already signed-in personal account, anle0429/ClosureCall. Preserve the existing master branch and all commits; no history rewrite, force push, generated starter files or application deployment.
 - Scan complete reachable history as well as current tracked files before the first push. Keep environment files, runtime data, backups and SSH keys outside Git; HTTPS remote contains no credentials, and Git Credential Manager handles authentication.
 - Verified first remote checkpoint daebe1a by git ls-remote. Documentation records the private remote; public visibility, collaborator access and actual challenge submission remain separate authorization steps.
+
+## V2 verified release decisions — 2026-10-10
+- Runtime 75300d4 versus docs daebe1a/6076307 differed only in docs/evidence; no blind redeploy for SHA matching. Deploy e5f7801 only after a necessary prompt fix and exact-image tests.
+- New frozen-input model diagnostic selected NWS request URL as evidence ID; reject remained correct. Share existing ID set with prompt, enumerate it, cite empty NWS by snapshot ID. No schema relaxation, retry, provider/SDK change or new agent. Original historical exact error remains unknowable from safe log.
+- Three consecutive new KC active samples suffice for bounded verification, not reliability statistics. Four total V2 live evaluations used; avoid repeated weather/model calls just for prettier evidence.
+- Keep fixed site/thresholds unchanged. New Watch stays incomplete/low/unsupported; test override explicitly synthetic. Historical expired warning never reused as current LIVE.
+- Restore with distinct volume/container/internal network/random test auth and no inference key. Read-only Docker cp failure fixed by stdin/tmpfs verification, without weakened isolation. Actual Uvicorn HTTP ran inside container; host port 8002 was unreachable. Stop drill container; retain original backups/data/resources.
+- Code/policy/dependencies frozen at e5f7801; docs commit tracked separately. Existing explicit private progress-push authorization covers reviewed checkpoints on same origin/master, no force/public/access grants. User package files preserved and not auto-staged.
+- User handles portal/team/judge access/Submit after technical readiness. No fabricated receipt or completed-goal status; finish independent technical work and handoff.

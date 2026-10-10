@@ -1,0 +1,33 @@
+closurecall-release-restore-v2-2252
+{"status":"ok","product":"ClosureCall","prototype":true}
+{
+  "mode": "ISOLATED_RESTORE_NOT_LIVE",
+  "build": "e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
+  "actual_uvicorn_http_matched": 6,
+  "database_integrity": "ok",
+  "production_inference_secret_present": false,
+  "forbidden_calls": 0,
+  "current_rules_changed": true,
+  "current_roster_changed": true,
+  "cycles": [
+    {
+      "lifespan_cycle": 1,
+      "matched_decisions": 6,
+      "replay_export_outbox_exact": true
+    },
+    {
+      "lifespan_cycle": 2,
+      "matched_decisions": 6,
+      "replay_export_outbox_exact": true
+    }
+  ],
+  "hashes": {
+    "fc569eb8-54bd-4989-b9b7-fedcc46b3896": "a5ff2acb07cc6f8e22cf038ca0a5301995af7c2f16b7ab6ff30695907ff8bb41",
+    "2efe6988-a638-4887-a15a-abc3319e5879": "4b5b9b42c30069005c51bdc0c2cc963f21c61c9fefcd46bc03ea84edc56039a0",
+    "4542c699-e59f-4f1f-ae5d-54b82c915333": "89bc46643aa450b817bee6dc3aebefe72051f7bf58627d5782cc445de4bb9644",
+    "9c022ef8-90ac-4f06-848f-24b232c35180": "0f7eb679fd1d217690cb07a6cd141ce419f2d30a5dfc7c0faefa6a8073c53e28",
+    "8cfdc9a8-6daa-4576-b901-a93c8a7a1a25": "24f30574cb8effc110d38f62bd820a55d47f5770ebcd187784a32643a744902a",
+    "cf6d7432-7246-49d0-96ce-cb3da56d7f89": "ec8f0456b3a4ff15be12a815e0526ad1892d7e7f6267d49903cf3e483ccb3705"
+  }
+}
+closurecall-release-restore-v2-2252

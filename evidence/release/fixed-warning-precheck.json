@@ -1,0 +1,93 @@
+{
+  "mode": "LIVE_POINT_PRECHECK_NOT_EVALUATION",
+  "checked_at": "2026-10-10T22:54:59.224667+00:00",
+  "facility": {
+    "closing_time_local": "17:00",
+    "display_name": "Synthetic site \u2014 Flash Flood Warning",
+    "facility_id": "site-b1a88d67-83cb-4c8c-a4b2-220f29254ed6",
+    "latitude": 33.34,
+    "location_verification": "NWS point endpoint confirmed",
+    "longitude": -82.08478124999999,
+    "minimum_notice_minutes": 30,
+    "opening_time_local": "08:00",
+    "source_alert_id": "urn:oid:2.49.0.1.840.0.26dc00bc166d39d7a3259fdccec35ec99f0c8d8e.001.1",
+    "supervisor_contact_label": "Demo facility supervisor",
+    "synthetic": true,
+    "telework_supported": true,
+    "timezone": "America/New_York",
+    "working_days": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "nws": {
+    "source_url": "https://api.weather.gov/alerts/active?point=33.34%2C-82.08478124999999",
+    "fetched_at_utc": "2026-10-10T22:54:59.223166+00:00",
+    "request_started_at_utc": "2026-10-10T22:54:58.652402+00:00",
+    "http_attempts": 1,
+    "response_status": 200,
+    "raw_response_sha256": "f2a49db88903b888104617293785759559447bc229db3284f3046acf049fff67",
+    "status": "available",
+    "source_id": "nws",
+    "request_location": {
+      "latitude": 33.34,
+      "longitude": -82.08478124999999
+    },
+    "alerts": [
+      {
+        "event": "Flood Watch",
+        "status": "Actual",
+        "message_type": "Update",
+        "severity": "Severe",
+        "certainty": "Possible",
+        "urgency": "Future",
+        "sent": "2026-10-10T08:39:00-04:00",
+        "effective": "2026-10-10T08:39:00-04:00",
+        "onset": "2026-10-10T08:39:00-04:00",
+        "expires": "2026-10-11T08:00:00-04:00",
+        "ends": "2026-10-11T08:00:00-04:00",
+        "area_desc": "Lincoln; McDuffie; Columbia; Richmond; Burke; McCormick; Edgefield; Aiken; Barnwell; Bamberg; Northwestern Orangeburg; Central Orangeburg; Southeastern Orangeburg",
+        "affected_zones": [
+          "https://api.weather.gov/zones/forecast/GAZ040",
+          "https://api.weather.gov/zones/forecast/GAZ063",
+          "https://api.weather.gov/zones/forecast/GAZ064",
+          "https://api.weather.gov/zones/forecast/GAZ065",
+          "https://api.weather.gov/zones/forecast/GAZ077",
+          "https://api.weather.gov/zones/forecast/SCZ018",
+          "https://api.weather.gov/zones/forecast/SCZ025",
+          "https://api.weather.gov/zones/forecast/SCZ030",
+          "https://api.weather.gov/zones/forecast/SCZ035",
+          "https://api.weather.gov/zones/forecast/SCZ041",
+          "https://api.weather.gov/zones/forecast/SCZ135",
+          "https://api.weather.gov/zones/forecast/SCZ136",
+          "https://api.weather.gov/zones/forecast/SCZ137"
+        ],
+        "headline": "Flood Watch issued October 10 at 8:39AM EDT until October 11 at 8:00AM EDT by NWS Columbia SC",
+        "description": "* WHAT...Flash flooding caused by excessive rainfall continues to be\npossible.\n\n* WHERE...Portions of east central Georgia, including the following\nareas, Burke, Columbia, Lincoln, McDuffie and Richmond and central\nSouth Carolina, including the following areas, Aiken, Bamberg,\nBarnwell, Central Orangeburg, Edgefield, McCormick, Northwestern\nOrangeburg and Southeastern Orangeburg.\n\n* WHEN...Through Sunday morning.\n\n* IMPACTS...Excessive runoff may result in flooding of rivers,\ncreeks, streams, and other low-lying and flood-prone locations.\nCreeks and streams may rise out of their banks. Flooding may occur\nin poor drainage and urban areas.\n\n* ADDITIONAL DETAILS...\n- Periods of heavy rainfall are possible today, with highest\namounts expected in the CSRA and southern Midlands. Rainfall\ntotals of 3-6\" are possible from this morning through tonight.\n- http://www.weather.gov/safety/flood",
+        "instruction": "You should monitor later forecasts and be prepared to take action\nshould Flash Flood Warnings be issued.",
+        "references": [
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.21681b4d0453cf40726a6edfd7740f8205dc0638.001.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.21681b4d0453cf40726a6edfd7740f8205dc0638.001.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-10-10T01:32:00-04:00"
+          },
+          {
+            "@id": "https://api.weather.gov/alerts/urn:oid:2.49.0.1.840.0.21681b4d0453cf40726a6edfd7740f8205dc0638.002.1",
+            "identifier": "urn:oid:2.49.0.1.840.0.21681b4d0453cf40726a6edfd7740f8205dc0638.002.1",
+            "sender": "w-nws.webmaster@noaa.gov",
+            "sent": "2026-10-10T01:32:00-04:00"
+          }
+        ],
+        "alert_id": "urn:oid:2.49.0.1.840.0.45c518d06640190ce0331ea66f91925d1858fbba.001.1",
+        "geometry": null,
+        "applicability_status": "point_confirmed",
+        "applicability_reason": "Returned by NWS point endpoint"
+      }
+    ],
+    "location_verified": true
+  }
+}

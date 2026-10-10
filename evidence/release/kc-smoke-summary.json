@@ -1,0 +1,223 @@
+{
+  "checked_at": "2026-10-10T23:00:26.950328+00:00",
+  "build": "e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
+  "three_consecutive_kc_live": [
+    {
+      "run_id": "99f46678-7a8f-44cd-b4e6-82c777421fc4",
+      "collected_at": "2026-10-10T22:51:03.674309+00:00",
+      "nws_fetched_at": "2026-10-10T22:51:03.226330+00:00",
+      "aq_valid_at": "2026-10-10T22:00:00+00:00",
+      "aq_value": 56,
+      "status": "ready",
+      "ai_status": "active",
+      "safe_error_code": null,
+      "metrics": {
+        "elapsed_ms": 44739.85,
+        "model_calls": 3,
+        "source_http_attempts": 2,
+        "successful_tool_calls": 6
+      },
+      "unique_tools": 5
+    },
+    {
+      "run_id": "532ce8de-91fd-4a76-88a4-f845a706249c",
+      "collected_at": "2026-10-10T22:52:38.239892+00:00",
+      "nws_fetched_at": "2026-10-10T22:52:37.918936+00:00",
+      "aq_valid_at": "2026-10-10T22:00:00+00:00",
+      "aq_value": 56,
+      "status": "ready",
+      "ai_status": "active",
+      "safe_error_code": null,
+      "metrics": {
+        "elapsed_ms": 32085.52,
+        "model_calls": 2,
+        "source_http_attempts": 2,
+        "successful_tool_calls": 5
+      },
+      "unique_tools": 5
+    },
+    {
+      "run_id": "342a092d-402b-4bf8-8d75-a522aa3d05c2",
+      "collected_at": "2026-10-10T22:54:46.018830+00:00",
+      "nws_fetched_at": "2026-10-10T22:54:45.739466+00:00",
+      "aq_valid_at": "2026-10-10T22:00:00+00:00",
+      "aq_value": 56,
+      "status": "ready",
+      "ai_status": "active",
+      "safe_error_code": null,
+      "metrics": {
+        "elapsed_ms": 37463.64,
+        "model_calls": 2,
+        "source_http_attempts": 2,
+        "successful_tool_calls": 5
+      },
+      "unique_tools": 5
+    }
+  ],
+  "approved_ui_decision": "a9cfe7dc-2336-4cde-8f55-694defe160ad",
+  "browser_download_export_replay_exact": true,
+  "counts": {
+    "deferred": 1,
+    "excluded": 2,
+    "included": 9
+  },
+  "all_12_drafts_reviewed": true,
+  "roster": [
+    {
+      "employee_id": "demo-01",
+      "name": "Avery Hart",
+      "assignment": "onsite",
+      "essential": false,
+      "telework_eligible": true,
+      "routing_status": "included",
+      "channel": "app_inbox",
+      "reason": "Assigned onsite in affected work period",
+      "instruction": "No supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.",
+      "follow_up": null,
+      "notification_status": "queued_demo"
+    },
+    {
+      "employee_id": "demo-02",
+      "name": "Blair Reed",
+      "assignment": "onsite",
+      "essential": false,
+      "telework_eligible": true,
+      "routing_status": "included",
+      "channel": "app_inbox",
+      "reason": "Assigned onsite in affected work period",
+      "instruction": "No supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.",
+      "follow_up": null,
+      "notification_status": "queued_demo"
+    },
+    {
+      "employee_id": "demo-03",
+      "name": "Casey Brook",
+      "assignment": "onsite",
+      "essential": false,
+      "telework_eligible": true,
+      "routing_status": "included",
+      "channel": "voice_accessible",
+      "reason": "Assigned onsite in affected work period",
+      "instruction": "No supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.",
+      "follow_up": null,
+      "notification_status": "queued_demo"
+    },
+    {
+      "employee_id": "demo-04",
+      "name": "Drew Vale",
+      "assignment": "onsite",
+      "essential": false,
+      "telework_eligible": true,
+      "routing_status": "included",
+      "channel": "app_inbox",
+      "reason": "Assigned onsite in affected work period",
+      "instruction": "No supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.",
+      "follow_up": null,
+      "notification_status": "queued_demo"
+    },
+    {
+      "employee_id": "demo-05",
+      "name": "Ellis Lane",
+      "assignment": "onsite",
+      "essential": false,
+      "telework_eligible": true,
+      "routing_status": "included",
+      "channel": "app_inbox",
+      "reason": "Assigned onsite in affected work period",
+      "instruction": "No supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.",
+      "follow_up": null,
+      "notification_status": "queued_demo"
+    },
+    {
+      "employee_id": "demo-06",
+      "name": "Finley Stone",
+      "assignment": "onsite",
+      "essential": false,
+      "telework_eligible": false,
+      "routing_status": "included",
+      "channel": "app_inbox",
+      "reason": "Assigned onsite in affected work period",
+      "instruction": "No supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.",
+      "follow_up": null,
+      "notification_status": "queued_demo"
+    },
+    {
+      "employee_id": "demo-07",
+      "name": "Gray Morgan",
+      "assignment": "onsite",
+      "essential": false,
+      "telework_eligible": false,
+      "routing_status": "included",
+      "channel": "app_inbox",
+      "reason": "Assigned onsite in affected work period",
+      "instruction": "No supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.",
+      "follow_up": null,
+      "notification_status": "queued_demo"
+    },
+    {
+      "employee_id": "demo-08",
+      "name": "Harper Quinn",
+      "assignment": "onsite",
+      "essential": true,
+      "telework_eligible": false,
+      "routing_status": "included",
+      "channel": "app_inbox",
+      "reason": "Assigned onsite in affected work period",
+      "instruction": "Essential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.",
+      "follow_up": null,
+      "notification_status": "queued_demo"
+    },
+    {
+      "employee_id": "demo-09",
+      "name": "Indigo Ray",
+      "assignment": "onsite",
+      "essential": true,
+      "telework_eligible": false,
+      "routing_status": "included",
+      "channel": "app_inbox",
+      "reason": "Assigned onsite in affected work period",
+      "instruction": "Essential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.",
+      "follow_up": null,
+      "notification_status": "queued_demo"
+    },
+    {
+      "employee_id": "demo-10",
+      "name": "Jordan Lake",
+      "assignment": "telework",
+      "essential": false,
+      "telework_eligible": true,
+      "routing_status": "deferred",
+      "channel": "app_inbox",
+      "reason": "Already scheduled for telework; informational inbox only",
+      "instruction": "Informational update only; continue scheduled telework unless your supervisor directs otherwise.",
+      "follow_up": "Supervisor reviews the informational draft before the assigned shift starts, or immediately if the shift is already underway. If the employee is reassigned onsite, re-evaluate the updated assignment and record a new manager decision; otherwise continue scheduled telework. This is a manual follow-up step, not an automatic send or scheduled job.",
+      "notification_status": "draft"
+    },
+    {
+      "employee_id": "demo-11",
+      "name": "Kai Rowan",
+      "assignment": "offsite",
+      "essential": false,
+      "telework_eligible": false,
+      "routing_status": "excluded",
+      "channel": null,
+      "reason": "Current detail/assignment is at another site",
+      "instruction": "No urgent instruction for this site assignment.",
+      "follow_up": null,
+      "notification_status": "draft"
+    },
+    {
+      "employee_id": "demo-12",
+      "name": "Logan Fern",
+      "assignment": "no_shift",
+      "essential": false,
+      "telework_eligible": false,
+      "routing_status": "excluded",
+      "channel": null,
+      "reason": "No assigned shift during affected work period",
+      "instruction": "No urgent instruction for this site assignment.",
+      "follow_up": null,
+      "notification_status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "HISTORICAL_INPUT_DIAGNOSTIC_NEW_MODEL_CALLS_NOT_LIVE_OR_REPLAY",
+  "started_at": "2026-10-10T22:42:46.550538+00:00",
+  "ended_at": "2026-10-10T22:43:24.120535+00:00",
+  "source_snapshot_id": "9f0eeb64-a9f3-4660-881e-e9ffd36e2192",
+  "source_collected_at": "2026-10-10T21:57:40.557766+00:00",
+  "nws_status": "available",
+  "nws_alert_count": 0,
+  "review_status": "ready_for_manager",
+  "observations": [
+    {
+      "stage": "schema_or_reference_validation",
+      "snapshot_matches": true,
+      "policy_matches": true,
+      "known_selected_references": [
+        "9f0eeb64-a9f3-4660-881e-e9ffd36e2192",
+        "https://api.weather.gov/alerts/active?point=39.0997%2C-94.5786",
+        "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=39.0997&longitude=-94.5786&current=us_aqi%2Cpm2_5&hourly=us_aqi&forecast_days=2&timezone=UTC"
+      ],
+      "unknown_reference_count": 0,
+      "known_review_focus": [
+        "LOCAL_ACCESS",
+        "ESSENTIAL_DIRECTIONS",
+        "MODELED_AQ_LIMITS"
+      ],
+      "status": "REJECTED",
+      "exception_class": "ValueError",
+      "validation_code": "UNKNOWN_EVIDENCE_REFERENCE"
+    }
+  ],
+  "result_status": "degraded",
+  "safe_error_code": "ValueError",
+  "model_calls": 2,
+  "successful_tools": 5,
+  "elapsed_ms": 37569.99,
+  "source_http_attempts": 0,
+  "decision_or_send_calls": 0,
+  "source_build": "75300d4"
+}

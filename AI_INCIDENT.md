@@ -1,0 +1,13 @@
+# KC zero-alert incident
+
+Historical runtime `75300d4` recorded a degraded KC run with `safe_error_code=ValueError`, five successful tools and two model calls. The historical raw model response was not persisted, so its precise failure reason cannot be recovered from that log.
+
+At 2026-10-10 22:42:46–22:43:24 UTC, a **new model call on frozen historical input** reproduced rejection. This was neither LIVE evidence nor historical replay: NWS/AQ were not fetched and no decision/outbox action occurred. Structured allowlisted diagnostics showed matching snapshot/policy, valid focus values, and selection of the NWS request URL. The validator correctly rejected `UNKNOWN_EVIDENCE_REFERENCE`: accepted IDs are the snapshot ID, AQ URL and actual alert IDs, not the NWS collection URL. Unknown raw reference strings and model prose were not logged.
+
+Minimal candidate change: share the pre-existing allowed-ID set between prompt construction and validation; explicitly enumerate it and explain empty-feed NWS citation by snapshot ID. The accepted set, strict schema, authority boundaries and configured budgets/fallback stay unchanged. There are five distinct read-only tools; repeat calls count toward the existing eight-tool/six-model-call limits. Historical five/two counts were observations, not configured limits. No provider/SDK/dependency changes or output retries.
+
+Regression before fix: prompt contract cases for empty/nonempty NWS failed twice; strict URL rejection passed. Candidate Windows: 65 tests passed in 8.69 seconds, including invalid facts/IDs, SDK tool-loop, budgets/timeouts, source failure, prompt injection and workflow/replay guards. This does not establish live model reliability.
+
+Investigation limit: 22:40 UTC to 00:10 UTC (90 minutes), at most two hypothesis rounds; one diagnostic round used. Completed within the limit. Exact-image Linux: 65 passed in 6.29s. Three consecutive fresh KC evaluations on e5f7801 were active, with strict references accepted: 99f46678, 532ce8de, 342a092d (full IDs in evidence/release/kc-smoke-summary.json). Each observed real empty NWS and modeled AQ. Counts were 6 tools/3 model calls, then 5/2, then 5/2; all five distinct tools were covered. Fourth fixed-site Flood Watch evaluation also had active 5/2 but remained unsupported_hazard, low confidence and no candidate.
+
+Status: VERIFIED_FIXED_FOR_OBSERVED_KC_SMOKE_SCOPE. The original historical call's exact rejection remains unverified. This small sample does not guarantee future AI availability or universal success. Historical degraded records remain unchanged and the browser fallback rehearsal explicitly replayed one, without presenting it as a new failure or LIVE input. No raw diagnostic logging was enabled in the deployed code.

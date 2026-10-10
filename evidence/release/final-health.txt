@@ -1,0 +1,8 @@
+2026-10-10T23:07:43+00:00
+health=healthy image=sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184 tag=closurecall-verified:e5f7801829aaa1f7cfd326e02e415f8389fa3dde started=2026-10-10T22:59:42.908771858Z user=appuser readonly=true caps=["ALL"] security=["no-new-privileges:true"] ports={"8000/tcp":[{"HostIp":"127.0.0.1","HostPort":"8000"}]}
+registry_digests=["closurecall-verified@sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184"]
+3131e3b36c7407054bce0d7cbfe698dd6563dfdf86faff9fd4889700f1a348f6  /app/data/backups/closurecall-20261010T215916Z.sqlite3
+3131e3b36c7407054bce0d7cbfe698dd6563dfdf86faff9fd4889700f1a348f6  /app/data/backups/closurecall-20261010T225050Z.sqlite3
+0992c1f1b4f8297ad04f2280ffe00b72c83f2d168cc42e73d3da0f03c27c537b  /app/data/backups/closurecall-20261010T225942Z.sqlite3
+private_env_mode=600
+{"status":"ok","product":"ClosureCall","prototype":true}

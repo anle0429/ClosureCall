@@ -26,4 +26,6 @@ git rev-parse HEAD
 git ls-remote origin refs/heads/master
 ```
 
-The last two full hashes must match. Never force-push merely to resolve a rejected update; fetch and review remote changes first. No automatic deployment or notification sending is configured by this push. The frozen Linode application remains commit 75300d4ef4b86f8175be9f17f1fa291b00f9d7b9, accessed through the existing private tunnel. Public visibility, collaborator grants, judging access and actual submission remain separate decisions.
+The last two full hashes must match. Never force-push merely to resolve a rejected update; fetch and review remote changes first. No automatic deployment or notification sending is configured by this push. V2 application source is e5f7801829aaa1f7cfd326e02e415f8389fa3dde, explicitly tested and deployed through SSH separately from GitHub progress. It remains private. Public visibility, collaborator grants, judging access and actual submission remain separate decisions.
+
+V2 progress includes the minimal prompt fix, exact-image test evidence, three fresh KC smokes, current fixed-site Watch review/controlled override, native Cloud Manager proof, isolated backup restore, measured agent UI rehearsals and updated acceptance/demo/submission handoff. User-supplied untracked goal package/sources remain local; environment/database/backups/SSH key remain ignored. RELEASE_MANIFEST.json separates application source/image from the reviewed documentation checkpoint; later metadata commits do not redeploy the app.

@@ -1,0 +1,64 @@
+{
+  "at": "2026-10-10T22:52:37.479181+00:00",
+  "build": "e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
+  "run_id": "532ce8de-91fd-4a76-88a4-f845a706249c",
+  "status": "ready",
+  "collected_at": "2026-10-10T22:52:38.239892+00:00",
+  "nws_status": "available",
+  "alert_count": 0,
+  "aq_status": "available",
+  "ai": {
+    "model_alias": "hackathon-chat",
+    "model_calls": 2,
+    "narrative": "Strands reviewed the five frozen tools for Kansas City \u2014 Synthetic Administrative Office.\nAffected period: 2026-10-10T22:50:37.644724Z \u2192 2026-10-11T00:52:37.644724Z; facility timezone America/Chicago.\nPrototype candidate: normal; ready_for_manager. No supported trigger found in fetched evidence; this is not a safety guarantee.\nSynthetic routing preview: 12 employees; 1 deferred, 2 excluded, 9 included.\nModel-selected evidence references: 532ce8de-91fd-4a76-88a4-f845a706249c, https://air-quality-api.open-meteo.com/v1/air-quality?latitude=39.0997&longitude=-94.5786&current=us_aqi%2Cpm2_5&hourly=us_aqi&forecast_days=2&timezone=UTC.\nManager should verify local access, facility conditions and timing.\nEssential personnel reporting requires supervisor direction.\nAir quality is an Open-Meteo/CAMS modeled grid estimate, not an indoor measurement.\nFacts and routing above are rendered from frozen records. The human manager makes the decision; no notification is sent.",
+    "review_selection": {
+      "evidence_ids": [
+        "532ce8de-91fd-4a76-88a4-f845a706249c",
+        "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=39.0997&longitude=-94.5786&current=us_aqi%2Cpm2_5&hourly=us_aqi&forecast_days=2&timezone=UTC"
+      ],
+      "policy_version": "prototype-v1",
+      "review_focus": [
+        "LOCAL_ACCESS",
+        "ESSENTIAL_DIRECTIONS",
+        "MODELED_AQ_LIMITS"
+      ],
+      "snapshot_id": "532ce8de-91fd-4a76-88a4-f845a706249c"
+    },
+    "safe_error_code": null,
+    "status": "active",
+    "tool_calls": 5
+  },
+  "metrics": {
+    "elapsed_ms": 32085.52,
+    "model_calls": 2,
+    "source_http_attempts": 2,
+    "successful_tool_calls": 5
+  },
+  "assessment": {
+    "assumptions": [
+      "Prototype action mappings for synthetic administrative offices; not USDA, OPM, NOAA or AirNow closure policy.",
+      "Fetch freshness and AQ age budgets are engineering assumptions.",
+      "Delay and early dismissal are manager-selectable with verified timing; not automatic recommendations."
+    ],
+    "confidence_basis": [
+      "Completeness/applicability rubric, not probability of correctness",
+      "Modeled AQ does not establish indoor conditions"
+    ],
+    "confidence_label": "moderate",
+    "evidence_ids": [
+      "aq"
+    ],
+    "matched_rules": [],
+    "missing_inputs": [],
+    "policy_version": "prototype-v1",
+    "protective_action_notice": "Closure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.",
+    "rationale_text": "No supported trigger found in fetched evidence; this is not a safety guarantee.",
+    "recommended_posture": "normal",
+    "review_status": "ready_for_manager",
+    "what_would_change": [
+      "New NWS warning/update or point applicability",
+      "AQ valid time / forecast changes",
+      "Manager verifies local access, timing or facility conditions"
+    ]
+  }
+}

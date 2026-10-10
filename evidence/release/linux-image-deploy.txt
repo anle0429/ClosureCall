@@ -1,0 +1,69 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 588B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#2 DONE 0.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 143B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#4 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 113.74kB 0.0s done
+#5 DONE 0.0s
+
+#6 [2/7] WORKDIR /app
+#6 CACHED
+
+#7 [3/7] COPY requirements.txt requirements-linux.lock ./
+#7 CACHED
+
+#8 [4/7] RUN pip install -r requirements-linux.lock && pip check
+#8 CACHED
+
+#9 [5/7] COPY app ./app
+#9 DONE 0.0s
+
+#10 [6/7] COPY scripts ./scripts
+#10 DONE 0.0s
+
+#11 [7/7] RUN useradd --create-home --uid 10001 appuser && mkdir -p /app/data && chown -R appuser:appuser /app
+#11 DONE 0.3s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.2s done
+#12 exporting manifest sha256:2b061bf2d3501ad4d83bea717febb838ea44fbdf0496058498470a93edfd58c5
+#12 exporting manifest sha256:2b061bf2d3501ad4d83bea717febb838ea44fbdf0496058498470a93edfd58c5 done
+#12 exporting config sha256:a6ff77486378df9bcc917582b5d67f4f17ae2c788acd6572abf7b4d400626dc1 0.0s done
+#12 exporting attestation manifest sha256:e4dad26285a5398c8d076296963837b4686bc26f37e64f023a21d9470e131e46 done
+#12 exporting manifest list sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184 done
+#12 naming to docker.io/library/closurecall-verified:e5f7801829aaa1f7cfd326e02e415f8389fa3dde done
+#12 unpacking to docker.io/library/closurecall-verified:e5f7801829aaa1f7cfd326e02e415f8389fa3dde 0.1s done
+#12 DONE 0.3s
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+.................................................................        [100%]
+65 passed in 6.29s
+SQLite backup created: /app/data/backups/closurecall-20261010T225050Z.sqlite3
+ Container closurecall-app-1 Recreate
+ Container closurecall-app-1 Recreated
+ Container closurecall-app-1 Starting
+ Container closurecall-app-1 Started
+NAME                IMAGE                                                           COMMAND                  SERVICE   CREATED         STATUS                            PORTS
+closurecall-app-1   closurecall-verified:e5f7801829aaa1f7cfd326e02e415f8389fa3dde   "python -m uvicorn a…"   app       3 seconds ago   Up 2 seconds (health: starting)   127.0.0.1:8000->8000/tcp
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+{"status":"ok","product":"ClosureCall","prototype":true}Next: remote live source smoke + authenticated workflow, restart replay, listener/firewall verification.
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100    56  100    56    0     0   9864      0 --:--:-- --:--:-- --:--:-- 11200

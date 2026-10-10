@@ -1,0 +1,62 @@
+FF.                                                                      [100%]
+================================== FAILURES ===================================
+_____ test_prompt_scopes_model_references_to_frozen_contract[alert_ids0] ______
+
+snapshot = {'mode': 'LIVE', 'test_evidence_label': 'SYNTHETIC TEST ONLY — never live fallback', 'snapshot_id': 'synthetic-run', 'collected_at_utc': '2026-10-10T22:44:46.362378+00:00', ...}
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FC0574B230>
+alert_ids = []
+
+    @pytest.mark.parametrize('alert_ids',[[],['urn:synthetic-warning']])
+    def test_prompt_scopes_model_references_to_frozen_contract(snapshot,monkeypatch,alert_ids):
+        import json
+        import app.agent.worker as worker
+        snapshot['nws']['alerts']=[{'alert_id':value} for value in alert_ids]
+        captured=[]
+        def agent(prompt):
+            captured.append(prompt)
+            return json.dumps({'snapshot_id':snapshot['snapshot_id'],'policy_version':snapshot['policy']['version'],
+                'evidence_ids':[snapshot['snapshot_id']],'review_focus':['LOCAL_ACCESS']})
+        budget=SimpleNamespace(trace=[{'tool_name':name,'status':'success'} for name in (
+            'read_facility_context','read_nws_evidence','read_air_quality_evidence',
+            'run_policy_assessment','preview_employee_impact')],exhausted=False,model_calls=2,tool_calls=5)
+        monkeypatch.setattr(worker,'make_agent',lambda frozen:(agent,budget))
+        result=worker.run(snapshot)
+        assert result['status']=='active'
+        marker='Allowed evidence_ids: '
+>       assert marker in captured[0], 'The model needs an explicit list when a valid NWS feed has no alert IDs.'
+E       AssertionError: The model needs an explicit list when a valid NWS feed has no alert IDs.
+E       assert 'Allowed evidence_ids: ' in 'Read all five tools and summarize this run. facility_id=kc-demo; snapshot_id=synthetic-run; policy_version=prototype-v1; posture=normal'
+
+tests\test_agent.py:136: AssertionError
+_____ test_prompt_scopes_model_references_to_frozen_contract[alert_ids1] ______
+
+snapshot = {'mode': 'LIVE', 'test_evidence_label': 'SYNTHETIC TEST ONLY — never live fallback', 'snapshot_id': 'synthetic-run', 'collected_at_utc': '2026-10-10T22:44:47.169807+00:00', ...}
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001FC0574B6F0>
+alert_ids = ['urn:synthetic-warning']
+
+    @pytest.mark.parametrize('alert_ids',[[],['urn:synthetic-warning']])
+    def test_prompt_scopes_model_references_to_frozen_contract(snapshot,monkeypatch,alert_ids):
+        import json
+        import app.agent.worker as worker
+        snapshot['nws']['alerts']=[{'alert_id':value} for value in alert_ids]
+        captured=[]
+        def agent(prompt):
+            captured.append(prompt)
+            return json.dumps({'snapshot_id':snapshot['snapshot_id'],'policy_version':snapshot['policy']['version'],
+                'evidence_ids':[snapshot['snapshot_id']],'review_focus':['LOCAL_ACCESS']})
+        budget=SimpleNamespace(trace=[{'tool_name':name,'status':'success'} for name in (
+            'read_facility_context','read_nws_evidence','read_air_quality_evidence',
+            'run_policy_assessment','preview_employee_impact')],exhausted=False,model_calls=2,tool_calls=5)
+        monkeypatch.setattr(worker,'make_agent',lambda frozen:(agent,budget))
+        result=worker.run(snapshot)
+        assert result['status']=='active'
+        marker='Allowed evidence_ids: '
+>       assert marker in captured[0], 'The model needs an explicit list when a valid NWS feed has no alert IDs.'
+E       AssertionError: The model needs an explicit list when a valid NWS feed has no alert IDs.
+E       assert 'Allowed evidence_ids: ' in 'Read all five tools and summarize this run. facility_id=kc-demo; snapshot_id=synthetic-run; policy_version=prototype-v1; posture=normal'
+
+tests\test_agent.py:136: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_agent.py::test_prompt_scopes_model_references_to_frozen_contract[alert_ids0]
+FAILED tests/test_agent.py::test_prompt_scopes_model_references_to_frozen_contract[alert_ids1]
+2 failed, 1 passed, 7 deselected in 3.90s
