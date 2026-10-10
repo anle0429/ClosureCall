@@ -1,14 +1,10 @@
 # ClosureCall tasks
-- [x] G0: private venv/imports/pip check; LIVE source smoke passed; real workshop inference/tool smoke passed
-- [x] G1 local: health/static UI and Compose packaging/config validation
-- [ ] G1 remote: SSH/non-root access, Docker/Compose and firewall verified; deploy image pending
-- [x] G2: source normalization, explicit prototype policy, 12-person routing; tests passed
-- [x] G3 code: actual Strands SDK/custom tools/hooks, bounded subprocess, safe error/trace behavior; synthetic model integration tests passed
-- [x] G3 live: real workshop smoke and grounded five-tool evidence brief passed
-- [x] G4 local: browser LIVE evaluate -> authenticated manager approve/override -> outbox -> REPLAY; JSON export downloaded
-- [ ] G4 remote: repeat full workflow on Linode
-- [x] G5 local: 59 tests; live decision hash/drafts unchanged after server restart; secrets scan source/API passed
-- [ ] G5 remote: Linux/image tests, listener/firewall inspection, remote restart persistence and full workflow
-- [ ] G6: optional simulation skipped while P0 remote/AI gates remain open
-- [x] G7 preparation: runbook/demo/submission drafts and SQLite backup script verified locally
-- [ ] G7 final: actual deployment commit/resource evidence, true inference trace, final backup and rehearsal
+- [x] G0: repo/environment/terminal inspected; private venv/imports/pip check; real sources and workshop tool smoke passed.
+- [x] G1: local app and authorized Linode Docker/Compose deployment; private SSH tunnel; healthy exact tested image.
+- [x] G2: NWS/AQ normalization, explicit prototype policies, 12-person routing and tests.
+- [x] G3: actual Strands SDK, bounded five-tool agent, validated grounded brief and true hosted inference trace.
+- [x] G4: local and remote source -> authenticated manager decision -> demo outbox -> historical replay; browser JSON exports.
+- [x] G5: 59 Windows tests and 59 final-image Linux tests; auth/adversarial/failure checks; secret scan; remote reload during job, backup, actual restart and exact replay persistence; listener/firewall inspection.
+- [x] G7: verified deployment commit/image/resource evidence, replay screenshots, SQLite backups, runbook/demo/submission documentation.
+- Optional G6 simulation UI omitted to keep the verified MVP stable.
+- External: organizer deadline/eligibility/judging access confirmation; public repository/domain/HTTPS publication and submission require user authorization.

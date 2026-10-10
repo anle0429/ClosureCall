@@ -39,3 +39,7 @@ Business routes all require server-side Basic authentication. Do not expose Basi
 SQLite WAL stores immutable snapshots, results, decisions and outbox. Decisions and outbox are transactional and idempotent. Replay reads frozen records and checks hashes without calling sources, policy or model. This detects accidental changes; it is not a claim of government compliance or absolute tamper resistance. Restart interrupts active jobs rather than inventing success.
 
 See [runbook](docs/RUNBOOK.md), [limitations](docs/LIMITATIONS.md), [demo](docs/DEMO_SCRIPT.md), and [project state](PROJECT_STATE.md) for actual verification/deployment status.
+
+## Verified private deployment
+
+Application commit `8316a0ca896362f0dbe11b5b6c61ff6371a62902` runs healthy on the authorized Linode. Open http://127.0.0.1:8081 while the SSH tunnel is active; restart the foreground tunnel with `scripts/open_tunnel.ps1` if needed. Login credentials are in ignored `.env`. Windows and the final Linux image each passed 59 tests. A real five-tool Strands/NWS/AQ/manager/outbox workflow and exact replay after container restart were verified; see docs/VERIFICATION.md. Public judging URL and repository publishing remain subject to authorization.

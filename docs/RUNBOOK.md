@@ -46,3 +46,9 @@ Export a secret-scanned local Git commit into a new /opt/closurecall/releases/<f
 Ubuntu security package upgrades completed on 2026-10-10; reboot completed before first app deployment. Fresh strict key-authenticated SSH verified kernel 6.8.0-134-generic, active Docker/UFW/SSH and disabled password login, with no reboot-required flag.
 
 Local port 8080 is occupied by an existing AgentService.exe; it was preserved. Use scripts/open_tunnel.ps1 (foreground, default 8081) or the equivalent Git OpenSSH command. Tunnel access is private; no public judging URL.
+
+## Current verified service
+
+Active release /opt/closurecall/releases/8316a0ca896362f0dbe11b5b6c61ff6371a62902; container closurecall-app-1 healthy, Python 3.12.15. The private tunnel is http://127.0.0.1:8081. Database/backup are in named volume closurecall_closurecall-data. The remote decision cf6d7432-7246-49d0-96ce-cb3da56d7f89 replay remained exactly identical in parsed JSON content after actual container restart (hash ec8f0456b3a4ff15be12a815e0526ad1892d7e7f6267d49903cf3e483ccb3705). See PROJECT_STATE.md and docs/VERIFICATION.md for the complete record.
+
+Latest verified operator documentation is also copied to /opt/closurecall/operator-docs. The application source release remains tied to its tested commit.

@@ -24,3 +24,6 @@
 
 - Linux Python 3.12 image passed 59 tests; capture that actual dependency resolution in requirements-linux.lock and pin the pulled base digest. Final Compose drops all capabilities, read-only root, no-new-privileges; SQLite and backups remain in writable persistent /app/data. Bound processes/memory/logs on the observed 1 CPU / 2 GB VM.
 - Ubuntu packages were upgraded; controlled reboot before first app deployment applies security updates without interrupting any application data (no app was running).
+
+- Private MVP verified on Linode, commit 8316a0ca896362f0dbe11b5b6c61ff6371a62902; retain source release and named SQLite data volume. Documentation checkpoints can advance local Git HEAD separately from deployed application commit. No application code change follows the verified freeze. Public exposure and submission stay external authorization steps.
+- Existing local 8080 service preserved; use 8081 for the private SSH tunnel and constrained verification scripts.

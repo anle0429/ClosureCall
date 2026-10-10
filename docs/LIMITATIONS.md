@@ -10,4 +10,4 @@
 - Notification packages are draft/queued_demo only. No real send integration or enterprise identity. HTTP Basic only through loopback, SSH or approved HTTPS.
 - Immutable SQLite tables/hash checks are prototype audit protection, not compliance certification.
 - SIMULATION is reserved and refused at manager-decision boundary; no what-if UI implemented before verified P0.
-- Real Strands tool use, Linux/container deployment, remote persistence and full Akamai workflow must be independently verified; see PROJECT_STATE.md.
+- Real Strands tool use, Linux/container deployment, remote persistence and full Akamai workflow were verified on 2026-10-10; see PROJECT_STATE.md for exact evidence. Public judging access and organizer requirements remain pending.

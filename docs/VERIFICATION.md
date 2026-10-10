@@ -1,30 +1,34 @@
-# Verification evidence — local, 2026-10-10
+# Executed verification — 2026-10-10T21:20:18+00:00
 
-This records executed tests, not a claim that all starter-kit acceptance items or the remote MVP passed.
+These are executed results. Synthetic unit fixtures and prototype manager tests remain explicitly labeled.
 
-- `python -m pytest -q`: 58 passed in 7.35s using .venv Python 3.13.9. Synthetic evidence appears only in tests with explicit labels.
-- Import smoke: real Strands SDK 1.59.0, OpenAIModel and FastAPI imports passed; `pip check` passed.
-- `scripts/smoke_sources.py`: NWS 200 / valid zero-alert Kansas City feed; Open-Meteo 200, modeled current AQI 44, valid 2026-10-10 20:00 UTC. Evidence `data/source-smoke.json`, ignored.
-- Browser live warning explorer: NWS national feed 200 / 513 alerts at 20:48 UTC; supported warnings limited to 50 display rows. A synthetic site at 33.3400, -82.08478125 was independently confirmed by the NWS point endpoint. NWS metadata verified America/New_York.
-- Real warning workflow: evaluation `bfe6fc0f-d562-453d-9996-65efdfe46f8a`, snapshot collected 20:53:42 UTC; three alerts including a Severe Flash Flood Warning. Current modeled AQI 47. Candidate closure preserved despite good AQ; additional Advisory/Watch had no automatic action mapping, so manager review/override was required.
-- Authenticated prototype manager override at 20:54:37 UTC: decision `4d9ecd40-d611-46e4-99c6-09a23fe9ec1c`; 9 included, 2 excluded, 1 deferred. Essential staff keep supervisor reporting requirements, one accessible voice draft. No notification sent.
-- Warning snapshot latency 2,092.04 ms, 2 source HTTP attempts, 0 model calls and 0 successful tools (AI unavailable). No inferred remote performance.
-- Historical warning bundle hash `3ee9906908139c3fdc37cc0c813a3478252dcbf3899e875555f29768cfe4161e`. Kansas City normal decision `f0776147-bfed-4f7b-9ab3-2b4b692ab2b3` persisted unchanged across actual local server restarts, hash `f555dbd75cf75d6ca7712d303cb4ddb1cf61d674c9a3c2adeb27326794482af3`.
-- Browser reload/sign-in restores the exact historical site, work period, timezone and stored decision; JSON package download to user Downloads succeeded. UI uses textContent and CSP; no model/source HTML execution.
-- `scripts/check_secrets.py --decision-id ...`: 68 staged/tracked source files and 7 authenticated API responses passed configured secret/private-key scan (count before adding this document). `.env`, .venv, data, logs, backups and screenshots are ignored; no remote Git publish.
-- `docker compose config --quiet` passed. Docker daemon unavailable locally, so image/Linux behavior is not yet proven.
-- Tests cover cutoff boundaries 150/150.99/151/172; API timeout/503/401; null/stale/gapped AQ; point/time applicability; expired/test/cancelled/superseded alerts; unsupported alert; routing; auth/actor spoof/CSRF; missing override reason (422); stale and superseded approval; duplicate requests and transaction/outbox; immutable records, replay/backup/restart; actual SDK tool dispatch with a synthetic Model; model/tool budgets; subprocess kill and preservation of pre-timeout trace.
+## Tests and image
+- Windows private Python 3.13.9: 59 passed in 7.99s; pip check/import smoke passed.
+- Linux first image: 59 passed in 5.77s. Final locked production image: 59 passed in 6.16s before docker compose up --no-build.
+- Deployment commit 8316a0ca896362f0dbe11b5b6c61ff6371a62902; Python 3.12.15; Strands 1.59.0. Production pip check passed.
+- Image identity sha256:64386106d97f124f0d30645cb9b920ff1ee4a195edcda0c553536bee87ac19c7. Base digest pinned and transitive Linux dependencies captured from actual tested image.
+- Tests cover exact AQ boundaries, missing/stale/invalid/gapped feeds, point/work-period applicability, expired/test/cancelled/superseded alerts, unsupported categories, essential/accessibility/telework/offsite routes, auth/spoof/CSRF, reason validation, stale/superseded/idempotent decisions, atomic outbox, immutable records/replay/backup, actual SDK dispatch with a synthetic model, budget/deadline/process termination, and rejection of invented model references/facts.
 
-## Pending gates
+## Live integrations and remote operation
+- Local and remote real workshop smoke: 2 model calls / 1 verified tool; random server token used exactly once. No synthetic model is counted as hosted inference proof.
+- Remote national NWS explorer: HTTP 200, 521 actual alerts at 21:14:41 UTC. Polygon point independently confirmed; timezone America/New_York verified by NWS metadata.
+- Remote evaluation 49395bae-6b9f-4ec8-b267-7d0902f72212, collected 2026-10-10T21:15:19.606431+00:00. NWS 200 / 3 actual alerts, including Severe Flash Flood Warning. Open-Meteo 200 / modeled AQI 46 valid 21:00 UTC.
+- Real Strands full brief active, 2 model calls and all five tools successful. Model-selected references and review focus validate against the frozen snapshot; server renders counts/timestamps/posture. Prior free-form model time/count mistakes prompted this validated contract.
+- Single measured latency 29763.77 ms; 2 source HTTP attempts. No general performance/impact claim.
+- Browser manager test override cf6d7432-7246-49d0-96ce-cb3da56d7f89 at 21:16:06 UTC: explicit synthetic office/shift reason, closure candidate plus review of unmapped Advisory/Watch. 9 included / 2 excluded / 1 deferred; all 12 have reasons/drafts. No notification sent.
+- Reload while evaluating: re-login resumed the same run with correct site/work period/timezone. API verified one run and one decision.
+- Baseline replay hash ec8f0456b3a4ff15be12a815e0526ad1892d7e7f6267d49903cf3e483ccb3705; SQLite backup then actual docker compose restart app; post-restart entire replay JSON/drafts exactly matched baseline.
+- Browser re-login, explicit Replay and authenticated JSON download passed after restart. Export saved to user Downloads. Screenshots and safe Docker proof in ignored artifacts/.
+- Local prior normal/warning decisions also retained exact replay after local restarts; their original AI-unavailable status is preserved honestly.
 
-- `scripts/smoke_inference.py`: exit 2 BLOCKED, INFERENCE_API_KEY missing/placeholder. Unauthenticated `/v1/models` probe returned 401, confirming network reachability only. Synthetic model tests do not satisfy live Strands/provider proof.
-- SSH server at 172.234.201.174 accepts the supplied public key but signing requires the private-key passphrase. Windows ssh-agent is stopped/disabled. Remote OS/security/Docker/service state not inspected because authentication did not complete.
-- Linux/image tests, remote workflow/restart persistence, firewall/listener proof, actual AI brief and final submission remain pending. No public app endpoint exposed.
-- Organizer deadline/timezone and judging-access requirements not independently confirmed from the original challenge.
+## Server and security
+- SSH verified supplied existing host 172.234.201.174 / Ubuntu 24.04.4. Second non-root closurecall session passed before restrictions.
+- Docker 29.9.0 / Compose 5.6.0 official apt install and hello-world passed. Ubuntu updates applied, reboot completed, kernel 6.8.0-134-generic; fresh strict SSH verifies SSH/Docker/UFW active.
+- SSH passwords/keyboard-interactive/X11 disabled; root key-only recovery retained, config backed up. Initial host-key trust was TOFU; later SSH strictly pinned.
+- Private env mode 600 with parent 700. Secrets excluded from Git/image build; 73 source files and 7 remote business API responses scanned with configured secrets, passed before final documentation additions.
+- Running app uid 10001, read-only root, capdrop ALL, no-new-privileges; persistent writable data volume. Docker port explicitly 127.0.0.1:8000; UFW only rate-limited SSH. Public 8000 unreachable from this client; private tunnel health passes.
+- Windows 8080 occupied by existing AgentService.exe preserved; tunnel uses 127.0.0.1:8081.
+- Remote backup /app/data/backups/closurecall-20261010T211630Z.sqlite3 (159744 bytes) persists in named volume. No volume pruning/reset or existing history overwrite.
 
-## Integration checkpoint 21:07 UTC
-- 59 tests passed in 7.99s after grounded output validation change.
-- Real workshop smoke passed with 2 model calls / 1 verified tool; full grounded brief passed with 2 model calls / all 5 verified tools. No raw generated time/count claims are exposed.
-- Local warning decision replay bundle/drafts exactly unchanged after actual server restart.
-- Browser reloaded during evaluating, re-login resumed the same run; facility/work-period/timezone restored correctly after small UI fix.
-- SSH verified Ubuntu 24.04.4; Docker 29.9.0 / Compose 5.6.0 installed, hello-world passed; second closurecall session/Docker access passed. SSH passwords disabled, root key-only recovery, UFW SSH-only active. Linux app/image and remote workflow remain pending.
+## External verification pending
+Organizer deadline/timezone, eligibility and judging access; public repository/domain/HTTPS and actual submission. Region/resource console label not inspected. Private MVP operation is verified; localhost tunnel is not a public judging URL.
