@@ -5,11 +5,12 @@ def package(snapshot, decision):
     if decision['status'] == 'rejected':
         for person in recipients:
             person.update(routing_status='excluded', channel=None, reason='Assessment rejected; no notification queued',
-                          instruction='No notification package for a rejected assessment.')
+                          instruction='No notification package for a rejected assessment.', follow_up=None)
     for person in recipients:
         person['notification_status'] = 'queued_demo' if person['routing_status'] == 'included' else 'draft'
         person['subject'] = f"ClosureCall prototype: {decision['posture'] or 'rejected'} — {snapshot['facility']['display_name']}"
-        person['message'] = (f"{person['name']},\n{person['instruction']}\n"
+        follow_up = f"Follow-up: {person['follow_up']}\n" if person['follow_up'] else ''
+        person['message'] = (f"{person['name']},\n{person['instruction']}\n{follow_up}"
             f"Work period: {decision['effective_window']['start']} to {decision['effective_window']['end']}\n"
             f"Confirmed timing: {decision.get('timing_at') or 'Not applicable'}\n"
             f"Manager reason: {decision['reason']}\n"

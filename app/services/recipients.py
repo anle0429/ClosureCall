@@ -43,5 +43,12 @@ def route(snapshot, posture):
             instruction = 'No urgent instruction for this site assignment.'
         if status == 'deferred':
             instruction = 'Informational update only; continue scheduled telework unless your supervisor directs otherwise.'
-        result.append({**person, 'routing_status': status, 'channel': channel, 'reason': reason, 'instruction': instruction})
+        follow_up = None
+        if status == 'deferred':
+            follow_up = ('Supervisor reviews the informational draft before the assigned shift starts, '
+                'or immediately if the shift is already underway. If the employee is reassigned onsite, '
+                're-evaluate the updated assignment and record a new manager decision; otherwise continue scheduled telework. '
+                'This is a manual follow-up step, not an automatic send or scheduled job.')
+        result.append({**person, 'routing_status': status, 'channel': channel, 'reason': reason,
+                       'instruction': instruction, 'follow_up': follow_up})
     return result
