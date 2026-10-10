@@ -1,0 +1,6 @@
+Sat Oct 10 09:52:11 PM UTC 2026
+closurecall-app-1 closurecall-verified:69a7738f1eb4eb087404254a2cec8859c4c35b79 Up About a minute (healthy) 127.0.0.1:8000->8000/tcp
+sha256:ee3deb4efbdca2e51ba3cf53a952ba2457fd8675046f379d45ef08d3afb56f71
+Python 3.12.15
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+LISTEN 0      4096       127.0.0.1:8000      0.0.0.0:*          
