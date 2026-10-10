@@ -37,7 +37,7 @@
 - [x] G1 minimal allowed-reference prompt clarification; regression before/after; strict validation retained; three fresh consecutive KC active results.
 - [x] G2 fixed point/current Actual Watch and modeled AQ; explicit unsupported/incomplete state and labeled test override; old warning historical only.
 - [x] G3 65 Windows + 65 exact-image Linux; backup/deploy/health; six originals plus two new bundles unchanged after actual restart; separate-container/volume restore after actual restart/current-binding changes/no external calls.
-- [x] G4 actual Cloud Manager VM label/Chicago/RUNNING screenshot; private app operation; approved private GitHub progress checkpoint prepared.
+- [x] G4 actual Cloud Manager VM label/Chicago/RUNNING screenshot; private app operation; approved private GitHub progress push independently verified (34e50c3; later post-push status metadata may follow).
 - [x] G5 two timed agent UI rehearsals, demo/pitch/limits/recovery, full draft roster checks, real downloads, auth/error/reload/double-click/width checks.
 - [x] G6 offline truthful submission draft/handoff; no portal writes or Submit.
 - [ ] Human spoken rehearsal; optional outside feedback; live high-wind/high-AQ remain unverified (not expanded scope).
