@@ -15,6 +15,8 @@ def check(body, values):
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('--decision-id')
+    parser.add_argument('--url',default='http://127.0.0.1:8000',choices=[
+        'http://127.0.0.1:8000','http://127.0.0.1:8080','http://127.0.0.1:8081'])
     args=parser.parse_args()
     secrets=[value for value in (settings.manager_password,settings.inference_key) if configured(value)]
     paths=subprocess.check_output(['git','ls-files','-z']).decode().split('\0')
@@ -29,7 +31,7 @@ if __name__=='__main__':
         routes=['/health','/api/config','/api/facilities',f'/api/decisions/{args.decision_id}',
                 f'/api/decisions/{args.decision_id}/replay',f'/api/decisions/{args.decision_id}/notifications',
                 f'/api/decisions/{args.decision_id}/export']
-        with httpx.Client(base_url='http://127.0.0.1:8000',auth=(settings.manager_username,settings.manager_password)) as client:
+        with httpx.Client(base_url=args.url,auth=(settings.manager_username,settings.manager_password)) as client:
             for route in routes:
                 response=client.get(route)
                 response.raise_for_status()

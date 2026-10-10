@@ -29,7 +29,7 @@ sudo docker compose up -d --build
 curl --fail http://127.0.0.1:8000/health
 ```
 
-On Windows, tunnel `ssh -N -L 8080:127.0.0.1:8000 DEPLOY_USER@SERVER_IP`. Remote UI is http://127.0.0.1:8080; local UI is port 8000. Neither is a public judging URL. Public exposure/DNS/HTTPS needs approval; never public plain-HTTP Basic Auth.
+On Windows, tunnel `ssh -N -L 127.0.0.1:8081:127.0.0.1:8000 DEPLOY_USER@SERVER_IP`. Remote UI is http://127.0.0.1:8081; local UI is port 8000. Neither is a public judging URL. Public exposure/DNS/HTTPS needs approval; never public plain-HTTP Basic Auth.
 
 ## Persistence verification
 
@@ -44,3 +44,5 @@ Pending jobs become interrupted on restart. Re-evaluate explicitly. No decision/
 Export a secret-scanned local Git commit into a new /opt/closurecall/releases/<full-commit> directory. Run `bash scripts/deploy_verified.sh <release> /opt/closurecall/config/.env <full-commit>` from that release. Tests must pass inside the exact built image before Compose starts it with --no-build. Keep BUILD_COMMIT set to that full commit for every later Compose command; otherwise its default tag is local. Backups created by scripts/backup_db.py are under the database parent data/backups, persisted in the Docker volume. Never run down -v or prune volumes.
 
 Ubuntu security package upgrades completed on 2026-10-10; reboot scheduled before first app deployment to apply the updated kernel. Verify fresh key-authenticated SSH, Docker, UFW and sshd settings after reboot. Do not assume scheduling a reboot proves it finished.
+
+Local port 8080 is occupied by an existing AgentService.exe; it was preserved. Use scripts/open_tunnel.ps1 (foreground, default 8081) or the equivalent Git OpenSSH command. Tunnel access is private; no public judging URL.

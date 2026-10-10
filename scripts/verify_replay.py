@@ -12,7 +12,7 @@ if __name__=='__main__':
     parser.add_argument('decision_id')
     parser.add_argument('--url',default='http://127.0.0.1:8000')
     args=parser.parse_args()
-    if args.url not in ('http://127.0.0.1:8000','http://127.0.0.1:8080'):
+    if args.url not in ('http://127.0.0.1:8000','http://127.0.0.1:8080','http://127.0.0.1:8081'):
         raise SystemExit('Only local/SSH-tunnel URL allowed')
     with httpx.Client(base_url=args.url,auth=(settings.manager_username,settings.manager_password)) as client:
         response=client.get(f'/api/decisions/{args.decision_id}/replay')
