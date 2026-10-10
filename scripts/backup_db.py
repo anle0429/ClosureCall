@@ -16,6 +16,6 @@ def backup(source, destination):
             src.backup(target)
 
 if __name__ == '__main__':
-    name = 'backups/closurecall-'+utcnow().strftime('%Y%m%dT%H%M%SZ')+'.sqlite3'
+    name = Path(settings.database).resolve().parent/'backups'/('closurecall-'+utcnow().strftime('%Y%m%dT%H%M%SZ')+'.sqlite3')
     backup(settings.database,name)
     print('SQLite backup created:',name)

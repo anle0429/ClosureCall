@@ -14,15 +14,15 @@ Current writer: Codex local, single writer.
 - Credentials configured only in ignored .env; unlocked SSH identity has two-hour agent lifetime. Host key pinned in ignored data/deployment_known_hosts (initial TOFU).
 
 ## Environment and tests
-- Local Python 3.13.9 private .venv; target Linux Python 3.12 not yet verified.
+- Local Python 3.13.9 private .venv; Linux Python 3.12 image: 59 tests passed in 5.77s. Lock captured from that actual image; base digest pinned.
 - Local http://127.0.0.1:8000; current hidden launcher PID in data/server.pid. Remote app/tunnel pending.
 - Latest pytest: 59 passed in 7.99s. Meaningful grounding validation test added after actual model misread timezone/routing counts; raw generated factual prose is no longer published.
 - Secret scan with actual key: 69 source files + 7 authenticated API responses passed before latest grounding/hardening additions; repeat before commit.
-- Compose quiet config validates; Linux build/tests and remote full workflow not yet run.
+- Compose quiet config validates; First Linux image build/tests passed; final locked/hardened image and remote full workflow pending.
 - Runtime evidence and backups ignored. No Git remote publish or public app endpoint.
 
 ## In progress
-- Ubuntu package upgrades running; no automatic reboot requested.
+- Ubuntu package upgrades completed; reboot scheduled for 21:11:26 UTC before first app deployment. Verify completion.
 - Export verified commit, configure private remote env, test Linux image before loopback-only deployment.
 - Then SSH tunnel full remote workflow, backup/restart/replay, resource and browser proof.
 

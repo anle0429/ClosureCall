@@ -21,6 +21,10 @@ if docker compose ps --status running -q app | grep -q .; then
   docker compose exec -T app python scripts/backup_db.py
 fi
 docker compose up -d --no-build
+for attempt in $(seq 1 30); do
+  if curl --silent --fail --max-time 3 http://127.0.0.1:8000/health >/dev/null; then break; fi
+  sleep 1
+done
 docker compose ps
 curl --fail --max-time 10 http://127.0.0.1:8000/health
 echo 'Next: remote live source smoke + authenticated workflow, restart replay, listener/firewall verification.'

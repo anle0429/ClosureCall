@@ -21,3 +21,6 @@
 
 - 2026-10-10: Use the user-created Linode, no paid provisioning. Verified closurecall key-only second session before SSH/UFW changes; retain root key-only recovery and keep application loopback-only.
 - Actual hosted model called all tools but misread UTC versus EDT and routing count in free prose. Replace unvalidated model facts with strict JSON evidence-reference/review-focus selection; validate against frozen run and render all facts from authoritative data. Invalid model selections degrade safely. Real grounded five-tool smoke passed.
+
+- Linux Python 3.12 image passed 59 tests; capture that actual dependency resolution in requirements-linux.lock and pin the pulled base digest. Final Compose drops all capabilities, read-only root, no-new-privileges; SQLite and backups remain in writable persistent /app/data. Bound processes/memory/logs on the observed 1 CPU / 2 GB VM.
+- Ubuntu packages were upgraded; controlled reboot before first app deployment applies security updates without interrupting any application data (no app was running).
