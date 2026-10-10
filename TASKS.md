@@ -25,3 +25,9 @@
 - [ ] Obtain original organizer rubric/deadline/timezone/eligibility/access requirements and secret-free Cloud Manager resource screenshot.
 - [ ] Stopwatch human rehearsal/full separate live-container backup restore, if required for judging; not claimed verified.
 - [ ] Public repository/judging URL/actual submission only after explicit publication authorization.
+
+## GitHub progress tracking (2026-10-10)
+- [x] User authorized a GitHub progress push; created private anle0429/ClosureCall without initializing or replacing project files.
+- [x] Scan current files and complete existing Git history before first push; configured secrets/private keys/token patterns/runtime paths absent from scanned content.
+- [x] Push all nine existing commits, retain master, set origin/master upstream, independently verify remote commit daebe1a.
+- [x] Record private remote and safe future push instructions; keep deployed application frozen at 75300d4.

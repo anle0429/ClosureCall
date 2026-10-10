@@ -4,6 +4,8 @@ ClosureCall helps a facility manager turn live weather and modeled air-quality e
 
 Hackathon targets: USDA Closure Call, AWS Strands Agents SDK, Akamai Cloud. This is a prototype for synthetic administrative offices, not an official USDA system. Action mappings are team assumptions, not federal closure policy. No real employee data or notification sending.
 
+Progress is tracked in the [private GitHub repository](https://github.com/anle0429/ClosureCall), on branch `master`. See [GitHub progress instructions](docs/GITHUB_PROGRESS.md). A Git push stores code and review evidence; the application is deployed separately and remains accessible through its private SSH tunnel.
+
 ## Local setup
 
 Use Python 3.12 (deployment) or the verified local 3.13 environment:

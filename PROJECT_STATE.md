@@ -1,8 +1,14 @@
 # ClosureCall — Project State
-Updated: 2026-10-10T22:03:59.649072+00:00 (UTC; America/Chicago UTC-05)
+Updated: 2026-10-10T22:14:25+00:00 (UTC; America/Chicago UTC-05)
 Repo: C:\Projects\ClosureCall; branch master; existing checkout preserved; one writer.
 Deployed application commit: 75300d4ef4b86f8175be9f17f1fa291b00f9d7b9
-Documentation/evidence checkpoint: subsequent local Git HEAD; see git log. No Git remote/publication.
+Documentation/evidence checkpoint: subsequent Git HEAD; see git log. Private GitHub remote: https://github.com/anle0429/ClosureCall; master tracks origin/master.
+
+## GitHub progress checkpoint
+- User explicitly requested pushing the existing repo to GitHub. Created an empty private repository under the signed-in account; preserved the master branch and existing history.
+- Initial push and independent git ls-remote check matched daebe1aee89475a702504d623b0c1039d5872fb6 exactly. All nine existing commits, source, tests, acceptance documents and inspected evidence are now on GitHub.
+- Before this first push, checked all nine commits and 160 reachable blobs for configured manager/inference secrets, private-key blocks, credential token patterns and forbidden runtime/environment/key paths; no matches. Current-tree check passed for 117 tracked files. See docs/GITHUB_PROGRESS.md for scope and future push commands.
+- Git credentials use Git Credential Manager; no token is embedded in the remote URL or repository. Application secrets/database/backups remain ignored. This documentation checkpoint can advance independently of the frozen deployed application; pushing does not deploy or expose the app.
 
 ## Current outcome
 Private MVP and acceptance audit complete within the starter-kit scope. Fresh remote business/browser workflows were checked separately from synthetic tests. ACCEPTANCE_REPORT.md assigns VERIFIED / FAILED / NOT VERIFIED per deliverable. No blanket challenge-compliance claim. One unresolved observed AI validation failure remains in zero-alert KC runs; deterministic recommendation, manager approval and drafts worked.

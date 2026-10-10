@@ -37,3 +37,8 @@
 - Use isolated SQLite/imported historical copy and changed current provider files for replay mutation test; external/recompute traps enforce zero calls. Never mutate production roster/rules or original backups for proof.
 - Fresh exact-image Linux tests precede every private source release. Final backup/restart compares every stored bundle/draft and independently reads Docker identity, loopback ports and database counters. Evidence totals are not blanket proof of challenge requirements.
 - Public/organizer-dependent items remain NOT VERIFIED. Official Akamai guide's Cloud Manager VM view is not replaced with an application footer label; SSH/runtime evidence is kept separately. Submission remains a draft.
+
+## GitHub progress decision (2026-10-10)
+- User explicitly requested pushing to GitHub to track progress. Use a private repository in the already signed-in personal account, anle0429/ClosureCall. Preserve the existing master branch and all commits; no history rewrite, force push, generated starter files or application deployment.
+- Scan complete reachable history as well as current tracked files before the first push. Keep environment files, runtime data, backups and SSH keys outside Git; HTTPS remote contains no credentials, and Git Credential Manager handles authentication.
+- Verified first remote checkpoint daebe1a by git ls-remote. Documentation records the private remote; public visibility, collaborator access and actual challenge submission remain separate authorization steps.

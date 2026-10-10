@@ -33,7 +33,7 @@ Application acceptance release: 75300d4ef4b86f8175be9f17f1fa291b00f9d7b9. Exact-
 | Akamai: actual remote application workflow | VERIFIED | Strict SSH to authorized VM, commit-tagged tested image, loopback tunnel, real evaluate/review/manager decision/drafts/replay. `remote-runtime.txt`, Linux deploy log and frozen remote records; health alone was not used as proof. |
 | Akamai: Cloud Manager resource screenshot/region/label | NOT VERIFIED | SSH/runtime proof exists, but no authenticated Cloud Manager view was supplied/inspected. Obtain a secret-free VM resource screenshot before submission. |
 | Akamai: shared inference integration | VERIFIED | Successful remote Strands feature uses approved workshop endpoint and alias with key backend-only; current [inference reference](https://github.com/akamai-developers/akamai-workshop-hackmidwest/blob/main/docs/inference.md) inspected. Eligibility of shared inference alone is NOT VERIFIED; this app also runs on Linode. |
-| Public judging URL, repository publication and actual submission | NOT VERIFIED | App remains private; no public Git remote/HTTPS/domain or submission was created. Requires organizer requirements and explicit publication authorization. |
+| Public judging URL, public repository access and actual submission | NOT VERIFIED | App remains private; no public repository/HTTPS/domain or submission was created. Subsequent user-authorized progress push created private anle0429/ClosureCall; git ls-remote matched daebe1a. This does not establish judge access or submission. Public access requires organizer requirements and explicit authorization. |
 
 ## Notification review of the actual closure package
 
