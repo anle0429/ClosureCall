@@ -1,0 +1,14 @@
+{
+  "status": "VERIFIED",
+  "checked_at_utc": "2026-10-10T21:49:15.381932+00:00",
+  "scope": "isolated copy of real historical export; no demo DB/backup modified",
+  "decision_id": "cf6d7432-7246-49d0-96ce-cb3da56d7f89",
+  "bundle_hash": "ec8f0456b3a4ff15be12a815e0526ad1892d7e7f6267d49903cf3e483ccb3705",
+  "current_policy_version": "CHANGED-CURRENT-SYNTHETIC-v2",
+  "historical_policy_version": "prototype-v1",
+  "changed_current_roster": true,
+  "replay_reads_after_restart": 2,
+  "source_model_recompute_calls": 0,
+  "historical_exact_equal": true,
+  "input_export_unchanged": true
+}

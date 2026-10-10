@@ -1,0 +1,941 @@
+{
+  "mode": "REPLAY",
+  "bundle_hash": "0f7eb679fd1d217690cb07a6cd141ce419f2d30a5dfc7c0faefa6a8073c53e28",
+  "ai": {
+    "model_alias": "hackathon-chat",
+    "model_calls": 2,
+    "narrative": "",
+    "review_selection": null,
+    "safe_error_code": "ValueError",
+    "status": "degraded",
+    "tool_calls": 5
+  },
+  "decision": {
+    "actor": "manager",
+    "approved_at": "2026-10-10T21:49:55.613447+00:00",
+    "decision_id": "9c022ef8-90ac-4f06-848f-24b232c35180",
+    "effective_window": {
+      "end": "2026-10-11T00:03:00Z",
+      "operating_context": "before_open",
+      "selected_work_date": "2026-10-10",
+      "special_shift": true,
+      "start": "2026-10-10T22:03:00Z",
+      "timezone": "America/Chicago"
+    },
+    "evaluation_id": "c09838c5-b14f-4cc0-84ef-5f11d128ffef",
+    "posture": "normal",
+    "reason": "Prototype acceptance test: approve the natural normal recommendation for the unchanged Kansas City preset. Live NWS returned zero alerts, modeled AQ is below the prototype trigger; AI is degraded. Continue monitoring; synthetic roster and drafts only.",
+    "snapshot_hash": "63cd075774bf29c6c411338f205e6f803a24a752f2f92c9507f674639a2a74d3",
+    "stale_or_superseded_override": false,
+    "status": "approved",
+    "timing_at": null,
+    "timing_basis": ""
+  },
+  "metrics": {
+    "elapsed_ms": 31034.52,
+    "model_calls": 2,
+    "source_http_attempts": 2,
+    "successful_tool_calls": 5
+  },
+  "notifications": {
+    "batch_id": "9c022ef8-90ac-4f06-848f-24b232c35180",
+    "counts": {
+      "deferred": 1,
+      "excluded": 2,
+      "included": 9
+    },
+    "mode": "outbox_only",
+    "recipients": [
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "channel": "app_inbox",
+        "email": "employee1@example.com",
+        "employee_id": "demo-01",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "No supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.",
+        "message": "Avery Hart,\nNo supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.\nWork period: 2026-10-10T22:03:00Z to 2026-10-11T00:03:00Z\nConfirmed timing: Not applicable\nManager reason: Prototype acceptance test: approve the natural normal recommendation for the unchanged Kansas City preset. Live NWS returned zero alerts, modeled AQ is below the prototype trigger; AI is degraded. Continue monitoring; synthetic roster and drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Avery Hart",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: normal — Kansas City — Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "channel": "app_inbox",
+        "email": "employee2@example.com",
+        "employee_id": "demo-02",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "No supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.",
+        "message": "Blair Reed,\nNo supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.\nWork period: 2026-10-10T22:03:00Z to 2026-10-11T00:03:00Z\nConfirmed timing: Not applicable\nManager reason: Prototype acceptance test: approve the natural normal recommendation for the unchanged Kansas City preset. Live NWS returned zero alerts, modeled AQ is below the prototype trigger; AI is degraded. Continue monitoring; synthetic roster and drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Blair Reed",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: normal — Kansas City — Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "channel": "voice_accessible",
+        "email": "employee3@example.com",
+        "employee_id": "demo-03",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "No supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.",
+        "message": "Casey Brook,\nNo supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.\nWork period: 2026-10-10T22:03:00Z to 2026-10-11T00:03:00Z\nConfirmed timing: Not applicable\nManager reason: Prototype acceptance test: approve the natural normal recommendation for the unchanged Kansas City preset. Live NWS returned zero alerts, modeled AQ is below the prototype trigger; AI is degraded. Continue monitoring; synthetic roster and drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Casey Brook",
+        "notification_status": "queued_demo",
+        "preferred_channel": "voice_accessible",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: normal — Kansas City — Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "channel": "app_inbox",
+        "email": "employee4@example.com",
+        "employee_id": "demo-04",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "No supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.",
+        "message": "Drew Vale,\nNo supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.\nWork period: 2026-10-10T22:03:00Z to 2026-10-11T00:03:00Z\nConfirmed timing: Not applicable\nManager reason: Prototype acceptance test: approve the natural normal recommendation for the unchanged Kansas City preset. Live NWS returned zero alerts, modeled AQ is below the prototype trigger; AI is degraded. Continue monitoring; synthetic roster and drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Drew Vale",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: normal — Kansas City — Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "channel": "app_inbox",
+        "email": "employee5@example.com",
+        "employee_id": "demo-05",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "No supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.",
+        "message": "Ellis Lane,\nNo supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.\nWork period: 2026-10-10T22:03:00Z to 2026-10-11T00:03:00Z\nConfirmed timing: Not applicable\nManager reason: Prototype acceptance test: approve the natural normal recommendation for the unchanged Kansas City preset. Live NWS returned zero alerts, modeled AQ is below the prototype trigger; AI is degraded. Continue monitoring; synthetic roster and drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Ellis Lane",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: normal — Kansas City — Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "channel": "app_inbox",
+        "email": "employee6@example.com",
+        "employee_id": "demo-06",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "No supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.",
+        "message": "Finley Stone,\nNo supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.\nWork period: 2026-10-10T22:03:00Z to 2026-10-11T00:03:00Z\nConfirmed timing: Not applicable\nManager reason: Prototype acceptance test: approve the natural normal recommendation for the unchanged Kansas City preset. Live NWS returned zero alerts, modeled AQ is below the prototype trigger; AI is degraded. Continue monitoring; synthetic roster and drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Finley Stone",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: normal — Kansas City — Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "channel": "app_inbox",
+        "email": "employee7@example.com",
+        "employee_id": "demo-07",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "No supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.",
+        "message": "Gray Morgan,\nNo supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.\nWork period: 2026-10-10T22:03:00Z to 2026-10-11T00:03:00Z\nConfirmed timing: Not applicable\nManager reason: Prototype acceptance test: approve the natural normal recommendation for the unchanged Kansas City preset. Live NWS returned zero alerts, modeled AQ is below the prototype trigger; AI is degraded. Continue monitoring; synthetic roster and drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Gray Morgan",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: normal — Kansas City — Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "channel": "app_inbox",
+        "email": "employee8@example.com",
+        "employee_id": "demo-08",
+        "essential": true,
+        "follow_up": null,
+        "instruction": "Essential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.",
+        "message": "Harper Quinn,\nEssential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.\nWork period: 2026-10-10T22:03:00Z to 2026-10-11T00:03:00Z\nConfirmed timing: Not applicable\nManager reason: Prototype acceptance test: approve the natural normal recommendation for the unchanged Kansas City preset. Live NWS returned zero alerts, modeled AQ is below the prototype trigger; AI is degraded. Continue monitoring; synthetic roster and drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Harper Quinn",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: normal — Kansas City — Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "channel": "app_inbox",
+        "email": "employee9@example.com",
+        "employee_id": "demo-09",
+        "essential": true,
+        "follow_up": null,
+        "instruction": "Essential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.",
+        "message": "Indigo Ray,\nEssential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.\nWork period: 2026-10-10T22:03:00Z to 2026-10-11T00:03:00Z\nConfirmed timing: Not applicable\nManager reason: Prototype acceptance test: approve the natural normal recommendation for the unchanged Kansas City preset. Live NWS returned zero alerts, modeled AQ is below the prototype trigger; AI is degraded. Continue monitoring; synthetic roster and drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Indigo Ray",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: normal — Kansas City — Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "telework",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "channel": "app_inbox",
+        "email": "employee10@example.com",
+        "employee_id": "demo-10",
+        "essential": false,
+        "follow_up": "Supervisor reviews the informational draft before the assigned shift starts, or immediately if the shift is already underway. If the employee is reassigned onsite, re-evaluate the updated assignment and record a new manager decision; otherwise continue scheduled telework. This is a manual follow-up step, not an automatic send or scheduled job.",
+        "instruction": "Informational update only; continue scheduled telework unless your supervisor directs otherwise.",
+        "message": "Jordan Lake,\nInformational update only; continue scheduled telework unless your supervisor directs otherwise.\nFollow-up: Supervisor reviews the informational draft before the assigned shift starts, or immediately if the shift is already underway. If the employee is reassigned onsite, re-evaluate the updated assignment and record a new manager decision; otherwise continue scheduled telework. This is a manual follow-up step, not an automatic send or scheduled job.\nWork period: 2026-10-10T22:03:00Z to 2026-10-11T00:03:00Z\nConfirmed timing: Not applicable\nManager reason: Prototype acceptance test: approve the natural normal recommendation for the unchanged Kansas City preset. Live NWS returned zero alerts, modeled AQ is below the prototype trigger; AI is degraded. Continue monitoring; synthetic roster and drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Jordan Lake",
+        "notification_status": "draft",
+        "preferred_channel": "app_inbox",
+        "reason": "Already scheduled for telework; informational inbox only",
+        "roster_version": "synthetic-v1",
+        "routing_status": "deferred",
+        "subject": "ClosureCall prototype: normal — Kansas City — Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "other-demo-site",
+        "assignment": "offsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "channel": null,
+        "email": "employee11@example.com",
+        "employee_id": "demo-11",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "No urgent instruction for this site assignment.",
+        "message": "Kai Rowan,\nNo urgent instruction for this site assignment.\nWork period: 2026-10-10T22:03:00Z to 2026-10-11T00:03:00Z\nConfirmed timing: Not applicable\nManager reason: Prototype acceptance test: approve the natural normal recommendation for the unchanged Kansas City preset. Live NWS returned zero alerts, modeled AQ is below the prototype trigger; AI is degraded. Continue monitoring; synthetic roster and drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Kai Rowan",
+        "notification_status": "draft",
+        "preferred_channel": "app_inbox",
+        "reason": "Current detail/assignment is at another site",
+        "roster_version": "synthetic-v1",
+        "routing_status": "excluded",
+        "subject": "ClosureCall prototype: normal — Kansas City — Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "no_shift",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "channel": null,
+        "email": "employee12@example.com",
+        "employee_id": "demo-12",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "No urgent instruction for this site assignment.",
+        "message": "Logan Fern,\nNo urgent instruction for this site assignment.\nWork period: 2026-10-10T22:03:00Z to 2026-10-11T00:03:00Z\nConfirmed timing: Not applicable\nManager reason: Prototype acceptance test: approve the natural normal recommendation for the unchanged Kansas City preset. Live NWS returned zero alerts, modeled AQ is below the prototype trigger; AI is degraded. Continue monitoring; synthetic roster and drafts only.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Logan Fern",
+        "notification_status": "draft",
+        "preferred_channel": "app_inbox",
+        "reason": "No assigned shift during affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "excluded",
+        "subject": "ClosureCall prototype: normal — Kansas City — Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": false
+      }
+    ]
+  },
+  "snapshot": {
+    "air_quality": {
+      "attribution": "Open-Meteo / Copernicus Atmosphere Monitoring Service (CAMS)",
+      "fetched_at_utc": "2026-10-10T21:48:47.456067+00:00",
+      "hourly_forecast": [
+        {
+          "us_aqi": 63,
+          "valid_at_utc": "2026-10-10T00:00:00+00:00"
+        },
+        {
+          "us_aqi": 62,
+          "valid_at_utc": "2026-10-10T01:00:00+00:00"
+        },
+        {
+          "us_aqi": 55,
+          "valid_at_utc": "2026-10-10T02:00:00+00:00"
+        },
+        {
+          "us_aqi": 48,
+          "valid_at_utc": "2026-10-10T03:00:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-10T04:00:00+00:00"
+        },
+        {
+          "us_aqi": 41,
+          "valid_at_utc": "2026-10-10T05:00:00+00:00"
+        },
+        {
+          "us_aqi": 38,
+          "valid_at_utc": "2026-10-10T06:00:00+00:00"
+        },
+        {
+          "us_aqi": 35,
+          "valid_at_utc": "2026-10-10T07:00:00+00:00"
+        },
+        {
+          "us_aqi": 34,
+          "valid_at_utc": "2026-10-10T08:00:00+00:00"
+        },
+        {
+          "us_aqi": 33,
+          "valid_at_utc": "2026-10-10T09:00:00+00:00"
+        },
+        {
+          "us_aqi": 33,
+          "valid_at_utc": "2026-10-10T10:00:00+00:00"
+        },
+        {
+          "us_aqi": 32,
+          "valid_at_utc": "2026-10-10T11:00:00+00:00"
+        },
+        {
+          "us_aqi": 31,
+          "valid_at_utc": "2026-10-10T12:00:00+00:00"
+        },
+        {
+          "us_aqi": 31,
+          "valid_at_utc": "2026-10-10T13:00:00+00:00"
+        },
+        {
+          "us_aqi": 30,
+          "valid_at_utc": "2026-10-10T14:00:00+00:00"
+        },
+        {
+          "us_aqi": 30,
+          "valid_at_utc": "2026-10-10T15:00:00+00:00"
+        },
+        {
+          "us_aqi": 30,
+          "valid_at_utc": "2026-10-10T16:00:00+00:00"
+        },
+        {
+          "us_aqi": 32,
+          "valid_at_utc": "2026-10-10T17:00:00+00:00"
+        },
+        {
+          "us_aqi": 35,
+          "valid_at_utc": "2026-10-10T18:00:00+00:00"
+        },
+        {
+          "us_aqi": 39,
+          "valid_at_utc": "2026-10-10T19:00:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-10T20:00:00+00:00"
+        },
+        {
+          "us_aqi": 48,
+          "valid_at_utc": "2026-10-10T21:00:00+00:00"
+        },
+        {
+          "us_aqi": 59,
+          "valid_at_utc": "2026-10-10T22:00:00+00:00"
+        },
+        {
+          "us_aqi": 69,
+          "valid_at_utc": "2026-10-10T23:00:00+00:00"
+        },
+        {
+          "us_aqi": 74,
+          "valid_at_utc": "2026-10-11T00:00:00+00:00"
+        },
+        {
+          "us_aqi": 71,
+          "valid_at_utc": "2026-10-11T01:00:00+00:00"
+        },
+        {
+          "us_aqi": 62,
+          "valid_at_utc": "2026-10-11T02:00:00+00:00"
+        },
+        {
+          "us_aqi": 50,
+          "valid_at_utc": "2026-10-11T03:00:00+00:00"
+        },
+        {
+          "us_aqi": 46,
+          "valid_at_utc": "2026-10-11T04:00:00+00:00"
+        },
+        {
+          "us_aqi": 41,
+          "valid_at_utc": "2026-10-11T05:00:00+00:00"
+        },
+        {
+          "us_aqi": 39,
+          "valid_at_utc": "2026-10-11T06:00:00+00:00"
+        },
+        {
+          "us_aqi": 40,
+          "valid_at_utc": "2026-10-11T07:00:00+00:00"
+        },
+        {
+          "us_aqi": 41,
+          "valid_at_utc": "2026-10-11T08:00:00+00:00"
+        },
+        {
+          "us_aqi": 41,
+          "valid_at_utc": "2026-10-11T09:00:00+00:00"
+        },
+        {
+          "us_aqi": 41,
+          "valid_at_utc": "2026-10-11T10:00:00+00:00"
+        },
+        {
+          "us_aqi": 41,
+          "valid_at_utc": "2026-10-11T11:00:00+00:00"
+        },
+        {
+          "us_aqi": 42,
+          "valid_at_utc": "2026-10-11T12:00:00+00:00"
+        },
+        {
+          "us_aqi": 42,
+          "valid_at_utc": "2026-10-11T13:00:00+00:00"
+        },
+        {
+          "us_aqi": 42,
+          "valid_at_utc": "2026-10-11T14:00:00+00:00"
+        },
+        {
+          "us_aqi": 42,
+          "valid_at_utc": "2026-10-11T15:00:00+00:00"
+        },
+        {
+          "us_aqi": 42,
+          "valid_at_utc": "2026-10-11T16:00:00+00:00"
+        },
+        {
+          "us_aqi": 42,
+          "valid_at_utc": "2026-10-11T17:00:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-11T18:00:00+00:00"
+        },
+        {
+          "us_aqi": 47,
+          "valid_at_utc": "2026-10-11T19:00:00+00:00"
+        },
+        {
+          "us_aqi": 51,
+          "valid_at_utc": "2026-10-11T20:00:00+00:00"
+        },
+        {
+          "us_aqi": 60,
+          "valid_at_utc": "2026-10-11T21:00:00+00:00"
+        },
+        {
+          "us_aqi": 68,
+          "valid_at_utc": "2026-10-11T22:00:00+00:00"
+        },
+        {
+          "us_aqi": 73,
+          "valid_at_utc": "2026-10-11T23:00:00+00:00"
+        }
+      ],
+      "http_attempts": 1,
+      "modeled": true,
+      "pm2_5": 5.3,
+      "raw_response_sha256": "8772e8439d789cfa06ab7501adfa20152254eaf74f323ba5aa08cf761c4e4d42",
+      "request_started_at_utc": "2026-10-10T21:48:46.990683+00:00",
+      "requested_location": {
+        "latitude": 39.0997,
+        "longitude": -94.5786
+      },
+      "response_status": 200,
+      "returned_grid_location": {
+        "latitude": 39.100006,
+        "longitude": -94.6
+      },
+      "source_id": "aq",
+      "source_url": "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=39.0997&longitude=-94.5786&current=us_aqi%2Cpm2_5&hourly=us_aqi&forecast_days=2&timezone=UTC",
+      "status": "available",
+      "units": {
+        "interval": "seconds",
+        "pm2_5": "μg/m³",
+        "time": "iso8601",
+        "us_aqi": "USAQI"
+      },
+      "us_aqi": 48,
+      "valid_at_utc": "2026-10-10T21:00:00+00:00"
+    },
+    "assessment": {
+      "assumptions": [
+        "Prototype action mappings for synthetic administrative offices; not USDA, OPM, NOAA or AirNow closure policy.",
+        "Fetch freshness and AQ age budgets are engineering assumptions.",
+        "Delay and early dismissal are manager-selectable with verified timing; not automatic recommendations."
+      ],
+      "confidence_basis": [
+        "Completeness/applicability rubric, not probability of correctness",
+        "Modeled AQ does not establish indoor conditions"
+      ],
+      "confidence_label": "moderate",
+      "evidence_ids": [
+        "aq"
+      ],
+      "matched_rules": [],
+      "missing_inputs": [],
+      "policy_version": "prototype-v1",
+      "protective_action_notice": "Closure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.",
+      "rationale_text": "No supported trigger found in fetched evidence; this is not a safety guarantee.",
+      "recommended_posture": "normal",
+      "review_status": "ready_for_manager",
+      "what_would_change": [
+        "New NWS warning/update or point applicability",
+        "AQ valid time / forecast changes",
+        "Manager verifies local access, timing or facility conditions"
+      ]
+    },
+    "collected_at_utc": "2026-10-10T21:48:47.456780+00:00",
+    "facility": {
+      "closing_time_local": "17:00",
+      "display_name": "Kansas City — Synthetic Administrative Office",
+      "facility_id": "kc-demo",
+      "latitude": 39.0997,
+      "longitude": -94.5786,
+      "minimum_notice_minutes": 30,
+      "opening_time_local": "08:00",
+      "supervisor_contact_label": "Demo facility supervisor",
+      "synthetic": true,
+      "telework_supported": true,
+      "timezone": "America/Chicago",
+      "working_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "mode": "LIVE",
+    "nws": {
+      "alerts": [],
+      "fetched_at_utc": "2026-10-10T21:48:47.119536+00:00",
+      "http_attempts": 1,
+      "location_verified": true,
+      "raw_response_sha256": "76a00091eb8631c90ae9db7fa3994d7edcb827352211229e52073caf81932801",
+      "request_location": {
+        "latitude": 39.0997,
+        "longitude": -94.5786
+      },
+      "request_started_at_utc": "2026-10-10T21:48:46.981545+00:00",
+      "response_status": 200,
+      "source_id": "nws",
+      "source_url": "https://api.weather.gov/alerts/active?point=39.0997%2C-94.5786",
+      "status": "available"
+    },
+    "policy": {
+      "disclaimer": "Prototype action mappings for synthetic administrative offices; not USDA, OPM, NOAA or AirNow closure policy.",
+      "rules": [
+        {
+          "comparator": "category",
+          "conditions": "Actual Severe/Extreme Flood or Flash Flood Warning, point confirmed, unexpired, overlaps work period",
+          "hazard_type": "flooding",
+          "id": "FLOOD_WARNING",
+          "limitations": "Does not prove building inundation or mandate evacuation.",
+          "proposed_posture": "closure",
+          "prototype_mapping_reason": "Avoid routine onsite reporting in a warning area pending manager review.",
+          "reference_claim": "NWS supplies alert categories and instructions, not this prototype closure mapping.",
+          "reference_source_url": "https://www.weather.gov/documentation/services-web-api",
+          "required_context": "Before opening; during an ongoing shift require local emergency procedure review.",
+          "threshold": null,
+          "units": null,
+          "version": "1"
+        },
+        {
+          "comparator": "category",
+          "conditions": "Actual High Wind Warning, point confirmed, unexpired, overlaps work period, telework supported",
+          "hazard_type": "high_wind",
+          "id": "WIND_WARNING",
+          "limitations": "No invented wind speed exceedance; no route safety guarantee.",
+          "proposed_posture": "telework",
+          "prototype_mapping_reason": "Reduce routine commute exposure subject to manager review.",
+          "reference_claim": "Warning category is NWS evidence; telework is a prototype mapping.",
+          "reference_source_url": "https://www.weather.gov/documentation/services-web-api",
+          "required_context": "Facility supports telework",
+          "threshold": null,
+          "units": null,
+          "version": "1"
+        },
+        {
+          "comparator": ">=",
+          "conditions": "Fresh modeled AQ valid for the selected window and US AQI >=151",
+          "hazard_type": "poor_air_quality",
+          "id": "AQ_151",
+          "limitations": "Modeled grid estimate; not indoor or building sensor reading.",
+          "proposed_posture": "telework",
+          "prototype_mapping_reason": "Use telework candidate to reduce routine outdoor exposure; manager validates local context.",
+          "reference_claim": "AQI 151–200 is the unhealthy category. This does not prescribe office closure.",
+          "reference_source_url": "https://www.airnow.gov/aqi/aqi-basics/",
+          "required_context": "Fresh valid-time evidence, telework supported",
+          "threshold": 151,
+          "units": "US AQI points",
+          "version": "1"
+        }
+      ],
+      "version": "prototype-v1"
+    },
+    "roster": [
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "email": "employee1@example.com",
+        "employee_id": "demo-01",
+        "essential": false,
+        "name": "Avery Hart",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "email": "employee2@example.com",
+        "employee_id": "demo-02",
+        "essential": false,
+        "name": "Blair Reed",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "email": "employee3@example.com",
+        "employee_id": "demo-03",
+        "essential": false,
+        "name": "Casey Brook",
+        "preferred_channel": "voice_accessible",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "email": "employee4@example.com",
+        "employee_id": "demo-04",
+        "essential": false,
+        "name": "Drew Vale",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "email": "employee5@example.com",
+        "employee_id": "demo-05",
+        "essential": false,
+        "name": "Ellis Lane",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "email": "employee6@example.com",
+        "employee_id": "demo-06",
+        "essential": false,
+        "name": "Finley Stone",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "email": "employee7@example.com",
+        "employee_id": "demo-07",
+        "essential": false,
+        "name": "Gray Morgan",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "email": "employee8@example.com",
+        "employee_id": "demo-08",
+        "essential": true,
+        "name": "Harper Quinn",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "email": "employee9@example.com",
+        "employee_id": "demo-09",
+        "essential": true,
+        "name": "Indigo Ray",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "telework",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "email": "employee10@example.com",
+        "employee_id": "demo-10",
+        "essential": false,
+        "name": "Jordan Lake",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "other-demo-site",
+        "assignment": "offsite",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "email": "employee11@example.com",
+        "employee_id": "demo-11",
+        "essential": false,
+        "name": "Kai Rowan",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "no_shift",
+        "assignment_end": "2026-10-11T00:03:00Z",
+        "assignment_start": "2026-10-10T22:03:00Z",
+        "email": "employee12@example.com",
+        "employee_id": "demo-12",
+        "essential": false,
+        "name": "Logan Fern",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      }
+    ],
+    "roster_version": "synthetic-v1",
+    "snapshot_id": "c09838c5-b14f-4cc0-84ef-5f11d128ffef",
+    "work_period": {
+      "end": "2026-10-11T00:03:00Z",
+      "operating_context": "before_open",
+      "selected_work_date": "2026-10-10",
+      "special_shift": true,
+      "start": "2026-10-10T22:03:00Z",
+      "timezone": "America/Chicago"
+    }
+  },
+  "snapshot_hash": "63cd075774bf29c6c411338f205e6f803a24a752f2f92c9507f674639a2a74d3",
+  "trace": [
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 0.63,
+      "ended_at": "2026-10-10T21:49:07.653828+00:00",
+      "evidence_ids": [
+        "c09838c5-b14f-4cc0-84ef-5f11d128ffef"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "c09838c5-b14f-4cc0-84ef-5f11d128ffef",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T21:49:07.650616+00:00",
+      "status": "success",
+      "step_number": 1,
+      "tool_name": "read_facility_context",
+      "validated_arguments": {
+        "facility_id": "kc-demo"
+      }
+    },
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 0.96,
+      "ended_at": "2026-10-10T21:49:07.657968+00:00",
+      "evidence_ids": [
+        "c09838c5-b14f-4cc0-84ef-5f11d128ffef"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "c09838c5-b14f-4cc0-84ef-5f11d128ffef",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T21:49:07.654294+00:00",
+      "status": "success",
+      "step_number": 2,
+      "tool_name": "read_nws_evidence",
+      "validated_arguments": {
+        "snapshot_id": "c09838c5-b14f-4cc0-84ef-5f11d128ffef"
+      }
+    },
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 0.48,
+      "ended_at": "2026-10-10T21:49:07.660727+00:00",
+      "evidence_ids": [
+        "c09838c5-b14f-4cc0-84ef-5f11d128ffef"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "c09838c5-b14f-4cc0-84ef-5f11d128ffef",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T21:49:07.658342+00:00",
+      "status": "success",
+      "step_number": 3,
+      "tool_name": "read_air_quality_evidence",
+      "validated_arguments": {
+        "snapshot_id": "c09838c5-b14f-4cc0-84ef-5f11d128ffef"
+      }
+    },
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 0.39,
+      "ended_at": "2026-10-10T21:49:07.663563+00:00",
+      "evidence_ids": [
+        "c09838c5-b14f-4cc0-84ef-5f11d128ffef"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "c09838c5-b14f-4cc0-84ef-5f11d128ffef",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T21:49:07.661370+00:00",
+      "status": "success",
+      "step_number": 4,
+      "tool_name": "run_policy_assessment",
+      "validated_arguments": {
+        "policy_version": "prototype-v1",
+        "snapshot_id": "c09838c5-b14f-4cc0-84ef-5f11d128ffef"
+      }
+    },
+    {
+      "configured_model_alias": "hackathon-chat",
+      "duration_ms": 0.88,
+      "ended_at": "2026-10-10T21:49:07.666823+00:00",
+      "evidence_ids": [
+        "c09838c5-b14f-4cc0-84ef-5f11d128ffef"
+      ],
+      "output_summary": "Frozen current-run evidence returned",
+      "provider_label": "Akamai workshop Chat Completions",
+      "run_id": "c09838c5-b14f-4cc0-84ef-5f11d128ffef",
+      "safe_error_code": null,
+      "sdk_version": "1.59.0",
+      "started_at": "2026-10-10T21:49:07.664182+00:00",
+      "status": "success",
+      "step_number": 5,
+      "tool_name": "preview_employee_impact",
+      "validated_arguments": {
+        "posture": "normal",
+        "snapshot_id": "c09838c5-b14f-4cc0-84ef-5f11d128ffef"
+      }
+    }
+  ]
+}
