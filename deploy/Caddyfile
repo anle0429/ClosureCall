@@ -1,0 +1,30 @@
+{
+    admin off
+    auto_https disable_redirects
+    servers {
+        protocols h1 h2
+    }
+}
+
+http://172.234.201.174 {
+    redir https://172.234.201.174{uri} 308
+}
+
+https://172.234.201.174 {
+    tls {
+        issuer acme {
+            dir https://acme-v02.api.letsencrypt.org/directory
+            profile shortlived
+        }
+    }
+    header {
+        Strict-Transport-Security "max-age=86400"
+        -Server
+    }
+    reverse_proxy 127.0.0.1:8000 {
+        header_up -Forwarded
+        header_up X-Forwarded-Proto https
+        header_up X-Forwarded-Host {host}
+        header_up X-Forwarded-For {remote_host}
+    }
+}
