@@ -1,5 +1,13 @@
 # Private demo access and recovery
 
+## Latest work-hours release — verified 2026-10-11 UTC
+
+Current application source **a5681bcd98400fd75d02670f378a04365459dd7e**, image `sha256:9ab42b0dcdfaee241b3d9156ac5433ecd0da772f29707ec6cb397664f0256b90`, directory `/opt/closurecall/releases/a5681bcd98400fd75d02670f378a04365459dd7e`. Main private address remains **http://127.0.0.1:8081/**; tunnel/manager credentials unchanged. The main form is open with **Refresh time (+15 min)**. Click it when the work hours have aged, then explicitly Check conditions for a new evaluation; it does not fetch sources or change historical records itself.
+
+Latest pre-cutover backup `/app/data/backups/closurecall-20261011T114549Z.sqlite3`; all nine original decision packages and six table fingerprints unchanged afterward. Current container verified healthy with loopback-only binding. For current inspection/restart use the latest directory and `export BUILD_COMMIT=a5681bcd98400fd75d02670f378a04365459dd7e`, following the no-active-run/fresh-backup safeguards below. The retained 4dffaac release is the immediate code-only fallback (same env/volume); select its directory/BUILD_COMMIT and `docker compose up -d --no-build` without restoring old data. This rollback was not executed. Existing older e5f7801 remains retained too. See [refresh release](WORK_HOURS_REFRESH.md).
+
+The earlier section below remains useful for opening the unchanged pinned tunnel and describes the prior precision release.
+
 ## Current private release — verified 2026-10-11 UTC
 
 Use **http://127.0.0.1:8081/** on the presentation laptop. The verified release is `4dffaac63f06b57bd97e2af17140ff850be147e5`, image `sha256:d580f299413bb9598750ab259502f1f96351d9078ae77fdc924acf6da3317a41`; source directory `/opt/closurecall/releases/4dffaac63f06b57bd97e2af17140ff850be147e5`. Existing env `/opt/closurecall/config/.env` and volume `closurecall_closurecall-data` remain intact. Application is private loopback only; no public endpoint/domain is needed. 8084 is a separate QA preview, not the main demo.

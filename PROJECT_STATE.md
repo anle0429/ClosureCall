@@ -1,4 +1,14 @@
-# Private precision release — current checkpoint
+# Work-hours refresh — current checkpoint
+
+Verified 2026-10-11 UTC. Application source `a5681bcd98400fd75d02670f378a04365459dd7e`, image `sha256:9ab42b0dcdfaee241b3d9156ac5433ecd0da772f29707ec6cb397664f0256b90`; healthy private main app open through 8081. Actual cutover `2026-10-11T11:45:50.513230916Z`, fresh backup `/app/data/backups/closurecall-20261011T114549Z.sqlite3`. Original 2 facilities / 13 runs / 9 decisions / 9 outbox, six table fingerprints and all nine replay bodies/hashes unchanged.
+
+Added the requested **Refresh time (+15 min)** button within Facility & work hours. Form only: device current time plus 15 minutes in selected facility timezone, valid shift duration preserved, 2-hour fallback for empty/invalid/>24-hour input. Native type=button, keyboard support, no automatic evaluation/approval or data write; old snapshots/recommendations remain distinct. Refresh confirmation clears on facility change or reopening a saved record. Only three static files changed; backend/API/policy/Strands/auth/storage unchanged from 4e03e57.
+
+Final full suites actually run: Windows **89 passed / 14.18s**, exact Linux release **89 / 6.38s**. Initial source 1a8735f also passed 89/10.28s and 89/6.51s; its logs retained, not promoted. Ten final scoped QA browser cases passed, plus unchanged six-table QA fingerprints and a 390px mobile layout check. Authenticated main browser refresh and exact served Git bytes verified. No new provider/model call, production evaluation/decision, public exposure or notification send. Evidence and scope: `WORK_HOURS_REFRESH.md`, `evidence/work-hours-refresh`. Existing env, DB, backups, prior 4dffaac/e5f7801 releases and user untracked files preserved. Private progress push remains authorized; judge access/Submit stay user-owned.
+
+Earlier checkpoints below retain their capture dates.
+
+# Private precision release — earlier checkpoint
 
 Verified 2026-10-11 UTC. **DEPLOYED / PRIVATE SSH TUNNEL / NOT SUBMITTED**. Application release `4dffaac63f06b57bd97e2af17140ff850be147e5`, image `sha256:d580f299413bb9598750ab259502f1f96351d9078ae77fdc924acf6da3317a41`, on the existing Linode. Actual cutover: `2026-10-11T11:26:02.703356199Z`. Healthy, appuser, read-only root filesystem, capabilities dropped, bound only to `127.0.0.1:8000`. Windows tunnel `127.0.0.1:8081` is running and the authenticated main browser displays the new design, production/source footer and original historical replay. Served HTML/CSS/JS match the committed bytes exactly.
 

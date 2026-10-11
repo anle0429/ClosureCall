@@ -1,5 +1,12 @@
 # Technical decisions
 
+## Work-hours refresh — 2026-10-11 UTC
+
+- Implement the user's request on an isolated fix branch with only HTML/CSS/JS. Use the existing date formatter/conversion and device clock in the selected facility timezone; it does not represent NWS validity or new source freshness.
+- Move end with start to preserve a valid elapsed shift (positive, up to 24h); use the existing 2h default when dates are empty/invalid. Keep facility and special-shift selection. Repeated clicks reset from now, not from the last start value.
+- Native type=button prevents form submission. Refresh changes form values only; do not clear/relabel frozen evidence as LIVE or alter manager authority/idempotency. Clear stale confirmation when selecting another facility or opening a saved record.
+- Full final Windows/Linux suite and scoped browser/DB checks precede private promotion. Retain initial candidate test logs and prior deployed images, take a fresh original backup, verify all nine historical bodies afterward. No new hosted-source/model test is claimed for this frontend-only change.
+
 ## Verified private precision release — 2026-10-11 UTC
 
 - Treat the user's conditional design application as authorized after the candidate opened successfully. The later laptop-only instruction cancels public/HTTPS/domain work. Revert the unused proxy files; no proxy, port opening, paid provisioning or submission. The official Caddy image was downloaded during preparation but never started.

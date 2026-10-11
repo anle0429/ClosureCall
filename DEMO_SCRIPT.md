@@ -2,6 +2,8 @@
 
 Use the already signed-in private browser at http://127.0.0.1:8081/. No slides. This is an English speaking script; the presenter still needs to rehearse it. Agent UI runs took 86.005 and 123.789 seconds, excluding a human spoken pitch.
 
+Latest verified application **a5681bc** adds **Refresh time (+15 min)** below Work starts/Work ends. Use it before a fresh evaluation: start becomes device now +15 minutes in the facility timezone and end keeps a valid shift length (2h fallback). It only updates the form; click Check conditions separately. Refresh does not update a saved record or make its weather LIVE. [Current release](WORK_HOURS_REFRESH.md); the earlier precision checkpoint below retains its date and scope.
+
 Vietnamese presenter annotations and exact branch-transition lines: [DEMO_PRESENTER_NOTES.md](DEMO_PRESENTER_NOTES.md). This is preparation, not a completed human rehearsal.
 
 Current private release, verified 2026-10-11: production source **4dffaac**, precision design applied, authenticated main tab open at **8081**. See [release evidence](PRIVATE_DESIGN_RELEASE.md). The current UI labels below match this release. The memo download button is deployed, but downloaded-file visual/print QA is still unverified; use the verified Replay/JSON demonstration. Latest separate remote QA retrieved real NWS/AQ and all five Strands tools with zero KC alerts; do not promise an active warning.

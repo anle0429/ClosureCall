@@ -1,0 +1,56 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 588B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 143B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#4 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 168.10kB 0.0s done
+#5 DONE 0.0s
+
+#6 [2/7] WORKDIR /app
+#6 CACHED
+
+#7 [3/7] COPY requirements.txt requirements-linux.lock ./
+#7 CACHED
+
+#8 [4/7] RUN pip install -r requirements-linux.lock && pip check
+#8 CACHED
+
+#9 [5/7] COPY app ./app
+#9 DONE 0.1s
+
+#10 [6/7] COPY scripts ./scripts
+#10 DONE 0.0s
+
+#11 [7/7] RUN useradd --create-home --uid 10001 appuser && mkdir -p /app/data && chown -R appuser:appuser /app
+#11 DONE 0.4s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.2s done
+#12 exporting manifest sha256:12bfb7a19e79cd0dc93deacda1955c4027b545387e8bc7c77554c00b22583eee 0.0s done
+#12 exporting config sha256:f67dccdeb515a8ea04a5bc3a44ca76bc7df5c7d5e0c6bdce2b98afa56f3f001f 0.0s done
+#12 exporting attestation manifest sha256:cd617df693fd7c2732b21a0b08d4972ff0c3726448fd3318c6e4bdbf8812cd96 0.0s done
+#12 exporting manifest list sha256:8159e78000e4bff2545052b7694bb9782b906bbbe9b282900d31a9401641da82 0.0s done
+#12 naming to docker.io/library/closurecall-verified:1a8735f9bd7f6fbb556d252dee1b1eb6a3ef8203 done
+#12 unpacking to docker.io/library/closurecall-verified:1a8735f9bd7f6fbb556d252dee1b1eb6a3ef8203 0.1s done
+#12 DONE 0.4s
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+........................................................................ [ 80%]
+.................                                                        [100%]
+89 passed in 6.51s

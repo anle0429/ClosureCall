@@ -1,5 +1,7 @@
 # ClosureCall acceptance report
 
+Latest private application source **a5681bc**, 2026-10-11: the requested form-only work-hours refresh is deployed, browser checked, full suites passed and nine original records unchanged. [Scoped refresh evidence](WORK_HOURS_REFRESH.md). No new hosted-source/model workflow or blanket challenge PASS is claimed; the older acceptance sections retain their dates/scopes.
+
 ## Current private release addendum — 2026-10-11 UTC
 
 **Application source 4dffaac is deployed privately and open through 8081.** This addendum supersedes the earlier undeployed/runtime statements only within its checked scope; older deliverable evidence retains its capture date. Full gate details: [PRIVATE_DESIGN_RELEASE.md](PRIVATE_DESIGN_RELEASE.md).

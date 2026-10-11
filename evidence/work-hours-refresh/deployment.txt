@@ -1,0 +1,8 @@
+SQLite backup created: /app/data/backups/closurecall-20261011T114549Z.sqlite3
+ Container closurecall-app-1 Recreate
+ Container closurecall-app-1 Recreated
+ Container closurecall-app-1 Starting
+ Container closurecall-app-1 Started
+{"status":"ok","product":"ClosureCall","prototype":true}NAME                IMAGE                                                           COMMAND                  SERVICE   CREATED         STATUS                            PORTS
+closurecall-app-1   closurecall-verified:a5681bcd98400fd75d02670f378a04365459dd7e   "python -m uvicorn a…"   app       2 seconds ago   Up 2 seconds (health: starting)   127.0.0.1:8000->8000/tcp
+source=closurecall-verified:a5681bcd98400fd75d02670f378a04365459dd7e image=sha256:9ab42b0dcdfaee241b3d9156ac5433ecd0da772f29707ec6cb397664f0256b90 started=2026-10-11T11:45:50.513230916Z user=appuser readonly=true ports={"8000/tcp":[{"HostIp":"127.0.0.1","HostPort":"8000"}]} caps=["ALL"]

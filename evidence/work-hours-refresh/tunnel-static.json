@@ -1,0 +1,12 @@
+{
+  "at_utc": "2026-10-11T11:47:56.785214+00:00",
+  "result": "VERIFIED",
+  "source": "a5681bcd98400fd75d02670f378a04365459dd7e",
+  "environment": "production",
+  "notification_mode": "outbox_only",
+  "served_files_exact_git_bytes": {
+    "index.html": "2c31f188a68fd7b2683ae7f676d8ddf5f6aefb6e740b8e226fb743a4392ace6c",
+    "app.js": "49450534404063d6e16b57f51216efe41456c196ad237fe90cd8bd077a43c2ce",
+    "styles.css": "f3b1c6659428f5d4b587029c92f0b94db5b1f80b32c5b4fc3d15341a63453a8c"
+  }
+}

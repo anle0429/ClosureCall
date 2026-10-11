@@ -1,0 +1,2 @@
+health=healthy source=closurecall-verified:a5681bcd98400fd75d02670f378a04365459dd7e image=sha256:9ab42b0dcdfaee241b3d9156ac5433ecd0da772f29707ec6cb397664f0256b90
+{"status":"ok","product":"ClosureCall","prototype":true}

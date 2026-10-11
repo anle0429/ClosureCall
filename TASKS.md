@@ -1,4 +1,12 @@
-# Private precision release — 2026-10-11 UTC
+# Work-hours refresh — 2026-10-11 UTC
+
+- [x] Add a native form-only Refresh time (+15 min) control, correct facility timezone, preserved valid duration and 2-hour fallback.
+- [x] Check current time, custom/midnight duration, repeated click, keyboard, invalid input, facility changes and frozen replay in isolated QA; all ten scoped cases verified and no QA DB changes.
+- [x] Check 390px layout/click, full final Windows 89/14.18s and exact final Linux 89/6.38s; preserve initial candidate logs.
+- [x] Fresh backup, private release a5681bc, healthy main 8081, exact served files, original six table fingerprints and nine replay bodies unchanged.
+- [x] Update state, decisions, demo/recovery and reviewed evidence. No public access or real sends.
+
+# Private precision release — earlier 2026-10-11 UTC checkpoint
 
 - [x] Open/authenticate the actual HTTP 8084 candidate; resolve the earlier browser error-page block without bypassing URL policy.
 - [x] Follow the user's revised laptop-only scope; revert public proxy configuration, keep firewall and app private.

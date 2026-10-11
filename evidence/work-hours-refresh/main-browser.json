@@ -1,0 +1,15 @@
+{
+  "at_utc": "2026-10-11T11:46:52.830Z",
+  "url": "http://127.0.0.1:8081/",
+  "result": "VERIFIED",
+  "scope": "Authenticated production browser; refresh form only, no evaluation/decision",
+  "expectedStart": "2026-10-11T07:01",
+  "timezone": "America/Chicago",
+  "buttonType": "button",
+  "end": "2026-10-11T09:01",
+  "footer": "Akamai Linode 172.234.201.174 (SSH verified) · production · a5681bcd98400fd75d02670f378a04365459dd7e · AI configured",
+  "historyRows": 9,
+  "mode": "NO EVALUATION",
+  "note": "Form updated: starts Oct 11, 2026, 7:01 AM CDT; shift length 120 min. Click Check conditions to evaluate this period. Existing evidence and saved decisions are unchanged.",
+  "start": "2026-10-11T07:01"
+}

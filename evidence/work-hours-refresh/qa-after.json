@@ -1,0 +1,30 @@
+{
+  "result": "VERIFIED",
+  "scope": "Actual 8084 QA DB; all six tables exact after final ten browser cases and mobile check",
+  "tables": {
+    "facilities": {
+      "count": 2,
+      "sha256": "e13eeaee1253d7b57de9def97953413f352fcee811d4f6df5797f2022096973b"
+    },
+    "runs": {
+      "count": 10,
+      "sha256": "2c51ee96e1222c39524075902b1640036f20db2833fe866d2dabe6c9a3678f47"
+    },
+    "snapshots": {
+      "count": 10,
+      "sha256": "e6bd9ad73248642672b1902e7fea2737c6a9420e9f745af942b47611b139c589"
+    },
+    "results": {
+      "count": 10,
+      "sha256": "50f35fe25419ee8e7c63291d53d96fcced4cdee1e35c39cb7f6fbe8968ce5ff0"
+    },
+    "decisions": {
+      "count": 9,
+      "sha256": "2a4bea24ff12476c866813e366025a052a2ee5854e9ce285741d70874914a893"
+    },
+    "outbox": {
+      "count": 9,
+      "sha256": "bc2cec0a6fb4f419cafaf6ba72562d905162f6d98975d16d7cb63422a8c9d638"
+    }
+  }
+}

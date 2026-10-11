@@ -1,0 +1,16 @@
+{
+  "result": "VERIFIED",
+  "source": "a5681bcd98400fd75d02670f378a04365459dd7e",
+  "all_six_table_fingerprints_unchanged": true,
+  "all_nine_replay_bodies_and_bundle_hashes_unchanged": true,
+  "counts": {
+    "facilities": 2,
+    "runs": 13,
+    "snapshots": 13,
+    "results": 13,
+    "decisions": 9,
+    "outbox": 9
+  },
+  "integrity": "ok",
+  "active_runs": 0
+}
