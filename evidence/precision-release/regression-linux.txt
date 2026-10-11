@@ -1,0 +1,9 @@
+Exact Linux image/source: closurecall-verified:4dffaac63f06b57bd97e2af17140ff850be147e5
+Full existing suite; tests and historical evidence mounted read-only; no skips or changes to tests.
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+........................................................................ [ 80%]
+.................                                                        [100%]
+89 passed in 6.53s

@@ -1,0 +1,16 @@
+{
+  "result": "VERIFIED",
+  "before_build": "e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
+  "after_build": "4dffaac63f06b57bd97e2af17140ff850be147e5",
+  "counts_unchanged": {
+    "facilities": 2,
+    "runs": 13,
+    "snapshots": 13,
+    "results": 13,
+    "decisions": 9,
+    "outbox": 9
+  },
+  "all_six_table_fingerprints_unchanged": true,
+  "all_nine_historical_replay_bodies_unchanged": true,
+  "active_runs": 0
+}

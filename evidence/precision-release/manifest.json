@@ -1,0 +1,69 @@
+{
+  "created_at_utc": "2026-10-11T11:36:03.793744+00:00",
+  "application_source": "4dffaac63f06b57bd97e2af17140ff850be147e5",
+  "image": "sha256:d580f299413bb9598750ab259502f1f96351d9078ae77fdc924acf6da3317a41",
+  "deployment": "Private existing Linode, SSH tunnel 8081; no public exposure",
+  "hash_scope": "Staged Git bytes; manifest excludes itself. Text line endings/trailing whitespace normalized only; results unchanged. Images are unedited browser captures.",
+  "evidence": {
+    "evidence/precision-release/after.json": {
+      "sha256": "854715a76b9b7c69a9c65815ef67ae4fe6675458f8d555f30ea1c05a6592d7bd"
+    },
+    "evidence/precision-release/before.json": {
+      "sha256": "625dd1b546c070135f2910ce518047347e84b2f43ef293e49716ed2673de8c53"
+    },
+    "evidence/precision-release/browser-main.json": {
+      "sha256": "05aa4606d8657794a032d694814f08b9e27f1035826287e333715fa398a3be55"
+    },
+    "evidence/precision-release/candidate-opened.jpg": {
+      "sha256": "b2d326d7bf34878a155f4b38e7dc473332aaa53a05e1ce15c55ddaff4accb7c6"
+    },
+    "evidence/precision-release/data-integrity.json": {
+      "sha256": "30394ca1306d487121a021c829ac245f41aa8569cbd03eea40e678dad7331b38"
+    },
+    "evidence/precision-release/deployment.txt": {
+      "sha256": "62f2bd1892b361a9239694b709d175f0ac6e8dc50ed8f7007ccfe26b22ee7926"
+    },
+    "evidence/precision-release/history-secret-scan.json": {
+      "sha256": "bd4e62b9bb9b0100653028f12a17a454e9963b55b754338064728e6ff61be2b5"
+    },
+    "evidence/precision-release/linux-initial-fixture-error.txt": {
+      "sha256": "f7f516dbdf08916b81649f4e5aed66103f6a79d261b123812206439c1c0295b7"
+    },
+    "evidence/precision-release/main-desktop.jpg": {
+      "sha256": "a487a3e5a7d80c2a20a78865feacc0dbf09a6137a7c231c052228203d3809a75"
+    },
+    "evidence/precision-release/main-evidence.jpg": {
+      "sha256": "8f1d3e6dd3e14d5678c9cf5a7cc9be41f2eb20b440164af74240fb3fd06f25bb"
+    },
+    "evidence/precision-release/pre-switch.json": {
+      "sha256": "fe81d2946220e1f06665b836f1d81dd94288c8fb4690b73af06971bea988790f"
+    },
+    "evidence/precision-release/qa-copy.json": {
+      "sha256": "41bfe274f9243cab23fe1cba4c5f2804560f9b53ef89c99d49dd7ddfb4b5133b"
+    },
+    "evidence/precision-release/qa-live-workflow.txt": {
+      "sha256": "fa50d0cff8e7c89b9daac20f517a8ed571f423b65f72ce9e290db3c29d4124b5"
+    },
+    "evidence/precision-release/regression-linux.txt": {
+      "sha256": "d125e7dab4e4ca6e0dfaa7f9c2bb97f4a2621ef50a47bc250f5fba618cd32f7d"
+    },
+    "evidence/precision-release/response-secret-scan.txt": {
+      "sha256": "176a2e26cb4759852d62388260da1f17734a1de2da030581062d2264b567e8ea"
+    },
+    "evidence/precision-release/secret-scan.json": {
+      "sha256": "04a2db2491ce19c0ed825c3d045911e88c2b9131ed75cd771aabffcec4d90025"
+    },
+    "evidence/precision-release/security-final.txt": {
+      "sha256": "cfa3114bf77d8f447cff6065d4e7a1fe25de3a94a8481ed770325fab0e71e8bd"
+    },
+    "evidence/precision-release/tunnel-static.json": {
+      "sha256": "0b888bca3d97beb0773ad14616e0dd4da5cc036fba7681a1223422274a5f29cb"
+    }
+  },
+  "limits": [
+    "LIVE QA had zero KC NWS alerts; not a fresh warning branch",
+    "Windows result is earlier identical app freeze, not a new execution",
+    "Human spoken rehearsal, accessibility certification and memo visual/print QA not verified",
+    "Judge access and Submit remain user-owned"
+  ]
+}

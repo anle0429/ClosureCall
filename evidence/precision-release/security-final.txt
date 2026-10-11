@@ -1,0 +1,18 @@
+2026-10-11T11:31:47Z
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), deny (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     LIMIT IN    Anywhere                   # Key-only SSH administration
+22/tcp (v6)                LIMIT IN    Anywhere (v6)              # Key-only SSH administration
+
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=474,fd=15))
+LISTEN 0      4096       127.0.0.1:8000      0.0.0.0:*    users:(("docker-proxy",pid=50427,fd=8))
+LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=474,fd=17))
+LISTEN 0      4096         0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=1103,fd=3),("systemd",pid=1,fd=93))
+LISTEN 0      4096            [::]:22           [::]:*    users:(("sshd",pid=1103,fd=4),("systemd",pid=1,fd=94))
+closurecall-app-1 closurecall-verified:4dffaac63f06b57bd97e2af17140ff850be147e5 Up 5 minutes (healthy) 127.0.0.1:8000->8000/tcp

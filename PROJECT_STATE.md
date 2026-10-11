@@ -1,4 +1,20 @@
-# Precision console candidate — current checkpoint
+# Private precision release — current checkpoint
+
+Verified 2026-10-11 UTC. **DEPLOYED / PRIVATE SSH TUNNEL / NOT SUBMITTED**. Application release `4dffaac63f06b57bd97e2af17140ff850be147e5`, image `sha256:d580f299413bb9598750ab259502f1f96351d9078ae77fdc924acf6da3317a41`, on the existing Linode. Actual cutover: `2026-10-11T11:26:02.703356199Z`. Healthy, appuser, read-only root filesystem, capabilities dropped, bound only to `127.0.0.1:8000`. Windows tunnel `127.0.0.1:8081` is running and the authenticated main browser displays the new design, production/source footer and original historical replay. Served HTML/CSS/JS match the committed bytes exactly.
+
+The user conditionally approved applying the design after opening the candidate. Valid HTTP 8084 opened and authenticated; the earlier blocked tab contained a browser-generated `data:` error document after connection refusal. No policy bypass was attempted. The user then cancelled public exposure and requested laptop-only presentation. Public proxy configuration was reverted before deployment; no proxy started, no HTTP/HTTPS firewall opening, no domain or new resource. Final firewall/listener read at 11:31:47 UTC confirms SSH only externally and loopback application binding. 8084 remains separate QA; use 8081 for the main demo.
+
+Exact Linux release image: **89 passed in 6.53s**. Initial runner had 87 passed / 2 failed because historical JSON fixtures were not mounted; preserve that failure. Only the release-test runner was corrected to mount existing fixtures read-only. No tests were weakened. Earlier final Windows run: **89 passed in 10.68s**, with identical application source; not a new execution in this deployment checkpoint. No new application edits after the completed design freeze.
+
+An isolated remote QA copy of the current backup exercised real NWS, modeled AQ and Strands 1.59.0: five successful scoped tools, two model calls; natural Normal recommendation, explicit manager test approval, unsent drafts, idempotent evaluation/decision and exact replay. NWS returned **zero alerts at Kansas City**, not a live warning demonstration. Six unauthenticated business reads rejected; cross-origin mutation rejected. QA stopped; its separate volume is retained. No new evaluation/decision was written to the original database during these checks.
+
+Fresh pre-cutover SQLite backup: `/app/data/backups/closurecall-20261011T112601Z.sqlite3`. Before/after: 2 facilities, 13 runs/snapshots/results, 9 decisions/outbox packages; integrity OK, zero active runs. All six table fingerprints, all nine replay bodies and bundle hashes exact. Original env/database/backups preserved. Prior e5f7801 release/image remains available for code-only rollback with the current database.
+
+Evidence: `evidence/precision-release`, `PRIVATE_DESIGN_RELEASE.md`; before/after design evidence remains `evidence/precision`. Tunnel helper now prefers Windows OpenSSH to reuse its unlocked agent; the actual updated script opened the verified 8081 listener. Private GitHub progress may advance with documentation independently of deployed application source. Human spoken rehearsal, accessibility certification, downloaded memo visual/print QA and current live-warning branch remain unverified. Judge access and Submit remain user-owned. All notifications remain drafts.
+
+The dated design checkpoint below describes the earlier isolated pass; its deployment and browser limitations are superseded only by the verified scope above.
+
+# Precision console candidate — earlier checkpoint
 
 Updated 2026-10-11 UTC. READY FOR USER REVIEW / NOT DEPLOYED. Branch `design/precision-console`; application/source freeze `2d6ef4ce3076c42b01573c2ed483bc296de84093`, base `3e585f0`. Only HTML/CSS changed in the app. All 29 other application Git blobs, 61 unique HTML IDs, control contracts/enum values and script references match the base; no business, NWS applicability, Strands, rule, auth, routing or stored-record changes.
 

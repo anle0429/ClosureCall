@@ -1,0 +1,2 @@
+SQLite backup created: /app/data/backups/closurecall-20261011T112601Z.sqlite3
+{"status":"ok","product":"ClosureCall","prototype":true}source=closurecall-verified:4dffaac63f06b57bd97e2af17140ff850be147e5 image=sha256:d580f299413bb9598750ab259502f1f96351d9078ae77fdc924acf6da3317a41 started=2026-10-11T11:26:02.703356199Z user=appuser readonly=true ports={"8000/tcp":[{"HostIp":"127.0.0.1","HostPort":"8000"}]} caps=["ALL"]

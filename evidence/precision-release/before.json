@@ -1,0 +1,69 @@
+{
+  "at_utc": "2026-10-11T11:19:39.794844+00:00",
+  "build": "e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
+  "integrity": "ok",
+  "active_runs": 0,
+  "counts": {
+    "facilities": 2,
+    "runs": 13,
+    "snapshots": 13,
+    "results": 13,
+    "decisions": 9,
+    "outbox": 9
+  },
+  "table_fingerprints": {
+    "facilities": "5f549534dc99f24eccf79afaf024f5a34d2d1e7c17e36cd1d5ed3fb855fe648e",
+    "runs": "0c9f89134769fdd62676ad764bff896f3efb93715f70c4a7a580ebbb85c848f5",
+    "snapshots": "5abc7633487be23b223e1008b3d490acac9bd66a18b76b4afaed747eaa3acbde",
+    "results": "29546cd30a9faf8e5eb9ba70fabbee6ed6df4bc6ac4d33338788426015893668",
+    "decisions": "0bf805abf318e7d09b3d6e12bde55e0926343547c80517872b5c110a5abd9cbb",
+    "outbox": "9928d01fa21f2aff3cfa1874dd294a282442df2cca833cd30bac7a7b46dac053"
+  },
+  "historical_records": [
+    {
+      "decision_id": "16a170c1-af9b-4950-86b2-a3eecf1ad26b",
+      "bundle_hash": "b73bcc9a7c06308fc349a39614c24516fac29413dd6ca49f41a34dcde1982a28",
+      "body_sha256": "746adcadace77144950fca514f62f6f1b0f802ed43ae74c854013d53afa5f3e7"
+    },
+    {
+      "decision_id": "2efe6988-a638-4887-a15a-abc3319e5879",
+      "bundle_hash": "4b5b9b42c30069005c51bdc0c2cc963f21c61c9fefcd46bc03ea84edc56039a0",
+      "body_sha256": "1b7700e57e8f2cc6d7d41a2f1805b2c682b2cd8ceac8d2784163a4eccb7ed6af"
+    },
+    {
+      "decision_id": "42d62a68-1959-4edb-8af9-2b805d8f6105",
+      "bundle_hash": "287b5b1e5f8786267d5f65461c263d41ecb4bfda7d8c6012f073b903cb2311d5",
+      "body_sha256": "6cca5e927aca2e309dcd73fe9def6258e90cfa7615345b1aea4ab67cd79f5eb3"
+    },
+    {
+      "decision_id": "4542c699-e59f-4f1f-ae5d-54b82c915333",
+      "bundle_hash": "89bc46643aa450b817bee6dc3aebefe72051f7bf58627d5782cc445de4bb9644",
+      "body_sha256": "65723d56007abc47587415d274cb5e61fbc6b144b3cf319c0cf361619019cd38"
+    },
+    {
+      "decision_id": "8cfdc9a8-6daa-4576-b901-a93c8a7a1a25",
+      "bundle_hash": "24f30574cb8effc110d38f62bd820a55d47f5770ebcd187784a32643a744902a",
+      "body_sha256": "64195a2f537969c4d3d1ad4d63b6c0f9795c49a0b4ce449afd5135102b8e9681"
+    },
+    {
+      "decision_id": "9c022ef8-90ac-4f06-848f-24b232c35180",
+      "bundle_hash": "0f7eb679fd1d217690cb07a6cd141ce419f2d30a5dfc7c0faefa6a8073c53e28",
+      "body_sha256": "46451bb9f1d3aa5b914c7b5135dc9f11127d8fe6d5fd9d7131ef0cfe06b6fd32"
+    },
+    {
+      "decision_id": "a9cfe7dc-2336-4cde-8f55-694defe160ad",
+      "bundle_hash": "ca9c9aa652b6b82d0d19f5058631ec1164d6eed66a5aa31c046539b622563058",
+      "body_sha256": "f79617cb83b796f8189e5add911e5223b92509936c8eb0d6cc6e57ed512c06b7"
+    },
+    {
+      "decision_id": "cf6d7432-7246-49d0-96ce-cb3da56d7f89",
+      "bundle_hash": "ec8f0456b3a4ff15be12a815e0526ad1892d7e7f6267d49903cf3e483ccb3705",
+      "body_sha256": "5f5eb556fb7b157a031ff2df0f0288073341dfa47fa50469e50b941556600d84"
+    },
+    {
+      "decision_id": "fc569eb8-54bd-4989-b9b7-fedcc46b3896",
+      "bundle_hash": "a5ff2acb07cc6f8e22cf038ca0a5301995af7c2f16b7ab6ff30695907ff8bb41",
+      "body_sha256": "f797c7bd0de045d538ef91e23a6a94746372d617d17815545d33afea9167051c"
+    }
+  ]
+}

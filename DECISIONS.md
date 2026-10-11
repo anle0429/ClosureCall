@@ -1,5 +1,16 @@
 # Technical decisions
 
+## Verified private precision release — 2026-10-11 UTC
+
+- Treat the user's conditional design application as authorized after the candidate opened successfully. The later laptop-only instruction cancels public/HTTPS/domain work. Revert the unused proxy files; no proxy, port opening, paid provisioning or submission. The official Caddy image was downloaded during preparation but never started.
+- Keep the existing stack and application freeze. Release 4dffaac includes earlier verified design/feedback work plus a test-runner fixture mount; no new NWS, policy, Strands, auth, route, schema or stored-record edits during this release.
+- An exact-image test failure is a failed gate: retain 87/2 fixture-path result, mount the committed historical evidence read-only, then require the full unchanged 89-test pass. Do not alter assertions, skip tests or claim earlier Windows evidence as a new run.
+- Exercise live external calls and test approval on a separate current-backup copy. Keep the original 13 runs and 9 decisions/outbox packages untouched; all six table fingerprints and nine replay bodies/hashes must match after the actual cutover. No backup restore into production.
+- Preserve the existing loopback binding, non-root read-only container and manager authentication. Windows OpenSSH is preferred for the tunnel because the Windows agent holds the unlocked key; retain strict known-host pinning, loopback forward and occupied-port refusal.
+- Distinguish source release 4dffaac from later documentation/client-helper commits. Preserve e5f7801 and take a fresh backup before any future code-only rollback; never replace newer decisions with old backup data.
+- Zero live KC alerts is a valid observed result. The original Flood Watch example remains historical REPLAY with a synthetic test override; do not relabel it LIVE or describe drafts as delivered.
+- Continue the previously authorized private GitHub progress track without changing repository visibility/access or force pushing. Judge access/Submit stay with the user.
+
 ## Precision operations console — 2026-10-11 UTC
 
 - Follow the user's three-change/35-minute scope: compact operational context; clear evidence/recommendation/human authority; recipient register and restrained semantic styling. Preserve native system fonts and existing responsive/keyboard/live-region mechanisms. No dependencies, framework, decorative charts or business capabilities.

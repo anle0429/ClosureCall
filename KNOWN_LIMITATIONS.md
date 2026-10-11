@@ -1,5 +1,15 @@
 # Known limitations and demo risks
 
+## Current checkpoint — private source 4dffaac, 2026-10-11 UTC
+
+Main 8081 now serves the verified precision design and earlier bounded feedback fixes. [Current release evidence](PRIVATE_DESIGN_RELEASE.md) supersedes older undeployed/runtime statements below; no new features were added during the release gate. Exact Linux 89/6.53s and the unchanged earlier Windows 89/10.68s are scoped test evidence, not universal correctness.
+
+Latest real-source/model workflow was run on a separate remote QA copy: KC NWS zero alerts, modeled AQ available, five Strands tools, natural Normal and explicit test approval/drafts/replay. It does not demonstrate a fresh live-warning branch. The original Flood Watch and warning examples are historical REPLAY, with original synthetic assumptions intact. Original 9 decision packages are unchanged after deployment.
+
+Public exposure/domain work was cancelled; present through the laptop's private SSH tunnel. Tunnel/network or a reload requiring sign-in can interrupt the demo; see [recovery](DEMO_RECOVERY.md). Human spoken rehearsal, full accessibility certification and downloaded memo visual/print QA remain unverified. No real delivery, current local power/water/security verification, official thresholds/authority or agency endorsement. Judge access and Submit remain user-owned; no submission receipt is claimed.
+
+## Earlier e5f7801 / feedback checkpoint — dated history
+
 Current release e5f7801, 2026-10-10. Ordered by demo/challenge effect.
 
 Feedback pass: `FEEDBACK_PASS_COMPLETE_WITH_LIMITATIONS`; submission `ON_HOLD / NOT_SUBMITTED`. Production remains e5f7801. Candidate 656e8a0 is tested separately, **not deployed**; its memo button/geographic checks are not features of the current 8081 release. See SPONSOR_FEEDBACK_REVIEW.md and FEEDBACK_MANIFEST.json for scoped proof.

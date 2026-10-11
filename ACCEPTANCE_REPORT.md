@@ -1,5 +1,21 @@
 # ClosureCall acceptance report
 
+## Current private release addendum — 2026-10-11 UTC
+
+**Application source 4dffaac is deployed privately and open through 8081.** This addendum supersedes the earlier undeployed/runtime statements only within its checked scope; older deliverable evidence retains its capture date. Full gate details: [PRIVATE_DESIGN_RELEASE.md](PRIVATE_DESIGN_RELEASE.md).
+
+| Gate | Status | Current evidence |
+| --- | --- | --- |
+| Precision UI and preserved application contracts | VERIFIED | Earlier completed design browser checks/invariants and 89-test Windows freeze; current served static bytes exact to 4dffaac, authenticated main UI/replay inspected. `evidence/precision`, `evidence/precision-release/tunnel-static.json`, `browser-main.json`. |
+| Exact Linux release suite | VERIFIED | 89 passed in 6.53s. Initial 87/2 fixture-path failure retained, then runner-only read-only fixture mount fix; no test weakening. `regression-linux.txt`, `linux-initial-fixture-error.txt`. |
+| Real NWS/AQ → Strands → human approval → drafts/replay | VERIFIED, separate remote QA copy | Real retrieval at Kansas City, zero NWS alerts, modeled AQ available, five successful Strands 1.59.0 tools, natural Normal, explicit manager test approval, idempotency, unsent drafts and exact replay. `qa-live-workflow.txt`; not a new original production record or live-warning branch. |
+| Original data after actual deployment/restart | VERIFIED | Fresh current SQLite backup; six table fingerprints and all nine original replay bodies/bundle hashes exact, 13 runs / 9 decisions / 9 outbox. `before.json`, `after.json`, `data-integrity.json`, `deployment.txt`. |
+| Private access and no public application exposure | VERIFIED | Actual 8081 loopback tunnel and authenticated main browser; healthy appuser/read-only/cap-drop ALL container, 127.0.0.1:8000 only, final firewall/listeners read. `security-final.txt`, `browser-main.json`. User cancelled public/HTTPS/domain work; proxy configuration reverted before use. |
+| Fresh live-warning branch, human spoken rehearsal, accessibility certification, downloaded memo visual/print QA | NOT VERIFIED in this checkpoint | Latest KC feed was empty. Historical Flood Watch remains REPLAY. Prior scoped tests do not certify these unperformed checks. |
+| Judge access / actual Submit | NOT VERIFIED; user-owned | No publication, access grant or submission performed. |
+
+No blanket challenge PASS or USDA endorsement. All notices remain drafts. The historical sections below are preserved as dated audits.
+
 Audit date: 2026-10-10, America/Chicago (UTC-05). This report distinguishes live observations, synthetic tests and historical replay. VERIFIED means the specified check was performed; it does not certify official USDA operating policy or prize eligibility. Prior totals of 59 tests were not reused as proof for all requirements.
 
 ## Bounded feedback addendum — candidate 656e8a0, NOT DEPLOYED

@@ -1,0 +1,23 @@
+{
+  "verified_at_utc": "2026-10-11T11:31:36.358Z",
+  "url": "http://127.0.0.1:8081/",
+  "result": "VERIFIED",
+  "application_source": "4dffaac63f06b57bd97e2af17140ff850be147e5",
+  "historical_decision": "16a170c1-af9b-4950-86b2-a3eecf1ad26b",
+  "actions": [
+    "Existing manager sign-in",
+    "Loaded two facilities and nine saved decisions",
+    "Opened original historical override record",
+    "Opened recommendation using workflow link"
+  ],
+  "observed": [
+    "REPLAY badge and saved collection time",
+    "Saved evidence, not current weather",
+    "Original low-confidence manager-judgment recommendation and reasoned test override distinct",
+    "All twelve draft routes and manual follow-up visible",
+    "Manager decision form absent during replay",
+    "Footer identifies production/source 4dffaac"
+  ],
+  "scope": "Read-only original production records; no new evaluation or decision. Screenshots main-desktop.jpg and main-evidence.jpg.",
+  "preview_recovery": "Valid HTTP 8084 tab opened and authenticated. Earlier failed page used browser-generated data: error document; no action attempted on that rejected document."
+}

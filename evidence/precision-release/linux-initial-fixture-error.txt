@@ -1,0 +1,7 @@
+Exact image/source: closurecall-verified:4ac7b536e7a8ad927246ada443a870348f8cfc4a
+Initial full Linux suite: 2 failed, 87 passed in 7.01s.
+Failures:
+  test_actual_historical_exports_unchanged_by_new_memo[ui-approved-export.json]
+  test_actual_historical_exports_unchanged_by_new_memo[ui-override-export.json]
+Both failed with FileNotFoundError because /app/evidence/release was not mounted by the deployment test runner.
+This was NOT a passing gate. The runner must include the original committed export fixtures read-only, then rerun the complete suite without modifying/skipping tests.

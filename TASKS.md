@@ -1,3 +1,17 @@
+# Private precision release — 2026-10-11 UTC
+
+- [x] Open/authenticate the actual HTTP 8084 candidate; resolve the earlier browser error-page block without bypassing URL policy.
+- [x] Follow the user's revised laptop-only scope; revert public proxy configuration, keep firewall and app private.
+- [x] Preserve initial Linux fixture-mount failure; fix only the release runner and run all 89 existing tests in the exact 4dffaac image (6.53s).
+- [x] Back up the original current DB; test a separate remote copy with real NWS/AQ, all five Strands tools, natural recommendation, manager test approval, drafts, idempotency and exact replay.
+- [x] Record the zero-alert KC limitation; no invented live warning or silent facility change.
+- [x] Apply the verified private release; compare six table fingerprints and all nine original replay bodies/hashes after restart.
+- [x] Open the updated Windows-agent-compatible tunnel; verify exact served static bytes, authenticated main UI, saved decision, REPLAY and drafts labels.
+- [x] Retain the prior image/release and current-data backup; update release evidence and demo recovery.
+- [ ] Human 180-second spoken rehearsal; user-owned judge access and Submit. These are not implied by automated checks.
+
+Earlier tasks below retain their dated scope.
+
 # ClosureCall tasks
 
 ## Precision console design and local review — 2026-10-11 UTC

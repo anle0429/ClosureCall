@@ -1,0 +1,18 @@
+{
+  "at_utc": "2026-10-11T11:26:44.371097+00:00",
+  "url": "http://127.0.0.1:8081",
+  "config": {
+    "environment": "production",
+    "deployment": "Akamai Linode 172.234.201.174 (SSH verified)",
+    "build": "4dffaac63f06b57bd97e2af17140ff850be147e5",
+    "ai_mode": "configured",
+    "notification_mode": "outbox_only",
+    "prototype": true
+  },
+  "static_files_exact_git_bytes": {
+    "index.html": "5c86f63715d591b67166422e97ce450a92fda6fb240e3e3b51ce1cacb5b43344",
+    "styles.css": "5f681967a3207ff5876098bf14f59b9a5c5ac3ed377db3cd6a21a0ccc5a3b82d",
+    "app.js": "2f972f8da3aa59d958096ee9eef4837568df5e020899355ba754cc214d24c296"
+  },
+  "result": "VERIFIED"
+}
