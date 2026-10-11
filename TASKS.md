@@ -1,5 +1,20 @@
 # ClosureCall tasks
 
+## Focused visual design pass — 2026-10-11 UTC
+- [x] Read start kit/current state/working agreement; inspect existing rendered UI and capture desktop/narrow before images.
+- [x] Create separate `design/operations-dashboard` branch; preserve known-good deployment, secrets, original data and user work; one writer.
+- [x] Improve existing static UI hierarchy, typography, spacing, responsive layout, semantic statuses, button/loading states and weather provenance clarity.
+- [x] Make facility/time/source collection/confidence/original recommendation/human decision/drafts/replay distinct without backend or architecture changes.
+- [x] Browser QA on isolated data: acknowledged evaluation reload, double-click, approve, reasoned override, delayed arrival timing, reject, errors/retry, recipient routes/manual follow-up, Refresh/replay and actual downloads.
+- [x] Capture final desktop/narrow and focused evidence/draft/error/loading screenshots; verify layout at widths 320/390/720/920/1440 and keyboard disclosure/focus.
+- [x] Execute full existing Windows suite on final source: 89 passed/12.43s; JavaScript syntax and pip consistency verified.
+- [x] Verify two original replay bundles/drafts and actual JSON/EML/memo downloads; recheck historical evidence and user-package hashes; preserve own synthetic test DB separately.
+- [x] Freeze frontend source `8f6923a`; prepare DESIGN_REVIEW.md and scoped sanitized evidence for concrete user review.
+- [ ] User approval before deployment, explicitly required by this design request. Candidate is not deployed or published/pushed.
+- [ ] Separate post-approval gate: exact Linux candidate image/tests, fresh backup of actual current production data, private deployment and runtime/browser validation. Earlier Linux results do not verify this image.
+
+Design candidate: READY FOR USER REVIEW / NOT DEPLOYED. Judge access/Submit remain user-owned. Earlier task history follows.
+
 ## Bounded USDA feedback pass — 2026-10-10 20:16 America/Chicago
 - [x] F0: read current requirements/handoff/state/evidence and code; record user-reported feedback separately from policy/endorsement in SPONSOR_FEEDBACK.md.
 - [x] F1: reproduce polygon/unknown-scope/expiry gaps and wrong-location cancellation; add explicit two-run membership/same-ID/null-geometry/empty-timeout coverage; minimal boundary fixes; old outside fixture now explicitly outside, not unknown.

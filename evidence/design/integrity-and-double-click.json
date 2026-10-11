@@ -1,0 +1,32 @@
+{
+  "mode": "ISOLATED DESIGN QA",
+  "database": "Separate ignored preview database",
+  "original_records": [
+    {
+      "decision_id": "a9cfe7dc-2336-4cde-8f55-694defe160ad",
+      "bundle_hash": "ca9c9aa652b6b82d0d19f5058631ec1164d6eed66a5aa31c046539b622563058",
+      "exact_match": true
+    },
+    {
+      "decision_id": "16a170c1-af9b-4950-86b2-a3eecf1ad26b",
+      "bundle_hash": "b73bcc9a7c06308fc349a39614c24516fac29413dd6ca49f41a34dcde1982a28",
+      "exact_match": true
+    }
+  ],
+  "counts": {
+    "runs": 5,
+    "decisions": 4,
+    "outbox": 4
+  },
+  "new_decisions": [
+    {
+      "run_id": "a71b0f9d-027b-491c-9b3d-9d26b2ae0e6f",
+      "decisions": 1
+    },
+    {
+      "run_id": "e21aa636-74d1-44d5-ad1c-e0d89ca1f8d5",
+      "decisions": 1
+    }
+  ],
+  "downloaded_approval_export_exact": true
+}

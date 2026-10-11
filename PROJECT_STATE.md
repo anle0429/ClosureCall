@@ -1,3 +1,19 @@
+# Current visual design candidate
+
+Updated 2026-10-11 UTC (2026-10-10 America/Chicago). **READY FOR USER REVIEW / NOT DEPLOYED**.
+
+Separate branch `design/operations-dashboard`; frozen application source `8f6923ac528204ab83c3e095e9768f8188985172`, base `c3d9c56`. Only three existing static frontend files changed. Backend, API contracts, five Strands tools, deterministic rules, audit storage, schema, dependencies and authorization are unchanged relative to the base. The base includes earlier undeployed feedback source `656e8a0`; any later release would include that candidate too.
+
+Completed focused hierarchy/typography/spacing/status/responsive/evidence presentation pass; facility/time/source collection and human decision context, separate original recommendation/recorded decision, unsent drafts/manual follow-up and historical replay. Read-only sign-in/config now times out after 15s to recover a demonstrated pending Basic-auth request; business POST/idempotency and server auth unchanged.
+
+Final Windows full suite actually executed: **89 passed in 12.43s**. JavaScript syntax and pip consistency checks pass. Isolated loopback browser QA covers login error/retry, work-period/reason/timing validation, evaluate/reload/approve/reasoned override/delayed arrival/reject, variable counts, all recipient routes, double-click/Refresh/replay/downloads, native keyboard disclosure/focus and widths 320/390/720/920/1440. Two actual historical records and downloaded JSON/essential EML/memo bytes exact after new test writes. New evaluations explicitly synthetic; providers/model disabled; own ignored DB, no production data writes. Evidence and review in DESIGN_REVIEW.md / evidence/design.
+
+Known-good production remains last verified source `e5f7801` / image `sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184`; last remote read `2026-10-11T01:15:40Z`. No SSH/redeploy/restart/public exposure/new remote health read in this design pass. Preview `8084` is isolated; `8081` remains the production tunnel address. No real notifications, push, PR or Submit in this pass. New branch is local pending review.
+
+Linux exact candidate build/tests, fresh provider/model workflow, production UI, accessibility certification, memo print layout and human spoken rehearsal are NOT VERIFIED here. Original 33 release + 3 follow-up + 26 feedback artifact hashes and six supplied package hashes rechecked unchanged. Existing secrets, original databases/backups and untracked user work preserved. Deployment awaits explicit user approval, then exact Linux gate and fresh backup of actual current data. Judge access and Submit remain user-owned.
+
+The dated checkpoints below are preserved as history.
+
 # Current bounded USDA feedback state
 
 Updated 2026-10-10T20:18:34.929109-05:00 (America/Chicago); 2026-10-11T01:18:34.929109+00:00 UTC.

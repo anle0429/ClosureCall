@@ -1,0 +1,185 @@
+{
+  "scope": "Isolated loopback browser QA; synthetic new evaluations; two actual historical exports; no live/model calls",
+  "checked_at_utc": "2026-10-11T03:35:22.697Z",
+  "checks": [
+    {
+      "name": "Authentication error remains on login",
+      "result": "VERIFIED",
+      "detail": ""
+    },
+    {
+      "name": "Sign-in timeout restores retry",
+      "result": "VERIFIED",
+      "detail": "Sign-in timed out. Check manager credentials or connectivity, then retry."
+    },
+    {
+      "name": "Login retry opens workspace",
+      "result": "VERIFIED",
+      "detail": "Correct synthetic preview credentials"
+    },
+    {
+      "name": "Invalid work period is rejected",
+      "result": "VERIFIED",
+      "detail": "Actual 422 from existing EvaluationRequest validation"
+    },
+    {
+      "name": "Evaluation loading disables button",
+      "result": "VERIFIED",
+      "detail": "Evaluation: collecting"
+    },
+    {
+      "name": "Reload resumes acknowledged evaluation",
+      "result": "VERIFIED",
+      "detail": "Oct 10, 2026, 10:38 PM CDT → Oct 11, 2026, 12:38 AM CDT"
+    },
+    {
+      "name": "Manager review is separate from recommendation",
+      "result": "VERIFIED",
+      "detail": "Awaiting manager review"
+    },
+    {
+      "name": "Approve records human decision",
+      "result": "VERIFIED",
+      "detail": "Actual decision endpoint; original recommendation remains separate"
+    },
+    {
+      "name": "All recipients remain visible",
+      "result": "VERIFIED",
+      "detail": "All included/excluded/deferred routes displayed"
+    },
+    {
+      "name": "Essential draft retains supervisor direction",
+      "result": "VERIFIED",
+      "detail": "Stored draft content displayed unchanged"
+    },
+    {
+      "name": "Deferred follow-up remains visible",
+      "result": "VERIFIED",
+      "detail": "Manual follow-up, not scheduled delivery"
+    },
+    {
+      "name": "History refresh preserves frozen display",
+      "result": "VERIFIED",
+      "detail": "Refresh only updates historical list"
+    },
+    {
+      "name": "Override without reason is rejected",
+      "result": "VERIFIED",
+      "detail": "Actual server-side 422; retry button enabled"
+    },
+    {
+      "name": "Override preserves original recommendation",
+      "result": "VERIFIED",
+      "detail": "Original normal recommendation; separate reasoned closure decision"
+    },
+    {
+      "name": "Unavailable feed does not look like valid empty feed",
+      "result": "VERIFIED",
+      "detail": "Clearly labeled seeded synthetic failure case; saved rules produce null/data_incomplete"
+    },
+    {
+      "name": "Delayed-arrival missing timing rejected",
+      "result": "VERIFIED",
+      "detail": "Existing 409 validation visible; retry button restored."
+    },
+    {
+      "name": "Confirmed timing preserved in replay",
+      "result": "VERIFIED",
+      "detail": "Delayed-arrival override displays stored UTC timestamp and explicit timing basis."
+    },
+    {
+      "name": "Reject uses actual variable counts",
+      "result": "VERIFIED",
+      "detail": "Reasoned rejection changes routes to all excluded; no hardcoded 9/2/1 display."
+    },
+    {
+      "name": "Recommendation rationale disclosures work",
+      "result": "VERIFIED",
+      "detail": "Native details reveal saved conditions, prototype assumptions and confidence basis."
+    },
+    {
+      "name": "Responsive width 1440",
+      "result": "VERIFIED",
+      "detail": "Measured visible cards and form controls; no document overflow."
+    },
+    {
+      "name": "Responsive width 920",
+      "result": "VERIFIED",
+      "detail": "Measured visible cards and form controls; no document overflow."
+    },
+    {
+      "name": "Responsive width 720",
+      "result": "VERIFIED",
+      "detail": "Measured visible cards and form controls; no document overflow."
+    },
+    {
+      "name": "Responsive width 390",
+      "result": "VERIFIED",
+      "detail": "Measured visible cards and form controls; no document overflow."
+    },
+    {
+      "name": "Responsive width 320",
+      "result": "VERIFIED",
+      "detail": "Measured visible cards and form controls; no document overflow."
+    },
+    {
+      "name": "Historical recipient channels and follow-up visible",
+      "result": "VERIFIED",
+      "detail": "All route reasons and accessible channel are rendered from the frozen package."
+    },
+    {
+      "name": "Keyboard disclosure activation",
+      "result": "VERIFIED",
+      "detail": "Enter closes the focused native disclosure."
+    },
+    {
+      "name": "Keyboard focus visible",
+      "result": "VERIFIED",
+      "detail": "Tab moves to Recommendation link; computed solid outline is 2.4px at browser display scaling."
+    }
+  ],
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "bodyScrollWidth": 1425,
+      "clipped": [],
+      "documentScrollWidth": 1425
+    },
+    {
+      "width": 920,
+      "height": 900,
+      "bodyScrollWidth": 905,
+      "clipped": [],
+      "documentScrollWidth": 905
+    },
+    {
+      "width": 720,
+      "height": 900,
+      "bodyScrollWidth": 705,
+      "clipped": [],
+      "documentScrollWidth": 705
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "bodyScrollWidth": 375,
+      "clipped": [],
+      "documentScrollWidth": 375
+    },
+    {
+      "width": 320,
+      "height": 800,
+      "bodyScrollWidth": 305,
+      "clipped": [],
+      "documentScrollWidth": 305
+    }
+  ],
+  "keyboardFocus": {
+    "outline": "solid",
+    "outlineWidth": "2.4px",
+    "tag": "A",
+    "text": "03 Recommendation"
+  },
+  "console": []
+}

@@ -1,5 +1,17 @@
 # Technical decisions
 
+## Focused visual design decisions — 2026-10-11 UTC
+- Work from existing base `c3d9c56` on local branch `design/operations-dashboard`, one writer, 60-minute timebox. No framework, agent, backend/API/policy/auth/schema/dependency rewrite. Only three existing static files change; application source frozen at `8f6923a`.
+- Use native system typography and restrained navy/slate/white operations styling. Keep readable text with color semantics for review/approval/error/drafts/replay; preserve all recipient cards and stored messages.
+- Separate original deterministic recommendation from recorded human posture/status/reason/actor/time. Confidence is completeness, not probability; thresholds remain prototype assumptions, not USDA/OPM policy.
+- Show facility timezone alongside local and exact stored source timestamps. Retrieval age is at display time, not an automatic monitoring/freshness guarantee; REPLAY states saved evidence explicitly. Valid empty feed differs from unavailable evidence; modeled AQ differs from a building sensor.
+- Limit the demonstrated login recovery fix to a 15-second AbortController on the initial read-only config request. A browser Basic-auth challenge had left invalid credentials pending. Keep server auth and business POST idempotency/deadlines unchanged.
+- Verify UI writes only in a new ignored loopback database; two actual frozen exports imported exactly, new evaluation and missing-source cases explicitly synthetic. Block providers/model in the QA harness; use unchanged authenticated decision service. Never relabel this as LIVE integration proof or production approval.
+- Preserve original historical exports/hashes/drafts and user-supplied package. Downloads verified against frozen content; downloaded memo visual/print remains unverified. Keyboard/responsive checks are narrow observations, not accessibility certification.
+- Final Windows full suite 89/12.43s, JS syntax/pip consistency pass. No exact candidate Linux image/build, new hosted call, production operation or fresh runtime health claim. Previous Linux tests apply to their older source/image only.
+- Preserve known-good production `e5f7801` and private tunnel `8081`. Candidate preview uses `8084`. The base includes earlier undeployed `656e8a0` feedback changes; future deployment must review/test the combined candidate.
+- Do not push/publish/deploy this candidate during the visual pass. Present screenshots and DESIGN_REVIEW.md for user approval as explicitly requested. A later approved deployment requires a fresh current-data backup and exact Linux gate; retain current data during code rollback. Judge access/Submit remain user-owned.
+
 ## Bounded feedback decisions — 2026-10-10 20:16 America/Chicago
 - Treat the conversation as user-reported feedback, not a policy/rubric/endorsement or app test by the representative. Do not infer that USDA lacks guidelines or that OnSolve API/import is available.
 - Correct demonstrated boundary gaps using the existing Shapely dependency: supplied polygon coverage, explicit outside versus unverified scope, county/zone metadata for null geometry, current-message expiry bound and geographically confirmed supersession. No geographic database, city-text/bbox positive proof, threshold change, new connector or framework.
