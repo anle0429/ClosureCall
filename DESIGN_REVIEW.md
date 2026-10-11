@@ -1,4 +1,32 @@
-# Operations dashboard design candidate
+# User-friendly refinement — current candidate
+
+Application source: `e820f0fd8259369f8457e5d8a43d2e1a62256cb9` on `design/operations-dashboard`, superseding the initial visual candidate below. **READY FOR USER REVIEW / NOT DEPLOYED**. Private preview: http://127.0.0.1:8084/ (isolated QA data).
+
+The desk now explains what to do next and presents four steps: choose work hours, review conditions, record a decision, and check employee drafts. Work start/end have a concrete shift example and are explicitly distinguished from alert validity. Buttons name their outcome; normal operation hides irrelevant arrival/dismissal inputs, while delayed arrival and early dismissal reveal them. Existing validation failures have readable recovery instructions. Saved decisions, unsupported hazards, original recommendations, manager overrides and unsent drafts remain distinct.
+
+This follow-up changes only the same three existing static files. API paths, enum values, request bodies, authentication, deterministic rules, agent/tools, audit records and backend behavior remain unchanged. All decision writes were in the separate synthetic QA database. No original demo database, backup, secret or remote server was modified.
+
+| Comparison | Before refinement | Current candidate |
+| --- | --- | --- |
+| Desktop, requested 1440 × 1000 | [Before](evidence/usability/before-desktop.jpg) | [After](evidence/usability/after-desktop.jpg) |
+| Narrow, requested 390 × 844 | [Before](evidence/usability/before-narrow.jpg) | [After](evidence/usability/after-narrow.jpg) |
+
+Both comparisons retain the same historical decision `16a170c1-af9b-4950-86b2-a3eecf1ad26b`; its Flood Watch is saved evidence, not current weather. The site's original synthetic name remains unchanged. Additional views: [weather and recommendation](evidence/usability/weather-and-recommendation-desktop.jpg), [conditional timing form](evidence/usability/manager-form-desktop.jpg), [essential draft](evidence/usability/drafts-desktop.jpg), and [loading guidance](evidence/usability/loading.jpg). First-use and loading captures show the same guidance during development; final comparison images are pinned to the final source hashes in [metadata](evidence/usability/capture-metadata.json).
+
+Actually verified in this follow-up:
+
+- Full existing Windows suite on final source: **89 passed in 12.49s**, [log](evidence/usability/windows-tests-final.txt). JavaScript syntax and dependency consistency pass.
+- Browser flow through real existing authenticated endpoints with synthetic evaluations: double-click evaluation, approve, reasonless override error, missing timing error, reasoned delayed-arrival override, draft routing, list Refresh and reload of acknowledged records. Original normal recommendation and recorded delayed timing remain separate.
+- Rendered historical unsupported hazard and rejection are understandable; rejection shows its actual **0 included / 12 excluded / 0 deferred**. All 12 recipient routes, accessible voice draft and deferred manual follow-up remain visible. No notification was sent.
+- Five responsive widths (320, 390, 720, 920, 1440): no measured document overflow or clipped visible cards/controls. Desktop/narrow screenshots inspected. Final console query returned no warning/error entries. [21 scoped browser checks](evidence/usability/browser-checks.json).
+- Two original frozen exports remain exactly equal after new writes. QA database now has 10 runs, 9 decisions and 9 outbox packages; each decided run has one decision. New UI-downloaded delayed-override JSON and essential EML headers/message exactly match stored records. The previously downloaded historical memo was rechecked, not downloaded again. [Integrity proof](evidence/usability/integrity-and-downloads.json).
+- The 33 release, 3 follow-up, 26 feedback, 37 initial design evidence hashes and 6 supplied package hashes remain unchanged. Configured manager/inference values and credential patterns checked without printing values.
+
+**NOT VERIFIED in this follow-up:** fresh LIVE-provider/model operation, exact Linux candidate build/tests, production UI/health, screen-reader certification, memo print rendering, and human rehearsal. The new next-step copy for an active incomplete assessment was inspected in source but not browser-exercised; the historical unsupported wording was rendered. Initial design sign-in timeout/keyboard/rejection-write checks below are dated earlier observations, not new follow-up runs. Full-suite counts do not prove every requirement.
+
+Production remains untouched. The previously undeployed backend candidate `656e8a0` is still part of this branch's base; any future release must review and test the combined candidate. Deployment requires the user's explicit approval, a fresh backup of actual current data and the exact Linux gate. No push, publish, public access, paid resource, real delivery, judge-access change or Submit in either design pass. The initial checkpoint below is retained as history.
+
+# Operations dashboard design candidate — initial checkpoint
 
 Candidate application source: `8f6923ac528204ab83c3e095e9768f8188985172` on `design/operations-dashboard`. Status: **READY FOR USER REVIEW / NOT DEPLOYED**.
 

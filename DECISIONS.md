@@ -1,5 +1,14 @@
 # Technical decisions
 
+## User-friendly refinement — 2026-10-11 UTC
+- Interpret “user friendly” as an incremental presentation refinement of the existing design candidate, not deployment approval. Keep one writer and the original 60-minute design timebox; no subagents, frameworks or backend changes.
+- Explain the next task in a four-step guide derived from existing visible run/decision state. This guide adds no workflow authority or new API state. Saved-decision navigation targets the stored record rather than a hidden approval form.
+- Explain work start/end as affected shift hours, distinct from alert validity. Use readable display labels without altering enum values, payloads, record text, facility identity or rule mappings.
+- Show timing inputs only when the selected operating outcome needs arrival/dismissal timing. Preserve the existing backend validation and confirmed-time/basis fields; hidden fields do not add approval permission.
+- Translate only known safe validation errors into recovery instructions. Unknown errors retain the existing safe response path; never expose raw provider errors or print credentials.
+- Reuse the isolated loopback QA database and blocked providers/model harness. Current source e820f0f has 89 Windows tests passing in 12.49s; new browser JSON/EML downloads match stored records. Historic incomplete/unsupported wording was rendered; the new active-incomplete guide copy has source inspection only.
+- Retain initial design evidence unchanged and put this refinement's proof in evidence/usability. No production operation, public access, push or real notification; deployment still awaits explicit user approval and exact Linux/current-data-backup gates.
+
 ## Focused visual design decisions — 2026-10-11 UTC
 - Work from existing base `c3d9c56` on local branch `design/operations-dashboard`, one writer, 60-minute timebox. No framework, agent, backend/API/policy/auth/schema/dependency rewrite. Only three existing static files change; application source frozen at `8f6923a`.
 - Use native system typography and restrained navy/slate/white operations styling. Keep readable text with color semantics for review/approval/error/drafts/replay; preserve all recipient cards and stored messages.

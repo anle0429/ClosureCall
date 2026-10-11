@@ -1,0 +1,147 @@
+{
+  "scope": "Loopback 8084, isolated synthetic evaluations and exact frozen historical imports; no current LIVE-provider or model verification.",
+  "checks": [
+    {
+      "name": "First-use guidance",
+      "result": "VERIFIED",
+      "detail": "Clean authenticated tab begins with choose work hours; no evaluation claimed."
+    },
+    {
+      "name": "Plain-language invalid work-hours error",
+      "result": "VERIFIED",
+      "detail": "Actual 422 response; readable recovery instruction and enabled retry."
+    },
+    {
+      "name": "Loading guidance is explicit",
+      "result": "VERIFIED",
+      "detail": "Busy stage points to source evidence and prevents repeated submission."
+    },
+    {
+      "name": "Ready stage explains choices",
+      "result": "VERIFIED",
+      "detail": "Ready evaluation points to recommendation; manager decision remains pending."
+    },
+    {
+      "name": "Irrelevant timing fields hidden",
+      "result": "VERIFIED",
+      "detail": "Normal recommendation does not show arrival/dismissal fields."
+    },
+    {
+      "name": "Approval advances to drafts",
+      "result": "VERIFIED",
+      "detail": "Actual synthetic approval returns frozen replay; drafts ready and not sent."
+    },
+    {
+      "name": "Recorded-decision navigation avoids hidden form",
+      "result": "VERIFIED",
+      "detail": "Replay sends the decision link to the saved decision rather than hidden approval controls."
+    },
+    {
+      "name": "Override action explains required reason",
+      "result": "VERIFIED",
+      "detail": "Actual 422 remains enforced; action-specific save label restores after error."
+    },
+    {
+      "name": "Timing fields appear only for timing outcome",
+      "result": "VERIFIED",
+      "detail": "Delayed arrival reveals time and evidence/assumption inputs."
+    },
+    {
+      "name": "Missing timing recovery is readable",
+      "result": "VERIFIED",
+      "detail": "Actual 409; saved authority unchanged."
+    },
+    {
+      "name": "Reasoned delayed override stored",
+      "result": "VERIFIED",
+      "detail": "Normal original recommendation and stored manager timing remain separate."
+    },
+    {
+      "name": "Readable channels and all routes remain present",
+      "result": "VERIFIED",
+      "detail": "All recipients remain visible; actual channels and deferred instructions retained."
+    },
+    {
+      "name": "Refresh preserves recorded timing",
+      "result": "VERIFIED",
+      "detail": "List refresh does not reconstruct historical content."
+    },
+    {
+      "name": "Historical unsupported hazard is understandable",
+      "result": "VERIFIED",
+      "detail": "Stored Flood Watch has no automatic rule; manager override remains distinct from the original recommendation."
+    },
+    {
+      "name": "Historical guide does not describe current weather",
+      "result": "VERIFIED",
+      "detail": "Saved-record guidance clearly distinguishes replay from new evaluation."
+    },
+    {
+      "name": "Responsive 390px",
+      "result": "VERIFIED",
+      "detail": "{\"clipped\":[],\"document\":375,\"viewport\":390}"
+    },
+    {
+      "name": "Responsive 320px",
+      "result": "VERIFIED",
+      "detail": "{\"clipped\":[],\"document\":305,\"viewport\":320}"
+    },
+    {
+      "name": "Responsive 720px",
+      "result": "VERIFIED",
+      "detail": "{\"clipped\":[],\"document\":705,\"viewport\":720}"
+    },
+    {
+      "name": "Responsive 920px",
+      "result": "VERIFIED",
+      "detail": "{\"clipped\":[],\"document\":905,\"viewport\":920}"
+    },
+    {
+      "name": "Responsive 1440px",
+      "result": "VERIFIED",
+      "detail": "{\"clipped\":[],\"document\":1425,\"viewport\":1440}"
+    },
+    {
+      "name": "Rejected assessment has a clear no-notice result",
+      "result": "VERIFIED",
+      "detail": "Stored rejected test record has variable counts and no operating notice queued."
+    }
+  ],
+  "responsive": [
+    {
+      "requested_width": 390,
+      "clipped": [],
+      "document": 375,
+      "viewport": 390
+    },
+    {
+      "requested_width": 320,
+      "clipped": [],
+      "document": 305,
+      "viewport": 320
+    },
+    {
+      "requested_width": 720,
+      "clipped": [],
+      "document": 705,
+      "viewport": 720
+    },
+    {
+      "requested_width": 920,
+      "clipped": [],
+      "document": 905,
+      "viewport": 920
+    },
+    {
+      "requested_width": 1440,
+      "clipped": [],
+      "document": 1425,
+      "viewport": 1440
+    }
+  ],
+  "console_entries": [],
+  "limits": [
+    "Active incomplete-assessment next-step copy was inspected in source but not browser-exercised in this follow-up.",
+    "Existing initial design QA covers rejection writes, login timeout and keyboard focus; those are not new follow-up test runs."
+  ]
+}

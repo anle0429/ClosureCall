@@ -1,0 +1,30 @@
+{
+  "checked_at_utc": "2026-10-11T03:54:52.084802+00:00",
+  "application_source": "e820f0fd8259369f8457e5d8a43d2e1a62256cb9",
+  "operating_system": "Windows-11-10.0.26200-SP0",
+  "full_suite_command": ".venv\\Scripts\\python.exe -m pytest -q",
+  "full_suite_result": "89 passed in 12.49s",
+  "full_suite_log": "windows-tests-final.txt",
+  "other_checks": [
+    {
+      "command": "node --check app/static/app.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "<repo>\\.venv\\Scripts\\python.exe -m pip check",
+      "exit_code": 0,
+      "output": "No broken requirements found."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "timebox_start_utc": "2026-10-11T03:09:56+00:00",
+  "elapsed_minutes_at_verification": 44.93,
+  "timebox_limit_minutes": 60,
+  "deployment": "NOT PERFORMED",
+  "preview_status": "Loopback candidate retained for user review"
+}

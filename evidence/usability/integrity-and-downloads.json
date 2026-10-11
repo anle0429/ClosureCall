@@ -1,0 +1,212 @@
+{
+  "scope": "Isolated design QA only; not a production or live-provider test",
+  "checked_at_utc": "2026-10-11T03:54:55.500135+00:00",
+  "original_records": [
+    {
+      "decision_id": "a9cfe7dc-2336-4cde-8f55-694defe160ad",
+      "bundle_hash": "ca9c9aa652b6b82d0d19f5058631ec1164d6eed66a5aa31c046539b622563058",
+      "exact_match": true
+    },
+    {
+      "decision_id": "16a170c1-af9b-4950-86b2-a3eecf1ad26b",
+      "bundle_hash": "b73bcc9a7c06308fc349a39614c24516fac29413dd6ca49f41a34dcde1982a28",
+      "exact_match": true
+    }
+  ],
+  "counts": {
+    "runs": 10,
+    "decisions": 9,
+    "outbox": 9
+  },
+  "per_run_decisions": [
+    {
+      "run_id": "342a092d-402b-4bf8-8d75-a522aa3d05c2",
+      "decisions": 1
+    },
+    {
+      "run_id": "4e6f28c5-cda1-4625-a9c9-7fe5a5331625",
+      "decisions": 1
+    },
+    {
+      "run_id": "6d55b860-3ca5-4986-b819-7347d14b8dca",
+      "decisions": 1
+    },
+    {
+      "run_id": "7d9d7420-e4c2-4612-8b31-e143e1227920",
+      "decisions": 1
+    },
+    {
+      "run_id": "88df3c14-74a3-4aec-9572-5f5d167750b7",
+      "decisions": 1
+    },
+    {
+      "run_id": "9b0371ba-e6b9-4645-948f-b0800d6b79e9",
+      "decisions": 1
+    },
+    {
+      "run_id": "a71b0f9d-027b-491c-9b3d-9d26b2ae0e6f",
+      "decisions": 1
+    },
+    {
+      "run_id": "c9228789-c2e3-45eb-9015-e2d4e53cd035",
+      "decisions": 1
+    },
+    {
+      "run_id": "e21aa636-74d1-44d5-ad1c-e0d89ca1f8d5",
+      "decisions": 1
+    }
+  ],
+  "new_records": [
+    {
+      "decision_id": "af2b9f26-e497-484e-a2a9-1aabfedae7d9",
+      "run_id": "a71b0f9d-027b-491c-9b3d-9d26b2ae0e6f",
+      "status": "approved",
+      "posture": "normal",
+      "counts": {
+        "deferred": 1,
+        "excluded": 2,
+        "included": 9
+      },
+      "source_http_attempts": 0,
+      "model_calls": 0
+    },
+    {
+      "decision_id": "b6148326-f880-4cbc-b084-de486ce9d7a7",
+      "run_id": "e21aa636-74d1-44d5-ad1c-e0d89ca1f8d5",
+      "status": "overridden",
+      "posture": "closure",
+      "counts": {
+        "deferred": 1,
+        "excluded": 2,
+        "included": 9
+      },
+      "source_http_attempts": 0,
+      "model_calls": 0
+    },
+    {
+      "decision_id": "cad00871-f123-4ab9-95f5-193ca8b0d330",
+      "run_id": "9b0371ba-e6b9-4645-948f-b0800d6b79e9",
+      "status": "overridden",
+      "posture": "closure",
+      "counts": {
+        "deferred": 1,
+        "excluded": 2,
+        "included": 9
+      },
+      "source_http_attempts": 0,
+      "model_calls": 0
+    },
+    {
+      "decision_id": "ee1573a8-8bc6-43a3-b137-e79c323182e3",
+      "run_id": "7d9d7420-e4c2-4612-8b31-e143e1227920",
+      "status": "overridden",
+      "posture": "delayed_arrival",
+      "counts": {
+        "deferred": 1,
+        "excluded": 2,
+        "included": 9
+      },
+      "source_http_attempts": 0,
+      "model_calls": 0
+    },
+    {
+      "decision_id": "b05aa9ff-e772-4f19-84c5-5b9b79afa3b7",
+      "run_id": "88df3c14-74a3-4aec-9572-5f5d167750b7",
+      "status": "rejected",
+      "posture": null,
+      "counts": {
+        "deferred": 0,
+        "excluded": 12,
+        "included": 0
+      },
+      "source_http_attempts": 0,
+      "model_calls": 0
+    },
+    {
+      "decision_id": "52c1e440-d904-4330-88d0-38e84cf25292",
+      "run_id": "4e6f28c5-cda1-4625-a9c9-7fe5a5331625",
+      "status": "approved",
+      "posture": "normal",
+      "counts": {
+        "deferred": 1,
+        "excluded": 2,
+        "included": 9
+      },
+      "source_http_attempts": 0,
+      "model_calls": 0
+    },
+    {
+      "decision_id": "2433f82b-35ea-4ce2-829e-bcaaabe59daf",
+      "run_id": "c9228789-c2e3-45eb-9015-e2d4e53cd035",
+      "status": "overridden",
+      "posture": "delayed_arrival",
+      "counts": {
+        "deferred": 1,
+        "excluded": 2,
+        "included": 9
+      },
+      "source_http_attempts": 0,
+      "model_calls": 0
+    }
+  ],
+  "downloads": {
+    "delayed_override_json_exact": true,
+    "essential_eml_headers_and_content_exact": true,
+    "historical_memo_bytes_exact": true,
+    "memo_visual_print": "NOT VERIFIED",
+    "historical_memo_bytes_exact_scope": "Previously downloaded initial-design memo rechecked; no new memo browser download in this follow-up."
+  },
+  "retained_artifacts": {
+    "evidence/release": {
+      "files": 33,
+      "unchanged": true
+    },
+    "evidence/release-followup": {
+      "files": 3,
+      "unchanged": true
+    },
+    "evidence/feedback": {
+      "files": 26,
+      "unchanged": true
+    },
+    "user_package": {
+      "files": 6,
+      "unchanged": true
+    },
+    "initial_design": {
+      "files": 37,
+      "unchanged": true
+    }
+  },
+  "application_diff": [
+    "app/static/app.js",
+    "app/static/index.html",
+    "app/static/styles.css"
+  ],
+  "followup_decisions": [
+    {
+      "decision_id": "52c1e440-d904-4330-88d0-38e84cf25292",
+      "status": "approved",
+      "posture": "normal",
+      "original_recommendation": "normal",
+      "timing_at": null,
+      "counts": {
+        "deferred": 1,
+        "excluded": 2,
+        "included": 9
+      }
+    },
+    {
+      "decision_id": "2433f82b-35ea-4ce2-829e-bcaaabe59daf",
+      "status": "overridden",
+      "posture": "delayed_arrival",
+      "original_recommendation": "normal",
+      "timing_at": "2026-10-11T05:00:00Z",
+      "counts": {
+        "deferred": 1,
+        "excluded": 2,
+        "included": 9
+      }
+    }
+  ]
+}

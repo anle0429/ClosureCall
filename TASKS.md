@@ -1,5 +1,18 @@
 # ClosureCall tasks
 
+## User-friendly refinement — 2026-10-11 UTC
+- [x] Continue existing candidate on the same separate branch; no architecture/backend/API/rule/auth changes.
+- [x] Add four-step guidance and next action; clarify work hours, decisions, conditional timing, channel names and recovery messages.
+- [x] Verify browser interactions on isolated synthetic data: evaluation/approval/timed override, actual validation errors, double-click, reload/Refresh, all routes and historical replay.
+- [x] Save before/after desktop/narrow screenshots and 21 scoped browser observations; no measured overflow at five widths.
+- [x] Full existing final Windows suite: 89 passed/12.49s; JS syntax and pip consistency pass.
+- [x] Recheck original frozen records, new actual browser JSON/EML downloads, prior 99 evidence artifacts and six supplied-package files; preserve user data/secrets/deployment.
+- [x] Freeze application source e820f0f and prepare current DESIGN_REVIEW / evidence/usability for review.
+- [ ] Explicit user approval before deployment; candidate remains private and local, not pushed/published/deployed.
+- [ ] After approval: exact Linux candidate gate, fresh current-production backup, private deployment and runtime/browser checks. Prior Linux results do not verify this candidate.
+
+Follow-up limits: active incomplete-assessment next-step copy inspected in source only; fresh LIVE/model, Linux candidate, production UI/health, accessibility certification, memo print and spoken rehearsal not verified here.
+
 ## Focused visual design pass — 2026-10-11 UTC
 - [x] Read start kit/current state/working agreement; inspect existing rendered UI and capture desktop/narrow before images.
 - [x] Create separate `design/operations-dashboard` branch; preserve known-good deployment, secrets, original data and user work; one writer.

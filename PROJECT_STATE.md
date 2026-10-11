@@ -1,4 +1,14 @@
-# Current visual design candidate
+# Current user-friendly design candidate
+
+Updated 2026-10-11 UTC (2026-10-10 America/Chicago). **READY FOR USER REVIEW / NOT DEPLOYED**. Branch `design/operations-dashboard`; current application source `e820f0fd8259369f8457e5d8a43d2e1a62256cb9`, refinement base `9bde445`. Same three static files only; backend/API enum values/request bodies/rules/Strands/auth/audit remain unchanged.
+
+Added four-step navigation, context-sensitive next-step guidance, plain work-hours examples and recovery messages, action-specific decision buttons, conditional arrival/dismissal fields, readable posture/channel names, and direct links from recommendation to decision to unsent drafts. Retained original facility data, weather evidence, frozen recommendations/manager records and all recipient routes. No new features/framework/providers.
+
+Final Windows full suite actually run: **89 passed in 12.49s**; JS syntax and pip consistency pass. Browser follow-up: synthetic evaluate/approve/reasoned timed override/errors/retry/double-click/reload/Refresh, exact historical replay, all 12 routes, 320–1440 px responsive checks; 21 scoped observations in evidence/usability. Original frozen exports exact; new JSON/essential EML downloads exact. Isolated QA DB has 10 runs / 9 decisions / 9 outbox packages, one decision per decided run; all new evaluations provider/model calls zero. Original 33+3+26+37 evidence hashes and 6 supplied-package hashes unchanged.
+
+DESIGN_REVIEW.md now leads with the current source, before/after screenshots and follow-up limits. Linux exact candidate, fresh LIVE-provider/model evaluation, production health/UI, accessibility certification, memo print and human rehearsal remain NOT VERIFIED. Active incomplete-assessment guide copy inspected in source only. No SSH/deploy/restart/public exposure/push/real notices/Submit. Last remote read remains 2026-10-11T01:15:40Z for source e5f7801; it is not a fresh health claim. Preview 8084 is separate from production tunnel 8081. Existing env, original DB/backups and user work preserved. Explicit user approval is still required before deployment, followed by current-data backup and exact Linux verification. Earlier checkpoints below are history.
+
+# Visual design candidate — initial checkpoint
 
 Updated 2026-10-11 UTC (2026-10-10 America/Chicago). **READY FOR USER REVIEW / NOT DEPLOYED**.
 

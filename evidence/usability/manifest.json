@@ -1,0 +1,24 @@
+{
+  "generated_at_utc": "2026-10-11T03:55:22.912984+00:00",
+  "application_source": "e820f0fd8259369f8457e5d8a43d2e1a62256cb9",
+  "scope": "Incremental usability proof only; canonical LF text and raw JPEG hashes; not a LIVE or deployment claim",
+  "sha256": {
+    "after-desktop.jpg": "a217626e8e59095926d10fd5f5cbc72889a3c75db59e7f405695fa74c02423b1",
+    "after-narrow.jpg": "880bc62fa6408d84cdd22df8c647a69ce4fda2f948cb93868f6c0114e696ac1d",
+    "before-desktop.jpg": "6215e65827eedcd815eebd85a0b517cb793f61314b640e199cb1ba2a5e1c2a17",
+    "before-narrow.jpg": "86a7d61db800642941decf3a5a2ad710398f32b74119df8a2fe1f8b9e9a1dbf1",
+    "browser-checks.json": "babb2c7e5f7dbde5f04ee11b16efcc6d823d93c8d3938bc5fb955ac2ec7948f3",
+    "capture-metadata.json": "4fc533f0182e9518d3faf5ea7785921894b632af39a02857728134e6d78bbb16",
+    "drafts-desktop.jpg": "4ce9b27ec59f70058f695916579d5cde03fe29e01a85670d6b9a8ea580c5c855",
+    "first-use-desktop.jpg": "360c004f7924c434712102d0526c189f8b6bc9d336bf9fc782974b298284d6a4",
+    "integrity-and-downloads.json": "a4654d04db7ae11f3a6c9f22126d5cd3fafd537b806f203d6a0711a3f3a648f3",
+    "integrity-audit.py": "1b0a9c4e786bcdd3ac01da3af6a93ccf6005be04add2a44c4f7aaf2a309595b0",
+    "loading.jpg": "d95aa26f894305998f34f85d0097a14d8670d34c7c47e0d964b96e6e16445542",
+    "manager-form-desktop.jpg": "06ff778a20f726742b17217328857fe04d3f984012834b24157a363427b6a596",
+    "secret-scan.json": "7aca85a34614318144d712b684b7112202678ec9a18c27562023cf0abf7d1ebc",
+    "verification.json": "d29db6a78b7596f412762f739e21c0ece214e31595ae99b0d4f2fc93c63f5d92",
+    "weather-and-recommendation-desktop.jpg": "8e2c68f736bfac51cc46010c43d93fe5cb92dfb22f40403965c0874ebeb9405c",
+    "windows-tests-final.txt": "f6718c697d7deef0b3d350e6f088a0b9adec1479347b8489a0f1297a6808c092",
+    "windows-tests.txt": "32a03640bcf88c6154ea97e3c65f7a4fe8333e3bf10522a30553fee146fc70dc"
+  }
+}

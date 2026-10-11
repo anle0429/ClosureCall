@@ -1,0 +1,80 @@
+{
+  "recorded_at_utc": "2026-10-11T03:54:52.084802+00:00",
+  "application_source": "e820f0fd8259369f8457e5d8a43d2e1a62256cb9",
+  "source_sha256_canonical_lf": {
+    "app/static/app.js": "2f972f8da3aa59d958096ee9eef4837568df5e020899355ba754cc214d24c296",
+    "app/static/index.html": "d669caa41e6462fed3d285a5d033a00cde37d3fe6a23e1f2216bb9702789bcda",
+    "app/static/styles.css": "b6032d35db7473c30cf68bb66c5f3048460d1947babd64494dc62111b7abd04b"
+  },
+  "refinement_base": "9bde445de6e0445d787287b5189526df7cefc0e3",
+  "branch": "design/operations-dashboard",
+  "comparison_record": "16a170c1-af9b-4950-86b2-a3eecf1ad26b",
+  "requested_desktop": [
+    1440,
+    1000
+  ],
+  "requested_narrow": [
+    390,
+    844
+  ],
+  "screenshots": {
+    "after-desktop.jpg": {
+      "width": 1425,
+      "height": 990,
+      "sha256": "a217626e8e59095926d10fd5f5cbc72889a3c75db59e7f405695fa74c02423b1",
+      "scope": "Final source comparison"
+    },
+    "after-narrow.jpg": {
+      "width": 375,
+      "height": 811,
+      "sha256": "880bc62fa6408d84cdd22df8c647a69ce4fda2f948cb93868f6c0114e696ac1d",
+      "scope": "Final source comparison"
+    },
+    "before-desktop.jpg": {
+      "width": 1425,
+      "height": 990,
+      "sha256": "6215e65827eedcd815eebd85a0b517cb793f61314b640e199cb1ba2a5e1c2a17",
+      "scope": "Before refinement"
+    },
+    "before-narrow.jpg": {
+      "width": 375,
+      "height": 811,
+      "sha256": "86a7d61db800642941decf3a5a2ad710398f32b74119df8a2fe1f8b9e9a1dbf1",
+      "scope": "Before refinement"
+    },
+    "drafts-desktop.jpg": {
+      "width": 1425,
+      "height": 990,
+      "sha256": "4ce9b27ec59f70058f695916579d5cde03fe29e01a85670d6b9a8ea580c5c855",
+      "scope": "Intermediate browser interaction evidence; no LIVE claim"
+    },
+    "first-use-desktop.jpg": {
+      "width": 1425,
+      "height": 990,
+      "sha256": "360c004f7924c434712102d0526c189f8b6bc9d336bf9fc782974b298284d6a4",
+      "scope": "Intermediate browser interaction evidence; no LIVE claim"
+    },
+    "loading.jpg": {
+      "width": 1425,
+      "height": 990,
+      "sha256": "d95aa26f894305998f34f85d0097a14d8670d34c7c47e0d964b96e6e16445542",
+      "scope": "Intermediate browser interaction evidence; no LIVE claim"
+    },
+    "manager-form-desktop.jpg": {
+      "width": 1425,
+      "height": 990,
+      "sha256": "06ff778a20f726742b17217328857fe04d3f984012834b24157a363427b6a596",
+      "scope": "Intermediate browser interaction evidence; no LIVE claim"
+    },
+    "weather-and-recommendation-desktop.jpg": {
+      "width": 1425,
+      "height": 990,
+      "sha256": "8e2c68f736bfac51cc46010c43d93fe5cb92dfb22f40403965c0874ebeb9405c",
+      "scope": "Final source comparison"
+    }
+  },
+  "preview": "Loopback 8084; own ignored synthetic QA database; exact historical imports",
+  "production_operations": [],
+  "linux_candidate": "NOT RUN",
+  "live_provider_or_model": "NOT RUN"
+}
