@@ -1,5 +1,14 @@
 # ClosureCall tasks
 
+## Editable Figma proposal — 2026-10-11 UTC
+- [x] Verify connected Figma identity and create an actual design file from the existing app.
+- [x] Capture an isolated static replay reference without weakening app CSP/auth or including credentials.
+- [x] Build editable desktop/mobile layouts, reusable statuses/context/workflow/recipient components and local token bindings; reuse library controls.
+- [x] Inspect screenshots and actual structural readback; repair narrow button overflow and override color; preserve historical/draft labels and all twelve routes.
+- [x] Save local screenshot/structure evidence and frame links; disclose proposed Inter, static controls and untested interaction states.
+- [ ] Remove temporary reference frame 3:2 / rename page: Starter MCP quota rejected the final call. Main design frames already saved and verified.
+- [ ] Review/approve design before code implementation or deployment. No paid upgrade, public sharing or deployment authorized by this Figma task.
+
 ## User-friendly refinement — 2026-10-11 UTC
 - [x] Continue existing candidate on the same separate branch; no architecture/backend/API/rule/auth changes.
 - [x] Add four-step guidance and next action; clarify work hours, decisions, conditional timing, channel names and recovery messages.

@@ -1,3 +1,9 @@
+# Editable Figma design proposal
+
+Verified 2026-10-11 UTC: Figma account connected; created file `3UWLj8CU622rsZJ374ZzLQ` with desktop frame `7:257`, mobile frame `7:480` and nine reusable local components. Actual readback: 139 editable text nodes / 31 instances per screen, zero image fills, no empty/unstyled text or measured horizontal overflow after the mobile-button repair. Screenshots and bindings are recorded in `evidence/figma`; review links and limits in `FIGMA_DESIGN_REVIEW.md`.
+
+Historical synthetic facility/roster example only; original recommendation, manager test override, all twelve routes and unsent drafts remain distinct. Proposed Inter differs from source Segoe UI / Arial. Starter MCP quota blocked final removal of temporary reference frame `3:2` and page rename; these cleanup operations were not completed. No upgrade or sharing/access changes. No app code or deployment changes, no new tests/LIVE calls/remote health claims. Current application candidate remains `e820f0f`; previous test/runtime observations below retain their original dates and scope.
+
 # Current user-friendly design candidate
 
 Updated 2026-10-11 UTC (2026-10-10 America/Chicago). **READY FOR USER REVIEW / NOT DEPLOYED**. Branch `design/operations-dashboard`; current application source `e820f0fd8259369f8457e5d8a43d2e1a62256cb9`, refinement base `9bde445`. Same three static files only; backend/API enum values/request bodies/rules/Strands/auth/audit remain unchanged.

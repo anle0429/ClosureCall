@@ -1,0 +1,32 @@
+[
+  {
+    "path": "evidence/figma/browser-file.jpg",
+    "bytes": 102484,
+    "sha256": "a3b8e7cced4ee990b02e3b4f4b494a520fbd7fd224861880b8640e9b0d310792"
+  },
+  {
+    "path": "evidence/figma/components.png",
+    "bytes": 52234,
+    "sha256": "9d73ef9bab20adc1f468f3a5477190142f84c5e1b477a9ca0e4b7ea68b0189c7"
+  },
+  {
+    "path": "evidence/figma/desktop.png",
+    "bytes": 504415,
+    "sha256": "cf68c5d4acf5711a007d81f9e7f7ed190f0535e5a99ee33ba177fa3d437265f3"
+  },
+  {
+    "path": "evidence/figma/mobile.png",
+    "bytes": 550420,
+    "sha256": "5fb47c5fec6aeb61b0a5bf8221cccb32e9ad6063d310df588ef31c0e73651181"
+  },
+  {
+    "path": "evidence/figma/state.json",
+    "bytes": 27554,
+    "sha256": "ffea1d63670d77f8cc6fb33c460d82ee05c5a9f9a96ed3d71c81d1f0cbcb8c61"
+  },
+  {
+    "path": "evidence/figma/structure.json",
+    "bytes": 17722,
+    "sha256": "957679e0126401976f5c4a7dbb6bdb3f447803b816d6692dfed0b49abe0340af"
+  }
+]

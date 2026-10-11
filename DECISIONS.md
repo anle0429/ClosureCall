@@ -1,5 +1,13 @@
 # Technical decisions
 
+## Editable Figma proposal — 2026-10-11 UTC
+- User selected a new design from the current ClosureCall and confirmed Figma connection. Create editable canvas layers using figma-use / figma-generate-design / figma-generate-library, not another frontend rewrite. One writer; existing branch and candidate remain intact.
+- Export only the isolated rendered workspace into an ignored static loopback server for capture. Do not change the application's CSP/authentication or include the login form, credentials, production DB or current provider/model calls.
+- Preserve facility identity, saved timestamps, unsupported Flood Watch recommendation, explicit synthetic manager override and every roster route. Distinguish source availability at capture from current freshness; all notifications remain drafts.
+- Use proposed Inter from Simple Design System with a disclosed font gap. Persist shared local text styles and 4/8/16/24 spacing values because imported handles could not be resolved in later MCP calls. Reuse component instances for library controls and repeated source elements; do not claim exact font fidelity or existing CSS implementation for new proposal token names.
+- Correct the observed mobile button overflow and use amber for Overridden. Record real readback/screenshot results; static Figma controls and unseen review-form/loading/error states are not claimed as tested workflows.
+- Starter quota prevented final scratch-reference cleanup/page rename. Keep that limitation visible, retain saved main frames/evidence, and do not purchase an upgrade. No application edit, GitHub push, production operation or fresh test/runtime claim follows this canvas task.
+
 ## User-friendly refinement — 2026-10-11 UTC
 - Interpret “user friendly” as an incremental presentation refinement of the existing design candidate, not deployment approval. Keep one writer and the original 60-minute design timebox; no subagents, frameworks or backend changes.
 - Explain the next task in a four-step guide derived from existing visible run/decision state. This guide adds no workflow authority or new API state. Saved-decision navigation targets the stored record rather than a hidden approval form.

@@ -1,0 +1,875 @@
+{
+  "dateUtc": "2026-10-11T06:40:10Z",
+  "fileKey": "3UWLj8CU622rsZJ374ZzLQ",
+  "applicationSource": "e820f0fd8259369f8457e5d8a43d2e1a62256cb9",
+  "reports": [
+    {
+      "id": "7:257",
+      "name": "ClosureCall / Desktop / Historical replay",
+      "width": 1440,
+      "height": 3419,
+      "textCount": 139,
+      "instanceCount": 31,
+      "imageFillCount": 0,
+      "horizontalOverflow": [],
+      "emptyText": [],
+      "unstyledText": [],
+      "textFonts": [
+        "Inter"
+      ]
+    },
+    {
+      "id": "7:480",
+      "name": "ClosureCall / Mobile / Historical replay",
+      "width": 390,
+      "height": 8227,
+      "textCount": 139,
+      "instanceCount": 31,
+      "imageFillCount": 0,
+      "horizontalOverflow": [],
+      "emptyText": [],
+      "unstyledText": [],
+      "textFonts": [
+        "Inter"
+      ]
+    },
+    {
+      "id": "5:28",
+      "name": "ClosureCall / Components",
+      "width": 900,
+      "height": 719,
+      "textCount": 18,
+      "instanceCount": 0,
+      "imageFillCount": 0,
+      "horizontalOverflow": [],
+      "emptyText": [],
+      "unstyledText": [],
+      "textFonts": [
+        "Inter"
+      ]
+    }
+  ],
+  "componentCheck": [
+    {
+      "id": "5:32",
+      "name": "ClosureCall / Status / Replay",
+      "textProperties": [
+        "Label#5:0"
+      ],
+      "fillBindings": [
+        "VariableID:4:111"
+      ],
+      "paddingBinding": "VariableID:7:3"
+    },
+    {
+      "id": "5:34",
+      "name": "ClosureCall / Status / Draft",
+      "textProperties": [
+        "Label#5:1"
+      ],
+      "fillBindings": [
+        "VariableID:4:114"
+      ],
+      "paddingBinding": "VariableID:7:3"
+    },
+    {
+      "id": "5:36",
+      "name": "ClosureCall / Status / Included",
+      "textProperties": [
+        "Label#5:2"
+      ],
+      "fillBindings": [
+        "VariableID:4:113"
+      ],
+      "paddingBinding": "VariableID:7:3"
+    },
+    {
+      "id": "5:38",
+      "name": "ClosureCall / Status / Excluded",
+      "textProperties": [
+        "Label#5:3"
+      ],
+      "fillBindings": [
+        "VariableID:4:115"
+      ],
+      "paddingBinding": "VariableID:7:3"
+    },
+    {
+      "id": "5:40",
+      "name": "ClosureCall / Status / Deferred",
+      "textProperties": [
+        "Label#5:4"
+      ],
+      "fillBindings": [
+        "VariableID:4:112"
+      ],
+      "paddingBinding": "VariableID:7:3"
+    },
+    {
+      "id": "5:42",
+      "name": "ClosureCall / Status / Low",
+      "textProperties": [
+        "Label#5:5"
+      ],
+      "fillBindings": [
+        "VariableID:4:112"
+      ],
+      "paddingBinding": "VariableID:7:3"
+    },
+    {
+      "id": "5:44",
+      "name": "ClosureCall / Context tile",
+      "textProperties": [
+        "Label#5:6",
+        "Value#5:7",
+        "Detail#5:8"
+      ],
+      "fillBindings": [
+        "VariableID:4:110"
+      ],
+      "paddingBinding": "VariableID:7:4"
+    },
+    {
+      "id": "5:48",
+      "name": "ClosureCall / Workflow step",
+      "textProperties": [
+        "Title#5:9",
+        "Detail#5:10"
+      ],
+      "fillBindings": [
+        "VariableID:4:114"
+      ],
+      "paddingBinding": "VariableID:7:4"
+    },
+    {
+      "id": "5:51",
+      "name": "ClosureCall / Recipient route",
+      "textProperties": [
+        "Name#5:11",
+        "Route#5:12",
+        "Reason#5:13",
+        "Channel#5:14",
+        "Follow-up#5:15"
+      ],
+      "fillBindings": [
+        "VariableID:4:110"
+      ],
+      "paddingBinding": "VariableID:7:4"
+    }
+  ],
+  "variables": [
+    {
+      "id": "VariableID:4:84",
+      "name": "color/ink",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--ink)"
+      },
+      "values": {
+        "4:0": {
+          "r": 0.09019608050584793,
+          "g": 0.16862745583057404,
+          "b": 0.250980406999588,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:85",
+      "name": "color/muted",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--muted)"
+      },
+      "values": {
+        "4:0": {
+          "r": 0.32156863808631897,
+          "g": 0.3960784375667572,
+          "b": 0.47843137383461,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:86",
+      "name": "color/line",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--line)"
+      },
+      "values": {
+        "4:0": {
+          "r": 0.8470588326454163,
+          "g": 0.8823529481887817,
+          "b": 0.9215686321258545,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:87",
+      "name": "color/blue",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--blue)"
+      },
+      "values": {
+        "4:0": {
+          "r": 0.09803921729326248,
+          "g": 0.30980393290519714,
+          "b": 0.5098039507865906,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:88",
+      "name": "color/teal",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--teal)"
+      },
+      "values": {
+        "4:0": {
+          "r": 0.09019608050584793,
+          "g": 0.4000000059604645,
+          "b": 0.3294117748737335,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:89",
+      "name": "color/amber",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--amber)"
+      },
+      "values": {
+        "4:0": {
+          "r": 0.501960813999176,
+          "g": 0.3137255012989044,
+          "b": 0.07450980693101883,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:90",
+      "name": "color/red",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--red)"
+      },
+      "values": {
+        "4:0": {
+          "r": 0.5921568870544434,
+          "g": 0.21960784494876862,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:91",
+      "name": "color/purple",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--purple)"
+      },
+      "values": {
+        "4:0": {
+          "r": 0.3843137323856354,
+          "g": 0.250980406999588,
+          "b": 0.545098066329956,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:92",
+      "name": "color/navy",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--cc-header)"
+      },
+      "values": {
+        "4:0": {
+          "r": 0.07450980693101883,
+          "g": 0.1725490242242813,
+          "b": 0.27450981736183167,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:93",
+      "name": "color/canvas",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--cc-canvas)"
+      },
+      "values": {
+        "4:0": {
+          "r": 0.9411764740943909,
+          "g": 0.9529411792755127,
+          "b": 0.9686274528503418,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:94",
+      "name": "color/white",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--cc-surface)"
+      },
+      "values": {
+        "4:0": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:95",
+      "name": "color/replayBg",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--cc-replay-bg)"
+      },
+      "values": {
+        "4:0": {
+          "r": 0.95686274766922,
+          "g": 0.9333333373069763,
+          "b": 0.9843137264251709,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:96",
+      "name": "color/amberBg",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--cc-review-bg)"
+      },
+      "values": {
+        "4:0": {
+          "r": 1,
+          "g": 0.95686274766922,
+          "b": 0.8745098114013672,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:97",
+      "name": "color/tealBg",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--cc-included-bg)"
+      },
+      "values": {
+        "4:0": {
+          "r": 0.9176470637321472,
+          "g": 0.9607843160629272,
+          "b": 0.9372549057006836,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:98",
+      "name": "color/blueBg",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--cc-info-bg)"
+      },
+      "values": {
+        "4:0": {
+          "r": 0.9176470637321472,
+          "g": 0.9490196108818054,
+          "b": 0.9843137264251709,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:99",
+      "name": "color/subtle",
+      "scopes": [],
+      "syntax": {
+        "WEB": "var(--cc-subtle)"
+      },
+      "values": {
+        "4:0": {
+          "r": 0.9725490212440491,
+          "g": 0.9803921580314636,
+          "b": 0.9882352948188782,
+          "a": 1
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:100",
+      "name": "color/ink",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--ink)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:84"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:101",
+      "name": "color/muted",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--muted)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:85"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:102",
+      "name": "color/line",
+      "scopes": [
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--line)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:86"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:103",
+      "name": "color/blue",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--blue)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:87"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:104",
+      "name": "color/teal",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--teal)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:88"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:105",
+      "name": "color/amber",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--amber)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:89"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:106",
+      "name": "color/red",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--red)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:90"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:107",
+      "name": "color/purple",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--purple)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:91"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:108",
+      "name": "color/navy",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--cc-header)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:92"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:109",
+      "name": "color/canvas",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--cc-canvas)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:93"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:110",
+      "name": "color/white",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--cc-surface)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:94"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:111",
+      "name": "color/replayBg",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--cc-replay-bg)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:95"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:112",
+      "name": "color/amberBg",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--cc-review-bg)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:96"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:113",
+      "name": "color/tealBg",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--cc-included-bg)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:97"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:114",
+      "name": "color/blueBg",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--cc-info-bg)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:98"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:115",
+      "name": "color/subtle",
+      "scopes": [
+        "FRAME_FILL",
+        "SHAPE_FILL",
+        "TEXT_FILL",
+        "STROKE_COLOR"
+      ],
+      "syntax": {
+        "WEB": "var(--cc-subtle)"
+      },
+      "values": {
+        "4:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:4:99"
+        }
+      }
+    },
+    {
+      "id": "VariableID:4:118",
+      "name": "radius/card",
+      "scopes": [
+        "CORNER_RADIUS"
+      ],
+      "syntax": {
+        "WEB": "var(--cc-card-radius)"
+      },
+      "values": {
+        "4:1": 8
+      }
+    },
+    {
+      "id": "VariableID:7:2",
+      "name": "spacing/s4",
+      "scopes": [
+        "GAP"
+      ],
+      "syntax": {
+        "WEB": "var(--cc-space-4)"
+      },
+      "values": {
+        "4:1": 4
+      }
+    },
+    {
+      "id": "VariableID:7:3",
+      "name": "spacing/s8",
+      "scopes": [
+        "GAP"
+      ],
+      "syntax": {
+        "WEB": "var(--cc-space-8)"
+      },
+      "values": {
+        "4:1": 8
+      }
+    },
+    {
+      "id": "VariableID:7:4",
+      "name": "spacing/s16",
+      "scopes": [
+        "GAP"
+      ],
+      "syntax": {
+        "WEB": "var(--cc-space-16)"
+      },
+      "values": {
+        "4:1": 16
+      }
+    },
+    {
+      "id": "VariableID:7:5",
+      "name": "spacing/s24",
+      "scopes": [
+        "GAP"
+      ],
+      "syntax": {
+        "WEB": "var(--cc-space-24)"
+      },
+      "values": {
+        "4:1": 24
+      }
+    }
+  ],
+  "styles": [
+    {
+      "id": "S:81a9caf1f0d141e7fb0267b6a71346006d735759,",
+      "name": "ClosureCall / heading",
+      "font": {
+        "family": "Inter",
+        "style": "Semi Bold",
+        "variationSettings": {
+          "wght": 600,
+          "slnt": 0
+        }
+      },
+      "size": 24
+    },
+    {
+      "id": "S:2742c9dc08728501c441af8f2ed1594635c2ca83,",
+      "name": "ClosureCall / body",
+      "font": {
+        "family": "Inter",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "slnt": 0
+        }
+      },
+      "size": 16
+    },
+    {
+      "id": "S:c6d09fe76bc4a2ba62d5c2477f90ee0d27fa3432,",
+      "name": "ClosureCall / small",
+      "font": {
+        "family": "Inter",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "slnt": 0
+        }
+      },
+      "size": 14
+    },
+    {
+      "id": "S:8a17f191ae790b3ce01206fdba147418fa174a5b,",
+      "name": "ClosureCall / strong",
+      "font": {
+        "family": "Inter",
+        "style": "Semi Bold",
+        "variationSettings": {
+          "wght": 600,
+          "slnt": 0
+        }
+      },
+      "size": 16
+    },
+    {
+      "id": "S:ac96699940545285fe1164f77edca9df4be8154e,",
+      "name": "ClosureCall / Display desktop",
+      "font": {
+        "family": "Inter",
+        "style": "Semi Bold",
+        "variationSettings": {
+          "wght": 600,
+          "slnt": 0
+        }
+      },
+      "size": 36
+    },
+    {
+      "id": "S:b4653fe38c91eb162c431ae1ed1b09e55a94f991,",
+      "name": "ClosureCall / Display mobile",
+      "font": {
+        "family": "Inter",
+        "style": "Semi Bold",
+        "variationSettings": {
+          "wght": 600,
+          "slnt": 0
+        }
+      },
+      "size": 28
+    }
+  ],
+  "fontFidelity": {
+    "expected": [
+      "Segoe UI",
+      "Arial"
+    ],
+    "actual": [
+      "Inter"
+    ],
+    "status": "NOT MATCHED — disclosed proposal font"
+  },
+  "dataFidelity": "Frozen historical example; layout copy is a design summary, not an edited audit record"
+}
