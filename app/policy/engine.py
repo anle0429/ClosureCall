@@ -27,7 +27,8 @@ def assess(snapshot, now=None):
     rules = {r['id']: r for r in policy['rules']}
     referenced = set()
     for alert in nws['alerts']:
-        if alert.get('status') == 'Actual' and alert.get('message_type') in ('Update', 'Cancel'):
+        if (alert.get('status') == 'Actual' and alert.get('message_type') in ('Update', 'Cancel')
+                and alert.get('applicability_status') == 'point_confirmed'):
             for ref in alert.get('references') or []:
                 if isinstance(ref, dict):
                     referenced.add(ref.get('identifier'))
@@ -36,7 +37,7 @@ def assess(snapshot, now=None):
         if alert['alert_id'] in referenced:
             continue
         if not applies:
-            if 'Missing validity' in reason or 'Invalid validity' in reason:
+            if 'Missing validity' in reason or 'Invalid validity' in reason or 'Location not verified' in reason:
                 missing.append(f"Alert {alert['alert_id']}: {reason}")
             continue
         ids.append(alert['alert_id'])

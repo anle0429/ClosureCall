@@ -94,7 +94,7 @@ async def demo_site(body: DemoSiteRequest):
     except (ValueError,TypeError,KeyError):
         raise HTTPException(422,'Invalid NWS polygon')
     confirmed = await nws.point(point.y,point.x)
-    if confirmed['status']!='available' or not any(x['alert_id']==body.alert_id for x in confirmed['alerts']):
+    if confirmed['status']!='available' or not any(x['alert_id']==body.alert_id and x.get('applicability_status')=='point_confirmed' for x in confirmed['alerts']):
         raise HTTPException(409,'Point endpoint did not confirm this alert')
     from app.clients.base import fetch_json
     # NWS normalizes point metadata to four decimal places with a redirect.
@@ -191,6 +191,12 @@ def notifications(id: str):
 def export(id: str):
     return Response(json.dumps(replay_record(id),indent=2),media_type='application/json',
                     headers={'Content-Disposition':f'attachment; filename="closurecall-{uuid.UUID(id)}.json"'})
+
+@api.get('/decisions/{id}/memo')
+def memo(id: str):
+    from app.services.memo import render_memo
+    return Response(render_memo(replay_record(id)), media_type='text/html',
+                    headers={'Content-Disposition':f'attachment; filename="closurecall-memo-{uuid.UUID(id)}.html"'})
 
 @api.get('/decisions/{id}/notifications/{employee_id}/export')
 def message_export(id: str, employee_id: str):

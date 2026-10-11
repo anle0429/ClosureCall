@@ -41,7 +41,7 @@ def test_serious_flood_not_erased_by_good_aq(snapshot,alert):
 
 @pytest.mark.parametrize('change',['outside','expired','test','cancel','other_period','superseded'])
 def test_nonapplicable_alerts(snapshot,alert,change):
-    if change=='outside':alert['applicability_status']='unverified'
+    if change=='outside':alert['applicability_status']='outside_polygon'
     if change=='expired':alert['expires']=(utcnow()-timedelta(seconds=1)).isoformat()
     if change=='test':alert['status']='Test'
     if change=='cancel':alert['message_type']='Cancel'
