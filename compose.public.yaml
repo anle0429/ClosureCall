@@ -1,7 +1,0 @@
-# Optional overlay for the authorized HTTPS reverse proxy on this Linode.
-# The application remains bound to host loopback by compose.yaml.
-services:
-  app:
-    environment:
-      FORWARDED_ALLOW_IPS: ${PROXY_TRUSTED_IPS:?Set the inspected Docker host gateway for the host-network proxy}
-      DEPLOYMENT_LABEL: Akamai Linode 172.234.201.174 · HTTPS demo
