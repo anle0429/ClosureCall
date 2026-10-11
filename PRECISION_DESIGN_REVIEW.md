@@ -1,6 +1,6 @@
 # ClosureCall precision design candidate
 
-Local review candidate on `design/precision-console`, based on `3e585f0`. This pass changes only `app/static/index.html` and `app/static/styles.css` in the application. No deployment, push, public exposure, cloud operation or production-data access was performed. Start: 2026-10-11 06:48:19 UTC; hard deadline: 07:23:19 UTC.
+Local review candidate on `design/precision-console`, source freeze `2d6ef4ce3076c42b01573c2ed483bc296de84093`, based on `3e585f0`. This pass changes only `app/static/index.html` and `app/static/styles.css` in the application. No deployment, push, public exposure, cloud operation or production-data access was performed. Start: 2026-10-11 06:48:19 UTC; hard deadline: 07:23:19 UTC.
 
 Final implementation/test evidence was recorded by 07:04:32 UTC, within the 35-minute design timebox. Delivery resumed after the user's later preview request at 11:01 UTC; no further application design or logic edits were made. Source SHA-256 values still match the final tested files in `invariants.json`.
 
@@ -71,3 +71,5 @@ Review the local candidate at `http://127.0.0.1:8084/`. Its footer retains the h
 On the later preview request, the old local preview process had stopped. Restarted the ignored loopback harness at 8084 using its existing QA database: 10 runs, 10 snapshots, 9 saved decisions and 9 outbox packages retained. Startup verified the two frozen historical exports exactly and continued blocking provider/model calls. No original/demo database was opened. Automated browser display was then rejected by its URL security policy; no alternate browser or bypass was attempted. The local link is provided for the user to open, but a fresh visible tab on the user's screen is NOT VERIFIED. The before/after images above are saved captures from the earlier verified candidate session, not fresh LIVE evidence.
 
 Deployment remains outside this task. A later explicitly authorized release needs an exact Linux gate and a fresh current-data backup; candidate base includes the prior undeployed feedback changes. Judge access and Submit remain user-owned. No new permission or credential was required for this local design pass.
+
+To reopen the same private QA preview from PowerShell in this checkout, run `.\.venv\Scripts\python.exe data\design_resume_preview.py`. The ignored launcher requires the existing QA location pointer/database; it does not provision resources or read production data. Keep the terminal running while reviewing.

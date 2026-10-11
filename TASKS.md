@@ -1,5 +1,18 @@
 # ClosureCall tasks
 
+## Precision console design and local review — 2026-10-11 UTC
+
+- [x] Inspect actual UI/source, capture desktop/narrow baseline, rank five generic elements and select exactly three focused changes.
+- [x] Isolate branch `design/precision-console`; limit app changes to HTML/CSS and preserve protected contracts/data.
+- [x] Implement operational context/navigation, evidence/human authority, recipient register/semantic styling within the 35-minute design timebox.
+- [x] Capture matching before/after views; verify synthetic browser workflows, five responsive widths and keyboard draft/focus observations.
+- [x] Run full existing Windows suite: 89 passed in 10.68s; verify 29 protected app blobs, 61 IDs and frozen replay bodies/hashes; staged secret scan had no findings.
+- [x] Freeze source `2d6ef4c`, save `PRECISION_DESIGN_REVIEW.md` and `evidence/precision`.
+- [x] Restart loopback 8084 on its existing QA database for the user's later preview request; retain all nine decisions and block providers/model calls.
+- [x] Deliver local preview link and saved before/after images. Fresh automated visible tab NOT VERIFIED: browser URL policy rejected display; no bypass.
+- [ ] User design approval; no Linode deployment authorized by the preview request.
+- [ ] A separately approved release: exact Linux gate, fresh actual-data backup and deployment verification. Current LIVE, production UI/health and full accessibility remain outside this design pass.
+
 ## Editable Figma proposal — 2026-10-11 UTC
 - [x] Verify connected Figma identity and create an actual design file from the existing app.
 - [x] Capture an isolated static replay reference without weakening app CSP/auth or including credentials.

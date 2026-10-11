@@ -1,5 +1,15 @@
 # Technical decisions
 
+## Precision operations console — 2026-10-11 UTC
+
+- Follow the user's three-change/35-minute scope: compact operational context; clear evidence/recommendation/human authority; recipient register and restrained semantic styling. Preserve native system fonts and existing responsive/keyboard/live-region mechanisms. No dependencies, framework, decorative charts or business capabilities.
+- Move existing HTML sections without changing IDs/control values/form contracts; only shorten the visible override label. Append bounded CSS overrides. Keep app JS and all 29 backend/tool/rule/auth-related source blobs exact to base `3e585f0`; source freeze `2d6ef4c`.
+- Display saved collection/validity times, synthetic facility identity, original low-confidence unsupported Flood Watch recommendation, recorded reasoned override and unsent draft routes without rewriting historical data. The saved facility name versus actual hazard remains visible.
+- Exercise approval/override and replay only in ignored, isolated loopback QA data, with provider/model calls blocked. Record the midnight route-count attempt as NOT VERIFIED rather than modify roster/rules for a preferred result.
+- Retain honest limits: requested DOM viewport versus tool JPEG dimensions, scoped contrast/focus checks rather than certification, no fresh Linux/LIVE/remote gate. All screenshots are actual captures, not edited images.
+- Complete implementation/tests inside the design timebox; the later delivery request permits restarting the existing local preview and presenting evidence, not more design changes or deployment. Preserve the stopped preview's existing QA database on restart. Respect the browser URL-policy rejection; give a local link without trying another browser or bypass.
+- Keep the last-known production release and original env/DB/backups intact. No cloud actions, public exposure, push or real sends. Update review/state/tasks after verified gates; user review precedes any later release authorization.
+
 ## Editable Figma proposal — 2026-10-11 UTC
 - User selected a new design from the current ClosureCall and confirmed Figma connection. Create editable canvas layers using figma-use / figma-generate-design / figma-generate-library, not another frontend rewrite. One writer; existing branch and candidate remain intact.
 - Export only the isolated rendered workspace into an ignored static loopback server for capture. Do not change the application's CSP/authentication or include the login form, credentials, production DB or current provider/model calls.

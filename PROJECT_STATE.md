@@ -1,3 +1,17 @@
+# Precision console candidate — current checkpoint
+
+Updated 2026-10-11 UTC. READY FOR USER REVIEW / NOT DEPLOYED. Branch `design/precision-console`; application/source freeze `2d6ef4ce3076c42b01573c2ed483bc296de84093`, base `3e585f0`. Only HTML/CSS changed in the app. All 29 other application Git blobs, 61 unique HTML IDs, control contracts/enum values and script references match the base; no business, NWS applicability, Strands, rule, auth, routing or stored-record changes.
+
+Three focused changes: compact facility/work-period/source context and navigation; stronger evidence/confidence with manager form beside the recommendation; aligned recipient register and consistent labeled semantics. Five ranked baseline issues, actual before/after images and scoped limits are in `PRECISION_DESIGN_REVIEW.md`. Screens captured at verified DOM viewports 1440x900 / 390x844; the tool exports 1425x891 / 375x811 JPEGs, equal dimensions in each pair.
+
+Final existing Windows suite: 89 passed in 10.68s. Fifteen browser observations: 14 VERIFIED, one route-count attempt NOT VERIFIED. Synthetic approve/reasoned timed override, loading/errors/double-click, keyboard drafts, Refresh/reload/replay exercised; five widths showed no horizontal overflow. Two frozen export bodies/hashes exact in the isolated QA DB. Source hashes still match tested files. Staged candidate scan before source commit: 98 files, zero secret findings. Evidence in `evidence/precision`.
+
+Implementation/test gates recorded by 07:04:32 UTC, inside the 06:48:19–07:23:19 UTC timebox. Later preview delivery resumed after 11:01 UTC, without further app edits. The previous local preview process had stopped; restarted 8084 with its existing ignored QA DB, retaining 10 runs / 10 snapshots / 9 decisions / 9 outbox packages. Provider/model calls remain blocked; new evaluations explicitly synthetic, replay historical. The browser URL policy rejected automated display; fresh visible user tab NOT VERIFIED. User receives the local link and saved before/after captures. No bypass attempted. Footer retains `design-working-candidate`, not a deployment-commit claim.
+
+Fresh LIVE/model, exact Linux candidate, production health/UI, accessibility certification and variable counts from the attempted midnight fixture remain NOT VERIFIED in this pass. No observed blocker in the exercised design workflows; long records still require scrolling/disclosures. Last recorded production source remains `e5f7801829aaa1f7cfd326e02e415f8389fa3dde`, last remote read 2026-10-11T01:15:40Z; no new remote verification or operation. Local preview is separate from production tunnel 8081. No Linode deploy/publish/push/cloud/prod-data access/real notices. Existing env, original databases/backups and user untracked files preserved. Deployment awaits explicit user approval and later exact Linux/current-backup gates; judge access/Submit remain user-owned.
+
+Earlier checkpoints below retain their dates and scope.
+
 # Editable Figma design proposal
 
 Verified 2026-10-11 UTC: Figma account connected; created file `3UWLj8CU622rsZJ374ZzLQ` with desktop frame `7:257`, mobile frame `7:480` and nine reusable local components. Actual readback: 139 editable text nodes / 31 instances per screen, zero image fills, no empty/unstyled text or measured horizontal overflow after the mobile-button repair. Screenshots and bindings are recorded in `evidence/figma`; review links and limits in `FIGMA_DESIGN_REVIEW.md`.
