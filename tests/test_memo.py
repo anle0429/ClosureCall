@@ -77,6 +77,7 @@ def test_memo_timezone_escaping_and_no_inferred_actor_reason(frozen):
     assert 'Recorded actor</strong></dt><dd>Not recorded' in output
     assert 'Recorded manager reason</strong></dt><dd>Not recorded' in output
     assert 'Approved deterministic prototype recommendation' not in output
+    assert '<h3>Missing inputs</h3><ul><li>No entries recorded</li></ul>' in output
 
 
 def test_memo_missing_timezone_or_offset_is_not_inferred(frozen):

@@ -28,7 +28,8 @@ def fields(items):
 
 
 def saved_list(title, items):
-    return f'<h3>{escape(title)}</h3><ul>' + ''.join(f'<li>{text(item)}</li>' for item in (items or ['Not recorded'])) + '</ul>'
+    values = ['Not recorded'] if items is None else items or ['No entries recorded']
+    return f'<h3>{escape(title)}</h3><ul>' + ''.join(f'<li>{text(item)}</li>' for item in values) + '</ul>'
 
 
 def render_memo(record):
