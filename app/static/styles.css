@@ -35,6 +35,7 @@ footer{max-width:1368px;margin:auto;padding:19px 24px;border-top:1px solid var(-
 @media(max-width:760px){.next-step{flex-direction:column;padding:16px;gap:12px}.next-step h2{font-size:18px}.workflow-nav a{padding:10px;font-size:12px;gap:8px}.workflow-nav small{font-size:10px}.workflow-nav b{flex-basis:24px;height:24px}.guide-action{min-width:0}}
 
 /* Precision console: bounded presentation overrides; workflow and data are unchanged. */
+.work-hours-refresh{grid-column:1/-1;display:flex;align-items:center;gap:12px;flex-wrap:wrap}.work-hours-refresh .note{margin:0;flex:1 1 260px}#evaluate .work-hours-refresh button{width:auto;flex-shrink:0}
 :root{color:#1F2933;background:#F5F6F7;--ink:#1F2933;--muted:#53606B;--line:#D4D9DE;--blue:#234866;--teal:#196047;--amber:#B54708;--red:#A12622;--purple:#234866}
 header{background:#234866;padding:14px max(24px,calc((100vw - 1320px)/2));border-bottom:0;min-height:72px}
 .brand strong{font-size:23px;letter-spacing:-.5px}.brand small{font-size:10px;letter-spacing:1px;color:#DFE8EE}.mark{display:none}
