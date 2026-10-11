@@ -2,6 +2,15 @@
 
 Audit date: 2026-10-10, America/Chicago (UTC-05). This report distinguishes live observations, synthetic tests and historical replay. VERIFIED means the specified check was performed; it does not certify official USDA operating policy or prize eligibility. Prior totals of 59 tests were not reused as proof for all requirements.
 
+## Bounded feedback addendum — candidate 656e8a0, NOT DEPLOYED
+
+SPONSOR_FEEDBACK_REVIEW.md maps each reported concern to existing controls, new gaps and evidence. Offline regression fixtures found gaps beyond the earlier observed V2 scope: supplied polygon contradictions, unverified scope, work-window coverage beyond message expiry and wrong-location cancellation. Baseline local source reproduction FAILED those new expectations; this does not establish a live Wisconsin/Kansas City incident. Candidate fixes pass targeted and full tests; production remains e5f7801. Earlier VERIFIED labels below retain their stated observed scope and date, not universal geographic/source accuracy.
+
+Candidate source 656e8a0a5ee78d89064ddb47318bd2ec75e0b899; image sha256:84b3d897808d5ecd6aa81f9d1ea2f31f93dc5097309d444a375204bedda29a81. Final Windows 89 passed/12.67s; exact Linux image 89/6.43s. One prior Windows deadline trace assertion failed, retained with unchanged successful single/full reruns; exact cause NOT VERIFIED. New memo API/download/content/frozen integrity is VERIFIED in an isolated preview; downloaded-file visual/print QA remains NOT VERIFIED due browser file-URL policy. No new live NWS/AQ/model workflow, deployment or production restore/restart was performed. FEEDBACK_MANIFEST.json identifies evidence and versions; no blanket challenge PASS or agency endorsement.
+
+Sponsor feedback pass: FEEDBACK_PASS_COMPLETE_WITH_LIMITATIONS.
+Submission: ON_HOLD / NOT_SUBMITTED; existing G4/G6 blockers unchanged by user choice.
+
 ## Current V2 checkpoint — e5f7801, 2026-10-10
 
 This section supersedes unresolved status statements in the retained earlier audit. It does not relabel an old snapshot LIVE. Current application source is `e5f7801829aaa1f7cfd326e02e415f8389fa3dde`; exact Linux image ID `sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184`. Documentation SHA is separate in RELEASE_MANIFEST.json. Public organizer sources and the supplied original are evidence of requirements, not eligibility/access approval.

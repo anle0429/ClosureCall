@@ -1,3 +1,21 @@
+# Current bounded USDA feedback state
+
+Updated 2026-10-10T20:18:34.929109-05:00 (America/Chicago); 2026-10-11T01:18:34.929109+00:00 UTC.
+Sponsor feedback pass: FEEDBACK_PASS_COMPLETE_WITH_LIMITATIONS.
+Submission: ON_HOLD / NOT_SUBMITTED; existing G4/G6 blockers unchanged by user choice.
+
+Reported feedback is documented, not official USDA policy/endorsement. SPONSOR_FEEDBACK_REVIEW.md maps every concern and all required facility/time/snapshot cases to evidence and limits. Baseline source gaps were reproduced offline, then corrected at the existing NWS/policy boundary. Strict snapshot reference validation, five tools, agent budgets/authority, mappings/dependencies/DB schema are preserved.
+
+Frozen candidate 656e8a0a5ee78d89064ddb47318bd2ec75e0b899, image sha256:84b3d897808d5ecd6aa81f9d1ea2f31f93dc5097309d444a375204bedda29a81; NOT DEPLOYED. Final Windows 89 passed/12.67s and exact Linux image 89/6.43s, 24 added cases. Initial same-candidate Windows execution had a synthetic 0.2s deadline trace failure; unchanged isolated/full reruns passed, cause unverified, failed log retained. No test assertion/deadline relaxation.
+
+New pure memo renderer frozen-memo-v1/authenticated HTML download and small JS display/download changes. Actual isolated UI download matched bytes; two historical exports/hashes/drafts exact; API source/model/rules/roster/routing call traps zero. Missing actor/reason not inferred. Downloaded-file visual/print QA NOT VERIFIED due browser file-protocol policy, no workaround attempted. Production Replay/JSON remains demo path.
+
+Production remains source e5f7801829aaa1f7cfd326e02e415f8389fa3dde / image sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184. Actual read 2026-10-11T01:15:40Z: healthy, unchanged started-at 2026-10-10T22:59:42.908771858Z, 127.0.0.1:8000. Tunnel 8081 and original user tab preserved. No production restart/redeploy/DB/config/roster/rules write or new LIVE source/model call. Baseline eight-record backup is not assumed to contain later user decisions; any future deployment needs a fresh backup of actual current data, never an old-data restore for code rollback.
+
+Demo/notes/QA/limits now position support for duty team/existing notification process, no OnSolve integration/replacement, no live power/water/security, drafts/manual follow-up and graded postures retained. Human speech unverified. Prior 33 release + 3 follow-up artifact hashes rechecked exact; original backups/env/database/user packages preserved. New evidence under evidence/feedback, FEEDBACK_MANIFEST.json separate from V2 RELEASE_MANIFEST.json. Same private progress push allowed; no public access/cost/real send/Submit.
+
+This bounded feedback objective ends here with disclosed limits; no automatic V2 submission continuation. A separate user decision is needed to apply the tested candidate. Earlier checkpoints follow as dated history.
+
 # ClosureCall current V2 state
 
 Updated 2026-10-10 18:24 America/Chicago. READY_WITH_DISCLOSED_LIMITATIONS; NOT_SUBMITTED. User deferred portal/team/judge access/Submit until technical preparation is complete. Do not claim the full submission goal achieved.

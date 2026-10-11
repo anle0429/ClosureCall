@@ -1,0 +1,114 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.9, pytest-9.1.1, pluggy-1.6.0 -- C:\Projects\ClosureCall\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Projects\ClosureCall
+plugins: anyio-4.15.1
+collecting ... collected 15 items
+
+tests/test_feedback_scope.py::test_wisconsin_polygon_cannot_supply_kc_closure FAILED [  6%]
+tests/test_feedback_scope.py::test_polygon_hole_is_not_positive_bbox_proof FAILED [ 13%]
+tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[None] FAILED [ 20%]
+tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[geometry1] FAILED [ 26%]
+tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[geometry2] FAILED [ 33%]
+tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[geometry3] FAILED [ 40%]
+tests/test_feedback_scope.py::test_null_geometry_retains_point_filtered_county_zone_scope[MOZ037-High Wind Warning] FAILED [ 46%]
+tests/test_feedback_scope.py::test_null_geometry_retains_point_filtered_county_zone_scope[MOC095-Severe Thunderstorm Watch] FAILED [ 53%]
+tests/test_feedback_scope.py::test_wrong_or_unknown_alert_does_not_erase_valid_warning[bad_geometry0] FAILED [ 60%]
+tests/test_feedback_scope.py::test_wrong_or_unknown_alert_does_not_erase_valid_warning[None] FAILED [ 66%]
+tests/test_feedback_scope.py::test_partial_overlap_is_bounded_by_message_expiry FAILED [ 73%]
+tests/test_feedback_scope.py::test_future_work_period_after_message_expiry_has_no_match FAILED [ 80%]
+tests/test_feedback_scope.py::test_reference_present_only_in_historical_run_rejected PASSED [ 86%]
+tests/test_feedback_scope.py::test_same_id_in_two_snapshots_uses_current_membership_and_assessment PASSED [ 93%]
+tests/test_feedback_scope.py::test_empty_200_and_timeout_have_distinct_assessments PASSED [100%]
+
+================================== FAILURES ===================================
+_______________ test_wisconsin_polygon_cannot_supply_kc_closure _______________
+tests\test_feedback_scope.py:32: in test_wisconsin_polygon_cannot_supply_kc_closure
+    assert stored['applicability_status'] == 'outside_polygon'
+E   AssertionError: assert 'point_confirmed' == 'outside_polygon'
+E     
+E     - outside_polygon
+E     + point_confirmed
+________________ test_polygon_hole_is_not_positive_bbox_proof _________________
+tests\test_feedback_scope.py:42: in test_polygon_hole_is_not_positive_bbox_proof
+    assert response(snapshot, alert, geometry)['alerts'][0]['applicability_status'] == 'outside_polygon'
+E   AssertionError: assert 'point_confirmed' == 'outside_polygon'
+E     
+E     - outside_polygon
+E     + point_confirmed
+________ test_unknown_scope_is_incomplete_not_normal_or_closure[None] _________
+tests\test_feedback_scope.py:49: in test_unknown_scope_is_incomplete_not_normal_or_closure
+    assert snapshot['nws']['alerts'][0]['applicability_status'] == 'unverified'
+E   AssertionError: assert 'point_confirmed' == 'unverified'
+E     
+E     - unverified
+E     + point_confirmed
+______ test_unknown_scope_is_incomplete_not_normal_or_closure[geometry1] ______
+tests\test_feedback_scope.py:49: in test_unknown_scope_is_incomplete_not_normal_or_closure
+    assert snapshot['nws']['alerts'][0]['applicability_status'] == 'unverified'
+E   AssertionError: assert 'point_confirmed' == 'unverified'
+E     
+E     - unverified
+E     + point_confirmed
+______ test_unknown_scope_is_incomplete_not_normal_or_closure[geometry2] ______
+tests\test_feedback_scope.py:49: in test_unknown_scope_is_incomplete_not_normal_or_closure
+    assert snapshot['nws']['alerts'][0]['applicability_status'] == 'unverified'
+E   AssertionError: assert 'point_confirmed' == 'unverified'
+E     
+E     - unverified
+E     + point_confirmed
+______ test_unknown_scope_is_incomplete_not_normal_or_closure[geometry3] ______
+tests\test_feedback_scope.py:49: in test_unknown_scope_is_incomplete_not_normal_or_closure
+    assert snapshot['nws']['alerts'][0]['applicability_status'] == 'unverified'
+E   AssertionError: assert 'point_confirmed' == 'unverified'
+E     
+E     - unverified
+E     + point_confirmed
+_ test_null_geometry_retains_point_filtered_county_zone_scope[MOZ037-High Wind Warning] _
+tests\test_feedback_scope.py:63: in test_null_geometry_retains_point_filtered_county_zone_scope
+    assert item['geocode']['UGC'] == [scope]
+           ^^^^^^^^^^^^^^^
+E   KeyError: 'geocode'
+_ test_null_geometry_retains_point_filtered_county_zone_scope[MOC095-Severe Thunderstorm Watch] _
+tests\test_feedback_scope.py:63: in test_null_geometry_retains_point_filtered_county_zone_scope
+    assert item['geocode']['UGC'] == [scope]
+           ^^^^^^^^^^^^^^^
+E   KeyError: 'geocode'
+___ test_wrong_or_unknown_alert_does_not_erase_valid_warning[bad_geometry0] ___
+tests\test_feedback_scope.py:75: in test_wrong_or_unknown_alert_does_not_erase_valid_warning
+    assert result['matched_rules'][0]['evidence_id'] == alert['alert_id']
+E   AssertionError: assert 'SYNTHETIC-BAD' == 'SYNTHETIC-ALERT-01'
+E     
+E     - SYNTHETIC-ALERT-01
+E     + SYNTHETIC-BAD
+_______ test_wrong_or_unknown_alert_does_not_erase_valid_warning[None] ________
+tests\test_feedback_scope.py:75: in test_wrong_or_unknown_alert_does_not_erase_valid_warning
+    assert result['matched_rules'][0]['evidence_id'] == alert['alert_id']
+E   AssertionError: assert 'SYNTHETIC-BAD' == 'SYNTHETIC-ALERT-01'
+E     
+E     - SYNTHETIC-ALERT-01
+E     + SYNTHETIC-BAD
+______________ test_partial_overlap_is_bounded_by_message_expiry ______________
+tests\test_feedback_scope.py:86: in test_partial_overlap_is_bounded_by_message_expiry
+    assert start.isoformat() in reason and stop.isoformat() in reason
+E   AssertionError: assert ('2026-10-11T01:00:00+00:00' in 'Work-period overlap checked')
+E    +  where '2026-10-11T01:00:00+00:00' = <built-in method isoformat of datetime.datetime object at 0x000002690BA6E4C0>()
+E    +    where <built-in method isoformat of datetime.datetime object at 0x000002690BA6E4C0> = datetime.datetime(2026, 10, 11, 1, 0, tzinfo=datetime.timezone.utc).isoformat
+__________ test_future_work_period_after_message_expiry_has_no_match __________
+tests\test_feedback_scope.py:96: in test_future_work_period_after_message_expiry_has_no_match
+    assert applicability(alert, start, end, parse_time(snapshot['collected_at_utc']))[0] is False
+E   assert True is False
+=========================== short test summary info ===========================
+FAILED tests/test_feedback_scope.py::test_wisconsin_polygon_cannot_supply_kc_closure
+FAILED tests/test_feedback_scope.py::test_polygon_hole_is_not_positive_bbox_proof
+FAILED tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[None]
+FAILED tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[geometry1]
+FAILED tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[geometry2]
+FAILED tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[geometry3]
+FAILED tests/test_feedback_scope.py::test_null_geometry_retains_point_filtered_county_zone_scope[MOZ037-High Wind Warning]
+FAILED tests/test_feedback_scope.py::test_null_geometry_retains_point_filtered_county_zone_scope[MOC095-Severe Thunderstorm Watch]
+FAILED tests/test_feedback_scope.py::test_wrong_or_unknown_alert_does_not_erase_valid_warning[bad_geometry0]
+FAILED tests/test_feedback_scope.py::test_wrong_or_unknown_alert_does_not_erase_valid_warning[None]
+FAILED tests/test_feedback_scope.py::test_partial_overlap_is_bounded_by_message_expiry
+FAILED tests/test_feedback_scope.py::test_future_work_period_after_message_expiry_has_no_match
+======================== 12 failed, 3 passed in 1.98s =========================

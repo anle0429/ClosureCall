@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-10-11T01:15:37.682230+00:00",
+  "candidate_source": "656e8a0a5ee78d89064ddb47318bd2ec75e0b899",
+  "renderer": "frozen-memo-v1",
+  "result": "VERIFIED_UI_DOWNLOAD_AND_FROZEN_BYTES",
+  "download_sha256": "9dde357a447bd90832fc63bd585e412317f02d09231b2658c8b7377342198d06",
+  "decision_id": "16a170c1-af9b-4950-86b2-a3eecf1ad26b",
+  "bundle_hash": "b73bcc9a7c06308fc349a39614c24516fac29413dd6ca49f41a34dcde1982a28",
+  "isolated_export_records_unchanged": 2,
+  "browser_file_visual": "NOT VERIFIED: file protocol blocked; no workaround attempted",
+  "sources_and_recompute": "Harness forbids provider/recompute calls and all writes; no evaluation initiated",
+  "scope": "Local read-only preview on loopback 8083; no production deployment"
+}

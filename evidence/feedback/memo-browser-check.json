@@ -1,0 +1,12 @@
+{
+  "result": "VERIFIED",
+  "scope": "Authenticated candidate UI download bytes exactly match new renderer on frozen override export; isolated records remain exact",
+  "download_sha256": "ea68f32bffcc03d91b551f9961f38c6a1d4b542c0cb2520b89f65f44fde398e3",
+  "record_file_sha256": "47c66e79a6120b2e7167080ec2014942042122fb63fb0ff89d11d1ee959da0ad",
+  "decision_id": "16a170c1-af9b-4950-86b2-a3eecf1ad26b",
+  "bundle_hash": "b73bcc9a7c06308fc349a39614c24516fac29413dd6ca49f41a34dcde1982a28",
+  "renderer": "frozen-memo-v1",
+  "browser_file_visual": "NOT VERIFIED \u2014 file protocol blocked by browser policy; no workaround attempted",
+  "new_source_model_calls": 0,
+  "production_modified": false
+}

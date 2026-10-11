@@ -1,3 +1,26 @@
+# Bàn giao lượt phản hồi USDA
+
+Sponsor feedback pass: **FEEDBACK_PASS_COMPLETE_WITH_LIMITATIONS**.
+Submission: **ON_HOLD / NOT_SUBMITTED; existing G4/G6 blockers unchanged by user choice.**
+
+Lượt bổ sung đã xong trong timebox; không quay lại mission nộp bài. Feedback được lưu là lời bạn thuật lại, không phải policy/endorsement USDA hoặc chứng cứ đại diện đã test app. Bảng đầy đủ: SPONSOR_FEEDBACK_REVIEW.md; nguồn/ảnh/log/diff: FEEDBACK_MANIFEST.json và evidence/feedback.
+
+Đã có từ trước: kiểm tra tọa độ request, strict snapshot/policy/evidence membership, agent read-only/bounded, human auth/approve/override, per-person drafts và frozen replay. Các bằng chứng LIVE/restore/Cloud Manager cũ được giữ đúng ngày/phiên bản; không gọi lại model hoặc mở điều tra ValueError lịch sử.
+
+Khoảng trống mới được tái hiện offline: polygon ngoài facility vẫn được coi áp dụng; scope chưa xác minh có thể bị coi confirmed hoặc bỏ qua thành normal; ends kéo match vượt message expires; Cancel ngoài vị trí có thể xóa warning hợp lệ. Candidate sửa tại boundary hiện có: polygon coverage, outside khác unverified, metadata county/zone cho geometry null, interval giao với ca và supersession đúng scope. Null-geometry vẫn tin NWS point-filter, chưa có kiểm tra zone độc lập; nguồn sai nhưng metadata nhất quán vẫn có thể lọt. Không có sự cố Wisconsin/KC LIVE được quan sát.
+
+Candidate source **656e8a0a5ee78d89064ddb47318bd2ec75e0b899**, image **sha256:84b3d897808d5ecd6aa81f9d1ea2f31f93dc5097309d444a375204bedda29a81**, tag closurecall-feedback:656e8a0a5ee78d89064ddb47318bd2ec75e0b899; **CHƯA DEPLOY**. Windows final 89 pass/12.67s; exact Linux image 89/6.43s; 24 cases mới, không phải 178 cases khác nhau. Một lần Windows bản chốt fail ở trace của test deadline 0,2 giây; testcase và full suite chạy lại nguyên trạng pass, nguyên nhân chưa xác minh, log fail còn nguyên. Không nới deadline hoặc sửa assertion.
+
+Memo HTML mới đọc nguyên bundle đóng băng, tách recommendation/decision, có facility/ca/timezone, actor/time/reason đã ghi, evidence/basis/limits, decision ID/hash và drafts; renderer frozen-memo-v1 ghi riêng. Không sửa hash, nội dung drafts hay lý do cũ; thiếu actor/reason không tự suy ra. API/auth/escaping/time/call traps pass; nút UI download trong preview database riêng tải đúng bytes. File HTML chưa được agent xem trực quan/print do browser chặn file protocol; không tìm cách vòng qua. Ví dụ: evidence/feedback/example-decision-memo-final.html. **Nút memo chưa có ở 8081**; demo production vẫn dùng Replay/JSON export.
+
+Production vẫn **e5f7801829aaa1f7cfd326e02e415f8389fa3dde**, image sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184. SSH read lúc **2026-10-11T01:15:40Z** xác nhận healthy, cùng start 22:59:42 UTC ngày 10/10 và bind 127.0.0.1:8000. Giữ tunnel 8081/user tab. Không restart/redeploy, không thay DB/env/roster/rules production; original 33+3 artifacts kiểm lại đúng hash. Không giả rằng backup tám records chứa các quyết định bạn tạo sau đó.
+
+Tài liệu demo/notes/QA/limitations đã chỉnh: hỗ trợ người trực/manager và quy trình thông báo hiện có, không thay OnSolve/đội emergency; không có API/import compatibility OnSolve hoặc nguồn LIVE điện/nước/cảnh sát. Tất cả notifications là drafts, deferred thủ công; giữ các mức operating posture, không biến cuộc trao đổi yes/no thành policy. Rehearsal lời nói vẫn bạn tự tập; UI times cũ không chứng minh đã tập nói.
+
+Quyết định tiếp theo thuộc bạn: có áp dụng candidate hay giữ bản production đang ổn định. Nếu áp dụng cần bước deployment riêng, backup DB **hiện tại** trước, pin đúng tested image/build source và giữ mọi quyết định mới. Rollback code không restore backup sáu/tám records đè dữ liệu mới. Tôi chưa chạy bước này và chưa xin lại judge access/Submit. Git/private progress checkpoint cuối được xác minh sau commit tài liệu, độc lập với source/image đang chạy.
+
+Không public/firewall/DNS/cấp quyền ngoài/tài nguyên trả phí/gửi thật/Submit. Kết thúc lượt feedback này; các giới hạn còn lại đã ghi rõ. Bàn giao V2 trước đó được giữ dưới đây như lịch sử.
+
 # Bàn giao ClosureCall V2
 
 Trạng thái: **READY_WITH_DISCLOSED_LIMITATIONS / NOT_SUBMITTED**. Phần kỹ thuật đã được kiểm tra trong phạm vi dưới đây. Bạn sẽ tự xử lý portal, team, quyền giám khảo và Submit sau khi chuẩn bị xong; chưa có bản nộp hay receipt. Goal đầy đủ chưa đạt bước nộp được xác nhận.

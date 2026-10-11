@@ -1,0 +1,48 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.9, pytest-9.1.1, pluggy-1.6.0 -- C:\Projects\ClosureCall\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Projects\ClosureCall
+plugins: anyio-4.15.1
+collecting ... collected 39 items
+
+tests/test_feedback_scope.py::test_wisconsin_polygon_cannot_supply_kc_closure PASSED [  2%]
+tests/test_feedback_scope.py::test_polygon_hole_is_not_positive_bbox_proof PASSED [  5%]
+tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[None] PASSED [  7%]
+tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[geometry1] PASSED [ 10%]
+tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[geometry2] PASSED [ 12%]
+tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[geometry3] PASSED [ 15%]
+tests/test_feedback_scope.py::test_null_geometry_retains_point_filtered_county_zone_scope[MOZ037-High Wind Warning] PASSED [ 17%]
+tests/test_feedback_scope.py::test_null_geometry_retains_point_filtered_county_zone_scope[MOC095-Severe Thunderstorm Watch] PASSED [ 20%]
+tests/test_feedback_scope.py::test_wrong_or_unknown_alert_does_not_erase_valid_warning[bad_geometry0] PASSED [ 23%]
+tests/test_feedback_scope.py::test_wrong_or_unknown_alert_does_not_erase_valid_warning[None] PASSED [ 25%]
+tests/test_feedback_scope.py::test_partial_overlap_is_bounded_by_message_expiry PASSED [ 28%]
+tests/test_feedback_scope.py::test_future_work_period_after_message_expiry_has_no_match PASSED [ 30%]
+tests/test_feedback_scope.py::test_reference_present_only_in_historical_run_rejected PASSED [ 33%]
+tests/test_feedback_scope.py::test_same_id_in_two_snapshots_uses_current_membership_and_assessment PASSED [ 35%]
+tests/test_feedback_scope.py::test_empty_200_and_timeout_have_distinct_assessments PASSED [ 38%]
+tests/test_sources.py::test_http_failure_bounded_not_empty PASSED        [ 41%]
+tests/test_sources.py::test_401_not_retried PASSED                       [ 43%]
+tests/test_sources.py::test_null_and_malformed_aq_are_missing PASSED     [ 46%]
+tests/test_sources.py::test_invalid_nws_shape_unavailable PASSED         [ 48%]
+tests/test_policy.py::test_zero_alerts_valid PASSED                      [ 51%]
+tests/test_policy.py::test_aq_exact_cutoff[150-normal-None] PASSED       [ 53%]
+tests/test_policy.py::test_aq_exact_cutoff[150.99-normal-None] PASSED    [ 56%]
+tests/test_policy.py::test_aq_exact_cutoff[151-telework-0] PASSED        [ 58%]
+tests/test_policy.py::test_aq_exact_cutoff[172-telework-21] PASSED       [ 61%]
+tests/test_policy.py::test_nws_failure_never_normal_or_aq_only PASSED    [ 64%]
+tests/test_policy.py::test_aq_missing_stale_window_location[null] PASSED [ 66%]
+tests/test_policy.py::test_aq_missing_stale_window_location[stale] PASSED [ 69%]
+tests/test_policy.py::test_aq_missing_stale_window_location[gap] PASSED  [ 71%]
+tests/test_policy.py::test_aq_missing_stale_window_location[wrong_location] PASSED [ 74%]
+tests/test_policy.py::test_serious_flood_not_erased_by_good_aq PASSED    [ 76%]
+tests/test_policy.py::test_nonapplicable_alerts[outside] PASSED          [ 79%]
+tests/test_policy.py::test_nonapplicable_alerts[expired] PASSED          [ 82%]
+tests/test_policy.py::test_nonapplicable_alerts[test] PASSED             [ 84%]
+tests/test_policy.py::test_nonapplicable_alerts[cancel] PASSED           [ 87%]
+tests/test_policy.py::test_nonapplicable_alerts[other_period] PASSED     [ 89%]
+tests/test_policy.py::test_nonapplicable_alerts[superseded] PASSED       [ 92%]
+tests/test_policy.py::test_unsupported_hazard_requires_review PASSED     [ 94%]
+tests/test_policy.py::test_location_mismatch_blocks PASSED               [ 97%]
+tests/test_policy.py::test_prompt_injection_does_not_set_policy PASSED   [100%]
+
+============================= 39 passed in 3.29s ==============================

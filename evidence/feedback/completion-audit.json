@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-11T01:24:43.717370+00:00",
+  "status": "PASS_SCOPED_COMPLETION_AUDIT",
+  "checks": [
+    "Source unchanged since frozen candidate",
+    "Final Windows/Linux results and exact image/source in logs",
+    "Retained failing deadline log and unchanged rerun",
+    "New memo download bytes and UI access proof",
+    "Independent status/version/demo wording and local links",
+    "Prior artifact hashes unchanged"
+  ],
+  "prior_artifact_counts": {
+    "evidence/release/manifest.json": 33,
+    "evidence/release-followup/manifest.json": 3
+  },
+  "limits": [
+    "Not a new live evaluation or deployment",
+    "No downloaded-file visual/print QA",
+    "No endorsement/local safety/zone truth certification"
+  ]
+}

@@ -1,0 +1,9 @@
+Offline read-only preview initialized; two historical exports exact; providers blocked
+INFO:     127.0.0.1:50884 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50884 - "GET /static/styles.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65340 - "GET /static/app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56578 - "GET /api/config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56578 - "GET /api/facilities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56578 - "GET /api/decisions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63696 - "GET /api/decisions/16a170c1-af9b-4950-86b2-a3eecf1ad26b/replay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49298 - "GET /api/decisions/16a170c1-af9b-4950-86b2-a3eecf1ad26b/memo HTTP/1.1" 200 OK

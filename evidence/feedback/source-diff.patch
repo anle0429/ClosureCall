@@ -1,0 +1,596 @@
+diff --git a/app/clients/nws.py b/app/clients/nws.py
+index 96c0f09..26cc7c2 100644
+--- a/app/clients/nws.py
++++ b/app/clients/nws.py
+@@ -1,13 +1,44 @@
+ from app.clients.base import fetch_json
+ from app.services.audit import parse_time, utcnow
++import re
++from shapely.geometry import Point, shape
++from shapely.errors import GEOSException
+ 
+ FIELDS = {'event':'event', 'status':'status', 'message_type':'messageType', 'severity':'severity',
+           'certainty':'certainty', 'urgency':'urgency', 'sent':'sent', 'effective':'effective',
+           'onset':'onset', 'expires':'expires', 'ends':'ends', 'area_desc':'areaDesc',
+           'affected_zones':'affectedZones', 'headline':'headline', 'description':'description',
+-          'instruction':'instruction', 'references':'references'}
++          'instruction':'instruction', 'references':'references', 'geocode':'geocode'}
+ SUPPORTED = {'Flash Flood Warning', 'Flood Warning', 'High Wind Warning'}
+ 
++def location_scope(alert, location):
++    if location is None:
++        return 'unverified', 'National explorer only; point confirmation required'
++    geometry = alert.get('geometry')
++    if geometry is not None:
++        try:
++            polygon = shape(geometry)
++            if polygon.geom_type not in ('Polygon', 'MultiPolygon') or polygon.is_empty or not polygon.is_valid:
++                raise ValueError('Invalid polygon')
++            west, south, east, north = polygon.bounds
++            if not (-180 <= west <= east <= 180 and -90 <= south <= north <= 90):
++                raise ValueError('Invalid geographic bounds')
++            point = Point(location['longitude'], location['latitude'])
++            if polygon.covers(point):
++                return 'point_confirmed', 'NWS point response and supplied polygon cover the facility point'
++            return 'outside_polygon', 'Facility point is outside the supplied alert polygon; point response and polygon disagree for this site'
++        except (ValueError, TypeError, KeyError, AttributeError, IndexError, GEOSException):
++            return 'unverified', 'Supplied geometry cannot verify facility applicability; manager review required'
++    geocode = alert.get('geocode') or {}
++    ugcs = geocode.get('UGC', []) if isinstance(geocode, dict) else []
++    zones = alert.get('affected_zones') or []
++    has_scope = (isinstance(ugcs, list) and any(isinstance(code, str) and re.fullmatch(r'[A-Z]{2}[CZ]\d{3}', code) for code in ugcs))
++    has_scope = has_scope or (isinstance(zones, list) and any(isinstance(url, str) and
++        re.fullmatch(r'https://api\.weather\.gov/zones/(?:county|forecast|fire|marine)/[A-Z]{2}[CZ]\d{3}', url) for url in zones))
++    if has_scope:
++        return 'point_confirmed', 'NWS point filter resolved county/zone scope; geometry is null, no independent zone-boundary check'
++    return 'unverified', 'No usable polygon or county/zone scope in the point response; manager review required'
++
+ def normalize(body, meta, location=None):
+     evidence = {**meta, 'source_id': 'nws', 'request_location': location, 'alerts': [],
+                 'location_verified': location is not None}
+@@ -20,8 +51,7 @@ def normalize(body, meta, location=None):
+             props = feature['properties']
+             alert = {key: props.get(source) for key, source in FIELDS.items()}
+             alert.update(alert_id=props.get('id') or feature['id'], geometry=feature.get('geometry'))
+-            alert['applicability_status'] = 'point_confirmed' if location else 'unverified'
+-            alert['applicability_reason'] = 'Returned by NWS point endpoint' if location else 'National explorer only; point confirmation required'
++            alert['applicability_status'], alert['applicability_reason'] = location_scope(alert, location)
+             evidence['alerts'].append(alert)
+     except (KeyError, TypeError):
+         return {**evidence, 'alerts': [], 'status': 'unavailable', 'safe_error_code': 'InvalidAlert'}
+@@ -38,8 +68,6 @@ async def national():
+ 
+ def applicability(alert, start, end, now=None):
+     now = now or utcnow()
+-    if alert.get('applicability_status') != 'point_confirmed':
+-        return False, 'Location not verified'
+     if alert.get('status') != 'Actual' or alert.get('message_type') not in ('Alert', 'Update'):
+         return False, 'Non-actual, cancelled or unsupported message type'
+     try:
+@@ -47,10 +75,21 @@ def applicability(alert, start, end, now=None):
+         expires = parse_time(alert.get('ends') or alert.get('expires'))
+         if effective is None or expires is None:
+             return False, 'Missing validity window; manager review required'
+-        # ends can exceed expires; expiration of the current message must also be respected.
++        # The current message cannot supply work-period coverage beyond its expiry.
+         message_expires = parse_time(alert.get('expires'))
+         if expires <= now or (message_expires and message_expires <= now):
+             return False, 'Expired alert; expiration is not proof of safety'
+-        return effective < end and expires > start, 'Work-period overlap checked'
++        if message_expires:
++            expires = min(expires, message_expires)
++        if effective >= expires:
++            return False, 'Invalid validity window; manager review required'
++        overlap_start, overlap_end = max(effective, start), min(expires, end)
++        if overlap_start >= overlap_end:
++            return False, 'No work-period overlap'
++        if alert.get('applicability_status') == 'outside_polygon':
++            return False, alert.get('applicability_reason') or 'Facility point outside alert polygon'
++        if alert.get('applicability_status') != 'point_confirmed':
++            return False, 'Location not verified; manager review required'
++        return True, f'Work-period overlap: {overlap_start.isoformat()} → {overlap_end.isoformat()}; no validity inferred outside this interval'
+     except (ValueError, TypeError):
+         return False, 'Invalid validity window; manager review required'
+diff --git a/app/main.py b/app/main.py
+index 58b083e..310a5d4 100644
+--- a/app/main.py
++++ b/app/main.py
+@@ -94,7 +94,7 @@ async def demo_site(body: DemoSiteRequest):
+     except (ValueError,TypeError,KeyError):
+         raise HTTPException(422,'Invalid NWS polygon')
+     confirmed = await nws.point(point.y,point.x)
+-    if confirmed['status']!='available' or not any(x['alert_id']==body.alert_id for x in confirmed['alerts']):
++    if confirmed['status']!='available' or not any(x['alert_id']==body.alert_id and x.get('applicability_status')=='point_confirmed' for x in confirmed['alerts']):
+         raise HTTPException(409,'Point endpoint did not confirm this alert')
+     from app.clients.base import fetch_json
+     # NWS normalizes point metadata to four decimal places with a redirect.
+@@ -192,6 +192,12 @@ def export(id: str):
+     return Response(json.dumps(replay_record(id),indent=2),media_type='application/json',
+                     headers={'Content-Disposition':f'attachment; filename="closurecall-{uuid.UUID(id)}.json"'})
+ 
++@api.get('/decisions/{id}/memo')
++def memo(id: str):
++    from app.services.memo import render_memo
++    return Response(render_memo(replay_record(id)), media_type='text/html',
++                    headers={'Content-Disposition':f'attachment; filename="closurecall-memo-{uuid.UUID(id)}.html"'})
++
+ @api.get('/decisions/{id}/notifications/{employee_id}/export')
+ def message_export(id: str, employee_id: str):
+     from email.message import EmailMessage
+diff --git a/app/policy/engine.py b/app/policy/engine.py
+index 6d2fb0a..864816c 100644
+--- a/app/policy/engine.py
++++ b/app/policy/engine.py
+@@ -27,7 +27,8 @@ def assess(snapshot, now=None):
+     rules = {r['id']: r for r in policy['rules']}
+     referenced = set()
+     for alert in nws['alerts']:
+-        if alert.get('status') == 'Actual' and alert.get('message_type') in ('Update', 'Cancel'):
++        if (alert.get('status') == 'Actual' and alert.get('message_type') in ('Update', 'Cancel')
++                and alert.get('applicability_status') == 'point_confirmed'):
+             for ref in alert.get('references') or []:
+                 if isinstance(ref, dict):
+                     referenced.add(ref.get('identifier'))
+@@ -36,7 +37,7 @@ def assess(snapshot, now=None):
+         if alert['alert_id'] in referenced:
+             continue
+         if not applies:
+-            if 'Missing validity' in reason or 'Invalid validity' in reason:
++            if 'Missing validity' in reason or 'Invalid validity' in reason or 'Location not verified' in reason:
+                 missing.append(f"Alert {alert['alert_id']}: {reason}")
+             continue
+         ids.append(alert['alert_id'])
+diff --git a/app/services/memo.py b/app/services/memo.py
+new file mode 100644
+index 0000000..7eb7176
+--- /dev/null
++++ b/app/services/memo.py
+@@ -0,0 +1,125 @@
++"""A presentation of a frozen replay bundle, with no evidence or policy recomputation."""
++from datetime import datetime
++from html import escape
++from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
++
++RENDERER_VERSION = 'frozen-memo-v1'
++
++
++def text(value):
++    return escape('Not recorded' if value is None or value == '' else str(value), quote=True)
++
++
++def recorded_time(value, zone):
++    if not value:
++        return 'Not recorded'
++    try:
++        date = datetime.fromisoformat(str(value).replace('Z', '+00:00'))
++        if date.tzinfo is None:
++            return f'{value} (offset not recorded; no conversion)'
++        local = date.astimezone(ZoneInfo(zone))
++        return f'{value} | {local.isoformat()} [{zone}]'
++    except (ValueError, TypeError, ZoneInfoNotFoundError):
++        return f'{value} (facility timezone conversion unavailable)'
++
++
++def fields(items):
++    return '<dl>' + ''.join(f'<dt><strong>{escape(label)}</strong></dt><dd>{text(value)}</dd>' for label, value in items) + '</dl>'
++
++
++def saved_list(title, items):
++    values = ['Not recorded'] if items is None else items or ['No entries recorded']
++    return f'<h3>{escape(title)}</h3><ul>' + ''.join(f'<li>{text(item)}</li>' for item in values) + '</ul>'
++
++
++def render_memo(record):
++    if record.get('mode') != 'REPLAY':
++        raise ValueError('Memo requires a frozen replay record')
++    s, d, pack = record['snapshot'], record['decision'], record['notifications']
++    facility, period, a = s['facility'], s['work_period'], s['assessment']
++    zone = facility.get('timezone')
++    time = lambda value: recorded_time(value, zone)
++    parts = ['<!doctype html><html lang="en"><head><meta charset="utf-8">',
++             '<meta name="viewport" content="width=device-width,initial-scale=1">',
++             '<meta http-equiv="Content-Security-Policy" content="default-src &#39;none&#39;; style-src &#39;unsafe-inline&#39;; base-uri &#39;none&#39;; form-action &#39;none&#39;">',
++             '<title>ClosureCall decision memo — REPLAY</title>',
++             '<style>body{font:15px/1.6 Segoe UI,Arial,sans-serif;color:#192d2c;background:#f3f4ef;margin:24px}'
++             'main{max-width:1000px;margin:auto;padding:28px;background:white;border:1px solid #d7ded6}'
++             'h1{font-size:30px;line-height:1.2}h2{color:#28554a;border-top:1px solid #d7ded6;padding-top:20px;margin-top:32px}'
++             'h3{font-size:17px}dl{display:grid;grid-template-columns:240px minmax(0,1fr);gap:8px 16px;font-size:13px}'
++             'dd{margin:0}dt,dd,p,li,pre{overflow-wrap:anywhere}pre{white-space:pre-wrap;font:13px/1.6 Segoe UI,Arial,sans-serif}'
++             'details{padding:12px;background:#f3f4ef}summary{cursor:pointer}'
++             '@media(max-width:640px){body{margin:8px}main{padding:16px}dl{display:block}dd{margin-bottom:12px}}'
++             '@media print{body{background:white;margin:0}main{border:0;padding:0}h2,h3{break-after:avoid}}'
++             '</style></head><body><main>',
++             '<h1>ClosureCall decision memo — REPLAY</h1>',
++             '<p><strong>PROTOTYPE · synthetic office and roster · notification drafts only.</strong></p>',
++             '<p>This is a new presentation of stored records, not current weather or a new operational decision. '
++             'No sources, model, policy assessment or recipient routing are called again. '
++             'Prototype action thresholds are not verified USDA/OPM policy; this memo is not a compliance certification.</p>',
++             fields([('Memo renderer (presentation only)', RENDERER_VERSION), ('Decision ID', d.get('decision_id')),
++                     ('Evaluation ID', d.get('evaluation_id')), ('Historical bundle hash', record.get('bundle_hash')),
++                     ('Snapshot hash', record.get('snapshot_hash')), ('Original snapshot mode', s.get('mode')),
++                     ('Stored test label', s.get('test_evidence_label') or 'No additional test label recorded')]),
++             '<h2>Facility and affected work period</h2>',
++             fields([('Facility', facility.get('display_name')), ('Facility ID', facility.get('facility_id')),
++                     ('Latitude / longitude', f"{facility.get('latitude')} / {facility.get('longitude')}"),
++                     ('Facility timezone', zone), ('Work period start', time(period.get('start'))),
++                     ('Work period end', time(period.get('end'))), ('Special shift (stored)', period.get('special_shift')),
++                     ('Evidence collected', time(s.get('collected_at_utc')))]),
++             '<h2>Original recommendation — before manager decision</h2>',
++             fields([('Original posture', a.get('recommended_posture') or 'No candidate recorded'),
++                     ('Review status', a.get('review_status')), ('Policy version', a.get('policy_version')),
++                     ('Confidence rubric (not probability)', a.get('confidence_label')), ('Saved rationale', a.get('rationale_text'))]),
++             '<h3>Matched prototype rules</h3>']
++    for rule in a.get('matched_rules', []):
++        parts.append(fields([('Rule ID / version', f"{rule.get('id')} / {rule.get('version')}"),
++            ('Observed value', rule.get('observed_value')), ('Numeric threshold', rule.get('threshold')),
++            ('Numeric exceedance', rule.get('exceedance')), ('Evidence ID', rule.get('evidence_id')),
++            ('Saved applicability / category basis', rule.get('categorical_match_reason')),
++            ('Prototype action basis', rule.get('prototype_mapping_reason')), ('Reference', rule.get('reference_source_url'))]))
++    if not a.get('matched_rules'):
++        parts.append('<p>No matched rules stored.</p>')
++    for title, key in [('Missing inputs', 'missing_inputs'), ('Confidence basis', 'confidence_basis'),
++                       ('Assumptions', 'assumptions'), ('What would change the recommendation', 'what_would_change')]:
++        parts.append(saved_list(title, a.get(key)))
++    parts.extend(['<h2>Final manager decision — separate from recommendation</h2>',
++        fields([('Decision status', d.get('status')), ('Final posture', d.get('posture')),
++                ('Recorded actor', d.get('actor')), ('Decision time', time(d.get('approved_at'))),
++                ('Recorded manager reason', d.get('reason')), ('Confirmed timing', time(d.get('timing_at'))),
++                ('Timing evidence / assumption', d.get('timing_basis')),
++                ('Stale / superseded override (stored)', d.get('stale_or_superseded_override'))]),
++        '<h2>Frozen evidence and saved applicability</h2>'])
++    nws, aq = s['nws'], s['air_quality']
++    parts.append(fields([('NWS source request', nws.get('source_url')), ('NWS status / HTTP', f"{nws.get('status')} / {nws.get('response_status')}"),
++                         ('NWS fetched', time(nws.get('fetched_at_utc'))), ('Requested location', nws.get('request_location'))]))
++    if not nws.get('alerts'):
++        parts.append('<p>No alert entries stored. Read the saved source status: empty available data and unavailable data differ. Neither establishes all local hazards are absent.</p>')
++    for alert in nws.get('alerts', []):
++        parts.append('<h3>' + text(alert.get('event')) + '</h3>' + fields([
++            ('Alert ID', alert.get('alert_id')), ('Message status / type', f"{alert.get('status')} / {alert.get('message_type')}"),
++            ('Issued', time(alert.get('sent'))), ('Effective', time(alert.get('effective'))), ('Onset', time(alert.get('onset'))),
++            ('Expires', time(alert.get('expires'))), ('Ends', time(alert.get('ends'))),
++            ('Saved applicability status', alert.get('applicability_status')), ('Saved applicability reason', alert.get('applicability_reason')),
++            ('County / zone metadata (stored)', alert.get('geocode')), ('Affected zone references (stored)', alert.get('affected_zones')),
++            ('Saved instruction', alert.get('instruction'))]))
++    parts.extend([fields([('AQ source request', aq.get('source_url')), ('AQ status', aq.get('status')),
++        ('AQ fetched', time(aq.get('fetched_at_utc'))), ('AQ valid', time(aq.get('valid_at_utc'))),
++        ('US AQI (stored)', aq.get('us_aqi')), ('PM2.5 (stored)', aq.get('pm2_5')), ('AQ attribution', aq.get('attribution'))]),
++        '<p>AQ is a modeled grid estimate, not an indoor measurement. Weather/AQ do not verify power, water, security or physical access. '
++        'Source assertions are shown as stored; old records are not revalidated with a newer connector.</p>',
++        fields([('Saved protective-action notice', a.get('protective_action_notice'))]),
++        '<h2>Stored AI brief</h2>', fields([('AI status', record['ai'].get('status')), ('Saved brief', record['ai'].get('narrative'))]),
++        '<h2>Notification package — DRAFTS, NOT SENT</h2>',
++        fields([('Stored notification mode', pack.get('mode')), ('Stored counts', pack.get('counts'))]),
++        '<p>Included/queued_demo means a draft. Channel labels do not prove email, SMS or voice delivery. Deferred follow-up is manual. '
++        'This package may support an operator\'s existing process; OnSolve integration/import compatibility is not implemented or tested.</p>'])
++    for person in pack['recipients']:
++        parts.extend(['<h3>' + text(person.get('name')) + '</h3>', fields([
++            ('Employee ID', person.get('employee_id')), ('Essential (stored)', person.get('essential')),
++            ('Route', person.get('routing_status')), ('Reason', person.get('reason')), ('Planned channel', person.get('channel')),
++            ('Draft status', person.get('notification_status')), ('Manual follow-up', person.get('follow_up'))]),
++            '<details><summary>Stored recipient draft</summary><p>' + text(person.get('subject')) + '</p><pre>' + text(person.get('message')) + '</pre></details>'])
++    parts.append('<hr><p>Keep the frozen JSON export with this memo for the full stored geometry, policy, roster, tool trace and hashes. '
++                 'Missing historical fields are not inferred by this renderer.</p></main></body></html>')
++    return ''.join(parts)
+diff --git a/app/static/app.js b/app/static/app.js
+index e297e89..6216810 100644
+--- a/app/static/app.js
++++ b/app/static/app.js
+@@ -3,7 +3,7 @@ const $ = id => document.getElementById(id);
+ let auth = '', facilities = [], activeRun = null, activeDecision = null, polling = null, evaluationKey = null, decisionKey = null;
+ function node(tag, text, className) { const e = document.createElement(tag); if(text !== undefined)e.textContent=String(text);if(className)e.className=className;return e; }
+ function status(message, error=false){$('status').textContent=message;$('status').className=error?'error':'';}
+-function link(label, url) {const a=node('a',label); try{const u=new URL(url,location.origin);if(u.origin===location.origin || ['https://api.weather.gov','https://www.weather.gov','https://air-quality-api.open-meteo.com','https://open-meteo.com','https://www.airnow.gov'].includes(u.origin)){a.href=u.href;a.target='_blank';a.rel='noopener';if(u.origin===location.origin && u.pathname.startsWith('/api/'))a.onclick=async event=>{event.preventDefault();try{const response=await fetch(u.href,{headers:{Authorization:auth}});if(!response.ok)throw Error(`Export failed: HTTP ${response.status}`);const blob=await response.blob(),objectUrl=URL.createObjectURL(blob),download=node('a');download.href=objectUrl;download.download=u.pathname.endsWith('/export')&&u.pathname.includes('/notifications/')?'prototype-draft.eml':'closurecall-record.json';download.click();setTimeout(()=>URL.revokeObjectURL(objectUrl),1000);}catch(error){status(error.message,true);}};}}catch{}return a;}
++function link(label, url) {const a=node('a',label); try{const u=new URL(url,location.origin);if(u.origin===location.origin || ['https://api.weather.gov','https://www.weather.gov','https://air-quality-api.open-meteo.com','https://open-meteo.com','https://www.airnow.gov'].includes(u.origin)){a.href=u.href;a.target='_blank';a.rel='noopener';if(u.origin===location.origin && u.pathname.startsWith('/api/'))a.onclick=async event=>{event.preventDefault();try{const response=await fetch(u.href,{headers:{Authorization:auth}});if(!response.ok)throw Error(`Export failed: HTTP ${response.status}`);const blob=await response.blob(),objectUrl=URL.createObjectURL(blob),download=node('a');download.href=objectUrl;download.download=u.pathname.endsWith('/export')&&u.pathname.includes('/notifications/')?'prototype-draft.eml':u.pathname.endsWith('/memo')?'closurecall-decision-memo.html':'closurecall-record.json';download.click();setTimeout(()=>URL.revokeObjectURL(objectUrl),1000);}catch(error){status(error.message,true);}};}}catch{}return a;}
+ async function api(path, options={}){const response=await fetch('/api'+path,{...options,headers:{Authorization:auth,'Content-Type':'application/json',...(options.headers||{})}});if(!response.ok){let b;try{b=await response.json();}catch{}const detail=b?.detail;throw Error(typeof detail==='string'?detail:Array.isArray(detail)?detail.map(item=>item.msg||'Invalid input').join('; '):`HTTP ${response.status}`);}return response.json();}
+ function selected(){return facilities.find(f=>f.facility_id===$('facility').value);}
+ function datetimeLocal(date, timezone){const parts=new Intl.DateTimeFormat('sv-SE',{timeZone:timezone,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(date);return parts.replace(' ','T');}
+@@ -15,13 +15,13 @@ $('login').addEventListener('submit',async event=>{event.preventDefault();auth='
+ $('logout').onclick=()=>{auth='';clearTimeout(polling);$('workspace').hidden=true;$('login-panel').hidden=false;status('Signed out.');};
+ function datum(parent,label,value){const row=node('div',undefined,'datum');row.append(node('span',label),node('strong',value??'Missing'));parent.append(row);}
+ function evidence(snapshot){const box=$('evidence');box.replaceChildren();const weather=snapshot.nws,aq=snapshot.air_quality;datum(box,'NWS feed',weather.status);datum(box,'Fetched UTC',weather.fetched_at_utc);datum(box,'HTTP / returned alerts',`${weather.response_status??'Unavailable'} / ${weather.alerts.length}`);box.append(link('NWS source request',weather.source_url));if(!weather.alerts.length)box.append(node('p',weather.status==='available'?'Valid empty feed: zero alerts returned.':'Feed unavailable; zero alerts cannot be inferred.','note'));for(const a of weather.alerts){const item=node('div',undefined,'alert-item');item.append(node('h3',a.event),node('p',a.headline||a.area_desc),node('p',`${a.severity} · ${a.certainty} · ${a.urgency}`),node('p',`Issued ${a.sent} · Expires ${a.expires}`),node('p',a.applicability_reason),node('p',a.instruction||'No instruction field provided.'));const detail=node('details');detail.append(node('summary','Alert text and identifier'),node('p',a.description),node('p',a.alert_id));item.append(detail);box.append(item);}box.append(node('h3','Modeled air quality — Open-Meteo / CAMS'));datum(box,'Source status',aq.status);datum(box,'Current US AQI (unrounded)',aq.us_aqi);datum(box,'PM2.5',aq.pm2_5);datum(box,'Valid UTC',aq.valid_at_utc);datum(box,'Fetched UTC',aq.fetched_at_utc);datum(box,'Returned grid',aq.returned_grid_location?`${aq.returned_grid_location.latitude}, ${aq.returned_grid_location.longitude}`:'Missing');box.append(link('Open-Meteo source request',aq.source_url),node('p',`${aq.attribution}. Modeled grid estimate; not a building sensor or indoor measurement.`,'note'));}
+-function brief(snapshot,ai){const box=$('brief');box.replaceChildren();const a=snapshot.assessment;box.append(node('div',a.recommended_posture?.replaceAll('_',' ')||'Assessment incomplete','big-posture'));datum(box,'Review status',a.review_status);datum(box,'Confidence rubric',a.confidence_label+' (not a probability)');datum(box,'Policy',a.policy_version);box.append(node('p',a.rationale_text),node('p',a.protective_action_notice,'warning'));for(const r of a.matched_rules){box.append(node('h3',r.id));datum(box,'Rule version',r.version);datum(box,'Observed / threshold',`${r.observed_value} / ${r.threshold??'category match'}`);datum(box,'Exceedance',r.exceedance===null?'No numeric exceedance':`${r.exceedance} ${r.units}`);box.append(node('p',r.prototype_mapping_reason),link('Reference evidence anchor',r.reference_source_url));}for(const [title,values] of [['Missing inputs',a.missing_inputs],['What would change this',a.what_would_change],['Assumptions & confidence basis',[...a.assumptions,...a.confidence_basis]]]){const d=node('details');d.append(node('summary',title));values.forEach(v=>d.append(node('p',v)));box.append(d);}box.append(node('h3',`Strands brief · ${ai.status}`),node('p',ai.narrative||`Deterministic result retained. ${ai.safe_error_code||''}`));}
++function brief(snapshot,ai){const box=$('brief');box.replaceChildren();const a=snapshot.assessment;box.append(node('div',a.recommended_posture?.replaceAll('_',' ')||'Assessment incomplete','big-posture'));datum(box,'Review status',a.review_status);datum(box,'Confidence rubric',a.confidence_label+' (not a probability)');datum(box,'Policy',a.policy_version);box.append(node('p',a.rationale_text),node('p',a.protective_action_notice,'warning'));for(const r of a.matched_rules){box.append(node('h3',r.id));datum(box,'Rule version',r.version);if(r.categorical_match_reason)datum(box,'Saved applicability',r.categorical_match_reason);datum(box,'Observed / threshold',`${r.observed_value} / ${r.threshold??'category match'}`);datum(box,'Exceedance',r.exceedance===null?'No numeric exceedance':`${r.exceedance} ${r.units}`);box.append(node('p',r.prototype_mapping_reason),link('Reference evidence anchor',r.reference_source_url));}for(const [title,values] of [['Missing inputs',a.missing_inputs],['What would change this',a.what_would_change],['Assumptions & confidence basis',[...a.assumptions,...a.confidence_basis]]]){const d=node('details');d.append(node('summary',title));values.forEach(v=>d.append(node('p',v)));box.append(d);}box.append(node('h3',`Strands brief · ${ai.status}`),node('p',ai.narrative||`Deterministic result retained. ${ai.safe_error_code||''}`));}
+ function timeline(snapshot,trace,decision){$('timeline').replaceChildren();const entries=[`LIVE sources collected ${snapshot.collected_at_utc}`,`Policy ${snapshot.policy.version}: ${snapshot.assessment.review_status}`,...trace.map(t=>`${t.step_number}. ${t.tool_name} · ${t.status} · ${t.duration_ms}ms · ${t.output_summary||t.safe_error_code||''}`)];if(!trace.length)entries.push('No verified Strands tool invocation for this run.');if(decision)entries.push(`Manager ${decision.actor}: ${decision.status} / ${decision.posture||'rejected'} at ${decision.approved_at}`,'Notification drafts stored in demo outbox','Historical replay reads frozen records only');entries.forEach(t=>$('timeline').append(node('li',t)));}
+ function renderRun(run){if(activeRun?.id!==run.id){$('reason').value='';$('timing').value='';$('timing-basis').value='';}activeRun=run;activeDecision=null;$('mode').textContent='LIVE';$('human-panel').hidden=!['ready','incomplete'].includes(run.status);$('people').replaceChildren(node('p','Manager decision pending. Recipient routing will be frozen when a human records a decision.','placeholder'));$('exports').replaceChildren();$('counts').textContent='12 SYNTHETIC EMPLOYEES';if(run.snapshot){showFrozenWindow(run.snapshot,false);evidence(run.snapshot);brief(run.snapshot,run.ai||{status:'running'});timeline(run.snapshot,run.trace||[]);const a=run.snapshot.assessment;if(a.recommended_posture)$('posture').value=a.recommended_posture;$('approval-note').textContent=`Affected period ${run.snapshot.work_period.start} → ${run.snapshot.work_period.end}. ${run.snapshot.work_period.special_shift?'SYNTHETIC SPECIAL SHIFT. ':''}Approval binds this snapshot hash. Stale, superseded, or incomplete evidence requires an explicit reasoned override.`;$('action').value=a.review_status==='ready_for_manager'?'approve':'override';}else{$('evidence').replaceChildren(node('p','Waiting for this evaluation’s live source collection. Previous evidence is cleared.','placeholder'));$('brief').replaceChildren(node('p','No current-run assessment yet.','placeholder'));$('timeline').replaceChildren(node('li','Waiting for current-run evidence; no tool result yet.'));}}
+ async function poll(id){clearTimeout(polling);try{const run=await api('/evaluations/'+id);const busy=['collecting','evaluating'].includes(run.status);$('evaluate-button').disabled=busy;if(run.decision_id){renderReplay(await api(`/decisions/${run.decision_id}/replay`));return;}renderRun(run);status(`LIVE evaluation: ${run.status}${run.error?' · '+run.error:''}`);if(busy)polling=setTimeout(()=>poll(id),2000);else evaluationKey=null;}catch(error){status(error.message,true);$('evaluate-button').disabled=false;}}
+ $('evaluate').addEventListener('submit',async event=>{event.preventDefault();$('evaluate-button').disabled=true;try{const payload={facility_id:$('facility').value,start:offsetDate($('start').value),end:offsetDate($('end').value),special_shift:$('special').checked};evaluationKey=evaluationKey||crypto.randomUUID();const run=await api('/evaluations',{method:'POST',headers:{'Idempotency-Key':evaluationKey},body:JSON.stringify(payload)});sessionStorage.setItem('closurecall-run',run.run_id);decisionKey=null;await poll(run.run_id);}catch(error){status(error.message,true);$('evaluate-button').disabled=false;evaluationKey=null;}});
+ function people(pack,id){$('counts').textContent=Object.entries(pack.counts).map(([k,v])=>`${v} ${k}`).join(' · ');$('people').replaceChildren();for(const p of pack.recipients){const item=node('div',undefined,'person'),top=node('div',undefined,'person-top');top.append(node('strong',p.name+(p.essential?' · Essential':'')),node('span',p.routing_status.toUpperCase(),'tag'));item.append(top,node('p',`${p.reason} · Channel: ${p.channel||'none'} · ${p.notification_status}`));if(p.follow_up)item.append(node('p',`Follow-up: ${p.follow_up}`));const d=node('details');d.append(node('summary','Review recipient draft'),node('div',p.message,'message'),link('Export prototype .eml',`/api/decisions/${id}/notifications/${p.employee_id}/export`));item.append(d);$('people').append(item);}}
+-function renderReplay(record){activeDecision=record.decision;showFrozenWindow(record.snapshot);$('mode').textContent='REPLAY';$('human-panel').hidden=true;evidence(record.snapshot);brief(record.snapshot,record.ai);datum($('brief'),'Manager decision',`${record.decision.status} · ${record.decision.posture||'rejected'}`);datum($('brief'),'Decision actor / time',`${record.decision.actor} / ${record.decision.approved_at}`);datum($('brief'),'Affected work period',`${record.decision.effective_window.start} → ${record.decision.effective_window.end}`);$('brief').append(node('p',record.decision.reason));timeline(record.snapshot,record.trace,record.decision);people(record.notifications,record.decision.decision_id);$('exports').replaceChildren(link('Export frozen decision package',`/api/decisions/${record.decision.decision_id}/export`));status(`Historical snapshot — collected ${record.snapshot.collected_at_utc}. Manager ${record.decision.actor} ${record.decision.status}. Bundle integrity verified. No APIs/model called for replay.`);}
++function renderReplay(record){activeDecision=record.decision;showFrozenWindow(record.snapshot);$('mode').textContent='REPLAY';$('human-panel').hidden=true;evidence(record.snapshot);brief(record.snapshot,record.ai);datum($('brief'),'Manager decision',`${record.decision.status} · ${record.decision.posture||'rejected'}`);datum($('brief'),'Decision actor / time',`${record.decision.actor} / ${record.decision.approved_at}`);datum($('brief'),'Affected work period',`${record.decision.effective_window.start} → ${record.decision.effective_window.end}`);$('brief').append(node('p',record.decision.reason));timeline(record.snapshot,record.trace,record.decision);people(record.notifications,record.decision.decision_id);$('exports').replaceChildren(link('Export frozen decision package',`/api/decisions/${record.decision.decision_id}/export`),node('span',' · '),link('Download decision memo (HTML)',`/api/decisions/${record.decision.decision_id}/memo`));status(`Historical snapshot — collected ${record.snapshot.collected_at_utc}. Manager ${record.decision.actor} ${record.decision.status}. Bundle integrity verified. No APIs/model called for replay.`);}
+ $('decision').addEventListener('submit',async event=>{event.preventDefault();$('decision-button').disabled=true;try{const payload={snapshot_hash:activeRun.snapshot_hash,action:$('action').value,posture:$('action').value==='reject'?null:$('posture').value,reason:$('reason').value,timing_at:$('timing').value?offsetDate($('timing').value,activeRun.snapshot.facility.timezone):null,timing_basis:$('timing-basis').value};decisionKey=decisionKey||crypto.randomUUID();const record=await api(`/evaluations/${activeRun.id}/decision`,{method:'POST',headers:{'Idempotency-Key':decisionKey},body:JSON.stringify(payload)});renderReplay(record);await history();}catch(error){status(error.message,true);decisionKey=null;}finally{$('decision-button').disabled=false;}});
+ async function history(){const records=await api('/decisions');$('history').replaceChildren();if(!records.length)$('history').append(node('p','No stored manager decisions yet.'));records.forEach(r=>{const row=node('div',undefined,'history-row'),button=node('button','Replay','quiet');button.onclick=async()=>{clearTimeout(polling);try{renderReplay(await api(`/decisions/${r.decision_id}/replay`));}catch(e){status(e.message,true);}};row.append(node('p',`${r.posture||'Rejected'} · ${r.status}\n${r.approved_at}`),button);$('history').append(row);});}
+ $('refresh-history').onclick=()=>history().catch(e=>status(e.message,true));
+diff --git a/tests/test_feedback_scope.py b/tests/test_feedback_scope.py
+new file mode 100644
+index 0000000..3c0bb16
+--- /dev/null
++++ b/tests/test_feedback_scope.py
+@@ -0,0 +1,149 @@
++"""Offline synthetic geography/time/snapshot cases; never live incident evidence."""
++import asyncio
++from copy import deepcopy
++from datetime import timedelta
++import json
++import httpx
++import pytest
++from app.clients.base import fetch_json
++from app.clients.nws import FIELDS, normalize, applicability
++from app.policy.engine import assess
++from app.services.audit import parse_time
++from app.agent.brief import grounded_brief
++
++KC_POLYGON = {'type': 'Polygon', 'coordinates': [[[-95, 38], [-94, 38], [-94, 40], [-95, 40], [-95, 38]]]}
++WISCONSIN_POLYGON = {'type': 'Polygon', 'coordinates': [[[-90, 43], [-89, 43], [-89, 44], [-90, 44], [-90, 43]]]}
++
++
++def response(snapshot, alert, geometry, *, scope=False):
++    props = {source: alert.get(key) for key, source in FIELDS.items()}
++    props['id'] = alert['alert_id']
++    if scope:
++        props['geocode'] = {'UGC': ['MOZ037'], 'SAME': ['029095']}
++        props['affectedZones'] = ['https://api.weather.gov/zones/forecast/MOZ037']
++    body = {'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'id': alert['alert_id'],
++                                                    'geometry': geometry, 'properties': props}]}
++    return normalize(body, snapshot['nws'], snapshot['nws']['request_location'])
++
++
++def test_wisconsin_polygon_cannot_supply_kc_closure(snapshot, alert):
++    snapshot['nws'] = response(snapshot, alert, WISCONSIN_POLYGON)
++    stored = snapshot['nws']['alerts'][0]
++    assert stored['applicability_status'] == 'outside_polygon'
++    assert 'outside' in stored['applicability_reason'].lower()
++    result = assess(snapshot)
++    assert result['recommended_posture'] != 'closure'
++    assert alert['alert_id'] not in result['evidence_ids']
++
++
++def test_polygon_hole_is_not_positive_bbox_proof(snapshot, alert):
++    geometry = deepcopy(KC_POLYGON)
++    geometry['coordinates'].append([[-94.8, 39], [-94.4, 39], [-94.4, 39.3], [-94.8, 39.3], [-94.8, 39]])
++    assert response(snapshot, alert, geometry)['alerts'][0]['applicability_status'] == 'outside_polygon'
++
++
++@pytest.mark.parametrize('geometry', [None, 'SYNTHETIC MALFORMED GEOMETRY', {'type': 'Point', 'coordinates': [-94.5786, 39.0997]},
++    {'type': 'Polygon', 'coordinates': []}, {'type': 'Polygon', 'coordinates': [[[-95, 38], [-94, 40], [-95, 40], [-94, 38], [-95, 38]]]}])
++def test_unknown_scope_is_incomplete_not_normal_or_closure(snapshot, alert, geometry):
++    snapshot['nws'] = response(snapshot, alert, geometry)
++    assert snapshot['nws']['alerts'][0]['applicability_status'] == 'unverified'
++    result = assess(snapshot)
++    assert result['review_status'] == 'data_incomplete'
++    assert result['recommended_posture'] is None
++
++
++@pytest.mark.parametrize('scope,event', [('MOZ037', 'High Wind Warning'), ('MOC095', 'Severe Thunderstorm Watch')])
++def test_null_geometry_retains_point_filtered_county_zone_scope(snapshot, alert, scope, event):
++    alert['event'] = event
++    alert['geocode'] = {'UGC': [scope]}
++    alert['affected_zones'] = [f'https://api.weather.gov/zones/{"county" if "C" in scope else "forecast"}/{scope}']
++    snapshot['nws'] = response(snapshot, alert, None)
++    item = snapshot['nws']['alerts'][0]
++    assert item['applicability_status'] == 'point_confirmed'
++    assert item['geocode']['UGC'] == [scope]
++    assert 'point' in item['applicability_reason'].lower()
++    assert assess(snapshot)['review_status'] != 'data_incomplete'
++
++
++@pytest.mark.parametrize('bad_geometry', [WISCONSIN_POLYGON, None])
++def test_wrong_or_unknown_alert_does_not_erase_valid_warning(snapshot, alert, bad_geometry):
++    bad = response(snapshot, {**alert, 'alert_id': 'SYNTHETIC-BAD'}, bad_geometry)['alerts'][0]
++    good = response(snapshot, alert, KC_POLYGON)['alerts'][0]
++    snapshot['nws']['alerts'] = [bad, good]
++    result = assess(snapshot)
++    assert result['recommended_posture'] == 'closure'
++    assert result['matched_rules'][0]['evidence_id'] == alert['alert_id']
++    assert 'SYNTHETIC-BAD' not in result['evidence_ids']
++    assert result['review_status'] == ('data_incomplete' if bad_geometry is None else 'ready_for_manager')
++
++
++def test_partial_overlap_is_bounded_by_message_expiry(snapshot, alert):
++    start, end = map(parse_time, [snapshot['work_period']['start'], snapshot['work_period']['end']])
++    stop = start + timedelta(minutes=30)
++    alert.update(onset=(start - timedelta(minutes=30)).isoformat(), expires=stop.isoformat(), ends=end.isoformat())
++    applies, reason = applicability(alert, start, end, parse_time(snapshot['collected_at_utc']))
++    assert applies
++    assert start.isoformat() in reason and stop.isoformat() in reason
++    assert end.isoformat() not in reason
++    snapshot['nws']['alerts'] = [alert]
++    match = assess(snapshot)['matched_rules'][0]
++    assert stop.isoformat() in match['categorical_match_reason']
++
++
++def test_future_work_period_after_message_expiry_has_no_match(snapshot, alert):
++    start, end = map(parse_time, [snapshot['work_period']['start'], snapshot['work_period']['end']])
++    alert.update(onset=snapshot['collected_at_utc'], expires=(start-timedelta(minutes=1)).isoformat(), ends=end.isoformat())
++    assert applicability(alert, start, end, parse_time(snapshot['collected_at_utc']))[0] is False
++
++
++def selection(snapshot, ids):
++    return json.dumps({'snapshot_id': snapshot['snapshot_id'], 'policy_version': snapshot['policy']['version'],
++                       'evidence_ids': ids, 'review_focus': ['LOCAL_ACCESS']})
++
++
++def test_reference_present_only_in_historical_run_rejected(snapshot, alert):
++    old = deepcopy(snapshot)
++    old['snapshot_id'] = 'SYNTHETIC-OLD-RUN'
++    old['nws']['alerts'] = [alert]
++    assert alert['alert_id'] in grounded_brief(selection(old, [alert['alert_id']]), old)[1]['evidence_ids']
++    with pytest.raises(ValueError, match='Unknown evidence reference'):
++        grounded_brief(selection(snapshot, [alert['alert_id']]), snapshot)
++
++
++@pytest.mark.parametrize('current_scope,expected', [('point_confirmed', 'closure'), ('outside_polygon', 'normal')])
++def test_same_id_in_two_snapshots_uses_current_membership_and_assessment(snapshot, alert, current_scope, expected):
++    old = deepcopy(snapshot)
++    old['snapshot_id'] = 'SYNTHETIC-OLD-RUN'
++    old['nws']['alerts'] = [deepcopy(alert)]
++    old['assessment'] = assess(old)
++    snapshot['nws']['alerts'] = [{**alert, 'applicability_status': current_scope}]
++    snapshot['assessment'] = assess(snapshot)
++    assert old['assessment']['recommended_posture'] == 'closure'
++    text, chosen = grounded_brief(selection(snapshot, [alert['alert_id']]), snapshot)
++    assert chosen['snapshot_id'] == snapshot['snapshot_id']
++    assert f'Prototype candidate: {expected};' in text
++    assert snapshot['assessment']['recommended_posture'] == expected
++
++
++def test_wrong_location_cancel_cannot_suppress_valid_warning(snapshot, alert):
++    wrong = response(snapshot, {**alert, 'alert_id': 'SYNTHETIC-OUTSIDE-CANCEL', 'message_type': 'Cancel',
++                     'references': [{'identifier': alert['alert_id']}]}, WISCONSIN_POLYGON)['alerts'][0]
++    good = response(snapshot, alert, KC_POLYGON)['alerts'][0]
++    snapshot['nws']['alerts'] = [good, wrong]
++    assert assess(snapshot)['recommended_posture'] == 'closure'
++
++
++def test_empty_200_and_timeout_have_distinct_assessments(snapshot, monkeypatch):
++    async def timeout(self, request):
++        raise httpx.ReadTimeout('SYNTHETIC OFFLINE TIMEOUT', request=request)
++    monkeypatch.setattr(httpx.AsyncClient, 'send', timeout)
++    body, meta = asyncio.run(fetch_json('https://api.weather.gov/alerts/active', nws=True))
++    assert body is None and meta['status'] == 'unavailable'
++    empty = deepcopy(snapshot)
++    empty['nws'] = normalize({'type': 'FeatureCollection', 'features': []}, snapshot['nws'], snapshot['nws']['request_location'])
++    assert empty['nws']['response_status'] == 200
++    assert assess(empty)['recommended_posture'] == 'normal'
++    assert 'not a safety guarantee' in assess(empty)['rationale_text']
++    snapshot['nws'] = normalize(body, meta, snapshot['nws']['request_location'])
++    assert assess(snapshot)['review_status'] == 'data_incomplete'
++    assert assess(snapshot)['recommended_posture'] is None
+diff --git a/tests/test_memo.py b/tests/test_memo.py
+new file mode 100644
+index 0000000..1b453d9
+--- /dev/null
++++ b/tests/test_memo.py
+@@ -0,0 +1,120 @@
++"""Frozen memo view; no live inputs, sends, history changes or inferred actors."""
++from copy import deepcopy
++from dataclasses import replace
++import hashlib
++import json
++from pathlib import Path
++import pytest
++from fastapi.testclient import TestClient
++from conftest import persist
++from app.schemas import DecisionRequest
++from app.services.decisions import decide
++from app.services.audit import canonical
++from app.services.memo import render_memo, RENDERER_VERSION
++
++
++@pytest.fixture
++def frozen(store, snapshot):
++    run = persist(store, snapshot)
++    return decide(store, run['id'], DecisionRequest(snapshot_hash=run['snapshot_hash'], action='override',
++                  posture='closure', reason='SYNTHETIC MEMO TEST ONLY'), 'synthetic-manager', 'memo-test-decision')
++
++
++def test_memo_api_authenticated_frozen_no_sources_model_rules_or_routing(store, frozen, monkeypatch):
++    import app.main as main
++    import app.auth as auth
++    import app.clients.base as base
++    from app.clients import nws, air_quality
++    import app.services.evaluation as evaluation
++    import app.policy.engine as engine
++    import app.services.recipients as recipients
++    import app.services.notifications as notifications
++    import app.agent.brief as brief
++    import app.services.decisions as decisions
++    calls = []
++    def forbidden(*args, **kwargs):
++        calls.append('forbidden')
++        raise AssertionError('Memo cannot call current inputs or recompute')
++    for module, name in [(base, 'fetch_json'), (nws, 'point'), (nws, 'national'), (air_quality, 'point'),
++                         (evaluation, 'bounded_worker'), (evaluation, 'assess'), (evaluation, 'load_rules'),
++                         (evaluation, 'roster'), (engine, 'assess'), (engine, 'load_rules'),
++                         (recipients, 'roster'), (recipients, 'route'), (notifications, 'package'),
++                         (decisions, 'package'), (brief, 'grounded_brief')]:
++        monkeypatch.setattr(module, name, forbidden)
++    monkeypatch.setattr(main, 'store', store)
++    monkeypatch.setattr(auth, 'settings', replace(auth.settings, manager_username='synthetic-manager', manager_password='memo-test-only-password'))
++    original = canonical(frozen)
++    path = '/api/decisions/' + frozen['decision']['decision_id']
++    with TestClient(main.app) as client:
++        assert client.get(path + '/memo').status_code == 401
++        response = client.get(path + '/memo', auth=('synthetic-manager', 'memo-test-only-password'))
++        assert response.status_code == 200
++        assert 'text/html' in response.headers['content-type']
++        assert '.html' in response.headers['content-disposition']
++        assert "script-src 'self'" in response.headers['content-security-policy']
++        assert RENDERER_VERSION in response.text
++        assert 'Original posture</strong></dt><dd>normal' in response.text
++        assert 'Final posture</strong></dt><dd>closure' in response.text
++        assert frozen['bundle_hash'] in response.text
++        assert canonical(client.get(path + '/export', auth=('synthetic-manager', 'memo-test-only-password')).json()) == original
++        assert 'Download decision memo (HTML)' in client.get('/static/app.js').text
++        assert 'closurecall-decision-memo.html' in client.get('/static/app.js').text
++    assert canonical(store.replay(frozen['decision']['decision_id'])) == original
++    assert calls == []
++
++
++def test_memo_timezone_escaping_and_no_inferred_actor_reason(frozen):
++    record = deepcopy(frozen)
++    record['snapshot']['work_period'].update(start='2026-10-10T14:00:00Z', end='2026-10-10T22:00:00Z')
++    record['snapshot']['facility']['display_name'] = '<script>unsafe()</script>'
++    record['decision'].update(actor=None, reason='')
++    record['notifications']['recipients'][0]['message'] = '<img src=x onerror=unsafe()>'
++    output = render_memo(record)
++    assert '2026-10-10T09:00:00-05:00 [America/Chicago]' in output
++    assert '<script>' not in output and '<img' not in output
++    assert '&lt;script&gt;unsafe()&lt;/script&gt;' in output
++    assert '&lt;img src=x onerror=unsafe()&gt;' in output
++    assert 'Recorded actor</strong></dt><dd>Not recorded' in output
++    assert 'Recorded manager reason</strong></dt><dd>Not recorded' in output
++    assert 'Approved deterministic prototype recommendation' not in output
++    assert '<h3>Missing inputs</h3><ul><li>No entries recorded</li></ul>' in output
++
++
++def test_memo_missing_timezone_or_offset_is_not_inferred(frozen):
++    record = deepcopy(frozen)
++    record['snapshot']['facility']['timezone'] = 'Not/A/Timezone'
++    record['snapshot']['work_period']['start'] = '2026-10-10T09:00:00'
++    output = render_memo(record)
++    assert 'offset not recorded; no conversion' in output
++    assert 'facility timezone conversion unavailable' in output
++
++
++@pytest.mark.parametrize('name', ['ui-approved-export.json', 'ui-override-export.json'])
++def test_actual_historical_exports_unchanged_by_new_memo(name, monkeypatch):
++    import app.policy.engine as engine
++    import app.clients.base as base
++    def forbidden(*args, **kwargs):
++        raise AssertionError('Historical rendering must not fetch or assess')
++    monkeypatch.setattr(engine, 'assess', forbidden)
++    monkeypatch.setattr(base, 'fetch_json', forbidden)
++    path = Path(__file__).resolve().parents[1] / 'evidence' / 'release' / name
++    before = path.read_bytes()
++    record = json.loads(before)
++    original = canonical(record)
++    drafts = deepcopy(record['notifications'])
++    output = render_memo(record)
++    assert record['decision']['decision_id'] in output and record['bundle_hash'] in output
++    assert 'REPLAY' in output and 'DRAFTS, NOT SENT' in output
++    assert 'Original recommendation — before manager decision' in output
++    assert 'Final manager decision — separate from recommendation' in output
++    if name == 'ui-override-export.json':
++        assert 'Original posture</strong></dt><dd>No candidate recorded' in output
++        assert 'Final posture</strong></dt><dd>closure' in output
++        assert 'CONTROLLED SYNTHETIC REHEARSAL ONLY' in output
++    assert canonical(record) == original and record['notifications'] == drafts
++    assert hashlib.sha256(path.read_bytes()).digest() == hashlib.sha256(before).digest()
++
++
++def test_memo_requires_replay(frozen):
++    with pytest.raises(ValueError, match='frozen replay'):
++        render_memo({**frozen, 'mode': 'LIVE'})
+diff --git a/tests/test_policy.py b/tests/test_policy.py
+index b929051..6d311ca 100644
+--- a/tests/test_policy.py
++++ b/tests/test_policy.py
+@@ -41,7 +41,7 @@ def test_serious_flood_not_erased_by_good_aq(snapshot,alert):
+ 
+ @pytest.mark.parametrize('change',['outside','expired','test','cancel','other_period','superseded'])
+ def test_nonapplicable_alerts(snapshot,alert,change):
+-    if change=='outside':alert['applicability_status']='unverified'
++    if change=='outside':alert['applicability_status']='outside_polygon'
+     if change=='expired':alert['expires']=(utcnow()-timedelta(seconds=1)).isoformat()
+     if change=='test':alert['status']='Test'
+     if change=='cancel':alert['message_type']='Cancel'

@@ -1,0 +1,24 @@
+..F..................................................................... [ 80%]
+.................                                                        [100%]
+================================== FAILURES ===================================
+____________________ test_subprocess_deadline_is_enforced _____________________
+
+tmp_path = WindowsPath('C:/Users/thien/AppData/Local/Temp/pytest-of-thien/pytest-27/test_subprocess_deadline_is_en0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001BCF81F8B00>
+
+    def test_subprocess_deadline_is_enforced(tmp_path,monkeypatch):
+        # Synthetic worker with no external side effects; verify actual process termination.
+        (tmp_path/'synthetic_slow_worker.py').write_text('import time\nprint(\'{"event":"tool_trace","trace":{"synthetic":true}}\',flush=True)\ntime.sleep(20)\n',encoding='utf-8')
+        monkeypatch.setenv('PYTHONPATH',str(tmp_path))
+        result=asyncio.run(bounded_worker('synthetic_slow_worker',{},deadline=.2))
+        assert result['safe_error_code']=='AGENT_DEADLINE'
+>       assert result['trace']==[{'synthetic':True}]
+E       AssertionError: assert [] == [{'synthetic': True}]
+E         
+E         Right contains one more item: {'synthetic': True}
+E         Use -v to get more diff
+
+tests\test_agent.py:39: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_agent.py::test_subprocess_deadline_is_enforced - AssertionE...
+1 failed, 88 passed in 19.20s

@@ -1,4 +1,19 @@
 # ClosureCall tasks
+
+## Bounded USDA feedback pass — 2026-10-10 20:16 America/Chicago
+- [x] F0: read current requirements/handoff/state/evidence and code; record user-reported feedback separately from policy/endorsement in SPONSOR_FEEDBACK.md.
+- [x] F1: reproduce polygon/unknown-scope/expiry gaps and wrong-location cancellation; add explicit two-run membership/same-ID/null-geometry/empty-timeout coverage; minimal boundary fixes; old outside fixture now explicitly outside, not unknown.
+- [x] F2: evaluate existing Replay/export, add pure authenticated frozen HTML memo with separate renderer identity; source/model/recompute traps, escaping/time/missing fields and exact old exports; real isolated UI download exact. Downloaded-file visual remains unverified due browser policy.
+- [x] F3: update existing demo/notes/QA/limits for duty-team support, unsent drafts, absent power/water/security sources, no OnSolve integration/endorsement; retain graded postures.
+- [x] F4: freeze source 656e8a0, Windows final 89/12.67s and exact Linux image 89/6.43s; preserve initial failed deadline log and successful unchanged reruns; no deployment/restart/production write.
+- [x] Recheck 33 original + 3 follow-up artifact hashes; preserve original backups/history/user package; scoped manifest and private progress checkpoint.
+- [ ] Optional next action, user-owned: separately decide whether to deploy tested candidate; obtain fresh backup of actual current data before any switch. Not required to complete this bounded pass.
+- [ ] Existing G4/G6 judge/access/portal/team/Submit remain ON_HOLD / NOT_SUBMITTED by user choice; do not reopen them automatically.
+
+Sponsor feedback pass: FEEDBACK_PASS_COMPLETE_WITH_LIMITATIONS.
+Submission: ON_HOLD / NOT_SUBMITTED; existing G4/G6 blockers unchanged by user choice.
+
+The dated release/task history below is preserved; its old pending technical statements are scoped to those checkpoints.
 - [x] G0: repo/environment/terminal inspected; private venv/imports/pip check; real sources and workshop tool smoke passed.
 - [x] G1: local app and authorized Linode Docker/Compose deployment; private SSH tunnel; healthy exact tested image.
 - [x] G2: NWS/AQ normalization, explicit prototype policies, 12-person routing and tests.

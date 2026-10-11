@@ -1,3 +1,26 @@
+# Bounded USDA feedback completion checkpoint
+
+Local time: 2026-10-10T20:18:34.929109-05:00; UTC 2026-10-11T01:18:34.929109+00:00. Started 2026-10-11T00:49:07Z; within the 60-minute timebox and operational cutoff 2026-10-11T08:00:00-05:00 from the handoff (not newly verified organizer-specific timing).
+
+Sponsor feedback pass: FEEDBACK_PASS_COMPLETE_WITH_LIMITATIONS.
+Submission: ON_HOLD / NOT_SUBMITTED; existing G4/G6 blockers unchanged by user choice.
+
+Previous goal turn: PROGRESS — read the current browser/schemas/decision/notification code, confirmed historical original recommendation versus final override and inventoried existing Replay data. No live process wait is inferred from an old state file. This turn reproduced failures, changed boundary code, added tests/memo, executed exact-image verification and completed the feedback documentation.
+
+| Requirement | Completion evidence / scope |
+|---|---|
+| F0 preserve baseline and reported feedback | Current handoff/acceptance/release/state/tasks/decisions/demo/notes read; existing code inspected; SPONSOR_FEEDBACK.md distinguishes reported statements from team interpretation/action; no outside endorsement inferred. |
+| F1 every listed case | SPONSOR_FEEDBACK_REVIEW.md; 18 offline scope cases plus retained expiry/auth/policy tests; initial failing fixtures/logs preserved. Null geometry remains provider-point-resolved, no independent zone GIS; consistent upstream misinformation/local safety disclosed. |
+| F2 memo and immutable history | Pure renderer + authenticated endpoint, six tests, actual isolated UI download exact with two historical exports/hashes/drafts unchanged. Original/final posture and renderer identity separate, missing fields not inferred. Source/model/current providers/recompute trapped. Downloaded-file visual/printing unverified due browser policy; no bypass. Existing Replay already reviewed. |
+| F3 process and demo | Existing DEMO_SCRIPT/DEMO_PRESENTER_NOTES/PITCH_QA/KNOWN_LIMITATIONS updated; supports duty team, unsent drafts, no OnSolve/power/water/security integrations, graded postures. Human spoken rehearsal remains user-owned. |
+| F4 tested candidate and separate deployment identity | Source 656e8a0a5ee78d89064ddb47318bd2ec75e0b899; image sha256:84b3d897808d5ecd6aa81f9d1ea2f31f93dc5097309d444a375204bedda29a81; final Windows 89/12.67s and exact Linux 89/6.43s. Failed Windows deadline trace execution and unchanged reruns retained/cause unknown. FEEDBACK_MANIFEST + source diff + before/final production reads. |
+| Preserve stable production/data/permission boundaries | e5 image remains healthy/original start/loopback; no production DB/config/roster/rules write/restart/deploy, live model/weather rerun, public/access/cost/real send/Submit. Prior 33+3 hashes exact; original backups and supplied untracked package intact. |
+| End and handoff | FINAL_HANDOFF current addendum; candidate approval needed separately, fresh actual-current DB backup before any later code switch; submission ON_HOLD independently, no return to V2 mission. |
+
+FEEDBACK_PASS_COMPLETE_WITH_LIMITATIONS is limited to this requested review/tests/memo/docs pass, not challenge certification, production application of fixes or submission. Known file-visual/source-truth/zone/human-rehearsal limits do not create an unapproved feature/integration task. Private Git HEAD/push receipt is resolved after the final documentation commit, separately from frozen application source.
+
+Earlier V2 checkpoints are retained below, not the active mission.
+
 # Release V2 external blocker checkpoint
 
 Local time: 2026-10-10 18:24:04 America/Chicago (23:24:04 UTC). Operational cutoff: 2026-10-11 08:00 America/Chicago; 13h35m56s remaining here. Organizer-specific deadline/timezone confirmation remains unknown.

@@ -2,6 +2,8 @@
 
 Dùng cùng `DEMO_SCRIPT.md`: lời nói trước giám khảo bằng tiếng Anh; tài liệu này giúp bạn hiểu ý, chuyển nhánh và tránh mô tả sai. Đây không phải bằng chứng bạn đã tập nói. Hai lần agent thao tác UI mất 86.005/123.789 giây, có overhead công cụ; thời gian lời nói chưa được đo.
 
+Sau lượt feedback: bản 8081 vẫn chạy e5f7801. Candidate 656e8a0 có kiểm tra phòng vệ polygon/thời gian và nút tải memo HTML, chưa deploy. Khi demo production, dùng Replay và JSON export đang có; không chỉ người xem tới nút memo chưa tồn tại tại đó. Feedback là lời người dùng thuật lại cuộc trao đổi, không phải USDA phê duyệt hay đại diện đã test app.
+
 | Mốc | Ý chính cần truyền đạt | Điểm cần nhìn trên UI |
 |---|---|---|
 | 0–20 giây | Vấn đề là giúp người quản lý có dữ liệu và lưu được quyết định. Facility, ca và nhân viên giả lập; ngưỡng hành động là prototype. | Tên facility, tọa độ/timezone, checkbox special shift. Chọn ca mới có giờ kết thúc trong tương lai; cuối tuần phải ghi rõ ca giả lập. |
@@ -27,3 +29,16 @@ Các mốc đã ghi, không phải dữ liệu LIVE mới:
 - Old KC degraded record `fc569eb8-54bd-4989-b9b7-fedcc46b3896` cho thấy ValueError đã lưu; đừng mô tả đó là một failure mới vừa xảy ra.
 
 Tập với đồng hồ một lần trước khi pitch, dùng browser đã đăng nhập và đọc lời Anh trong DEMO_SCRIPT.md. Mục tiêu nói khoảng 150–165 giây là kế hoạch nội bộ, không phải SLA. Nếu chưa tập, giữ trạng thái human rehearsal NOT VERIFIED. Không khẳng định USDA phê duyệt ngưỡng, đã gửi thông báo, tự động follow-up, impact/latency thống kê hay đã Submit.
+
+Các câu hỏi bạn cần tự trả lời khi trình bày:
+
+| Câu hỏi | Cách trả lời đúng với bản hiện tại |
+|---|---|
+| Dữ liệu áp dụng ở đâu, lúc nào? | Chỉ facility/tọa độ, timezone, Start–End, fetched time và hiệu lực alert. REPLAY là thời điểm lịch sử. Candidate kiểm thử fixture Wisconsin ngoài KC; đó không phải sự cố LIVE hay bảo đảm chặn mọi dữ liệu sai. |
+| Model có quyền gì? | Đọc năm tools của snapshot hiện tại, chọn references/focus hợp lệ. Rules tạo đề xuất; manager ghi quyết định. Model không approve/send. |
+| Nếu dữ liệu sai hoặc thiếu? | Phân biệt nguồn rỗng hợp lệ, nguồn lỗi và phần chưa xác minh. Kiểm tra kỹ thuật không phát hiện mọi thông tin sai có metadata nhất quán. Manager/đội trực cần xem điều kiện thực địa; weather/AQ chưa kiểm tra điện, nước hay an ninh. |
+| Thông báo đã gửi chưa? | Chưa. Included/queued_demo là draft; channel là nhãn dự kiến; deferred cần supervisor xử lý thủ công. Package có thể hỗ trợ quy trình hiện có, chưa có OnSolve integration/import schema được thử. |
+| Memo chứa gì? | Facility/ca/timezone, đề xuất gốc, quyết định cuối, actor/time/reason đã ghi, nguồn/hiệu lực/giới hạn và drafts. Candidate tạo cách trình bày mới từ bundle cũ với renderer version riêng; không sửa lịch sử, không gọi model lại. HTML tải được trong preview; agent browser chưa mở file để kiểm tra trực quan do chặn file protocol. |
+| Có thay đội emergency/security không? | Không có bằng chứng cho điều đó. App hỗ trợ người trực/manager đọc dữ liệu và lưu quyết định; không có giám sát 24/7 hoặc nguồn cảnh sát/điện/nước. |
+
+Câu Anh khi cần: “This supports the existing duty team and notification process. It does not establish local safety, replace a staffed emergency team, or integrate with OnSolve.” Giữ các mức operating posture của challenge; mô tả yes/no trong cuộc trao đổi không biến thành policy mới hoặc quyền xóa các mức đó.

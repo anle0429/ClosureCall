@@ -1,5 +1,18 @@
 # Technical decisions
 
+## Bounded feedback decisions — 2026-10-10 20:16 America/Chicago
+- Treat the conversation as user-reported feedback, not a policy/rubric/endorsement or app test by the representative. Do not infer that USDA lacks guidelines or that OnSolve API/import is available.
+- Correct demonstrated boundary gaps using the existing Shapely dependency: supplied polygon coverage, explicit outside versus unverified scope, county/zone metadata for null geometry, current-message expiry bound and geographically confirmed supersession. No geographic database, city-text/bbox positive proof, threshold change, new connector or framework.
+- The old `outside` fixture used `unverified` and expected normal; distinguish a known outside polygon from uncertainty. New failing unknown-scope tests establish the new expected outcome independently; do not alter thresholds to force a nicer posture.
+- Keep current-snapshot ID/policy validation unchanged. Same alert ID can legitimately recur in two snapshots; no global ID blacklist. Context references do not replace current applicability/assessment.
+- Display exact alert/work-period intersection as saved match basis. It does not establish validity across the whole shift; the human retains the operating decision. Null-geometry scope still trusts the NWS point filter, explicitly without independent zone-boundary lookup. Consistent upstream misinformation/local conditions remain limits.
+- Add a small HTML memo download from `Store.replay` only, renderer frozen-memo-v1. Do not recompute, mutate historical hashes/drafts/reasons/times or infer missing actors/reasons. App auth/CSP unchanged; the downloaded standalone document permits only its static stylesheet, with no scripts/external resources.
+- Source frozen at 656e8a0; Windows 89/12.67s and exact Linux image 89/6.43s. Retain the failed 0.2s Windows deadline trace execution and unchanged reruns; exact failure cause unverified. No deadline/assertion relaxation or old ValueError investigation.
+- Isolated loopback preview used two actual frozen exports with original hashes, no inference key, test auth, blocked writes/providers/recompute. Memo download matched bytes; browser rejected file URLs, so do not claim visual/print QA or attempt a workaround. Production UI remains e5f7801; original user tab/tunnel preserved.
+- Default no redeploy/restart/production DB, roster, rules or environment mutation. Tested candidate image sha256:84b3d897808d5ecd6aa81f9d1ea2f31f93dc5097309d444a375204bedda29a81 awaits a separate deployment decision. Future code rollback must retain current DB; never restore older six/eight-record backup over later decisions merely to roll code back.
+- Update existing demo/notes, support existing duty/notification process, keep drafts and graded postures. No OnSolve integration/replacement, power/water/security source, map/scheduler/agent/mobile/compare/real send/publication/Submit. Same private origin/master progress push remains authorized, without force or access grants.
+- End FEEDBACK_PASS_COMPLETE_WITH_LIMITATIONS; submission ON_HOLD / NOT_SUBMITTED independently. No automatic continuation of V2 submission or further live/model calls for prettier evidence.
+
 ## 2026-10-10
 - Start kit found in project and read in full; no existing code to overwrite. Initialize local Git only, no remote publishing.
 - Use existing Python 3.13.9 in an isolated .venv, validate imports/tests; deployment remains Python 3.12 Linux and requires separate verification.

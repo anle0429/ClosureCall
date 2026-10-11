@@ -1,0 +1,20 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.9, pytest-9.1.1, pluggy-1.6.0 -- C:\Projects\ClosureCall\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Projects\ClosureCall
+plugins: anyio-4.15.1
+collecting ... collected 18 items / 17 deselected / 1 selected
+
+tests/test_feedback_scope.py::test_wrong_location_cancel_cannot_suppress_valid_warning FAILED [100%]
+
+================================== FAILURES ===================================
+__________ test_wrong_location_cancel_cannot_suppress_valid_warning ___________
+tests\test_feedback_scope.py:133: in test_wrong_location_cancel_cannot_suppress_valid_warning
+    assert assess(snapshot)['recommended_posture'] == 'closure'
+E   AssertionError: assert 'normal' == 'closure'
+E     
+E     - closure
+E     + normal
+=========================== short test summary info ===========================
+FAILED tests/test_feedback_scope.py::test_wrong_location_cancel_cannot_suppress_valid_warning
+====================== 1 failed, 17 deselected in 0.49s =======================

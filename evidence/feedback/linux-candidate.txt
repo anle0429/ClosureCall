@@ -1,0 +1,159 @@
+2026-10-11T01:03:06Z
+SOURCE_COMMIT=164c036d23c418c3a01ee490654b68585e21dc9d
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 588B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 143B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#4 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 127.06kB 0.0s done
+#5 DONE 0.0s
+
+#6 [2/7] WORKDIR /app
+#6 CACHED
+
+#7 [3/7] COPY requirements.txt requirements-linux.lock ./
+#7 CACHED
+
+#8 [4/7] RUN pip install -r requirements-linux.lock && pip check
+#8 CACHED
+
+#9 [5/7] COPY app ./app
+#9 DONE 0.0s
+
+#10 [6/7] COPY scripts ./scripts
+#10 DONE 0.0s
+
+#11 [7/7] RUN useradd --create-home --uid 10001 appuser && mkdir -p /app/data && chown -R appuser:appuser /app
+#11 DONE 0.4s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.2s done
+#12 exporting manifest sha256:e6ec3a455d1edbb676b89cf8ea2244408101513ad7d61aacb4f0213b8cb7f0ec done
+#12 exporting config sha256:706de4f2599be845720fad094e1235db23425d7507dfc983e1b952bf031c855f 0.0s done
+#12 exporting attestation manifest sha256:6c54375b8fc470b2397d29bca733948d3d8e8423404039699250e422ab4cb2f7 0.0s done
+#12 exporting manifest list sha256:e8b32b9284b6c32932a4ca3d862595aa3b54aba6d3b4a2c2f8706d28a4ba0672 0.0s done
+#12 naming to docker.io/library/closurecall-feedback:164c036d23c418c3a01ee490654b68585e21dc9d done
+#12 unpacking to docker.io/library/closurecall-feedback:164c036d23c418c3a01ee490654b68585e21dc9d 0.1s done
+#12 DONE 0.4s
+CANDIDATE_IMAGE=sha256:e8b32b9284b6c32932a4ca3d862595aa3b54aba6d3b4a2c2f8706d28a4ba0672
+{"org.opencontainers.image.revision":"164c036d23c418c3a01ee490654b68585e21dc9d"}
+Python 3.12.15
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+No broken requirements found.
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-9.1.1, pluggy-1.6.0 -- /usr/local/bin/python
+cachedir: .pytest_cache
+rootdir: /app
+plugins: anyio-4.15.1
+collecting ... collected 89 items
+
+tests/test_agent.py::test_model_and_tool_budgets_enforced_without_model PASSED [  1%]
+tests/test_agent.py::test_tools_scoped_to_run_and_no_mutations PASSED    [  2%]
+tests/test_agent.py::test_subprocess_deadline_is_enforced PASSED         [  3%]
+tests/test_agent.py::test_provider_placeholder_never_creates_agent PASSED [  4%]
+tests/test_agent.py::test_real_sdk_tool_loop_and_hooks_with_synthetic_model PASSED [  5%]
+tests/test_agent.py::test_brief_rejects_invented_facts_and_ids PASSED    [  6%]
+tests/test_agent.py::test_sdk_stops_repeated_model_calls PASSED          [  7%]
+tests/test_agent.py::test_prompt_scopes_model_references_to_frozen_contract[alert_ids0] PASSED [  8%]
+tests/test_agent.py::test_prompt_scopes_model_references_to_frozen_contract[alert_ids1] PASSED [ 10%]
+tests/test_agent.py::test_zero_alert_nws_url_still_rejected_and_snapshot_reference_accepted PASSED [ 11%]
+tests/test_api.py::test_health_and_every_business_route_auth PASSED      [ 12%]
+tests/test_api.py::test_full_api_synthetic_flow PASSED                   [ 13%]
+tests/test_api.py::test_auth_actor_spoof_unknown_fields_and_cross_origin PASSED [ 14%]
+tests/test_api.py::test_work_period_validation PASSED                    [ 15%]
+tests/test_api.py::test_ui_security_headers_and_no_inner_html PASSED     [ 16%]
+tests/test_approval.py::test_idempotent_decision_and_outbox PASSED       [ 17%]
+tests/test_approval.py::test_idempotency_mismatch_and_duplicate_rejected PASSED [ 19%]
+tests/test_approval.py::test_override_requires_reason PASSED             [ 20%]
+tests/test_approval.py::test_approval_guards[stale] PASSED               [ 21%]
+tests/test_approval.py::test_approval_guards[superseded] PASSED          [ 22%]
+tests/test_approval.py::test_approval_guards[simulation] PASSED          [ 23%]
+tests/test_approval.py::test_approval_guards[hash] PASSED                [ 24%]
+tests/test_approval.py::test_stale_explicit_override PASSED              [ 25%]
+tests/test_approval.py::test_timing_requires_confirmation PASSED         [ 26%]
+tests/test_approval.py::test_reject_never_queues_notification PASSED     [ 28%]
+tests/test_audit.py::test_replay_after_restart_and_current_changes PASSED [ 29%]
+tests/test_audit.py::test_immutable_tables[snapshots] PASSED             [ 30%]
+tests/test_audit.py::test_immutable_tables[results] PASSED               [ 31%]
+tests/test_audit.py::test_immutable_tables[decisions] PASSED             [ 32%]
+tests/test_audit.py::test_immutable_tables[outbox] PASSED                [ 33%]
+tests/test_audit.py::test_restart_interrupts_active_run PASSED           [ 34%]
+tests/test_audit.py::test_evaluation_duplicate_and_concurrency PASSED    [ 35%]
+tests/test_audit.py::test_isolated_api_replay_after_current_rules_roster_change_without_external_calls PASSED [ 37%]
+tests/test_explorer.py::test_synthetic_demo_site_requires_point_confirmation_and_timezone PASSED [ 38%]
+tests/test_feedback_scope.py::test_wisconsin_polygon_cannot_supply_kc_closure PASSED [ 39%]
+tests/test_feedback_scope.py::test_polygon_hole_is_not_positive_bbox_proof PASSED [ 40%]
+tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[None] PASSED [ 41%]
+tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[SYNTHETIC MALFORMED GEOMETRY] PASSED [ 42%]
+tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[geometry2] PASSED [ 43%]
+tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[geometry3] PASSED [ 44%]
+tests/test_feedback_scope.py::test_unknown_scope_is_incomplete_not_normal_or_closure[geometry4] PASSED [ 46%]
+tests/test_feedback_scope.py::test_null_geometry_retains_point_filtered_county_zone_scope[MOZ037-High Wind Warning] PASSED [ 47%]
+tests/test_feedback_scope.py::test_null_geometry_retains_point_filtered_county_zone_scope[MOC095-Severe Thunderstorm Watch] PASSED [ 48%]
+tests/test_feedback_scope.py::test_wrong_or_unknown_alert_does_not_erase_valid_warning[bad_geometry0] PASSED [ 49%]
+tests/test_feedback_scope.py::test_wrong_or_unknown_alert_does_not_erase_valid_warning[None] PASSED [ 50%]
+tests/test_feedback_scope.py::test_partial_overlap_is_bounded_by_message_expiry PASSED [ 51%]
+tests/test_feedback_scope.py::test_future_work_period_after_message_expiry_has_no_match PASSED [ 52%]
+tests/test_feedback_scope.py::test_reference_present_only_in_historical_run_rejected PASSED [ 53%]
+tests/test_feedback_scope.py::test_same_id_in_two_snapshots_uses_current_membership_and_assessment[point_confirmed-closure] PASSED [ 55%]
+tests/test_feedback_scope.py::test_same_id_in_two_snapshots_uses_current_membership_and_assessment[outside_polygon-normal] PASSED [ 56%]
+tests/test_feedback_scope.py::test_wrong_location_cancel_cannot_suppress_valid_warning PASSED [ 57%]
+tests/test_feedback_scope.py::test_empty_200_and_timeout_have_distinct_assessments PASSED [ 58%]
+tests/test_memo.py::test_memo_api_authenticated_frozen_no_sources_model_rules_or_routing PASSED [ 59%]
+tests/test_memo.py::test_memo_timezone_escaping_and_no_inferred_actor_reason PASSED [ 60%]
+tests/test_memo.py::test_memo_missing_timezone_or_offset_is_not_inferred PASSED [ 61%]
+tests/test_memo.py::test_actual_historical_exports_unchanged_by_new_memo[ui-approved-export.json] PASSED [ 62%]
+tests/test_memo.py::test_actual_historical_exports_unchanged_by_new_memo[ui-override-export.json] PASSED [ 64%]
+tests/test_memo.py::test_memo_requires_replay PASSED                     [ 65%]
+tests/test_policy.py::test_zero_alerts_valid PASSED                      [ 66%]
+tests/test_policy.py::test_aq_exact_cutoff[150-normal-None] PASSED       [ 67%]
+tests/test_policy.py::test_aq_exact_cutoff[150.99-normal-None] PASSED    [ 68%]
+tests/test_policy.py::test_aq_exact_cutoff[151-telework-0] PASSED        [ 69%]
+tests/test_policy.py::test_aq_exact_cutoff[172-telework-21] PASSED       [ 70%]
+tests/test_policy.py::test_nws_failure_never_normal_or_aq_only PASSED    [ 71%]
+tests/test_policy.py::test_aq_missing_stale_window_location[null] PASSED [ 73%]
+tests/test_policy.py::test_aq_missing_stale_window_location[stale] PASSED [ 74%]
+tests/test_policy.py::test_aq_missing_stale_window_location[gap] PASSED  [ 75%]
+tests/test_policy.py::test_aq_missing_stale_window_location[wrong_location] PASSED [ 76%]
+tests/test_policy.py::test_serious_flood_not_erased_by_good_aq PASSED    [ 77%]
+tests/test_policy.py::test_nonapplicable_alerts[outside] PASSED          [ 78%]
+tests/test_policy.py::test_nonapplicable_alerts[expired] PASSED          [ 79%]
+tests/test_policy.py::test_nonapplicable_alerts[test] PASSED             [ 80%]
+tests/test_policy.py::test_nonapplicable_alerts[cancel] PASSED           [ 82%]
+tests/test_policy.py::test_nonapplicable_alerts[other_period] PASSED     [ 83%]
+tests/test_policy.py::test_nonapplicable_alerts[superseded] PASSED       [ 84%]
+tests/test_policy.py::test_unsupported_hazard_requires_review PASSED     [ 85%]
+tests/test_policy.py::test_location_mismatch_blocks PASSED               [ 86%]
+tests/test_policy.py::test_prompt_injection_does_not_set_policy PASSED   [ 87%]
+tests/test_recipients.py::test_all_12_routes_explained PASSED            [ 88%]
+tests/test_recipients.py::test_essential_accessibility_nontelework PASSED [ 89%]
+tests/test_recipients.py::test_no_urgent_broadcast_offsite_or_telework PASSED [ 91%]
+tests/test_recipients.py::test_assignment_window_not_home_facility PASSED [ 92%]
+tests/test_recipients.py::test_deferred_has_manual_follow_up_in_draft PASSED [ 93%]
+tests/test_recipients.py::test_counts_and_instructions_change_with_roster_and_posture PASSED [ 94%]
+tests/test_secret_scan.py::test_scanner_detects_values_and_keys_without_matching_its_own_patterns PASSED [ 95%]
+tests/test_sources.py::test_http_failure_bounded_not_empty PASSED        [ 96%]
+tests/test_sources.py::test_401_not_retried PASSED                       [ 97%]
+tests/test_sources.py::test_null_and_malformed_aq_are_missing PASSED     [ 98%]
+tests/test_sources.py::test_invalid_nws_shape_unavailable PASSED         [100%]
+
+============================== 89 passed in 6.66s ==============================
+NO_DEPLOY_OR_PRODUCTION_RESTART
+sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184 healthy 2026-10-10T22:59:42.908771858Z {"8000/tcp":[{"HostIp":"127.0.0.1","HostPort":"8000"}]}
