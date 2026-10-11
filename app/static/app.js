@@ -1,5 +1,6 @@
 'use strict';
 const $ = id => document.getElementById(id);
+const workRefreshHint = $('work-refresh-note').textContent;
 let auth = '', facilities = [], activeRun = null, activeDecision = null, polling = null, evaluationKey = null, decisionKey = null;
 function node(tag, text, className) { const e = document.createElement(tag); if(text !== undefined)e.textContent=String(text);if(className)e.className=className;return e; }
 function status(message,error=false,state='info'){$('status').textContent=error?friendlyError(message):message;$('status').className=error?'error':'';$('status').dataset.state=error?'error':state;$('status').setAttribute('role',error?'alert':'status');if(error)$('status').scrollIntoView({block:'nearest'});}
@@ -23,7 +24,7 @@ $('action').addEventListener('change',decisionHint);$('posture').addEventListene
 function selected(){return facilities.find(f=>f.facility_id===$('facility').value);}
 function datetimeLocal(date, timezone){const parts=new Intl.DateTimeFormat('sv-SE',{timeZone:timezone,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(date);return parts.replace(' ','T');}
 function offsetDate(value,zone=selected().timezone){if(!value)throw Error('Choose a date and time');const target=new Date(value+'Z');let candidate=target;for(let i=0;i<3;i++){const local=new Date(datetimeLocal(candidate,zone)+'Z');candidate=new Date(candidate.getTime()+target.getTime()-local.getTime());}if(datetimeLocal(candidate,zone)!==value)throw Error('Invalid local time for this timezone; choose another time');return candidate.toISOString();}
-function workDefaults(){const facility=selected();if(!facility)return;const now=new Date();$('start').value=datetimeLocal(new Date(now.getTime()+15*60000),facility.timezone);$('end').value=datetimeLocal(new Date(now.getTime()+135*60000),facility.timezone);$('timezone').textContent=`All work and decision times use ${facility.timezone}. Location: ${facility.latitude.toFixed(4)}, ${facility.longitude.toFixed(4)}. Synthetic office; no real employee data.`;if(!activeRun&&!activeDecision)context();}
+function workDefaults(){const facility=selected();if(!facility)return;$('work-refresh-note').textContent=workRefreshHint;const now=new Date();$('start').value=datetimeLocal(new Date(now.getTime()+15*60000),facility.timezone);$('end').value=datetimeLocal(new Date(now.getTime()+135*60000),facility.timezone);$('timezone').textContent=`All work and decision times use ${facility.timezone}. Location: ${facility.latitude.toFixed(4)}, ${facility.longitude.toFixed(4)}. Synthetic office; no real employee data.`;if(!activeRun&&!activeDecision)context();}
 async function loadFacilities(id){facilities=await api('/facilities');$('facility').replaceChildren(...facilities.map(f=>{const o=node('option',f.display_name);o.value=f.facility_id;return o;}));if(id)$('facility').value=id;workDefaults();}
 $('facility').addEventListener('change',workDefaults);
 $('refresh-work-hours').addEventListener('click',()=>{
@@ -74,6 +75,7 @@ $('refresh-history').onclick=async()=>{busyButton($('refresh-history'),true,'Ref
 $('explore').onclick=async()=>{busyButton($('explore'),true,'Finding active warnings…');try{status('Fetching national live warnings…');const data=await api('/live-alerts');$('explorer').replaceChildren(node('p',`${data.status} · fetched ${data.fetched_at_utc} · national feed ${data.national_total} alerts · up to 50 supported warnings shown`));for(const a of data.alerts){const item=node('div',undefined,'alert-item'),button=node('button','Create verified synthetic site','quiet');button.disabled=!a.geometry;button.onclick=async()=>{button.disabled=true;try{const f=await api('/facilities/demo-site',{method:'POST',body:JSON.stringify({alert_id:a.alert_id})});await loadFacilities(f.facility_id);status('Synthetic site verified by NWS point endpoint; review work period.');}catch(e){status(e.message,true);}finally{button.disabled=!a.geometry;}};item.append(node('p',`${a.event} · ${a.area_desc}`),button);$('explorer').append(item);}status('Explorer ready; sites are synthetic and require point confirmation.');}catch(e){status(e.message,true);}finally{busyButton($('explore'),false,'');}};
 
 function showFrozenWindow(snapshot,historical=true){
+  $('work-refresh-note').textContent=workRefreshHint;
   const f=snapshot.facility;
   if(facilities.some(item=>item.facility_id===f.facility_id))$('facility').value=f.facility_id;
   $('start').value=datetimeLocal(new Date(snapshot.work_period.start),f.timezone);
