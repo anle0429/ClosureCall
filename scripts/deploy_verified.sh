@@ -16,6 +16,7 @@ docker compose config --quiet
 docker build -t "closurecall-verified:$commit" .
 # Verify tests inside this exact Linux image before changing the running service.
 docker run --rm --user 0 --entrypoint sh -v "$release/tests:/app/tests:ro" \
+  -v "$release/evidence/release:/app/evidence/release:ro" \
   "closurecall-verified:$commit" -c 'pip install pytest==9.1.1 >/dev/null && python -m pytest /app/tests -q'
 if docker compose ps --status running -q app | grep -q .; then
   docker compose exec -T app python scripts/backup_db.py
