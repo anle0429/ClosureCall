@@ -1,0 +1,168 @@
+[
+  {
+    "check": "Invalid end before start",
+    "observed": "Check your work hours: the end must be after the start, and the period must be no longer than 24 hours.",
+    "result": "VERIFIED"
+  },
+  {
+    "check": "Start beyond 24 hours",
+    "observed": "Live work period must end in the future and begin within 24 hours",
+    "result": "VERIFIED"
+  },
+  {
+    "check": "Loading and duplicate-click button guard",
+    "observed": {
+      "busy": "true",
+      "button": "Collecting source evidence…",
+      "disabled": true,
+      "managerHidden": true,
+      "status": "Evaluation: collecting"
+    },
+    "result": "VERIFIED"
+  },
+  {
+    "check": "Ready synthetic recommendation and human form",
+    "observed": {
+      "mode": "TEST",
+      "recommendation": "Normal operations",
+      "action": "action",
+      "managerVisible": true
+    },
+    "result": "VERIFIED"
+  },
+  {
+    "check": "Approve + double click save",
+    "observed": {
+      "counts": "9 included · 2 excluded · 1 deferred",
+      "people": 12,
+      "savedDecisions": 3,
+      "expectedDecisions": 3,
+      "mode": "REPLAY"
+    },
+    "result": "VERIFIED"
+  },
+  {
+    "check": "Narrow override explanation required",
+    "observed": "To choose a different outcome, select how the facility should operate and explain your reason.",
+    "result": "VERIFIED"
+  },
+  {
+    "check": "Timed override at narrow viewport",
+    "observed": {
+      "status": "Historical replay · collected Oct 11, 2026, 1:55 AM CDT. Bundle integrity verified. No sources or model called for replay.",
+      "decision": "Delayed arrival · Overridden",
+      "people": 12,
+      "saved": 4,
+      "expectedSaved": 4
+    },
+    "result": "VERIFIED"
+  },
+  {
+    "check": "Essential draft disclosure with keyboard",
+    "observed": "Harper Quinn · Essential\nIncluded\n\nAssigned onsite in affected work period\n\nChannel: App inbox\nDemo outbox draft · not sent\nRead draft message\nHarper Quinn,\nEssential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.\nWork period: 2026-10-11T13:00:00Z to 2026-10-11T14:00:00Z\nConfirmed timing: 2026-10-11T13:30:00Z\nManager reason: SYNTHETIC DESIGN QA ONLY: rehearse delayed arrival to verify the review form and stored drafts; no real operating instruction.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.\nExport prototype .eml",
+    "result": "VERIFIED"
+  },
+  {
+    "check": "Deferred manual follow-up and excluded reasons",
+    "observed": {
+      "deferred": "Jordan Lake\nDeferred\n\nAlready scheduled for telework; informational inbox only\n\nChannel: App inbox\nDraft · not sent\n\nManual follow-up: Supervisor reviews the informational draft before the assigned shift starts, or immediately if the shift is already underway. If the employee is reassigned onsite, re-evaluate the updated assignment and record a new manager decision; otherwise continue scheduled telework. This is a manual follow-up step, not an automatic send or scheduled job.\n\nRead draft message",
+      "excluded": [
+        "Kai RowanExcludedCurrent detail/assignment is at another siteChannel: NoneDraft · not sentRead draft messageKai Rowan,\nNo urgent instruction for this site assignment.\nWork period: 2026-10-11T13:00:00Z to 2026-10-11T14:00:00Z\nConfirmed timing: 2026-10-11T13:30:00Z\nManager reason: SYNTHETIC DESIGN QA ONLY: rehearse delayed arrival to verify the review form and stored drafts; no real operating instruction.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.Export prototype .eml",
+        "Logan FernExcludedNo assigned shift during affected work periodChannel: NoneDraft · not sentRead draft messageLogan Fern,\nNo urgent instruction for this site assignment.\nWork period: 2026-10-11T13:00:00Z to 2026-10-11T14:00:00Z\nConfirmed timing: 2026-10-11T13:30:00Z\nManager reason: SYNTHETIC DESIGN QA ONLY: rehearse delayed arrival to verify the review form and stored drafts; no real operating instruction.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.Export prototype .eml"
+      ]
+    },
+    "result": "VERIFIED"
+  },
+  {
+    "check": "Refresh saved decisions",
+    "observed": {
+      "saved": 4,
+      "expectedSaved": 4
+    },
+    "result": "VERIFIED"
+  },
+  {
+    "check": "Reload authentication and saved replay restoration",
+    "observed": {
+      "mode": "REPLAY",
+      "decision": "Delayed arrival · Overridden",
+      "managerHidden": true,
+      "saved": 4
+    },
+    "result": "VERIFIED"
+  },
+  {
+    "check": "Out-of-shift route counts are not a fixed display",
+    "observed": {
+      "counts": "9 included · 2 excluded · 1 deferred",
+      "recipients": 12,
+      "saved": 5
+    },
+    "result": "NOT VERIFIED",
+    "limitation": "The built-in synthetic roster assigns its onsite employees to each selected work period. Moving the period alone produced the same 9/2/1; this is not browser proof of varying route counts. No roster or business-rule changes were made."
+  },
+  {
+    "check": "Final short override label fits narrow manager form",
+    "observed": {
+      "button": "Save override & prepare drafts",
+      "client": 375,
+      "height": 844,
+      "label": "Override recommendation",
+      "scroll": 375,
+      "width": 390
+    },
+    "result": "VERIFIED"
+  },
+  {
+    "check": "Final narrow roster and keyboard deferred disclosure",
+    "observed": {
+      "deferred": "Jordan Lake\nDeferred\n\nAlready scheduled for telework; informational inbox only\n\nChannel: App inbox\nDraft · not sent\n\nManual follow-up: Supervisor reviews the informational draft before the assigned shift starts, or immediately if the shift is already underway. If the employee is reassigned onsite, re-evaluate the updated assignment and record a new manager decision; otherwise continue scheduled telework. This is a manual follow-up step, not an automatic send or scheduled job.\n\nRead draft message\nJordan Lake,\nInformational update only; continue scheduled telework unless your supervisor directs otherwise.\nFollow-up: Supervisor reviews the informational draft before the assigned shift starts, or immediately if the shift is already underway. If the employee is reassigned onsite, re-evaluate the updated assignment and record a new manager decision; otherwise continue scheduled telework. This is a manual follow-up step, not an automatic send or scheduled job.\nWork period: 2026-10-10T23:11:00Z to 2026-10-11T01:11:00Z\nConfirmed timing: Not applicable\nManager reason: CONTROLLED SYNTHETIC REHEARSAL ONLY: choose closure to exercise roster routing. Current Flood Watch has no automatic posture mapping, low confidence, and unchecked local access. This is a manager test override, not a real operational determination. Drafts only; no notice sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.\nExport prototype .eml",
+      "focusedTag": "SUMMARY",
+      "focusedText": "Read draft message",
+      "outline": "rgb(35, 72, 102) solid 2.4px",
+      "people": 12
+    },
+    "result": "VERIFIED"
+  },
+  {
+    "check": "Five responsive widths",
+    "observed": [
+      {
+        "client": 360,
+        "height": 844,
+        "recipients": 12,
+        "scroll": 360,
+        "width": 375
+      },
+      {
+        "client": 375,
+        "height": 844,
+        "recipients": 12,
+        "scroll": 375,
+        "width": 390
+      },
+      {
+        "client": 753,
+        "height": 900,
+        "recipients": 12,
+        "scroll": 753,
+        "width": 768
+      },
+      {
+        "client": 1009,
+        "height": 900,
+        "recipients": 12,
+        "scroll": 1009,
+        "width": 1024
+      },
+      {
+        "client": 1425,
+        "height": 900,
+        "recipients": 12,
+        "scroll": 1425,
+        "width": 1440
+      }
+    ],
+    "result": "VERIFIED"
+  }
+]

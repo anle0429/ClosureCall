@@ -1,0 +1,111 @@
+{
+  "application_base": "3e585f0e664bb222097a08dfe21d7c3298936d55",
+  "branch": "design/precision-console",
+  "changed_application_files": [
+    "app/static/index.html",
+    "app/static/styles.css"
+  ],
+  "regression": "89 Windows tests passed in 10.68 seconds; no fresh Linux test",
+  "files": {
+    "evidence/precision/accessibility-observations.json": {
+      "sha256": "ab744c63fd2cd4c2036a2f17cdadc0f9c4a3dca75e6d1da6ec225c127ebbf671",
+      "bytes": 5810
+    },
+    "evidence/precision/after-desktop-evidence.jpg": {
+      "sha256": "75cea046a2fc8b37950708832c00e1beb3c1667703f02cc5f2fc5ef6e4e8dbad",
+      "bytes": 133707
+    },
+    "evidence/precision/after-desktop.jpg": {
+      "sha256": "e3d88bc8ff4496841fb29ddd7a88231edd696448b8206e0f3fb2b0277f85bd39",
+      "bytes": 113070
+    },
+    "evidence/precision/after-narrow.jpg": {
+      "sha256": "a78500a733c021160784f680a79acc584df7f3be29aeab6f43fe9610acd297fb",
+      "bytes": 51378
+    },
+    "evidence/precision/before-desktop-evidence.jpg": {
+      "sha256": "2395f67d5fad46ec6d642c554357f6b027dda09c41a14c283dc2ed0ab6bb5a7d",
+      "bytes": 102450
+    },
+    "evidence/precision/before-desktop.jpg": {
+      "sha256": "aa313daeb1a5d91bc0205f31c8d2fc4f9abd67e556f777116cad989a0dbded71",
+      "bytes": 89386
+    },
+    "evidence/precision/before-layout.json": {
+      "sha256": "9b466bd99da0884dd1a68a5a4fca2d40a57ffb7c01dfbff4a626d4cd3d3119da",
+      "bytes": 645
+    },
+    "evidence/precision/before-narrow.jpg": {
+      "sha256": "dc6f6b770477a5a8f0e152e3846a7b88da4fd1cbcbc46fb6126ef1880cbfb17b",
+      "bytes": 44846
+    },
+    "evidence/precision/browser-checks.json": {
+      "sha256": "944929333dda70ad3f94e487c94f98388b1a42c408a627fa1b91305a39ebba5d",
+      "bytes": 8762
+    },
+    "evidence/precision/deferred-narrow.jpg": {
+      "sha256": "0dbbfaa991cae565c9949788dddaad6f182ffc82896a090367886a68ee13add0",
+      "bytes": 60617
+    },
+    "evidence/precision/desktop-layout.json": {
+      "sha256": "913485b8265e3f32868a725d15201b85e6aad4068a3c4b85352521deb3fa426d",
+      "bytes": 993
+    },
+    "evidence/precision/error-desktop.jpg": {
+      "sha256": "b9b6aca68841860a52eb3a561ec018038819cc0bb9538429a4a153e214289d96",
+      "bytes": 110706
+    },
+    "evidence/precision/invariants.json": {
+      "sha256": "dff598fe2fec4572e97edc592f68e2fa5e0cc3d85d094ab457aae138958aaa06",
+      "bytes": 3175
+    },
+    "evidence/precision/loading-desktop.jpg": {
+      "sha256": "102894d5bb2ebd686ef43d4fbe585c7225d3bac2a26431beee19e63c6d9de8da",
+      "bytes": 100681
+    },
+    "evidence/precision/manager-desktop.jpg": {
+      "sha256": "af62396f25bb5b4584d8553e8ef6d6c22a5170e3cc464114a75ee85fdbd89da4",
+      "bytes": 95246
+    },
+    "evidence/precision/manager-narrow.jpg": {
+      "sha256": "e917108cf17897dde7e5567164fe822ae041ca5aa0a377a4dad0ae86761c24c9",
+      "bytes": 48346
+    },
+    "evidence/precision/narrow-layout.json": {
+      "sha256": "91a0e16240a3322e4185bdc33c71afa18d34d2612400d52203daed81ffc8f28e",
+      "bytes": 512
+    },
+    "evidence/precision/preview-status.json": {
+      "sha256": "84f017c82d919dfe0a13aa05308d4df12c7766ad1f0c87d77ba8fd922ff7cc28",
+      "bytes": 560
+    },
+    "evidence/precision/raw-narrow.jpg": {
+      "sha256": "0dbbfaa991cae565c9949788dddaad6f182ffc82896a090367886a68ee13add0",
+      "bytes": 60617
+    },
+    "evidence/precision/regression-windows.txt": {
+      "sha256": "5b3880a48cd7936129e72bccce7c92bf562f3901f6a39da8c9c68d18cb59e1c9",
+      "bytes": 8511
+    },
+    "evidence/precision/responsive.json": {
+      "sha256": "d3e5bc19cd5f12c94ebd7031ca09ef3d82cade057f537412cbf5f54e660673ce",
+      "bytes": 533
+    },
+    "evidence/precision/roster-desktop.jpg": {
+      "sha256": "63c8488cb660a4a49931b18f8caa04534d95d5e8f0d3c5fa667e6816afb304c7",
+      "bytes": 88800
+    },
+    "evidence/precision/roster-narrow.jpg": {
+      "sha256": "4bf06124aa152c632647952b5856be7984220cfa5d28c64a733a28a6e139412c",
+      "bytes": 41697
+    },
+    "evidence/precision/screenshot-dimensions.json": {
+      "sha256": "7792633ebd1b5d23a824bc83947c97553340ce0f680163920f429b8791218620",
+      "bytes": 1117
+    },
+    "evidence/precision/verify_invariants.py": {
+      "sha256": "e8540ab51fbe8d20cfdcc71755fe04d5e9a1c98b8f8f6bb4d8220c4870f89776",
+      "bytes": 3647
+    }
+  }
+}

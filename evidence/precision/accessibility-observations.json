@@ -1,0 +1,222 @@
+{
+  "scope": "Visible text color samples from frozen replay; native keyboard disclosure and focus observed separately. This is not an accessibility certification.",
+  "samples": [
+    {
+      "background": "rgb(255, 255, 255)",
+      "contrast": 6.46,
+      "foreground": "rgb(83, 96, 107)",
+      "text": "Facility / synthetic"
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "contrast": 6.46,
+      "foreground": "rgb(83, 96, 107)",
+      "text": "Affected work period"
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "contrast": 6.46,
+      "foreground": "rgb(83, 96, 107)",
+      "text": "Evidence collection"
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "contrast": 6.46,
+      "foreground": "rgb(83, 96, 107)",
+      "text": "Human decision"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 5.79,
+      "foreground": "rgb(83, 96, 107)",
+      "text": "Saved decision · historical replay"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Available at capture"
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "contrast": 6.46,
+      "foreground": "rgb(83, 96, 107)",
+      "text": "Saved NWS retrieval · not a current freshness check"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Available at capture"
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "contrast": 6.46,
+      "foreground": "rgb(83, 96, 107)",
+      "text": "Open-Meteo / CAMS · modeled grid estimate"
+    },
+    {
+      "background": "rgb(255, 244, 232)",
+      "contrast": 5,
+      "foreground": "rgb(181, 71, 8)",
+      "text": "No automatic rule for this hazard"
+    },
+    {
+      "background": "rgb(255, 244, 232)",
+      "contrast": 5,
+      "foreground": "rgb(181, 71, 8)",
+      "text": "Low confidence"
+    },
+    {
+      "background": "rgb(255, 244, 232)",
+      "contrast": 5,
+      "foreground": "rgb(181, 71, 8)",
+      "text": "Overridden"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Included"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Demo outbox draft · not sent"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Included"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Demo outbox draft · not sent"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Included"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Demo outbox draft · not sent"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Included"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Demo outbox draft · not sent"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Included"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Demo outbox draft · not sent"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Included"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Demo outbox draft · not sent"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Included"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Demo outbox draft · not sent"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Included"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Demo outbox draft · not sent"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Included"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Demo outbox draft · not sent"
+    },
+    {
+      "background": "rgb(255, 244, 232)",
+      "contrast": 5,
+      "foreground": "rgb(181, 71, 8)",
+      "text": "Deferred"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Draft · not sent"
+    },
+    {
+      "background": "rgb(245, 246, 247)",
+      "contrast": 5.97,
+      "foreground": "rgb(83, 96, 107)",
+      "text": "Excluded"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Draft · not sent"
+    },
+    {
+      "background": "rgb(245, 246, 247)",
+      "contrast": 5.97,
+      "foreground": "rgb(83, 96, 107)",
+      "text": "Excluded"
+    },
+    {
+      "background": "rgb(239, 243, 246)",
+      "contrast": 8.59,
+      "foreground": "rgb(35, 72, 102)",
+      "text": "Draft · not sent"
+    }
+  ],
+  "comparisonTabConsoleErrorCount": 0
+}

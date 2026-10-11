@@ -1,0 +1,35 @@
+{
+  "clientWidth": 1425,
+  "context": "FACILITY / SYNTHETIC\nSynthetic site — Flash Flood Warning\n33.3400, -82.0848 · America/New_York\nAFFECTED WORK PERIOD\nOct 10, 2026 · 7:11 PM EDT → 9:11 PM EDT\nAmerica/New_York · synthetic special shift\nEVIDENCE COLLECTION\nOct 10, 2026, 6:56 PM EDT\nSaved evidence · not current weather\nHUMAN DECISION\nFacility closure · Overridden\nmanager · Oct 10, 2026, 6:58 PM EDT",
+  "innerHeight": 900,
+  "innerWidth": 1440,
+  "pageHeight": 4696,
+  "scrollWidth": 1425,
+  "sections": [
+    {
+      "hidden": false,
+      "id": "controls-card",
+      "top": 595.4000244140625
+    },
+    {
+      "hidden": false,
+      "id": "evidence-card",
+      "top": 1011.2000122070312
+    },
+    {
+      "hidden": false,
+      "id": "brief-card",
+      "top": 1011.2000122070312
+    },
+    {
+      "hidden": true,
+      "id": "human-panel",
+      "top": 0
+    },
+    {
+      "hidden": false,
+      "id": "outbox-card",
+      "top": 2331.400146484375
+    }
+  ]
+}

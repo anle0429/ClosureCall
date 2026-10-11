@@ -1,0 +1,63 @@
+{
+  "base": "3e585f0e664bb222097a08dfe21d7c3298936d55",
+  "changed_application_files": [
+    "app/static/index.html",
+    "app/static/styles.css"
+  ],
+  "html_ids_unique_and_unchanged": 61,
+  "controls_and_enum_values_unchanged": true,
+  "script_and_stylesheet_references_unchanged": true,
+  "unchanged_application_git_blobs": {
+    "app/__init__.py": "2e204ea796d37ec0aed69e5ab275072f8be7e932",
+    "app/agent/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "app/agent/brief.py": "1a58296b8c88c2389da9c697fa5c887d1ae79242",
+    "app/agent/factory.py": "ab3c6c136e85d685aa9060472d92b75597f576af",
+    "app/agent/prompts.py": "6e2b78fda6c3a50e616be7120ee4c77d874bb101",
+    "app/agent/smoke_worker.py": "33fb5f21776b3b91fda95e4786a3f1a6e389d167",
+    "app/agent/tools.py": "7ba77fc6437d9ea4ff0b3de6993c01a71a52f54b",
+    "app/agent/worker.py": "87da52ce343875c8d4f8172873546b95124bdcef",
+    "app/auth.py": "6f14040eeb3fc5588795f30cd25a0e9ed82a7dbf",
+    "app/clients/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "app/clients/air_quality.py": "456e0ebd41f8db4b24cbf24e020e67ce097093a9",
+    "app/clients/base.py": "38b95144ee4fa3171f3ae52fd854cd0e75f42604",
+    "app/clients/nws.py": "26cc7c2aa029f29f36382e81a770b56a8a66cb2d",
+    "app/db.py": "25fbdba624059569c2b5ecfc12d627e383d19a12",
+    "app/jobs.py": "fc7208edd1ae59f45ab50e569158be9d4404fc07",
+    "app/main.py": "310a5d4e0b18a43aa4c0af620c727e360c3972da",
+    "app/policy/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "app/policy/engine.py": "864816c02988ea9426a126cfd3db901607a843df",
+    "app/policy/rules.json": "28492b89eaae7c67a0ad3e0d70727152681e145b",
+    "app/schemas.py": "331f77e5cb0659183f516e24888e4435380cc298",
+    "app/services/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "app/services/audit.py": "33969c75885464463f574aa93616dea104e626bc",
+    "app/services/decisions.py": "281ef8ad1a594d88cbf835c041c42c4422295890",
+    "app/services/evaluation.py": "1508109c9f72d7d71ff291ba3eb51030ef3ae4e5",
+    "app/services/memo.py": "7eb7176cd4ebd83b1533d38dd0615d428ac6bc98",
+    "app/services/notifications.py": "2740b941a3dc5acdb420c1c70a26082d4dcdfa23",
+    "app/services/recipients.py": "1115c50d1a253d91c0c8d6cc67c51fa95d2980b0",
+    "app/settings.py": "a9e596853a2610610e68876ef3844617a4aeb219",
+    "app/static/app.js": "b7fd6b3c052796369f924836cec84a2ed05d91a5"
+  },
+  "frozen_records": [
+    {
+      "export": "ui-approved-export.json",
+      "bundle_hash": "ca9c9aa652b6b82d0d19f5058631ec1164d6eed66a5aa31c046539b622563058",
+      "exact_replay_match": true
+    },
+    {
+      "export": "ui-override-export.json",
+      "bundle_hash": "b73bcc9a7c06308fc349a39614c24516fac29413dd6ca49f41a34dcde1982a28",
+      "exact_replay_match": true
+    }
+  ],
+  "isolated_qa_counts": {
+    "runs": 6,
+    "snapshots": 6,
+    "decisions": 5,
+    "outbox": 5
+  },
+  "candidate_sha256": {
+    "app/static/index.html": "225d81a08991916681010ceb0357284c0ea9028f75423ec4608131a304efc9b0",
+    "app/static/styles.css": "f1035e5e44e0406ef5ad899a17360abbbc68a44e9c598d374a7fd1c4d42c4191"
+  }
+}

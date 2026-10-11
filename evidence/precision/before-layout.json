@@ -1,0 +1,22 @@
+{
+  "source_commit": "3e585f0e664bb222097a08dfe21d7c3298936d55",
+  "record": "16a170c1-af9b-4950-86b2-a3eecf1ad26b",
+  "desktop": {
+    "innerWidth": 1440,
+    "innerHeight": 900,
+    "clientWidth": 1425,
+    "scrollWidth": 1425,
+    "pageHeight": 4798,
+    "controlsTop": 763.1749877929688,
+    "evidenceTop": 1199.175048828125,
+    "outboxTop": 2608.074951171875
+  },
+  "narrow": {
+    "innerWidth": 390,
+    "innerHeight": 844,
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "pageHeight": 10534
+  },
+  "provenance": "Recorded from the actual read-only browser measurements before edits, not estimated from images."
+}

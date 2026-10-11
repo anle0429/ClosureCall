@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-10-11T11:05:48.522566+00:00",
+  "candidate_url": "http://127.0.0.1:8084/",
+  "loopback_harness_startup": "VERIFIED",
+  "preserved_qa_counts": {
+    "runs": 10,
+    "snapshots": 10,
+    "decisions": 9,
+    "outbox": 9
+  },
+  "provider_model_calls": "blocked by isolated harness",
+  "fresh_browser_display": "NOT VERIFIED - URL policy rejected automated display; no bypass attempted",
+  "screenshots": "saved earlier verified before/after session",
+  "deployment": "No Linode operation or fresh remote health check"
+}

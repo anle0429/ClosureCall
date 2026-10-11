@@ -1,0 +1,37 @@
+[
+  {
+    "client": 360,
+    "height": 844,
+    "recipients": 12,
+    "scroll": 360,
+    "width": 375
+  },
+  {
+    "client": 375,
+    "height": 844,
+    "recipients": 12,
+    "scroll": 375,
+    "width": 390
+  },
+  {
+    "client": 753,
+    "height": 900,
+    "recipients": 12,
+    "scroll": 753,
+    "width": 768
+  },
+  {
+    "client": 1009,
+    "height": 900,
+    "recipients": 12,
+    "scroll": 1009,
+    "width": 1024
+  },
+  {
+    "client": 1425,
+    "height": 900,
+    "recipients": 12,
+    "scroll": 1425,
+    "width": 1440
+  }
+]

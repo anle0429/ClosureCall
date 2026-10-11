@@ -1,0 +1,67 @@
+[
+  {
+    "file": "after-desktop-evidence.jpg",
+    "width": 1425,
+    "height": 891
+  },
+  {
+    "file": "after-desktop.jpg",
+    "width": 1425,
+    "height": 891
+  },
+  {
+    "file": "after-narrow.jpg",
+    "width": 375,
+    "height": 811
+  },
+  {
+    "file": "before-desktop-evidence.jpg",
+    "width": 1425,
+    "height": 891
+  },
+  {
+    "file": "before-desktop.jpg",
+    "width": 1425,
+    "height": 891
+  },
+  {
+    "file": "before-narrow.jpg",
+    "width": 375,
+    "height": 811
+  },
+  {
+    "file": "deferred-narrow.jpg",
+    "width": 375,
+    "height": 811
+  },
+  {
+    "file": "error-desktop.jpg",
+    "width": 1425,
+    "height": 891
+  },
+  {
+    "file": "loading-desktop.jpg",
+    "width": 1425,
+    "height": 891
+  },
+  {
+    "file": "manager-desktop.jpg",
+    "width": 1425,
+    "height": 891
+  },
+  {
+    "file": "manager-narrow.jpg",
+    "width": 375,
+    "height": 811
+  },
+  {
+    "file": "roster-desktop.jpg",
+    "width": 1425,
+    "height": 891
+  },
+  {
+    "file": "roster-narrow.jpg",
+    "width": 375,
+    "height": 811
+  }
+]
