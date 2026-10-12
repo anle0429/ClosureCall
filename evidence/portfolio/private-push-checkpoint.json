@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-12T05:27:09.772408+00:00",
+  "repository": "anle0429/ClosureCall",
+  "visibility": "private",
+  "branch": "maintenance/portfolio-readiness",
+  "local_and_remote_documentation_checkpoint": "e8bb341bb351da2b810a3e0823e0807c88665d40",
+  "master_unchanged": "d3ea87ed673acb85b26a14a2b7e972f7c9e97471",
+  "push_verified": true,
+  "source_candidate": "3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
+  "user_package_integrity_files": 6,
+  "production_deployed": false,
+  "hosted_ci_dispatched": false,
+  "scope": "Observed private documentation push; next manifest metadata commit is distinct from this pinned checkpoint"
+}

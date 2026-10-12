@@ -1,6 +1,6 @@
 # Bàn giao ClosureCall — portfolio sau hackathon
 
-Trạng thái chuẩn bị kỹ thuật: **ACCEPTABLE_WITH_LIMITATIONS**. Các kiểm tra cuối tài liệu/secret/private push đang được chốt trong GOAL_PROGRESS; submission vẫn **ON_HOLD / NOT_SUBMITTED**. Deadline thi cũ không được coi là gia hạn. Bạn đã yêu cầu hoàn thiện riêng cho GitHub/LinkedIn sau sự kiện.
+Trạng thái cuối: **PREP_COMPLETE_PENDING_EXTERNAL**, verdict kỹ thuật **ACCEPTABLE_WITH_LIMITATIONS**. Các gate nội bộ/link/secret/history/image/data đã kiểm tra; private branch đã push checkpoint e8bb341, master không đổi; submission vẫn **ON_HOLD / NOT_SUBMITTED**. Deadline thi cũ không được coi là gia hạn. Bạn đã yêu cầu hoàn thiện riêng cho GitHub/LinkedIn sau sự kiện.
 
 Linode giữ nguyên source **a5681bc**, image **9ab42b0...**, healthy/private loopback, cùng start 11:45:50 UTC ngày 11/10. Candidate **3bc1ddd** / image **5fdf4901...** đã kiểm thử, **chưa deploy**. 8084 là bản QA local tách biệt; đánh giá mới có nhãn SYNTHETIC TEST và không gọi provider/model. 8081 cần mở tunnel bằng [hướng dẫn](docs/DEMO_RECOVERY.md); lượt này chưa mở lại.
 
@@ -14,4 +14,4 @@ Memo xem qua HTTP local và download đúng bytes; **Print/pagination và tập 
 
 Packet: [SUBMISSION.md](SUBMISSION.md). [Demo 180 giây](docs/DEMO_SCRIPT.md), [chú giải tiếng Việt](docs/DEMO_PRESENTER_NOTES.md), [LinkedIn draft](docs/LINKEDIN_DRAFT.md), [verification](docs/VERIFICATION.md), [limitations](docs/LIMITATIONS.md), [manifest](RELEASE_MANIFEST.json). Toàn bộ handoff cũ giữ nguyên tại docs/archive/hackathon/FINAL_HANDOFF_PRE_PORTFOLIO.md.
 
-Phần bạn quyết định: license/team credits/quyền công bố, public GitHub hoặc đăng LinkedIn, có deploy candidate hay giữ Linode hiện tại, và kiểm tra print/tập nói nếu cần. Không post/share/public/restart/deploy/gửi thật/Submit trong lượt này; không có receipt. Private progress push chỉ tới repo đã có và sẽ ghi kết quả thực sau kiểm tra.
+Phần bạn quyết định: license/team credits/quyền công bố, public GitHub hoặc đăng LinkedIn, có deploy candidate hay giữ Linode hiện tại, và kiểm tra print/tập nói nếu cần. Không post/share/public/restart/deploy/gửi thật/Submit trong lượt này; không có receipt. Private progress đã push vào maintenance/portfolio-readiness của repo đã có, independently matched tại checkpoint e8bb341; metadata follow-up giữ source/image riêng và không deploy. Không merge master trong lượt này.

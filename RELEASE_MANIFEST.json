@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-10-12T05:23:48.060557+00:00",
-  "quality_status": "ACCEPTABLE_WITH_LIMITATIONS",
+  "updated_at": "2026-10-12T05:27:09.772408+00:00",
+  "quality_status": "PREP_COMPLETE_PENDING_EXTERNAL",
   "submission_status": "ON_HOLD / NOT_SUBMITTED",
   "runtime_source_commit": "a5681bcd98400fd75d02670f378a04365459dd7e",
-  "documentation_commit": "d3ea87ed673acb85b26a14a2b7e972f7c9e97471",
+  "documentation_commit": "e8bb341bb351da2b810a3e0823e0807c88665d40",
   "candidate_source_commit": "3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
   "image_id": "sha256:9ab42b0dcdfaee241b3d9156ac5433ecd0da772f29707ec6cb397664f0256b90",
   "image_tag": "closurecall-verified:a5681bcd98400fd75d02670f378a04365459dd7e",
@@ -66,7 +66,7 @@
     ]
   },
   "cutoff": "2026-10-11T08:00:00-05:00",
-  "documentation_commit_resolution": "Pre-portfolio checkpoint preserved; final documentation commit will be pinned separately from candidate/runtime, without self-referential commit hashing",
+  "documentation_commit_resolution": "Documentation/evidence checkpoint e8bb341 independently pushed; later metadata commit does not rebuild/deploy candidate or hash itself",
   "baseline_documentation_commit": "607630726fc0004bb2890fe0bff293ee67fecfdc",
   "image_digest": "sha256:9ab42b0dcdfaee241b3d9156ac5433ecd0da772f29707ec6cb397664f0256b90",
   "image_digest_kind": "Docker locally observed image ID; no external registry publication or registry digest claim",
@@ -92,9 +92,9 @@
     "distribution_metadata": "evidence/release-followup/distribution-metadata.json"
   },
   "blocker_audit": {
-    "condition": "Submission user-owned/ON_HOLD; post-event portfolio prep in progress",
+    "condition": "Post-event internal preparation complete; deployment/publication/license/human checks/user-owned submission pending",
     "consecutive_goal_turns_with_same_condition": 0,
-    "independent_technical_work_remaining": "Final same-private-remote push and its documentation checkpoint",
+    "independent_technical_work_remaining": "None; only stated user-owned external choices/checks",
     "submission_receipt": null
   },
   "app_source_commit": "a5681bcd98400fd75d02670f378a04365459dd7e",
@@ -125,7 +125,7 @@
     "human_rehearsal": "NOT VERIFIED",
     "candidate_preview": "http://127.0.0.1:8084/; isolated synthetic QA, no provider/model calls",
     "current_8081_tunnel": "STOPPED_AT_R0; not reopened in this pass",
-    "private_push_status": "PENDING_FINAL_AUDIT",
+    "private_push_status": "VERIFIED",
     "diff_classification": [
       "Mechanical source formatting with semantic guards",
       "Memo presentation, frozen values preserved",
@@ -134,7 +134,7 @@
       "Development tooling/manual CI and documentation archive"
     ],
     "evidence_manifest": "evidence/portfolio/manifest.json",
-    "final_prep_status": "VERIFIED_INTERNAL_PREP; private push checkpoint pending",
+    "final_prep_status": "PREP_COMPLETE_PENDING_EXTERNAL",
     "internal_gates": {
       "R0": "VERIFIED",
       "R1": "ACCEPTABLE_WITH_LIMITATIONS",
@@ -143,7 +143,7 @@
       "R4": "CANDIDATE_SELECTED_FOR_REVIEW_NOT_DEPLOYED",
       "R5": "SCRIPT_AND_UI_REHEARSAL_VERIFIED; HUMAN_SPEECH_NOT_VERIFIED",
       "R6": "LOCAL_PACKET_VERIFIED",
-      "R7": "AUDITS_VERIFIED; PRIVATE_PUSH_PENDING"
+      "R7": "VERIFIED_INTERNAL_AUDITS_AND_PRIVATE_PROGRESS_PUSH"
     },
     "pending_external": [
       "Human spoken rehearsal and actual print if used",
@@ -151,7 +151,10 @@
       "Public repository/demo access or LinkedIn posting if requested",
       "New deployment approval if requested",
       "User-owned organizer fields/terms/eligibility/Submit/receipt; submission ON_HOLD"
-    ]
+    ],
+    "private_push_branch": "maintenance/portfolio-readiness",
+    "private_push_checkpoint": "e8bb341bb351da2b810a3e0823e0807c88665d40",
+    "private_push_evidence": "evidence/portfolio/private-push-checkpoint.json"
   },
   "historical_blocker_audit": {
     "checked_at": "2026-10-10T23:24:04Z",

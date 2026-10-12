@@ -15,3 +15,5 @@ Candidate **3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24**, image **sha256:5fdf4901d
 Memo-v2 visually reviewed through loopback HTTP; actual print and human speech remain unverified. Repository/docs archived with current README/index/demo/packet and a local LinkedIn draft. GitHub remains private; same-remote private progress is authorized. License/team publication rights, public access/social posting and deployment require separate decisions.
 
 Current gates/checkpoint: [GOAL_PROGRESS.md](GOAL_PROGRESS.md), [RELEASE_MANIFEST.json](RELEASE_MANIFEST.json), [verification](docs/VERIFICATION.md). Original history: docs/archive/hackathon/PROJECT_STATE_PRE_PORTFOLIO.md. No live/model calls, hosted CI, external access grant or submission in this pass.
+
+Final internal preparation: **PREP_COMPLETE_PENDING_EXTERNAL**. Private branch documentation/evidence checkpoint e8bb341 pushed and independently matched; master stays d3ea87e. See manifest for candidate/image versus docs identity. No public visibility change or deployment.

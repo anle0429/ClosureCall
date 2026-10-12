@@ -1,6 +1,6 @@
 # Portfolio readiness progress
 
-Mode: **POST_HACKATHON_PORTFOLIO**, explicitly requested after the event. Historical competition deadline: 2026-10-11 08:00 America/Chicago; no extension/retrospective submission claimed. Submission **ON_HOLD / NOT_SUBMITTED**.
+Mode: **POST_HACKATHON_PORTFOLIO**, explicitly requested after the event. Historical competition deadline: 2026-10-11 08:00 America/Chicago; no extension/retrospective submission claimed. Final status: **PREP_COMPLETE_PENDING_EXTERNAL**. Submission **ON_HOLD / NOT_SUBMITTED**.
 
 ## Current gate ledger
 
@@ -13,7 +13,7 @@ Mode: **POST_HACKATHON_PORTFOLIO**, explicitly requested after the event. Histor
 | R4 | Candidate 3bc1ddd/image5fdf4901 selected for review; NOT DEPLOYED; private runtime a5681bc/image9ab42b0 unchanged | manifest, runtime-final, image-content-verified |
 | R5 | Current 180-second script/fallback/Vietnamese notes and scoped UI observations; human speech NOT VERIFIED | docs/DEMO_SCRIPT, UI rehearsal JSON |
 | R6 | Local English copy/sponsor map/assets/demo/recovery/limitations, concise repo docs/archive, LinkedIn draft | SUBMISSION, README, docs index |
-| R7 | Link/secret/reachable-history/original-evidence/image audits passed; final private push checkpoint pending | links, secret-scan, completion-integrity; compatible manifest |
+| R7 | Link/secret/reachable-history/original-evidence/image audits passed; private branch push independently verified at e8bb341, master unchanged | links, secret-scan, completion-integrity; compatible manifest |
 
 Evidence filenames above are under evidence/portfolio; current [verification](docs/VERIFICATION.md) defines scope and retained initial failures. Logs/screenshots are evidence, not blanket challenge or production-readiness certification.
 

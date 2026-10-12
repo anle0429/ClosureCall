@@ -1,6 +1,6 @@
 # ClosureCall — review packet draft
 
-Status: **FINAL REVIEW PREP / ON_HOLD / NOT_SUBMITTED**. Purpose: post-hackathon portfolio preparation under the user's latest instruction. No organizer extension, retrospective submission, portal write, public code access or social publication is claimed.
+Status: **PREP_COMPLETE_PENDING_EXTERNAL / ON_HOLD / NOT_SUBMITTED**. Purpose: post-hackathon portfolio preparation under the user's latest instruction. No organizer extension, retrospective submission, portal write, public code access or social publication is claimed.
 
 ## Project copy
 
@@ -12,7 +12,7 @@ Status: **FINAL REVIEW PREP / ON_HOLD / NOT_SUBMITTED**. Purpose: post-hackathon
 
 **Long description:** One FastAPI service collects NWS point alerts and Open-Meteo/CAMS modeled air quality. Deterministic prototype rules determine supported candidate postures and disclose missing inputs, applicability, threshold matches and confidence basis. One Strands agent reads five tools scoped to the frozen evaluation; it cannot approve, change policy or send notifications. The manager approves or records an explicit reasoned override. A twelve-person synthetic roster produces explained included/excluded/deferred routes and unsent drafts. SQLite preserves the evidence, policy, roster, AI trace, manager decision and drafts for historical replay without fresh source/model calls. A standalone decision memo is a presentation of this frozen record, not a new decision.
 
-## Current identities — R0 observation
+## Verified source and private access
 
 - Running private application: `a5681bcd98400fd75d02670f378a04365459dd7e`.
 - Image: `sha256:9ab42b0dcdfaee241b3d9156ac5433ecd0da772f29707ec6cb397664f0256b90`, observed through authorized SSH; no registry publication.
@@ -43,3 +43,5 @@ All notifications are drafts; deferred follow-up is manual. No OnSolve integrati
 - [LinkedIn draft](docs/LINKEDIN_DRAFT.md), [architecture](docs/ARCHITECTURE.md), [sources](docs/SOURCES.md), [attributions](docs/ATTRIBUTIONS.md).
 
 The packet is this local index plus referenced source/evidence/assets; nothing has been uploaded or posted. Test downloads are explicitly synthetic. Historical live integration remains dated. Do not distribute env, databases/backups, keys, manager credentials or raw provider errors. Repository/private packet history scan scope and checksums are in evidence/portfolio; a scan is not a guarantee of every possible secret. Read before approving public access.
+
+Private progress: documentation/evidence checkpoint `e8bb341` pushed to `maintenance/portfolio-readiness`; master preserved. [Private branch](https://github.com/anle0429/ClosureCall/tree/maintenance/portfolio-readiness). This is not public judge access, an external publication or a deployment.
