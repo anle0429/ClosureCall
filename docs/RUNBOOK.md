@@ -1,58 +1,40 @@
-# Runtime and deployment runbook
+# Runbook
 
-Local Python 3.13.9 is used in a private .venv; Linux image targets 3.12. Actual versions/results are recorded in PROJECT_STATE.md. Linux requirements-linux.lock was captured from the actual Python 3.12 image after 59 tests passed. Docker base image is pinned by its tested digest. Docker daemon is unavailable locally; Linux builds run on the authorized Linode.
+## Local configuration
 
-## Credentials
+Use a virtual environment and the pinned Python requirements. Deployment uses Python 3.12 and `requirements-linux.lock`; local Windows verification uses the existing 3.13 environment. The runtime dependency versions are unchanged in the portfolio pass.
 
-Use ignored `.env`, never Git. Required: `MANAGER_USERNAME`, `MANAGER_PASSWORD`; inference: `INFERENCE_API_KEY`, approved `INFERENCE_BASE_URL`, `INFERENCE_MODEL`; optional source contact: `NWS_USER_AGENT`. The only approved inference endpoint in this build is the workshop HTTPS endpoint. A provider change requires approval and an explicit allowlist update. Credentials are loaded at server start; restart after local edits, preserve database.
+Create `.env` from `.env.example` only for a fresh checkout. Set `MANAGER_USERNAME`, `MANAGER_PASSWORD` and an identifying NWS user agent privately. `DATABASE_PATH` points to local SQLite. Hosted inference uses the configured approved Chat Completions endpoint/model/key; availability after the event is not assumed. Missing/placeholder keys produce an explicit unavailable/degraded state.
 
-Budget variables in `.env.example` are enforced. `APP_TIMEZONE` validates the default Kansas City preset timezone; other sites use NWS-verified timezone. `DEPLOYMENT_LABEL` and `BUILD_COMMIT` are operator-supplied display metadata, not deployment proof.
-
-### Existing VM authorization (2026-10-10)
-
-User provided existing Ubuntu 24.04 VM `172.234.201.174`, root SSH and key path `C:\Users\thien\.ssh\closurecall_akamai`. Setup/deployment is authorized, public exposure remains withheld. No new resource purchase is needed. First SSH connection recorded its host key in ignored `data/deployment_known_hosts` using trust on first use (`accept-new`); subsequent connections use strict checking. Key authentication is verified with a two-hour Git OpenSSH agent identity. The Windows agent refused importing the key; use the Git ssh/ssh-add pair consistently with its SSH_AUTH_SOCK. Never write the passphrase into scripts or command arguments.
-
-Prepared `bootstrap_ubuntu.sh` follows official Docker apt repository installation, refuses conflicting packages instead of removing them, installs a non-root key-authenticated deployment user, and leaves access restrictions for a second-session check. `deploy_verified.sh` builds a commit-tagged image, runs tests inside that Linux image before replacing a service, uses the exact tested image with `--no-build`, and preserves the named SQLite volume. Bootstrap actually passed on Ubuntu 24.04.4. Docker 29.9.0 / Compose 5.6.0 and hello-world verified. Second closurecall session passed before hardening; SSH is key-only, UFW active with only SSH allowed. Configuration backup is under /root/closurecall-config-backups. Root key-only recovery remains available.
-
-## Private Akamai deployment
-
-Before creating any VM, verify credits, show the actual region, plan, disk, price and resource label in Cloud Manager and obtain approval. Suggested Ubuntu 24.04 x86_64, around 2 vCPU/4 GB, no GPU. No paid resource was provisioned by this repository.
-
-Use SSH key, a deploy user, and appropriate firewall. SSH binary locally: `C:\Windows\System32\OpenSSH\ssh.exe`. Confirm a second SSH connection before changing access. Inspect existing Docker before installing; use the official Ubuntu apt repository instructions, never blindly pipe a script or remove an existing installation.
-
-Transfer reviewed source only, never .env/.venv/DB through Git. Existing private environment is /opt/closurecall/config/.env (600), parent directory 700; never overwrite it during a source release. Keep backend bound to loopback, with a named persistent data volume:
-
-```bash
-chmod 600 .env
-sudo docker compose config --quiet
-sudo docker compose up -d --build
-curl --fail http://127.0.0.1:8000/health
+```sh
+python scripts/seed_demo.py
+python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 1
 ```
 
-On Windows, tunnel `ssh -N -L 127.0.0.1:8081:127.0.0.1:8000 DEPLOY_USER@SERVER_IP`. Remote UI is http://127.0.0.1:8081; local UI is port 8000. Neither is a public judging URL. Public exposure/DNS/HTTPS needs approval; never public plain-HTTP Basic Auth.
+Seed is for a synthetic local office/roster. Preserve existing data. Choose a future-ending period in the displayed facility timezone, not the alert's validity window. Use the special-shift checkbox for a weekend demonstration. Refresh changes only form time; evaluate is separate.
 
-## Persistence verification
+## Checks
 
-Run live evaluation, human decision, outbox and replay on the VM. Record IDs, timestamps and hash. Backup with SQLite backup API before migration/deploy. Restart container and replay the same decision; compare exact bundle hash and notification drafts. Do not run `down -v`, prune volumes or reset DB. Record measured remote latency and tools; capture redacted resource evidence. Linux dependency lock and base digest are now captured from the tested image. Compose runs non-root, read-only root filesystem, dropped capabilities, no-new-privileges, bounded processes/memory/logs and one worker. /app/data is the persistent writable volume; /tmp is ephemeral.
+```sh
+python -m pytest -q
+npm ci --ignore-scripts
+npm run format:check
+python -m black --check --target-version py312 app tests scripts
+python scripts/check_secrets.py
+```
 
-## Recovery
+Tests use explicitly synthetic fixtures and do not require a hosted model. Live smoke scripts are separate opt-in network/provider operations; running a suite is not live integration proof. Keep credentials and raw provider diagnostics out of screenshots and logs.
 
-Pending jobs become interrupted on restart. Re-evaluate explicitly. No decision/notification side effects are retried automatically. Idempotency keys protect duplicate user requests. An override of stale/incomplete evidence requires a human reason; consider re-evaluation first. Backups never overwrite an existing destination. Code rollback requires schema compatibility review and preserving data.
+The app image copies Python/app/static source and production scripts. Node/formatters are development tools. Linux candidate verification runs the complete tests in the exact built image with historical fixtures mounted read-only. Do not substitute a different rebuild for the tested image.
 
-## Verified release procedure
+## Private operator deployment
 
-Export a secret-scanned local Git commit into a new /opt/closurecall/releases/<full-commit> directory. Run `bash scripts/deploy_verified.sh <release> /opt/closurecall/config/.env <full-commit>` from that release. Tests must pass inside the exact built image before Compose starts it with --no-build. Keep BUILD_COMMIT set to that full commit for every later Compose command; otherwise its default tag is local. Backups created by scripts/backup_db.py are under the database parent data/backups, persisted in the Docker volume. Never run down -v or prune volumes.
+The current private source is a5681bc; this portfolio candidate is not deployed. Existing operator access/recovery is in [DEMO_RECOVERY.md](DEMO_RECOVERY.md). Production deployment/restart remains separately approved, with no active jobs, a fresh consistent current backup, exact-image checks and original-body comparisons required.
 
-Ubuntu security package upgrades completed on 2026-10-10; reboot completed before first app deployment. Fresh strict key-authenticated SSH verified kernel 6.8.0-134-generic, active Docker/UFW/SSH and disabled password login, with no reboot-required flag.
+Keep one worker, non-root/read-only container, loopback binding, existing env and persistent volume. No public HTTP Basic authentication, firewall/DNS change or new resource is part of local preparation. Never use `down -v`, prune volumes, reset/reseed production or restore an old backup merely to roll code back.
 
-Local port 8080 is occupied by an existing AgentService.exe; it was preserved. Use scripts/open_tunnel.ps1 (foreground, default 8081) or the equivalent Git OpenSSH command. Tunnel access is private; no public judging URL.
+## Data and history
 
-## Prior baseline service (8316a0c, retained)
+Replay reads frozen records and verifies bundle hashes. Roster/rules changes create later assessments; they do not rewrite an earlier decision. A memo is a separately versioned presentation of that record. Backups use SQLite's consistent backup API, not a blind copy of a live WAL database. Restore drills use a separate database/container.
 
-Active release /opt/closurecall/releases/8316a0ca896362f0dbe11b5b6c61ff6371a62902; container closurecall-app-1 healthy, Python 3.12.15. The private tunnel is http://127.0.0.1:8081. Database/backup are in named volume closurecall_closurecall-data. The remote decision cf6d7432-7246-49d0-96ce-cb3da56d7f89 replay remained exactly identical in parsed JSON content after actual container restart (hash ec8f0456b3a4ff15be12a815e0526ad1892d7e7f6267d49903cf3e483ccb3705). See PROJECT_STATE.md and docs/VERIFICATION.md for the complete record.
-
-Latest verified operator documentation is also copied to /opt/closurecall/operator-docs. The application source release remains tied to its tested commit.
-
-## Current acceptance release
-
-Application e5f7801829aaa1f7cfd326e02e415f8389fa3dde is the verified private V2 release; current commands are in [../DEMO_RECOVERY.md](../DEMO_RECOVERY.md). All original records and old code images remain preserved. See [../RELEASE_MANIFEST.json](../RELEASE_MANIFEST.json) for source/image identity and [../ACCEPTANCE_REPORT.md](../ACCEPTANCE_REPORT.md) for the actual 65 Windows/exact-image Linux tests, live observations and remaining limits. Historical evidence retains its original build/date.
+A restart interrupts pending work rather than inventing success; re-evaluate explicitly. Idempotency protects repeated manager actions. Before recovery, check actual current activity and preserve all later decisions.

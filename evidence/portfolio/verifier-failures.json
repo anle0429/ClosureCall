@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-10-12T05:21:09.436466+00:00",
+  "scope": "Verifier failures observed in this pass; not product patches",
+  "work_day_initial_assertion": {
+    "result": "1 failed, 1 passed, 4 deselected in 1.12s",
+    "cause": "Equivalent timestamp string Z vs +00:00; parsed-instant assertion corrected"
+  },
+  "linux_metadata_lookup": {
+    "suite": "91 passed in 7.43s",
+    "command_exit": 1,
+    "cause": "Docker image has no Config.Labels; independent image/content inspection used"
+  },
+  "restore_initial": {
+    "result": "read-only rootfs rejected docker cp verifier",
+    "correction": "read-only bind mounts at new isolated QA container startup"
+  },
+  "ui_observation_limits": {
+    "missing_reason_response_text": "NOT CAPTURED; API regression verifies rejection",
+    "first_readiness_wait": "reported early timeout; existing run inspected instead of duplicate evaluation",
+    "print": "no destination surfaced; human print remains NOT VERIFIED"
+  }
+}

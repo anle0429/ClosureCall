@@ -6,7 +6,7 @@ Created and verified through the connected Figma MCP on 2026-10-11 UTC. This is 
 - [Mobile — 390 px](https://www.figma.com/design/3UWLj8CU622rsZJ374ZzLQ?node-id=7-480)
 - [Reusable components](https://www.figma.com/design/3UWLj8CU622rsZJ374ZzLQ?node-id=5-28)
 
-The original frontend screenshots, browser checks and dated tests remain in [DESIGN_REVIEW.md](DESIGN_REVIEW.md). The new proposal has screenshots and an actual Plugin API readback in [evidence/figma](evidence/figma).
+The original frontend screenshots, browser checks and dated tests remain in [DESIGN_REVIEW.md](DESIGN_REVIEW.md). The new proposal has screenshots and an actual Plugin API readback in [evidence/figma](../../../evidence/figma).
 
 ## Content and provenance
 

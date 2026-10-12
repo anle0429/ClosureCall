@@ -1,0 +1,11 @@
+{
+  "scope": "Controlled synthetic startup delay 1s; no APIs/model or production data",
+  "deadline_seconds": 0.2,
+  "worker_startup_delay_seconds": 1,
+  "elapsed_seconds": 0.22,
+  "safe_error_code": "AGENT_DEADLINE",
+  "trace": [],
+  "process_returncode": 1,
+  "terminated": true,
+  "conclusion": "A correct 0.2s kill can precede the first trace. This reproduces the missing-trace assertion condition, not the unknown exact timing of the historical failure."
+}

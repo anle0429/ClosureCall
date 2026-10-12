@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-12T05:23:48.060557+00:00",
+  "old_evidence_git_blobs_unchanged": 231,
+  "historical_manifest_exact": true,
+  "intentional_runtime_python_ast_delta": [
+    "app/services/memo.py"
+  ],
+  "candidate_source": "3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
+  "scope": "Source/checkpoint identity, not a fresh LIVE/model validation"
+}

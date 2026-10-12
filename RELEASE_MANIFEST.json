@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-10T23:24:04Z",
-  "quality_status": "READY_WITH_DISCLOSED_LIMITATIONS",
-  "submission_status": "NOT_SUBMITTED",
-  "runtime_source_commit": "e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
-  "documentation_commit": "78c0ddd0c36603b25a2f45104e149b94a6f0ff2a",
-  "candidate_source_commit": "e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
-  "image_id": "sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184",
-  "image_tag": "closurecall-verified:e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
+  "updated_at": "2026-10-12T05:23:48.060557+00:00",
+  "quality_status": "ACCEPTABLE_WITH_LIMITATIONS",
+  "submission_status": "ON_HOLD / NOT_SUBMITTED",
+  "runtime_source_commit": "a5681bcd98400fd75d02670f378a04365459dd7e",
+  "documentation_commit": "d3ea87ed673acb85b26a14a2b7e972f7c9e97471",
+  "candidate_source_commit": "3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
+  "image_id": "sha256:9ab42b0dcdfaee241b3d9156ac5433ecd0da772f29707ec6cb397664f0256b90",
+  "image_tag": "closurecall-verified:a5681bcd98400fd75d02670f378a04365459dd7e",
   "image_registry_digest": null,
   "dependencies": {
     "python_linux": "3.12.15",
@@ -17,8 +17,8 @@
     "lockfile": "requirements-linux.lock"
   },
   "policy_version": "prototype-v1",
-  "observed_container_started_at": "2026-10-10T22:59:42.908771858Z",
-  "runtime_verified_at": "2026-10-10T23:16:01Z",
+  "observed_container_started_at": "2026-10-11T11:45:50.513230916Z",
+  "runtime_verified_at": "2026-10-12T05:13:47Z",
   "access": {
     "mode": "PRIVATE_SSH_TUNNEL",
     "server": "172.234.201.174",
@@ -27,37 +27,50 @@
     "judge_access": "UNKNOWN_USER_DEFERRED"
   },
   "backup": {
-    "latest_path_in_container": "/app/data/backups/closurecall-20261010T225942Z.sqlite3",
-    "decision_count": 8,
+    "latest_path_in_container": "/app/data/backups/closurecall-20261011T114549Z.sqlite3",
+    "decision_count": 9,
     "drilled_path_in_container": "/app/data/backups/closurecall-20261010T225050Z.sqlite3",
     "drilled_decision_count": 6,
     "drilled_backup_sha256": "3131e3b36c7407054bce0d7cbfe698dd6563dfdf86faff9fd4889700f1a348f6",
     "restore_status": "VERIFIED_SEPARATE_CONTAINER_VOLUME",
     "latest_eight_record_backup_restored": false,
-    "report": "RESTORE_DRILL.md",
-    "latest_backup_sha256": "0992c1f1b4f8297ad04f2280ffe00b72c83f2d168cc42e73d3da0f03c27c537b"
+    "report": "docs/archive/hackathon/RESTORE_DRILL.md",
+    "latest_backup_sha256": "608ef3c847cc227e10e421f8f170e5061c0ed879d767992ed1f45fba0850a003",
+    "latest_backup_verification": "Nine records restored with exact candidate in separate network-disabled volume; original unchanged",
+    "candidate_restore_report": "evidence/portfolio/restore-final-verified.txt",
+    "candidate_restore_source_commit": "3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
+    "candidate_restore_record_count": 9
   },
   "test_evidence": {
-    "windows_candidate": "evidence/release/windows-tests.txt",
-    "windows_result": "65 passed in 8.69s",
-    "linux_candidate": "evidence/release/linux-image-deploy.txt",
-    "linux_result": "65 passed in 6.29s",
+    "windows_candidate": "evidence/portfolio/windows-source-final.txt",
+    "windows_result": "91 passed in 10.85s",
+    "linux_candidate": "evidence/portfolio/linux-source-final.txt",
+    "linux_result": "91 passed in 7.43s",
     "live_candidate": [
       "evidence/release/kc-smoke-summary.json",
       "evidence/release/fixed-watch-summary.json"
     ],
-    "rehearsal": "REHEARSAL_RESULTS.md",
-    "restore": "evidence/release/restore-restarted.txt",
+    "rehearsal": "evidence/portfolio/ui-rehearsal-approve.json",
+    "restore": "evidence/portfolio/restore-final-verified.txt",
     "restart": "evidence/release/final-restart-runtime.txt",
     "cloud_manager": "evidence/release/cloud-manager-vm.png",
-    "secret_scan": "evidence/release/secret-scan.json"
+    "secret_scan": "evidence/portfolio/secret-scan.json",
+    "rehearsal_override": "evidence/portfolio/ui-rehearsal-override.json",
+    "fresh_live_candidate": "NOT VERIFIED; historical live paths remain dated evidence",
+    "retained_failures": [
+      "evidence/feedback/windows-frozen.txt",
+      "evidence/portfolio/deadline-targeted-initial-crlf.txt",
+      "evidence/portfolio/windows-final-after-badge.txt",
+      "evidence/portfolio/linux-exact-candidate.txt",
+      "evidence/portfolio/verifier-failures.json"
+    ]
   },
   "cutoff": "2026-10-11T08:00:00-05:00",
-  "documentation_commit_resolution": "Reviewed documentation follow-up including Vietnamese presenter notes and attribution metadata; original release evidence separately pinned at evidence_checkpoint_commit. Later metadata commits do not redeploy the frozen application.",
+  "documentation_commit_resolution": "Pre-portfolio checkpoint preserved; final documentation commit will be pinned separately from candidate/runtime, without self-referential commit hashing",
   "baseline_documentation_commit": "607630726fc0004bb2890fe0bff293ee67fecfdc",
-  "image_digest": "sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184",
-  "image_digest_kind": "Docker local OCI image ID and locally observed RepoDigest; no external registry publication",
-  "deployed_at": "2026-10-10T22:50:51.763543705Z",
+  "image_digest": "sha256:9ab42b0dcdfaee241b3d9156ac5433ecd0da772f29707ec6cb397664f0256b90",
+  "image_digest_kind": "Docker locally observed image ID; no external registry publication or registry digest claim",
+  "deployed_at": "2026-10-11T11:45:50.513230916Z",
   "dependency_versions": {
     "python_linux": "3.12.15",
     "strands-agents": "1.59.0",
@@ -67,18 +80,80 @@
     "lockfile": "requirements-linux.lock"
   },
   "access_mode": "PRIVATE_SSH_TUNNEL",
-  "backup_ref": "/app/data/backups/closurecall-20261010T225942Z.sqlite3",
-  "observed_repo_digest": "closurecall-verified@sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184",
+  "backup_ref": "/app/data/backups/closurecall-20261011T114549Z.sqlite3",
+  "observed_repo_digest": null,
   "user_source_integrity": "All six supplied goal/source files match PACKAGE_MANIFEST.json; retained locally untracked.",
   "evidence_checkpoint_commit": "2a98f48d40009beeec560e3c3da304755aeffd9c",
   "documentation_followup": {
-    "scope": "Documentation only; app/image/policy/dependencies unchanged; no new tests/live calls/redeploy",
-    "presenter_notes": "DEMO_PRESENTER_NOTES.md",
-    "attributions": "ATTRIBUTIONS.md",
+    "scope": "Post-event docs/archive and tests/formatter/presentation candidate; original deployment preserved",
+    "presenter_notes": "docs/DEMO_PRESENTER_NOTES.md",
+    "attributions": "docs/ATTRIBUTIONS.md",
     "runtime_read": "evidence/release-followup/runtime-health.txt",
     "distribution_metadata": "evidence/release-followup/distribution-metadata.json"
   },
   "blocker_audit": {
+    "condition": "Submission user-owned/ON_HOLD; post-event portfolio prep in progress",
+    "consecutive_goal_turns_with_same_condition": 0,
+    "independent_technical_work_remaining": "Final same-private-remote push and its documentation checkpoint",
+    "submission_receipt": null
+  },
+  "app_source_commit": "a5681bcd98400fd75d02670f378a04365459dd7e",
+  "tested_image_id": "sha256:5fdf4901dc2d30bde0558edf5a1520021145bdce7b3a7fcbd8c5ca5c280c76e8",
+  "submitted_source_commit": null,
+  "historical_manifest": "docs/archive/hackathon/RELEASE_MANIFEST_PRE_PORTFOLIO.json",
+  "portfolio": {
+    "mode": "POST_HACKATHON_PORTFOLIO",
+    "user_override": "User explicitly requested post-event improvement for GitHub/LinkedIn; no competition extension claimed",
+    "base_commit": "d3ea87ed673acb85b26a14a2b7e972f7c9e97471",
+    "candidate_deployed": false,
+    "production_changed_in_pass": false,
+    "evidence": "evidence/portfolio",
+    "packet": "SUBMISSION.md",
+    "social_draft": "docs/LINKEDIN_DRAFT.md",
+    "hosted_ci_dispatched": false,
+    "live_model_calls_in_pass": 0,
+    "license_and_team_publication_rights": "NEEDS_USER_DECISION",
+    "candidate_source_commit": "3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
+    "candidate_image_tag": "closurecall-portfolio:3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
+    "candidate_image_id": "sha256:5fdf4901dc2d30bde0558edf5a1520021145bdce7b3a7fcbd8c5ca5c280c76e8",
+    "local_candidate_repo_digest": "closurecall-portfolio@sha256:5fdf4901dc2d30bde0558edf5a1520021145bdce7b3a7fcbd8c5ca5c280c76e8",
+    "digest_scope": "Observed local Docker engine RepoDigest, not publication to an external registry",
+    "verdict": "ACCEPTABLE_WITH_LIMITATIONS",
+    "memo_renderer": "frozen-memo-v2",
+    "runtime_memo_renderer": "frozen-memo-v1",
+    "print_status": "NOT VERIFIED; browser did not expose print destination",
+    "human_rehearsal": "NOT VERIFIED",
+    "candidate_preview": "http://127.0.0.1:8084/; isolated synthetic QA, no provider/model calls",
+    "current_8081_tunnel": "STOPPED_AT_R0; not reopened in this pass",
+    "private_push_status": "PENDING_FINAL_AUDIT",
+    "diff_classification": [
+      "Mechanical source formatting with semantic guards",
+      "Memo presentation, frozen values preserved",
+      "Two-line draft-pill alignment",
+      "Test-only deadline/clock fixture corrections",
+      "Development tooling/manual CI and documentation archive"
+    ],
+    "evidence_manifest": "evidence/portfolio/manifest.json",
+    "final_prep_status": "VERIFIED_INTERNAL_PREP; private push checkpoint pending",
+    "internal_gates": {
+      "R0": "VERIFIED",
+      "R1": "ACCEPTABLE_WITH_LIMITATIONS",
+      "R2": "VERIFIED_SCOPED",
+      "R3": "VERIFIED_EXCEPT_HUMAN_PRINT",
+      "R4": "CANDIDATE_SELECTED_FOR_REVIEW_NOT_DEPLOYED",
+      "R5": "SCRIPT_AND_UI_REHEARSAL_VERIFIED; HUMAN_SPEECH_NOT_VERIFIED",
+      "R6": "LOCAL_PACKET_VERIFIED",
+      "R7": "AUDITS_VERIFIED; PRIVATE_PUSH_PENDING"
+    },
+    "pending_external": [
+      "Human spoken rehearsal and actual print if used",
+      "License/team credits and publication rights",
+      "Public repository/demo access or LinkedIn posting if requested",
+      "New deployment approval if requested",
+      "User-owned organizer fields/terms/eligibility/Submit/receipt; submission ON_HOLD"
+    ]
+  },
+  "historical_blocker_audit": {
     "checked_at": "2026-10-10T23:24:04Z",
     "condition": "User-deferred organizer-approved judge/code access and portal/team/tracks/Submit/receipt",
     "gates": [
@@ -91,5 +166,6 @@
     "disposition": "Stop autonomous goal continuation at external blocker; full objective not achieved",
     "submission_receipt": null,
     "no_new_test_or_live_call": true
-  }
+  },
+  "runtime_identity_observed": "evidence/portfolio/runtime-final.txt"
 }

@@ -1,0 +1,11 @@
+{
+  "result": "VERIFIED",
+  "baseline": "d3ea87e",
+  "html_ids_preserved": 63,
+  "control_contracts_exact": true,
+  "runtime_python_ast_changes": [
+    "app/services/memo.py"
+  ],
+  "intentional_change": "Memo presentation only, no stored fields or contracts changed",
+  "policy_file_exact": true
+}

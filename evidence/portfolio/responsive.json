@@ -1,0 +1,34 @@
+{
+  "result": "VERIFIED",
+  "scope": "Current candidate, same historical decision; four measured DOM sizes. Browser viewport capability targets the selected tab; early captures on an inactive tab stayed at default 1280 and were not used for the responsive gate.",
+  "viewports": [
+    {
+      "height": 900,
+      "mode": "REPLAY",
+      "recipients": 12,
+      "scrollWidth": 1425,
+      "width": 1440
+    },
+    {
+      "height": 800,
+      "mode": "REPLAY",
+      "recipients": 12,
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    {
+      "height": 1024,
+      "mode": "REPLAY",
+      "recipients": 12,
+      "scrollWidth": 753,
+      "width": 768
+    },
+    {
+      "height": 844,
+      "mode": "REPLAY",
+      "recipients": 12,
+      "scrollWidth": 375,
+      "width": 390
+    }
+  ]
+}

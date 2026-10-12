@@ -1,0 +1,7 @@
+{
+  "scope": "Temporary in-memory mutation only; real synthetic worker; production source unmodified",
+  "old_error_code_assertion_passes": true,
+  "old_trace_assertion_passes": true,
+  "new_termination_invariant_passes": false,
+  "result": "EXPECTED_REGRESSION_DETECTED"
+}

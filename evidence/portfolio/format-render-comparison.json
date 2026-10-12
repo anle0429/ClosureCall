@@ -1,0 +1,7 @@
+{
+  "result": "VERIFIED",
+  "css_rule_count": 289,
+  "css_delta": "Only capitalization of hexadecimal color values in custom properties; declaration/rule order unchanged",
+  "same_layout_positions": true,
+  "same_frozen_content": true
+}

@@ -1,0 +1,4 @@
+608ef3c847cc227e10e421f8f170e5061c0ed879d767992ed1f45fba0850a003  /opt/closurecall/restore-drills/portfolio-3bc1ddd/source.sqlite3
+closurecall-portfolio-restore-3bc1ddd
+2d1558a7b0da51074a0af4834ae70e1af6b0c9d0ccfde7d0c398656940da767e
+Error response from daemon: container rootfs is marked read-only

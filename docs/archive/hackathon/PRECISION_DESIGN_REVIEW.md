@@ -1,6 +1,6 @@
 # ClosureCall precision design candidate
 
-**Later release checkpoint, 2026-10-11 UTC:** user conditionally approved the design after the HTTP 8084 preview opened successfully, then requested private laptop-only presentation. Application source `4dffaac63f06b57bd97e2af17140ff850be147e5` is now verified deployed privately and open through 8081. Exact Linux suite 89/6.53s; separate remote real-source/model workflow and all nine original historical bodies verified unchanged. No new application edits after the design freeze. See [private release](PRIVATE_DESIGN_RELEASE.md), [main screenshot](evidence/precision-release/main-desktop.jpg) and [evidence/manager screenshot](evidence/precision-release/main-evidence.jpg). The dated design-pass limits below remain specific to that earlier pass; the later evidence supersedes only the browser, Linux/LIVE QA and private deployment gates. Public exposure was cancelled and no proxy started.
+**Later release checkpoint, 2026-10-11 UTC:** user conditionally approved the design after the HTTP 8084 preview opened successfully, then requested private laptop-only presentation. Application source `4dffaac63f06b57bd97e2af17140ff850be147e5` is now verified deployed privately and open through 8081. Exact Linux suite 89/6.53s; separate remote real-source/model workflow and all nine original historical bodies verified unchanged. No new application edits after the design freeze. See [private release](PRIVATE_DESIGN_RELEASE.md), [main screenshot](../../../evidence/precision-release/main-desktop.jpg) and [evidence/manager screenshot](../../../evidence/precision-release/main-evidence.jpg). The dated design-pass limits below remain specific to that earlier pass; the later evidence supersedes only the browser, Linux/LIVE QA and private deployment gates. Public exposure was cancelled and no proxy started.
 
 Local review candidate on `design/precision-console`, source freeze `2d6ef4ce3076c42b01573c2ed483bc296de84093`, based on `3e585f0`. This pass changes only `app/static/index.html` and `app/static/styles.css` in the application. No deployment, push, public exposure, cloud operation or production-data access was performed. Start: 2026-10-11 06:48:19 UTC; hard deadline: 07:23:19 UTC.
 
@@ -38,11 +38,11 @@ These are layout measurements, not task-completion, latency or impact claims. `b
 
 | View | Before | After |
 | --- | --- | --- |
-| Desktop overview | ![Before desktop](evidence/precision/before-desktop.jpg) | ![After desktop](evidence/precision/after-desktop.jpg) |
-| Narrow overview | ![Before narrow](evidence/precision/before-narrow.jpg) | ![After narrow](evidence/precision/after-narrow.jpg) |
-| Desktop evidence/recommendation | ![Before evidence](evidence/precision/before-desktop-evidence.jpg) | ![After evidence](evidence/precision/after-desktop-evidence.jpg) |
+| Desktop overview | ![Before desktop](../../../evidence/precision/before-desktop.jpg) | ![After desktop](../../../evidence/precision/after-desktop.jpg) |
+| Narrow overview | ![Before narrow](../../../evidence/precision/before-narrow.jpg) | ![After narrow](../../../evidence/precision/after-narrow.jpg) |
+| Desktop evidence/recommendation | ![Before evidence](../../../evidence/precision/before-desktop-evidence.jpg) | ![After evidence](../../../evidence/precision/after-desktop-evidence.jpg) |
 
-Additional actual renders: [manager desktop](evidence/precision/manager-desktop.jpg), [manager narrow](evidence/precision/manager-narrow.jpg), [roster desktop](evidence/precision/roster-desktop.jpg), [roster narrow](evidence/precision/roster-narrow.jpg), [deferred draft and keyboard focus](evidence/precision/deferred-narrow.jpg), [loading](evidence/precision/loading-desktop.jpg), [validation error](evidence/precision/error-desktop.jpg).
+Additional actual renders: [manager desktop](../../../evidence/precision/manager-desktop.jpg), [manager narrow](../../../evidence/precision/manager-narrow.jpg), [roster desktop](../../../evidence/precision/roster-desktop.jpg), [roster narrow](../../../evidence/precision/roster-narrow.jpg), [deferred draft and keyboard focus](../../../evidence/precision/deferred-narrow.jpg), [loading](../../../evidence/precision/loading-desktop.jpg), [validation error](../../../evidence/precision/error-desktop.jpg).
 
 ## Verification and limits
 

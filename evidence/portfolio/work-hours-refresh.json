@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-12T05:08:21.914Z",
+  "before": {
+    "end": "2026-10-12T02:11",
+    "export": "http://127.0.0.1:8084/api/decisions/f63cd7a8-fa0d-490e-be2b-08d8c9a4168a/export",
+    "mode": "REPLAY",
+    "rows": 10,
+    "start": "2026-10-12T00:11"
+  },
+  "after": {
+    "end": "2026-10-12T02:23",
+    "export": "http://127.0.0.1:8084/api/decisions/f63cd7a8-fa0d-490e-be2b-08d8c9a4168a/export",
+    "mode": "REPLAY",
+    "note": "Form updated: starts Oct 12, 2026, 12:23 AM CDT; shift length 120 min. Click Check conditions to evaluate this period. Existing evidence and saved decisions are unchanged.",
+    "rows": 10,
+    "start": "2026-10-12T00:23"
+  },
+  "expected_start": "2026-10-12T00:23",
+  "start_now_plus_15": true,
+  "duration_preserved_minutes": 120,
+  "replay_and_export_unchanged": true,
+  "history_rows_unchanged": true
+}

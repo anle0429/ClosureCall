@@ -1,0 +1,41 @@
+{
+  "result": "VERIFIED_VISUAL_DESKTOP_MOBILE",
+  "scope": "Fresh standalone HTML from current renderer and same public frozen export; supported loopback HTTP preview, no file-protocol bypass or changed application CSP/auth",
+  "views": [
+    {
+      "details": 12,
+      "headings": [
+        "Facility and affected work period",
+        "Original recommendation — before manager decision",
+        "Final manager decision — separate from recommendation",
+        "Frozen evidence and saved applicability",
+        "Stored AI brief",
+        "Notification package — DRAFTS, NOT SENT",
+        "Record identity and presentation"
+      ],
+      "height": 800,
+      "renderer": true,
+      "scrollWidth": 1265,
+      "title": "ClosureCall decision memo — REPLAY",
+      "width": 1280
+    },
+    {
+      "details": 12,
+      "headings": [
+        "Facility and affected work period",
+        "Original recommendation — before manager decision",
+        "Final manager decision — separate from recommendation",
+        "Frozen evidence and saved applicability",
+        "Stored AI brief",
+        "Notification package — DRAFTS, NOT SENT",
+        "Record identity and presentation"
+      ],
+      "height": 844,
+      "renderer": true,
+      "scrollWidth": 375,
+      "title": "ClosureCall decision memo — REPLAY",
+      "width": 390
+    }
+  ],
+  "print": "NOT VERIFIED: Control+P exposed no print preview/destination through current supported browser surface. No print-perfect claim; user check pending."
+}

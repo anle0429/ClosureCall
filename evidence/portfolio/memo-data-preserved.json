@@ -1,0 +1,7 @@
+{
+  "result": "VERIFIED",
+  "scope": "Rendered memo dd values identical except intentional renderer version; technical identity reordered without changing record fields",
+  "values_compared": 139,
+  "before_renderer": "frozen-memo-v1",
+  "after_renderer": "frozen-memo-v2"
+}

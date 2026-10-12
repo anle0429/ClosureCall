@@ -1,0 +1,6 @@
+{
+  "result": "VERIFIED",
+  "scope": "Babel syntax trees exact excluding comments/raw quoting/source coordinates including Prettier __contentEnd",
+  "sha256": "03d74d6da8a3add212fc6f0576c8a2737e0538c3bc90ab9108d920c6b5d1b4e9",
+  "note": "Initial comparison detected __contentEnd coordinate fields; inspected exact diff and excluded only that source-offset metadata. Source unchanged during check."
+}

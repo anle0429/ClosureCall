@@ -1,38 +1,47 @@
-# Executed verification — 2026-10-10T21:20:18+00:00
+# Verification
 
-These are executed results. Synthetic unit fixtures and prototype manager tests remain explicitly labeled.
+This page records scope, not a blanket challenge PASS. The release manifest separates the current private runtime from an undeployed portfolio candidate and from documentation checkpoints.
 
-## Tests and image
-- Windows private Python 3.13.9: 59 passed in 7.99s; pip check/import smoke passed.
-- Linux first image: 59 passed in 5.77s. Final locked production image: 59 passed in 6.16s before docker compose up --no-build.
-- Deployment commit 8316a0ca896362f0dbe11b5b6c61ff6371a62902; Python 3.12.15; Strands 1.59.0. Production pip check passed.
-- Image identity sha256:64386106d97f124f0d30645cb9b920ff1ee4a195edcda0c553536bee87ac19c7. Base digest pinned and transitive Linux dependencies captured from actual tested image.
-- Tests cover exact AQ boundaries, missing/stale/invalid/gapped feeds, point/work-period applicability, expired/test/cancelled/superseded alerts, unsupported categories, essential/accessibility/telework/offsite routes, auth/spoof/CSRF, reason validation, stale/superseded/idempotent decisions, atomic outbox, immutable records/replay/backup, actual SDK dispatch with a synthetic model, budget/deadline/process termination, and rejection of invented model references/facts.
+## Current pass
 
-## Live integrations and remote operation
-- Local and remote real workshop smoke: 2 model calls / 1 verified tool; random server token used exactly once. No synthetic model is counted as hosted inference proof.
-- Remote national NWS explorer: HTTP 200, 521 actual alerts at 21:14:41 UTC. Polygon point independently confirmed; timezone America/New_York verified by NWS metadata.
-- Remote evaluation 49395bae-6b9f-4ec8-b267-7d0902f72212, collected 2026-10-10T21:15:19.606431+00:00. NWS 200 / 3 actual alerts, including Severe Flash Flood Warning. Open-Meteo 200 / modeled AQI 46 valid 21:00 UTC.
-- Real Strands full brief active, 2 model calls and all five tools successful. Model-selected references and review focus validate against the frozen snapshot; server renders counts/timestamps/posture. Prior free-form model time/count mistakes prompted this validated contract.
-- Single measured latency 29763.77 ms; 2 source HTTP attempts. No general performance/impact claim.
-- Browser manager test override cf6d7432-7246-49d0-96ce-cb3da56d7f89 at 21:16:06 UTC: explicit synthetic office/shift reason, closure candidate plus review of unmapped Advisory/Watch. 9 included / 2 excluded / 1 deferred; all 12 have reasons/drafts. No notification sent.
-- Reload while evaluating: re-login resumed the same run with correct site/work period/timezone. API verified one run and one decision.
-- Baseline replay hash ec8f0456b3a4ff15be12a815e0526ad1892d7e7f6267d49903cf3e483ccb3705; SQLite backup then actual docker compose restart app; post-restart entire replay JSON/drafts exactly matched baseline.
-- Browser re-login, explicit Replay and authenticated JSON download passed after restart. Export saved to user Downloads. Screenshots and safe Docker proof in ignored artifacts/.
-- Local prior normal/warning decisions also retained exact replay after local restarts; their original AI-unavailable status is preserved honestly.
+- R0 fresh SSH observation: source a5681bc / image 9ab42b0..., healthy, unchanged 2026-10-11 11:45:50 UTC start, private loopback/non-root/read-only. `evidence/portfolio/runtime-r0.txt`.
+- Read-only original data: 2 facilities, 13 runs, 9 decisions/outbox; integrity OK and no active job. `production-r0.json`. No restart, config change or original-data write.
+- GitHub metadata freshly confirmed the existing repository is private. `github-metadata.json`. No access/visibility change or hosted workflow dispatch.
+- Controlled delayed startup: a 0.2s deadline can correctly kill before any trace, observed at about 0.22s. `deadline-controlled-startup.json`. The exact timing of the old failure remains unknown.
+- Timeout tests now separately cover termination without a trace and trace retention after a real worker is ready. The 0.2s budget and original trace assertion remain; actual process termination is also asserted. Targeted final result: 2 passed. The initial Windows CRLF fixture assertion failure is retained, then checked by parsed JSON without altering production logic.
+- Six memo boundary tests passed after the presentation update. Frozen record data and no-source/model/recompute traps remain covered.
+- Formatting checks: all 47 Python syntax trees exact before/after the formatter; JavaScript syntax tree exact after excluding source-position metadata; all 63 HTML IDs and control contracts preserved. Only memo presentation changes the runtime Python AST from d3ea87e. `python-format-semantics.json`, `js-format-semantics.json`, `protected-contracts.json`.
 
-## Server and security
-- SSH verified supplied existing host 172.234.201.174 / Ubuntu 24.04.4. Second non-root closurecall session passed before restrictions.
-- Docker 29.9.0 / Compose 5.6.0 official apt install and hello-world passed. Ubuntu updates applied, reboot completed, kernel 6.8.0-134-generic; fresh strict SSH verifies SSH/Docker/UFW active.
-- SSH passwords/keyboard-interactive/X11 disabled; root key-only recovery retained, config backed up. Initial host-key trust was TOFU; later SSH strictly pinned.
-- Private env mode 600 with parent 700. Secrets excluded from Git/image build; 73 source files and 7 remote business API responses scanned with configured secrets, passed before final documentation additions.
-- Running app uid 10001, read-only root, capdrop ALL, no-new-privileges; persistent writable data volume. Docker port explicitly 127.0.0.1:8000; UFW only rate-limited SSH. Public 8000 unreachable from this client; private tunnel health passes.
-- Windows 8080 occupied by existing AgentService.exe preserved; tunnel uses 127.0.0.1:8081.
-- Remote backup /app/data/backups/closurecall-20261010T211630Z.sqlite3 (159744 bytes) persists in named volume. No volume pruning/reset or existing history overwrite.
+Final source **3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24** is undeployed. Windows: **91 passed in 10.85s** ([log](../evidence/portfolio/windows-source-final.txt)); exact Linux image `sha256:5fdf4901dc2d30bde0558edf5a1520021145bdce7b3a7fcbd8c5ca5c280c76e8`: **91 passed in 7.43s** ([log](../evidence/portfolio/linux-source-final.txt), [identity](../evidence/portfolio/runtime-final.txt)). These are the same 91 cases on two environments. The post-test label lookup failed because the Dockerfile has no labels; independent final inspection and restore pin the image. No test rerun was needed for that metadata failure.
 
-## External verification pending
-Organizer deadline/timezone, eligibility and judging access; public repository/domain/HTTPS and actual submission. Region/resource console label not inspected. Private MVP operation is verified; localhost tunnel is not a public judging URL.
+## Browser, memo and integrity gates
 
-## Acceptance checkpoint after the original MVP verification
+- Local 8084 QA: approve and reasoned override, loading/busy/double-click checks, recipient drafts, history refresh/reload, authenticated JSON/HTML downloads. Exactly two new runs/two decisions; original QA nine decisions unchanged. [Approve](../evidence/portfolio/ui-rehearsal-approve.json), [override](../evidence/portfolio/ui-rehearsal-override.json), [download/data proof](../evidence/portfolio/final-data-check.json). These were synthetic with zero provider/model calls, not new live integration evidence. The empty-reason attempt's response text was not captured; regression tests verify API rejection independently.
+- **Refresh time (+15 min)** set start to device now +15 minutes in facility timezone, preserved the 120-minute shift and left replay/export/history unchanged. [Observed proof](../evidence/portfolio/work-hours-refresh.json). It updates only the form.
+- Selected-tab checks at 1440×900, 1280×800, 768×1024 and 390×844: no horizontal overflow, twelve recipients and 23px draft pills. [Geometry](../evidence/portfolio/responsive-final.json). Before/after screenshots are in evidence/portfolio. Formatting preserved the workbench appearance; a targeted alignment fix stopped long follow-up rows stretching draft pills. Memo-v2 puts facility/work period before technical identity and uses the same restrained palette. [Data preservation](../evidence/portfolio/memo-data-preserved.json), [visual scope](../evidence/portfolio/memo-visual.json).
+- A newly generated frozen memo was visually reviewed through normal loopback HTTP, desktop/narrow. Authenticated downloads matched API bytes. Ctrl+P exposed no print destination in this browser: **actual print/pagination NOT VERIFIED** ([attempt](../evidence/portfolio/memo-print-attempt.jpg)). The previously blocked file URL was not retried/bypassed.
+- Existing nine-record backup restored into a separate volume with the exact candidate image, network disabled and no inference key/published port. All nine HTTP replay/export/outbox/memo records matched before/after an actual QA restart; in-memory current rules/roster changed and forbidden-source/model/recompute traps stayed at zero. Six restored table fingerprints matched. [Successful drill](../evidence/portfolio/restore-final-verified.txt), [initial read-only-copy refusal](../evidence/portfolio/restore-final.txt). Original data was not restored.
+- Fresh final production probe matched all six tables/nine body hashes against R0. Original private runtime remains healthy with the same source/image/start. [Data](../evidence/portfolio/final-data-check.json), [runtime](../evidence/portfolio/runtime-final.txt).
 
-Earlier application 75300d4ef4b86f8175be9f17f1fa291b00f9d7b9 has dated exact-image tests and browser/remote evidence in `evidence/acceptance/`. This baseline remains historical proof, not a claim that every requirement passed or its NWS snapshots are live now. Current V2 source/image and 65-test evidence are recorded separately in [../RELEASE_MANIFEST.json](../RELEASE_MANIFEST.json) and [../ACCEPTANCE_REPORT.md](../ACCEPTANCE_REPORT.md).
+## Retained failures and corrections
+
+An initial full Windows suite passed (90/11.41s), then both Windows and Linux failed near Sunday midnight: an old test checked today's weekday although start +10 minutes was Monday. Production correctly validated the facility-local work start. Tests now fix time and cover Sunday-rejected/Monday-accepted boundaries without changing validation. [Windows failure](../evidence/portfolio/windows-final-after-badge.txt), [Linux failure](../evidence/portfolio/linux-exact-candidate.txt), [targeted pass](../evidence/portfolio/work-day-targeted.txt). The first new assertion compared equivalent Z/+00:00 strings and failed; it now compares parsed instants. Deadline startup/CRLF findings remain separately recorded above. No deadline was extended, assertion skipped or process budget relaxed.
+
+Verdict: **ACCEPTABLE_WITH_LIMITATIONS** for local/private prototype review. This is not government production-readiness, deployment approval or an all-challenge PASS. Fresh live-warning/high-wind/high-AQ, post-event hosted inference, human speech, actual print and external access/submission remain unverified. No hosted CI was dispatched.
+
+## Boundary coverage map
+
+| Boundary | Relevant checks |
+| --- | --- |
+| Geography, null geometry, time overlap/expiry, cancellation scope | [Feedback scope](../tests/test_feedback_scope.py), [sources](../tests/test_sources.py), [policy](../tests/test_policy.py) |
+| Scoped references, tool/model budgets, degraded output and process termination | [Agent](../tests/test_agent.py) |
+| Manager auth, stale/superseded decisions, override reason, idempotency | [API](../tests/test_api.py), [approval](../tests/test_approval.py) |
+| Synthetic roster, essential/telework/offsite/no-shift/accessibility routes | [Recipients](../tests/test_recipients.py) |
+| Frozen replay, changed bindings, escaping, missing memo fields, no recomputation | [Audit](../tests/test_audit.py), [memo](../tests/test_memo.py) |
+| Secret handling | [Secret scan](../tests/test_secret_scan.py), [scanner](../scripts/check_secrets.py) |
+
+## Historical evidence
+
+Recorded real NWS/AQ and Strands calls on Linode are in `evidence/release` and `evidence/precision-release`; each retains its source and capture time. The KC empty feed was valid, not a failed request. Saved Flood Watch/warning records are historical; their test override is not a natural closure recommendation or physical safety verification.
+
+Original restore/restart evidence and failed/flaky logs remain under `evidence/`. [Archived acceptance](archive/hackathon/ACCEPTANCE_REPORT.md), [feedback review](archive/hackathon/SPONSOR_FEEDBACK_REVIEW.md) and [restore drill](archive/hackathon/RESTORE_DRILL.md) describe their exact old scope. A previous restore does not prove a new image was restored. Existing human spoken rehearsal and current live-warning/high-wind/high-AQ branches are not inferred from unit tests.

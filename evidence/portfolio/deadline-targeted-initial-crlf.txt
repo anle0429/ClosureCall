@@ -1,0 +1,96 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.9, pytest-9.1.1, pluggy-1.6.0 -- C:\Projects\ClosureCall\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Projects\ClosureCall
+plugins: anyio-4.15.1
+collecting ... collected 2 items
+
+tests/test_agent.py::test_subprocess_deadline_is_enforced FAILED         [ 50%]
+tests/test_agent.py::test_deadline_terminates_worker_before_any_trace PASSED [100%]
+
+================================== FAILURES ===================================
+____________________ test_subprocess_deadline_is_enforced _____________________
+
+tmp_path = WindowsPath('C:/Users/thien/AppData/Local/Temp/pytest-of-thien/pytest-41/test_subprocess_deadline_is_en0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001A43C24A8B0>
+
+    def test_subprocess_deadline_is_enforced(tmp_path,monkeypatch):
+        # Trace retention needs a started worker; startup scheduling is a separate case.
+        (tmp_path/'synthetic_slow_worker.py').write_text('import time\nprint(\'{"event":"tool_trace","trace":{"synthetic":true}}\',flush=True)\ntime.sleep(20)\n',encoding='utf-8')
+        monkeypatch.setenv('PYTHONPATH',str(tmp_path))
+        create = asyncio.create_subprocess_exec
+        spawned = []
+    
+        class StartedOutput:
+            def __init__(self, first_line, stream):
+                self.first_line, self.stream = first_line, stream
+    
+            async def __aiter__(self):
+                yield self.first_line
+                async for line in self.stream:
+                    yield line
+    
+        async def start_and_observe(*args, **kwargs):
+            process = await create(*args, **kwargs)
+            spawned.append(process)
+            try:
+                # This is bounded fixture setup, not an extension of the .2s deadline.
+                first_line = await asyncio.wait_for(process.stdout.readline(), timeout=5)
+                assert first_line == b'{"event":"tool_trace","trace":{"synthetic":true}}\n'
+                process.stdout = StartedOutput(first_line, process.stdout)
+                return process
+            except BaseException:
+                if process.returncode is None:
+                    process.kill()
+                await process.wait()
+                raise
+    
+        monkeypatch.setattr(asyncio, 'create_subprocess_exec', start_and_observe)
+>       result=asyncio.run(bounded_worker('synthetic_slow_worker',{},deadline=.2))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_agent.py:65: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\thien\anaconda3\Lib\asyncio\runners.py:195: in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+C:\Users\thien\anaconda3\Lib\asyncio\runners.py:118: in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\thien\anaconda3\Lib\asyncio\base_events.py:725: in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+app\jobs.py:7: in bounded_worker
+    process = await asyncio.create_subprocess_exec(sys.executable,'-m',module,
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+args = ('C:\\Projects\\ClosureCall\\.venv\\Scripts\\python.exe', '-m', 'synthetic_slow_worker')
+kwargs = {'stdin': -1, 'stdout': -1, 'stderr': -3}
+
+    async def start_and_observe(*args, **kwargs):
+        process = await create(*args, **kwargs)
+        spawned.append(process)
+        try:
+            # This is bounded fixture setup, not an extension of the .2s deadline.
+            first_line = await asyncio.wait_for(process.stdout.readline(), timeout=5)
+>           assert first_line == b'{"event":"tool_trace","trace":{"synthetic":true}}\n'
+E           assert b'{"event":"tool_trace","trace":{"synthetic":true}}\r\n' == b'{"event":"tool_trace","trace":{"synthetic":true}}\n'
+E             
+E             At index 49 diff: b'\r' != b'\n'
+E             
+E             Full diff:
+E             - (b'{"event":"tool_trace","trace":{"synthetic":true}}\n')
+E             + (b'{"event":"tool_trace","trace":{"synthetic":true}}\r\n')
+E             ?                                                      ++
+
+tests\test_agent.py:55: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_agent.py::test_subprocess_deadline_is_enforced - assert b'{"event":"tool_trace","trace":{"synthetic":true}}\r\n' == b'{"event":"tool_trace","trace":{"synthetic":true}}\n'
+  
+  At index 49 diff: b'\r' != b'\n'
+  
+  Full diff:
+  - (b'{"event":"tool_trace","trace":{"synthetic":true}}\n')
+  + (b'{"event":"tool_trace","trace":{"synthetic":true}}\r\n')
+  ?                                                      ++
+========================= 1 failed, 1 passed in 5.54s =========================

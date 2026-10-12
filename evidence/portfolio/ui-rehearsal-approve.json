@@ -1,0 +1,61 @@
+{
+  "result": "VERIFIED_UI_REHEARSAL_ONLY",
+  "source": "6d4ca21999cbeff0b7f8e8eadda1bdbbbf0a637b",
+  "elapsed_ms": 153088,
+  "scope": "Synthetic local QA, includes automation selector observation waits; not provider latency or spoken rehearsal",
+  "checks": [
+    {
+      "case": "Invalid period visible error; no evaluation created",
+      "result": "VERIFIED",
+      "message": "Check your work hours: the end must be after the start, and the period must be no longer than 24 hours."
+    },
+    {
+      "case": "Evaluation loading locks evaluate/refresh and keeps manager panel hidden",
+      "result": "VERIFIED",
+      "busy": "true",
+      "disabled": true,
+      "managerHidden": true,
+      "refreshDisabled": true
+    },
+    {
+      "case": "New synthetic run clears old closure/replay content; natural Normal and AI unavailable explicit",
+      "result": "VERIFIED",
+      "brief": "Original recommendation · prototype rulesNormal operationsReady for your reviewModerate confidenceConfidence reflects how complete and applicable the evidence is. It is not a guarantee of safety or a probability. You still make the decision.Make your decision →Review requirementReady for your reviewPolicy versionprototype-v1No supported trigger found in fetched evidence; this is not a safety guarantee.Closure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.Missing inputs (0)No entries recorded.What could change the recommendation?New NWS warning/update or point applicabilityAQ valid time / forecast changesManager verifies local access, timing or facility conditionsWhy this confidence level?Prototype action mappings for synthetic administrative offices; not USDA, OPM, NOAA or AirNow closure policy.Fetch freshness and AQ age budgets are engineering assumptions.Delay and early dismissal are manager-selectable with verified timing; not automatic recommendations.Completeness/applicability rubric, not probability of correctnessModeled AQ does not establish indoor conditionsStrands evidence brief · UnavailableSYNTHETIC DESIGN TEST: no hosted inference invocation.",
+      "mode": "TEST",
+      "natural": "Normal operations",
+      "people": "Manager decision pending. Recipient routing will be frozen when a human records a decision.",
+      "refreshDisabled": false
+    },
+    {
+      "case": "Observation selector mismatch only: action-specific approve button visible after ready; no new evaluation/restart after timeout",
+      "result": "VERIFIED"
+    },
+    {
+      "case": "Second selector mismatch only: actual title-cased Recorded manager decision present; successful save confirmed without retry",
+      "result": "VERIFIED"
+    },
+    {
+      "case": "Approve double-click saves one decision/outbox and all 12 routes",
+      "result": "VERIFIED",
+      "counts": "9 included · 2 excluded · 1 deferred",
+      "exportUrl": "http://127.0.0.1:8084/api/decisions/f63cd7a8-fa0d-490e-be2b-08d8c9a4168a/export",
+      "historyRows": 10,
+      "managerHidden": true,
+      "mode": "REPLAY",
+      "people": 12
+    },
+    {
+      "case": "Essential/telework/accessibility/offsite/no-shift routes explained; unsent drafts",
+      "result": "VERIFIED",
+      "essential": "Harper Quinn · EssentialIncludedAssigned onsite in affected work periodChannel: App inboxDemo outbox draft · not sentRead draft messageHarper Quinn,\nEssential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.\nWork period: 2026-10-12T05:11:00Z to 2026-10-12T07:11:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: approve the fixture recommendation; no local safety determination and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.Export prototype .eml",
+      "noShift": "Logan FernExcludedNo assigned shift during affected work periodChannel: NoneDraft · not sentRead draft messageLogan Fern,\nNo urgent instruction for this site assignment.\nWork period: 2026-10-12T05:11:00Z to 2026-10-12T07:11:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: approve the fixture recommendation; no local safety determination and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.Export prototype .eml",
+      "offsite": "Kai RowanExcludedCurrent detail/assignment is at another siteChannel: NoneDraft · not sentRead draft messageKai Rowan,\nNo urgent instruction for this site assignment.\nWork period: 2026-10-12T05:11:00Z to 2026-10-12T07:11:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: approve the fixture recommendation; no local safety determination and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.Export prototype .eml",
+      "telework": "Jordan LakeDeferredAlready scheduled for telework; informational inbox onlyChannel: App inboxDraft · not sentManual follow-up: Supervisor reviews the informational draft before the assigned shift starts, or immediately if the shift is already underway. If the employee is reassigned onsite, re-evaluate the updated assignment and record a new manager decision; otherwise continue scheduled telework. This is a manual follow-up step, not an automatic send or scheduled job.Read draft messageJordan Lake,\nInformational update only; continue scheduled telework unless your supervisor directs otherwise.\nFollow-up: Supervisor reviews the informational draft before the assigned shift starts, or immediately if the shift is already underway. If the employee is reassigned onsite, re-evaluate the updated assignment and record a new manager decision; otherwise continue scheduled telework. This is a manual follow-up step, not an automatic send or scheduled job.\nWork period: 2026-10-12T05:11:00Z to 2026-10-12T07:11:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: approve the fixture recommendation; no local safety determination and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.Export prototype .eml",
+      "voice": "Casey BrookIncludedAssigned onsite in affected work periodChannel: Accessible voice draftDemo outbox draft · not sentRead draft messageCasey Brook,\nNo supported prototype trigger found. Continue assigned duties and monitor official updates and supervisor instructions.\nWork period: 2026-10-12T05:11:00Z to 2026-10-12T07:11:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: approve the fixture recommendation; no local safety determination and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX — no email, SMS or voice call sent. Not an official USDA notice.Export prototype .eml"
+    },
+    {
+      "case": "Current v2 memo and JSON download complete",
+      "result": "VERIFIED"
+    }
+  ]
+}

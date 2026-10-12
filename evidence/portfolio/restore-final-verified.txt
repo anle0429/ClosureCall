@@ -1,0 +1,48 @@
+closurecall-portfolio-restore-3bc1ddd
+68eed697a6eb458244a2eebb797e89a2d78e65082d377cf2f7a9d542f53bd31f
+restore_cycle=1
+{
+  "scope": "ISOLATED_BACKUP_RESTORE_NOT_LIVE",
+  "build": "3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
+  "matched_records": 9,
+  "uvicorn_replay_export_outbox_memo": true,
+  "current_rules_and_roster_changed": true,
+  "forbidden_calls": 0,
+  "six_table_fingerprints_unchanged": true,
+  "memo_sha256": {
+    "16a170c1-af9b-4950-86b2-a3eecf1ad26b": "2e240da3ee30aed7fe22ad2d26eaf783c2c6ee1b9e0a49ff7c59d79bc8c93b29",
+    "2efe6988-a638-4887-a15a-abc3319e5879": "eed30aad1cbc7d06e62be456c9c203cc143fa10ce89ea60585ec863abcdc66f6",
+    "42d62a68-1959-4edb-8af9-2b805d8f6105": "3200127703765736c8e8049014a1d77f21cabac38cfffbb3b1c5564def1ad8dc",
+    "4542c699-e59f-4f1f-ae5d-54b82c915333": "cdece6370a8471be930e744f2fadff919b0e8e7341c8ad9a576a6219f2048f9c",
+    "8cfdc9a8-6daa-4576-b901-a93c8a7a1a25": "ab5f5865d32035da055906b2f497a2c79aa96274e3f052f834789aed89442ac8",
+    "9c022ef8-90ac-4f06-848f-24b232c35180": "3d65e69b98ea54084b8a686a677b7948e5b067aad625da2fb41af10ffa3ab6d7",
+    "a9cfe7dc-2336-4cde-8f55-694defe160ad": "f1f22231fcbf57155f200cf3844db2fab2345e9c9d7ff035e2668a32431cfa3b",
+    "cf6d7432-7246-49d0-96ce-cb3da56d7f89": "e24874e1113b25249bf0fdc13cdd0c27dde4d4309658e6c0838388e1f20a1e3e",
+    "fc569eb8-54bd-4989-b9b7-fedcc46b3896": "a730d67239593aacfc23302439808666d0ec010a220bcab661c01fba7f2d37c9"
+  }
+}
+closurecall-portfolio-restore-3bc1ddd-verified
+restore_cycle=2
+{
+  "scope": "ISOLATED_BACKUP_RESTORE_NOT_LIVE",
+  "build": "3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
+  "matched_records": 9,
+  "uvicorn_replay_export_outbox_memo": true,
+  "current_rules_and_roster_changed": true,
+  "forbidden_calls": 0,
+  "six_table_fingerprints_unchanged": true,
+  "memo_sha256": {
+    "16a170c1-af9b-4950-86b2-a3eecf1ad26b": "2e240da3ee30aed7fe22ad2d26eaf783c2c6ee1b9e0a49ff7c59d79bc8c93b29",
+    "2efe6988-a638-4887-a15a-abc3319e5879": "eed30aad1cbc7d06e62be456c9c203cc143fa10ce89ea60585ec863abcdc66f6",
+    "42d62a68-1959-4edb-8af9-2b805d8f6105": "3200127703765736c8e8049014a1d77f21cabac38cfffbb3b1c5564def1ad8dc",
+    "4542c699-e59f-4f1f-ae5d-54b82c915333": "cdece6370a8471be930e744f2fadff919b0e8e7341c8ad9a576a6219f2048f9c",
+    "8cfdc9a8-6daa-4576-b901-a93c8a7a1a25": "ab5f5865d32035da055906b2f497a2c79aa96274e3f052f834789aed89442ac8",
+    "9c022ef8-90ac-4f06-848f-24b232c35180": "3d65e69b98ea54084b8a686a677b7948e5b067aad625da2fb41af10ffa3ab6d7",
+    "a9cfe7dc-2336-4cde-8f55-694defe160ad": "f1f22231fcbf57155f200cf3844db2fab2345e9c9d7ff035e2668a32431cfa3b",
+    "cf6d7432-7246-49d0-96ce-cb3da56d7f89": "e24874e1113b25249bf0fdc13cdd0c27dde4d4309658e6c0838388e1f20a1e3e",
+    "fc569eb8-54bd-4989-b9b7-fedcc46b3896": "a730d67239593aacfc23302439808666d0ec010a220bcab661c01fba7f2d37c9"
+  }
+}
+qa_image=sha256:5fdf4901dc2d30bde0558edf5a1520021145bdce7b3a7fcbd8c5ca5c280c76e8 user=appuser readonly=true network=none ports={}
+closurecall-portfolio-restore-3bc1ddd-verified
+production_image=sha256:9ab42b0dcdfaee241b3d9156ac5433ecd0da772f29707ec6cb397664f0256b90 started=2026-10-11T11:45:50.513230916Z health=healthy

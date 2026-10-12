@@ -1,0 +1,741 @@
+{
+  "mode": "REPLAY",
+  "bundle_hash": "17084343df595467850b4dfdbaec7be28d4dc2b0e3ffb40fc973cadea27363b0",
+  "ai": {
+    "narrative": "SYNTHETIC DESIGN TEST: no hosted inference invocation.",
+    "safe_error_code": "DESIGN_PREVIEW_NO_INFERENCE",
+    "status": "unavailable"
+  },
+  "decision": {
+    "actor": "design-review",
+    "approved_at": "2026-10-12T05:10:23.560194+00:00",
+    "decision_id": "16b1e0e7-2b20-46a0-a7a6-38b36c0ac65f",
+    "effective_window": {
+      "end": "2026-10-12T07:24:00Z",
+      "operating_context": "before_open",
+      "selected_work_date": "2026-10-10",
+      "special_shift": true,
+      "start": "2026-10-12T05:24:00Z",
+      "timezone": "America/Chicago"
+    },
+    "evaluation_id": "a15636ae-07c8-49a0-b7bc-579f6415d68c",
+    "posture": "closure",
+    "reason": "SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: closure override exercises manager authority and recipient drafts; no local safety conclusion and no message sent.",
+    "snapshot_hash": "ba17375456ac4818dd15426b02af68845ce5ab472a7d6cad5f7a5a2ae8830b1e",
+    "stale_or_superseded_override": false,
+    "status": "overridden",
+    "timing_at": null,
+    "timing_basis": ""
+  },
+  "metrics": {
+    "model_calls": 0,
+    "source_http_attempts": 0
+  },
+  "notifications": {
+    "batch_id": "16b1e0e7-2b20-46a0-a7a6-38b36c0ac65f",
+    "counts": {
+      "deferred": 1,
+      "excluded": 2,
+      "included": 9
+    },
+    "mode": "outbox_only",
+    "recipients": [
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "channel": "app_inbox",
+        "email": "employee1@example.com",
+        "employee_id": "demo-01",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "Routine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.",
+        "message": "Avery Hart,\nRoutine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.\nWork period: 2026-10-12T05:24:00Z to 2026-10-12T07:24:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: closure override exercises manager authority and recipient drafts; no local safety conclusion and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX \u2014 no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Avery Hart",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure \u2014 Kansas City \u2014 Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "channel": "app_inbox",
+        "email": "employee2@example.com",
+        "employee_id": "demo-02",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "Routine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.",
+        "message": "Blair Reed,\nRoutine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.\nWork period: 2026-10-12T05:24:00Z to 2026-10-12T07:24:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: closure override exercises manager authority and recipient drafts; no local safety conclusion and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX \u2014 no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Blair Reed",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure \u2014 Kansas City \u2014 Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "channel": "voice_accessible",
+        "email": "employee3@example.com",
+        "employee_id": "demo-03",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "Routine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.",
+        "message": "Casey Brook,\nRoutine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.\nWork period: 2026-10-12T05:24:00Z to 2026-10-12T07:24:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: closure override exercises manager authority and recipient drafts; no local safety conclusion and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX \u2014 no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Casey Brook",
+        "notification_status": "queued_demo",
+        "preferred_channel": "voice_accessible",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure \u2014 Kansas City \u2014 Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "channel": "app_inbox",
+        "email": "employee4@example.com",
+        "employee_id": "demo-04",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "Routine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.",
+        "message": "Drew Vale,\nRoutine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.\nWork period: 2026-10-12T05:24:00Z to 2026-10-12T07:24:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: closure override exercises manager authority and recipient drafts; no local safety conclusion and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX \u2014 no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Drew Vale",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure \u2014 Kansas City \u2014 Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "channel": "app_inbox",
+        "email": "employee5@example.com",
+        "employee_id": "demo-05",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "Routine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.",
+        "message": "Ellis Lane,\nRoutine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.\nWork period: 2026-10-12T05:24:00Z to 2026-10-12T07:24:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: closure override exercises manager authority and recipient drafts; no local safety conclusion and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX \u2014 no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Ellis Lane",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure \u2014 Kansas City \u2014 Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "channel": "app_inbox",
+        "email": "employee6@example.com",
+        "employee_id": "demo-06",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "Routine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.",
+        "message": "Finley Stone,\nRoutine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.\nWork period: 2026-10-12T05:24:00Z to 2026-10-12T07:24:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: closure override exercises manager authority and recipient drafts; no local safety conclusion and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX \u2014 no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Finley Stone",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure \u2014 Kansas City \u2014 Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "channel": "app_inbox",
+        "email": "employee7@example.com",
+        "employee_id": "demo-07",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "Routine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.",
+        "message": "Gray Morgan,\nRoutine onsite reporting is affected. Contact your supervisor for approved work or leave arrangements; this prototype does not grant paid leave.\nWork period: 2026-10-12T05:24:00Z to 2026-10-12T07:24:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: closure override exercises manager authority and recipient drafts; no local safety conclusion and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX \u2014 no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Gray Morgan",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure \u2014 Kansas City \u2014 Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "channel": "app_inbox",
+        "email": "employee8@example.com",
+        "employee_id": "demo-08",
+        "essential": true,
+        "follow_up": null,
+        "instruction": "Essential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.",
+        "message": "Harper Quinn,\nEssential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.\nWork period: 2026-10-12T05:24:00Z to 2026-10-12T07:24:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: closure override exercises manager authority and recipient drafts; no local safety conclusion and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX \u2014 no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Harper Quinn",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure \u2014 Kansas City \u2014 Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "channel": "app_inbox",
+        "email": "employee9@example.com",
+        "employee_id": "demo-09",
+        "essential": true,
+        "follow_up": null,
+        "instruction": "Essential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.",
+        "message": "Indigo Ray,\nEssential personnel: reporting requirements remain subject to supervisor direction. Contact the designated supervisor; follow local emergency procedures.\nWork period: 2026-10-12T05:24:00Z to 2026-10-12T07:24:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: closure override exercises manager authority and recipient drafts; no local safety conclusion and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX \u2014 no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Indigo Ray",
+        "notification_status": "queued_demo",
+        "preferred_channel": "app_inbox",
+        "reason": "Assigned onsite in affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "included",
+        "subject": "ClosureCall prototype: closure \u2014 Kansas City \u2014 Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "telework",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "channel": "app_inbox",
+        "email": "employee10@example.com",
+        "employee_id": "demo-10",
+        "essential": false,
+        "follow_up": "Supervisor reviews the informational draft before the assigned shift starts, or immediately if the shift is already underway. If the employee is reassigned onsite, re-evaluate the updated assignment and record a new manager decision; otherwise continue scheduled telework. This is a manual follow-up step, not an automatic send or scheduled job.",
+        "instruction": "Informational update only; continue scheduled telework unless your supervisor directs otherwise.",
+        "message": "Jordan Lake,\nInformational update only; continue scheduled telework unless your supervisor directs otherwise.\nFollow-up: Supervisor reviews the informational draft before the assigned shift starts, or immediately if the shift is already underway. If the employee is reassigned onsite, re-evaluate the updated assignment and record a new manager decision; otherwise continue scheduled telework. This is a manual follow-up step, not an automatic send or scheduled job.\nWork period: 2026-10-12T05:24:00Z to 2026-10-12T07:24:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: closure override exercises manager authority and recipient drafts; no local safety conclusion and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX \u2014 no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Jordan Lake",
+        "notification_status": "draft",
+        "preferred_channel": "app_inbox",
+        "reason": "Already scheduled for telework; informational inbox only",
+        "roster_version": "synthetic-v1",
+        "routing_status": "deferred",
+        "subject": "ClosureCall prototype: closure \u2014 Kansas City \u2014 Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "other-demo-site",
+        "assignment": "offsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "channel": null,
+        "email": "employee11@example.com",
+        "employee_id": "demo-11",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "No urgent instruction for this site assignment.",
+        "message": "Kai Rowan,\nNo urgent instruction for this site assignment.\nWork period: 2026-10-12T05:24:00Z to 2026-10-12T07:24:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: closure override exercises manager authority and recipient drafts; no local safety conclusion and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX \u2014 no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Kai Rowan",
+        "notification_status": "draft",
+        "preferred_channel": "app_inbox",
+        "reason": "Current detail/assignment is at another site",
+        "roster_version": "synthetic-v1",
+        "routing_status": "excluded",
+        "subject": "ClosureCall prototype: closure \u2014 Kansas City \u2014 Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "no_shift",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "channel": null,
+        "email": "employee12@example.com",
+        "employee_id": "demo-12",
+        "essential": false,
+        "follow_up": null,
+        "instruction": "No urgent instruction for this site assignment.",
+        "message": "Logan Fern,\nNo urgent instruction for this site assignment.\nWork period: 2026-10-12T05:24:00Z to 2026-10-12T07:24:00Z\nConfirmed timing: Not applicable\nManager reason: SYNTHETIC PORTFOLIO UI REHEARSAL ONLY: closure override exercises manager authority and recipient drafts; no local safety conclusion and no message sent.\nClosure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.\n\nSYNTHETIC RECIPIENT / PROTOTYPE DEMO OUTBOX \u2014 no email, SMS or voice call sent. Not an official USDA notice.",
+        "name": "Logan Fern",
+        "notification_status": "draft",
+        "preferred_channel": "app_inbox",
+        "reason": "No assigned shift during affected work period",
+        "roster_version": "synthetic-v1",
+        "routing_status": "excluded",
+        "subject": "ClosureCall prototype: closure \u2014 Kansas City \u2014 Synthetic Administrative Office",
+        "synthetic": true,
+        "telework_eligible": false
+      }
+    ]
+  },
+  "snapshot": {
+    "air_quality": {
+      "attribution": "Open-Meteo / Copernicus Atmosphere Monitoring Service (CAMS)",
+      "fetched_at_utc": "2026-10-12T05:10:00.034725+00:00",
+      "hourly_forecast": [
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T05:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T06:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T07:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T08:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T09:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T10:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T11:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T12:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T13:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T14:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T15:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T16:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T17:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T18:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T19:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T20:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T21:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T22:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-12T23:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-13T00:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-13T01:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-13T02:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-13T03:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-13T04:24:00+00:00"
+        },
+        {
+          "us_aqi": 44,
+          "valid_at_utc": "2026-10-13T05:24:00+00:00"
+        }
+      ],
+      "http_attempts": 1,
+      "modeled": true,
+      "pm2_5": 5.5,
+      "raw_response_sha256": "4f4fc928d88da8b7393c605bf66a9cb2f30a01487904f7e8c3af93cc70e795ae",
+      "request_started_at_utc": "2026-10-10T22:54:45.562011+00:00",
+      "requested_location": {
+        "latitude": 39.0997,
+        "longitude": -94.5786
+      },
+      "response_status": 200,
+      "returned_grid_location": {
+        "latitude": 39.0997,
+        "longitude": -94.5786
+      },
+      "source_id": "aq",
+      "source_url": "https://air-quality-api.open-meteo.com/v1/air-quality?latitude=39.0997&longitude=-94.5786&current=us_aqi%2Cpm2_5&hourly=us_aqi&forecast_days=2&timezone=UTC",
+      "status": "available",
+      "units": {
+        "interval": "seconds",
+        "pm2_5": "\u03bcg/m\u00b3",
+        "time": "iso8601",
+        "us_aqi": "USAQI"
+      },
+      "us_aqi": 44,
+      "valid_at_utc": "2026-10-12T05:10:00.034730+00:00"
+    },
+    "assessment": {
+      "assumptions": [
+        "Prototype action mappings for synthetic administrative offices; not USDA, OPM, NOAA or AirNow closure policy.",
+        "Fetch freshness and AQ age budgets are engineering assumptions.",
+        "Delay and early dismissal are manager-selectable with verified timing; not automatic recommendations."
+      ],
+      "confidence_basis": [
+        "Completeness/applicability rubric, not probability of correctness",
+        "Modeled AQ does not establish indoor conditions"
+      ],
+      "confidence_label": "moderate",
+      "evidence_ids": [
+        "aq"
+      ],
+      "matched_rules": [],
+      "missing_inputs": [],
+      "policy_version": "prototype-v1",
+      "protective_action_notice": "Closure does not mean evacuation. Follow official NWS instructions and established local emergency procedures; essential reporting requirements require supervisor direction.",
+      "rationale_text": "No supported trigger found in fetched evidence; this is not a safety guarantee.",
+      "recommended_posture": "normal",
+      "review_status": "ready_for_manager",
+      "what_would_change": [
+        "New NWS warning/update or point applicability",
+        "AQ valid time / forecast changes",
+        "Manager verifies local access, timing or facility conditions"
+      ]
+    },
+    "collected_at_utc": "2026-10-12T05:10:00.029850+00:00",
+    "facility": {
+      "closing_time_local": "17:00",
+      "display_name": "Kansas City \u2014 Synthetic Administrative Office",
+      "facility_id": "kc-demo",
+      "latitude": 39.0997,
+      "longitude": -94.5786,
+      "minimum_notice_minutes": 30,
+      "opening_time_local": "08:00",
+      "supervisor_contact_label": "Demo facility supervisor",
+      "synthetic": true,
+      "telework_supported": true,
+      "timezone": "America/Chicago",
+      "working_days": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "mode": "LIVE",
+    "nws": {
+      "alerts": [],
+      "fetched_at_utc": "2026-10-12T05:10:00.034662+00:00",
+      "http_attempts": 1,
+      "location_verified": true,
+      "raw_response_sha256": "51bf8d94811bdb7dbf75397338712e961e0723c23a5ba498ebb78b7c7015fc5b",
+      "request_location": {
+        "latitude": 39.0997,
+        "longitude": -94.5786
+      },
+      "request_started_at_utc": "2026-10-10T22:54:45.550914+00:00",
+      "response_status": 200,
+      "source_id": "nws",
+      "source_url": "https://api.weather.gov/alerts/active?point=39.0997%2C-94.5786",
+      "status": "available"
+    },
+    "policy": {
+      "disclaimer": "Prototype action mappings for synthetic administrative offices; not USDA, OPM, NOAA or AirNow closure policy.",
+      "rules": [
+        {
+          "comparator": "category",
+          "conditions": "Actual Severe/Extreme Flood or Flash Flood Warning, point confirmed, unexpired, overlaps work period",
+          "hazard_type": "flooding",
+          "id": "FLOOD_WARNING",
+          "limitations": "Does not prove building inundation or mandate evacuation.",
+          "proposed_posture": "closure",
+          "prototype_mapping_reason": "Avoid routine onsite reporting in a warning area pending manager review.",
+          "reference_claim": "NWS supplies alert categories and instructions, not this prototype closure mapping.",
+          "reference_source_url": "https://www.weather.gov/documentation/services-web-api",
+          "required_context": "Before opening; during an ongoing shift require local emergency procedure review.",
+          "threshold": null,
+          "units": null,
+          "version": "1"
+        },
+        {
+          "comparator": "category",
+          "conditions": "Actual High Wind Warning, point confirmed, unexpired, overlaps work period, telework supported",
+          "hazard_type": "high_wind",
+          "id": "WIND_WARNING",
+          "limitations": "No invented wind speed exceedance; no route safety guarantee.",
+          "proposed_posture": "telework",
+          "prototype_mapping_reason": "Reduce routine commute exposure subject to manager review.",
+          "reference_claim": "Warning category is NWS evidence; telework is a prototype mapping.",
+          "reference_source_url": "https://www.weather.gov/documentation/services-web-api",
+          "required_context": "Facility supports telework",
+          "threshold": null,
+          "units": null,
+          "version": "1"
+        },
+        {
+          "comparator": ">=",
+          "conditions": "Fresh modeled AQ valid for the selected window and US AQI >=151",
+          "hazard_type": "poor_air_quality",
+          "id": "AQ_151",
+          "limitations": "Modeled grid estimate; not indoor or building sensor reading.",
+          "proposed_posture": "telework",
+          "prototype_mapping_reason": "Use telework candidate to reduce routine outdoor exposure; manager validates local context.",
+          "reference_claim": "AQI 151\u2013200 is the unhealthy category. This does not prescribe office closure.",
+          "reference_source_url": "https://www.airnow.gov/aqi/aqi-basics/",
+          "required_context": "Fresh valid-time evidence, telework supported",
+          "threshold": 151,
+          "units": "US AQI points",
+          "version": "1"
+        }
+      ],
+      "version": "prototype-v1"
+    },
+    "roster": [
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "email": "employee1@example.com",
+        "employee_id": "demo-01",
+        "essential": false,
+        "name": "Avery Hart",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "email": "employee2@example.com",
+        "employee_id": "demo-02",
+        "essential": false,
+        "name": "Blair Reed",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "email": "employee3@example.com",
+        "employee_id": "demo-03",
+        "essential": false,
+        "name": "Casey Brook",
+        "preferred_channel": "voice_accessible",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "email": "employee4@example.com",
+        "employee_id": "demo-04",
+        "essential": false,
+        "name": "Drew Vale",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "email": "employee5@example.com",
+        "employee_id": "demo-05",
+        "essential": false,
+        "name": "Ellis Lane",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "email": "employee6@example.com",
+        "employee_id": "demo-06",
+        "essential": false,
+        "name": "Finley Stone",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "email": "employee7@example.com",
+        "employee_id": "demo-07",
+        "essential": false,
+        "name": "Gray Morgan",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "email": "employee8@example.com",
+        "employee_id": "demo-08",
+        "essential": true,
+        "name": "Harper Quinn",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "onsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "email": "employee9@example.com",
+        "employee_id": "demo-09",
+        "essential": true,
+        "name": "Indigo Ray",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "telework",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "email": "employee10@example.com",
+        "employee_id": "demo-10",
+        "essential": false,
+        "name": "Jordan Lake",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": true
+      },
+      {
+        "assigned_facility_id": "other-demo-site",
+        "assignment": "offsite",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "email": "employee11@example.com",
+        "employee_id": "demo-11",
+        "essential": false,
+        "name": "Kai Rowan",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      },
+      {
+        "assigned_facility_id": "kc-demo",
+        "assignment": "no_shift",
+        "assignment_end": "2026-10-12T07:24:00Z",
+        "assignment_start": "2026-10-12T05:24:00Z",
+        "email": "employee12@example.com",
+        "employee_id": "demo-12",
+        "essential": false,
+        "name": "Logan Fern",
+        "preferred_channel": "app_inbox",
+        "roster_version": "synthetic-v1",
+        "synthetic": true,
+        "telework_eligible": false
+      }
+    ],
+    "roster_version": "synthetic-v1",
+    "snapshot_id": "a15636ae-07c8-49a0-b7bc-579f6415d68c",
+    "test_evidence_label": "SYNTHETIC DESIGN TEST \u2014 no weather or model call",
+    "work_period": {
+      "end": "2026-10-12T07:24:00Z",
+      "operating_context": "before_open",
+      "selected_work_date": "2026-10-10",
+      "special_shift": true,
+      "start": "2026-10-12T05:24:00Z",
+      "timezone": "America/Chicago"
+    }
+  },
+  "snapshot_hash": "ba17375456ac4818dd15426b02af68845ce5ab472a7d6cad5f7a5a2ae8830b1e",
+  "trace": []
+}

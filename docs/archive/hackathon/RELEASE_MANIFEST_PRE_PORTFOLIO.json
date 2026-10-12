@@ -1,0 +1,95 @@
+{
+  "updated_at": "2026-10-10T23:24:04Z",
+  "quality_status": "READY_WITH_DISCLOSED_LIMITATIONS",
+  "submission_status": "NOT_SUBMITTED",
+  "runtime_source_commit": "e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
+  "documentation_commit": "78c0ddd0c36603b25a2f45104e149b94a6f0ff2a",
+  "candidate_source_commit": "e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
+  "image_id": "sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184",
+  "image_tag": "closurecall-verified:e5f7801829aaa1f7cfd326e02e415f8389fa3dde",
+  "image_registry_digest": null,
+  "dependencies": {
+    "python_linux": "3.12.15",
+    "strands-agents": "1.59.0",
+    "fastapi": "0.143.0",
+    "pydantic": "2.14.0",
+    "httpx": "0.28.1",
+    "lockfile": "requirements-linux.lock"
+  },
+  "policy_version": "prototype-v1",
+  "observed_container_started_at": "2026-10-10T22:59:42.908771858Z",
+  "runtime_verified_at": "2026-10-10T23:16:01Z",
+  "access": {
+    "mode": "PRIVATE_SSH_TUNNEL",
+    "server": "172.234.201.174",
+    "server_bind": "127.0.0.1:8000",
+    "local_url": "http://127.0.0.1:8081/",
+    "judge_access": "UNKNOWN_USER_DEFERRED"
+  },
+  "backup": {
+    "latest_path_in_container": "/app/data/backups/closurecall-20261010T225942Z.sqlite3",
+    "decision_count": 8,
+    "drilled_path_in_container": "/app/data/backups/closurecall-20261010T225050Z.sqlite3",
+    "drilled_decision_count": 6,
+    "drilled_backup_sha256": "3131e3b36c7407054bce0d7cbfe698dd6563dfdf86faff9fd4889700f1a348f6",
+    "restore_status": "VERIFIED_SEPARATE_CONTAINER_VOLUME",
+    "latest_eight_record_backup_restored": false,
+    "report": "RESTORE_DRILL.md",
+    "latest_backup_sha256": "0992c1f1b4f8297ad04f2280ffe00b72c83f2d168cc42e73d3da0f03c27c537b"
+  },
+  "test_evidence": {
+    "windows_candidate": "evidence/release/windows-tests.txt",
+    "windows_result": "65 passed in 8.69s",
+    "linux_candidate": "evidence/release/linux-image-deploy.txt",
+    "linux_result": "65 passed in 6.29s",
+    "live_candidate": [
+      "evidence/release/kc-smoke-summary.json",
+      "evidence/release/fixed-watch-summary.json"
+    ],
+    "rehearsal": "REHEARSAL_RESULTS.md",
+    "restore": "evidence/release/restore-restarted.txt",
+    "restart": "evidence/release/final-restart-runtime.txt",
+    "cloud_manager": "evidence/release/cloud-manager-vm.png",
+    "secret_scan": "evidence/release/secret-scan.json"
+  },
+  "cutoff": "2026-10-11T08:00:00-05:00",
+  "documentation_commit_resolution": "Reviewed documentation follow-up including Vietnamese presenter notes and attribution metadata; original release evidence separately pinned at evidence_checkpoint_commit. Later metadata commits do not redeploy the frozen application.",
+  "baseline_documentation_commit": "607630726fc0004bb2890fe0bff293ee67fecfdc",
+  "image_digest": "sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184",
+  "image_digest_kind": "Docker local OCI image ID and locally observed RepoDigest; no external registry publication",
+  "deployed_at": "2026-10-10T22:50:51.763543705Z",
+  "dependency_versions": {
+    "python_linux": "3.12.15",
+    "strands-agents": "1.59.0",
+    "fastapi": "0.143.0",
+    "pydantic": "2.14.0",
+    "httpx": "0.28.1",
+    "lockfile": "requirements-linux.lock"
+  },
+  "access_mode": "PRIVATE_SSH_TUNNEL",
+  "backup_ref": "/app/data/backups/closurecall-20261010T225942Z.sqlite3",
+  "observed_repo_digest": "closurecall-verified@sha256:11bddbc767275d8af7d603511596cc432b5862fe07fd880d5404fac8d13f7184",
+  "user_source_integrity": "All six supplied goal/source files match PACKAGE_MANIFEST.json; retained locally untracked.",
+  "evidence_checkpoint_commit": "2a98f48d40009beeec560e3c3da304755aeffd9c",
+  "documentation_followup": {
+    "scope": "Documentation only; app/image/policy/dependencies unchanged; no new tests/live calls/redeploy",
+    "presenter_notes": "DEMO_PRESENTER_NOTES.md",
+    "attributions": "ATTRIBUTIONS.md",
+    "runtime_read": "evidence/release-followup/runtime-health.txt",
+    "distribution_metadata": "evidence/release-followup/distribution-metadata.json"
+  },
+  "blocker_audit": {
+    "checked_at": "2026-10-10T23:24:04Z",
+    "condition": "User-deferred organizer-approved judge/code access and portal/team/tracks/Submit/receipt",
+    "gates": [
+      "G4 judge/code access",
+      "G6 actual form and submitted receipt"
+    ],
+    "consecutive_goal_turns_with_same_condition": 3,
+    "previous_goal_turn_classification": "PROGRESS: documentation commits 78c0ddd / a5b433e and verified private push",
+    "independent_technical_work_remaining": "None within existing authorization/tools; human spoken rehearsal remains user-owned and unverified",
+    "disposition": "Stop autonomous goal continuation at external blocker; full objective not achieved",
+    "submission_receipt": null,
+    "no_new_test_or_live_call": true
+  }
+}

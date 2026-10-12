@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-10-12T05:15:41.178548+00:00",
+  "candidate": "3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
+  "original_production_six_tables_and_nine_records_unchanged": true,
+  "qa_original_nine_records_unchanged": true,
+  "qa_two_runs_two_decisions_only": true,
+  "qa_counts": {
+    "runs": 12,
+    "snapshots": 12,
+    "results": 12,
+    "decisions": 11,
+    "outbox": 11
+  },
+  "authenticated_downloads": [
+    {
+      "decision_id": "f63cd7a8-fa0d-490e-be2b-08d8c9a4168a",
+      "action": "approve",
+      "download_bytes_exact": true,
+      "provider_calls": 0
+    },
+    {
+      "decision_id": "16b1e0e7-2b20-46a0-a7a6-38b36c0ac65f",
+      "action": "override",
+      "download_bytes_exact": true,
+      "provider_calls": 0
+    }
+  ]
+}

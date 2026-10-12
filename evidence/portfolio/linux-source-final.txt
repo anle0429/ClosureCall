@@ -1,0 +1,59 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 588B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#2 DONE 0.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 156B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#4 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 197.11kB 0.0s done
+#5 DONE 0.0s
+
+#6 [2/7] WORKDIR /app
+#6 CACHED
+
+#7 [3/7] COPY requirements.txt requirements-linux.lock ./
+#7 CACHED
+
+#8 [4/7] RUN pip install -r requirements-linux.lock && pip check
+#8 CACHED
+
+#9 [5/7] COPY app ./app
+#9 DONE 0.0s
+
+#10 [6/7] COPY scripts ./scripts
+#10 DONE 0.0s
+
+#11 [7/7] RUN useradd --create-home --uid 10001 appuser && mkdir -p /app/data && chown -R appuser:appuser /app
+#11 DONE 0.4s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.3s done
+#12 exporting manifest sha256:8e646be2a6ed591b5136db54ff4503c406a6ee617768b64788f5ec3ce37493a5
+#12 exporting manifest sha256:8e646be2a6ed591b5136db54ff4503c406a6ee617768b64788f5ec3ce37493a5 done
+#12 exporting config sha256:7543e18e66e1e5c3e85dcd99afe526f039dde284d996310f624f697b8a47a564 done
+#12 exporting attestation manifest sha256:a0cbdd390ba8b6b04947eeec9944b64d054e965dc152efbcbf77c8a98c1891d4 0.0s done
+#12 exporting manifest list sha256:5fdf4901dc2d30bde0558edf5a1520021145bdce7b3a7fcbd8c5ca5c280c76e8 0.0s done
+#12 naming to docker.io/library/closurecall-portfolio:3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24 done
+#12 unpacking to docker.io/library/closurecall-portfolio:3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24 0.1s done
+#12 DONE 0.5s
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+........................................................................ [ 79%]
+...................                                                      [100%]
+91 passed in 7.43s
+
+template parsing error: template: :1:43: executing "" at <.Config.Labels>: map has no entry for key "Labels"

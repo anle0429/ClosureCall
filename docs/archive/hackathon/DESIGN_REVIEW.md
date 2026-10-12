@@ -8,18 +8,18 @@ This follow-up changes only the same three existing static files. API paths, enu
 
 | Comparison | Before refinement | Current candidate |
 | --- | --- | --- |
-| Desktop, requested 1440 × 1000 | [Before](evidence/usability/before-desktop.jpg) | [After](evidence/usability/after-desktop.jpg) |
-| Narrow, requested 390 × 844 | [Before](evidence/usability/before-narrow.jpg) | [After](evidence/usability/after-narrow.jpg) |
+| Desktop, requested 1440 × 1000 | [Before](../../../evidence/usability/before-desktop.jpg) | [After](../../../evidence/usability/after-desktop.jpg) |
+| Narrow, requested 390 × 844 | [Before](../../../evidence/usability/before-narrow.jpg) | [After](../../../evidence/usability/after-narrow.jpg) |
 
-Both comparisons retain the same historical decision `16a170c1-af9b-4950-86b2-a3eecf1ad26b`; its Flood Watch is saved evidence, not current weather. The site's original synthetic name remains unchanged. Additional views: [weather and recommendation](evidence/usability/weather-and-recommendation-desktop.jpg), [conditional timing form](evidence/usability/manager-form-desktop.jpg), [essential draft](evidence/usability/drafts-desktop.jpg), and [loading guidance](evidence/usability/loading.jpg). First-use and loading captures show the same guidance during development; final comparison images are pinned to the final source hashes in [metadata](evidence/usability/capture-metadata.json).
+Both comparisons retain the same historical decision `16a170c1-af9b-4950-86b2-a3eecf1ad26b`; its Flood Watch is saved evidence, not current weather. The site's original synthetic name remains unchanged. Additional views: [weather and recommendation](../../../evidence/usability/weather-and-recommendation-desktop.jpg), [conditional timing form](../../../evidence/usability/manager-form-desktop.jpg), [essential draft](../../../evidence/usability/drafts-desktop.jpg), and [loading guidance](../../../evidence/usability/loading.jpg). First-use and loading captures show the same guidance during development; final comparison images are pinned to the final source hashes in [metadata](../../../evidence/usability/capture-metadata.json).
 
 Actually verified in this follow-up:
 
-- Full existing Windows suite on final source: **89 passed in 12.49s**, [log](evidence/usability/windows-tests-final.txt). JavaScript syntax and dependency consistency pass.
+- Full existing Windows suite on final source: **89 passed in 12.49s**, [log](../../../evidence/usability/windows-tests-final.txt). JavaScript syntax and dependency consistency pass.
 - Browser flow through real existing authenticated endpoints with synthetic evaluations: double-click evaluation, approve, reasonless override error, missing timing error, reasoned delayed-arrival override, draft routing, list Refresh and reload of acknowledged records. Original normal recommendation and recorded delayed timing remain separate.
 - Rendered historical unsupported hazard and rejection are understandable; rejection shows its actual **0 included / 12 excluded / 0 deferred**. All 12 recipient routes, accessible voice draft and deferred manual follow-up remain visible. No notification was sent.
-- Five responsive widths (320, 390, 720, 920, 1440): no measured document overflow or clipped visible cards/controls. Desktop/narrow screenshots inspected. Final console query returned no warning/error entries. [21 scoped browser checks](evidence/usability/browser-checks.json).
-- Two original frozen exports remain exactly equal after new writes. QA database now has 10 runs, 9 decisions and 9 outbox packages; each decided run has one decision. New UI-downloaded delayed-override JSON and essential EML headers/message exactly match stored records. The previously downloaded historical memo was rechecked, not downloaded again. [Integrity proof](evidence/usability/integrity-and-downloads.json).
+- Five responsive widths (320, 390, 720, 920, 1440): no measured document overflow or clipped visible cards/controls. Desktop/narrow screenshots inspected. Final console query returned no warning/error entries. [21 scoped browser checks](../../../evidence/usability/browser-checks.json).
+- Two original frozen exports remain exactly equal after new writes. QA database now has 10 runs, 9 decisions and 9 outbox packages; each decided run has one decision. New UI-downloaded delayed-override JSON and essential EML headers/message exactly match stored records. The previously downloaded historical memo was rechecked, not downloaded again. [Integrity proof](../../../evidence/usability/integrity-and-downloads.json).
 - The 33 release, 3 follow-up, 26 feedback, 37 initial design evidence hashes and 6 supplied package hashes remain unchanged. Configured manager/inference values and credential patterns checked without printing values.
 
 **NOT VERIFIED in this follow-up:** fresh LIVE-provider/model operation, exact Linux candidate build/tests, production UI/health, screen-reader certification, memo print rendering, and human rehearsal. The new next-step copy for an active incomplete assessment was inspected in source but not browser-exercised; the historical unsupported wording was rendered. Initial design sign-in timeout/keyboard/rejection-write checks below are dated earlier observations, not new follow-up runs. Full-suite counts do not prove every requirement.
@@ -40,16 +40,16 @@ Both comparisons show the same frozen historical decision `16a170c1-af9b-4950-86
 
 | Viewport requested | Before | After |
 | --- | --- | --- |
-| Desktop, 1440 × 1000 | [Original desk](evidence/design/before-desktop.jpg) | [Candidate desk](evidence/design/after-desktop.jpg) |
-| Narrow, 390 × 844 | [Original narrow desk](evidence/design/before-narrow.jpg) | [Candidate narrow desk](evidence/design/after-narrow.jpg) |
-| Full desktop page | [Before](evidence/design/before-desktop-full.jpg) | [After](evidence/design/after-desktop-full.jpg) |
-| Full narrow page | [Before](evidence/design/before-narrow-full.jpg) | [After](evidence/design/after-narrow-full.jpg) |
+| Desktop, 1440 × 1000 | [Original desk](../../../evidence/design/before-desktop.jpg) | [Candidate desk](../../../evidence/design/after-desktop.jpg) |
+| Narrow, 390 × 844 | [Original narrow desk](../../../evidence/design/before-narrow.jpg) | [Candidate narrow desk](../../../evidence/design/after-narrow.jpg) |
+| Full desktop page | [Before](../../../evidence/design/before-desktop-full.jpg) | [After](../../../evidence/design/after-desktop-full.jpg) |
+| Full narrow page | [Before](../../../evidence/design/before-narrow-full.jpg) | [After](../../../evidence/design/after-narrow-full.jpg) |
 
-The browser returns JPEG frames. Their measured encoded sizes are recorded separately in [capture metadata](evidence/design/capture-metadata.json); viewport settings and image pixel dimensions are not assumed identical.
+The browser returns JPEG frames. Their measured encoded sizes are recorded separately in [capture metadata](../../../evidence/design/capture-metadata.json); viewport settings and image pixel dimensions are not assumed identical.
 
-![Candidate weather evidence and separate original recommendation / manager decision](evidence/design/after-evidence-desktop.jpg)
+![Candidate weather evidence and separate original recommendation / manager decision](../../../evidence/design/after-evidence-desktop.jpg)
 
-Additional views: [manager timing form](evidence/design/after-manager-timing.jpg), [essential-personnel draft](evidence/design/after-essential-draft.jpg), [narrow draft](evidence/design/after-drafts-narrow.jpg), [loading](evidence/design/after-loading-desktop.jpg), [sign-in timeout](evidence/design/after-login-error-narrow.jpg), [synthetic missing source](evidence/design/after-missing-source-desktop.jpg).
+Additional views: [manager timing form](../../../evidence/design/after-manager-timing.jpg), [essential-personnel draft](../../../evidence/design/after-essential-draft.jpg), [narrow draft](../../../evidence/design/after-drafts-narrow.jpg), [loading](../../../evidence/design/after-loading-desktop.jpg), [sign-in timeout](../../../evidence/design/after-login-error-narrow.jpg), [synthetic missing source](../../../evidence/design/after-missing-source-desktop.jpg).
 
 ## What changed
 
@@ -68,24 +68,24 @@ All new browser decisions used a separate ignored SQLite database at loopback `8
 
 | Check | Result and evidence |
 | --- | --- |
-| Full existing Windows suite on final static source | **VERIFIED**: 89 passed in 12.43s; [final log](evidence/design/windows-tests-final.txt). Earlier executions also passed; they are separate observations. |
-| JavaScript syntax / dependency consistency | **VERIFIED**: `node --check app/static/app.js`; `python -m pip check` reported no broken requirements. [Verification record](evidence/design/verification.json). |
-| Sign-in error, timeout, retry | **VERIFIED** in isolated preview; [browser checks](evidence/design/browser-checks.json) and timeout screenshot. |
-| Invalid work period / reasonless override / missing timing | **VERIFIED**: existing API returned 422 / 422 / 409 respectively; visible errors and restored retry buttons. [Access-log excerpt](evidence/design/browser-server.txt). |
+| Full existing Windows suite on final static source | **VERIFIED**: 89 passed in 12.43s; [final log](../../../evidence/design/windows-tests-final.txt). Earlier executions also passed; they are separate observations. |
+| JavaScript syntax / dependency consistency | **VERIFIED**: `node --check app/static/app.js`; `python -m pip check` reported no broken requirements. [Verification record](../../../evidence/design/verification.json). |
+| Sign-in error, timeout, retry | **VERIFIED** in isolated preview; [browser checks](../../../evidence/design/browser-checks.json) and timeout screenshot. |
+| Invalid work period / reasonless override / missing timing | **VERIFIED**: existing API returned 422 / 422 / 409 respectively; visible errors and restored retry buttons. [Access-log excerpt](../../../evidence/design/browser-server.txt). |
 | Evaluate → review → approve → outbox → replay | **VERIFIED**, synthetic evidence through existing authenticated decision endpoint. |
 | Normal recommendation → reasoned closure override | **VERIFIED**; original normal recommendation remains distinct from stored closure. |
 | Delayed arrival with confirmed time and basis | **VERIFIED**; initial missing-timing error, successful retry and stored timing displayed in replay. |
 | Reasoned rejection / variable counts | **VERIFIED**; actual rejection package shows 0 included / 12 excluded / 0 deferred. Approved/override cases show their actual 9 / 2 / 1 counts. |
 | Reload / double-click / Refresh | **VERIFIED** for acknowledged active evaluation, decision double-clicks and history refresh. Each decided run has exactly one decision and one outbox package; one additional test evaluation remains unreviewed. Refresh before a POST acknowledgement is not guaranteed by this check. |
 | All 12 recipient routes / essential / telework / offsite / no shift | **VERIFIED** in rendered frozen and synthetic packages; channel, reason, unsent status and manual follow-up visible. |
-| Original historical data after new browser writes | **VERIFIED**: two original exports, bundle hashes and drafts exactly equal; [integrity/download audit](evidence/design/final-integrity-and-downloads.json). |
+| Original historical data after new browser writes | **VERIFIED**: two original exports, bundle hashes and drafts exactly equal; [integrity/download audit](../../../evidence/design/final-integrity-and-downloads.json). |
 | JSON / essential `.eml` / HTML memo downloads | **VERIFIED**: actual browser downloads match frozen record / stored headers and message / renderer bytes respectively. Downloaded memo visual/print layout is **NOT VERIFIED**. |
 | Desktop and narrow layout | **VERIFIED** at requested widths 1440, 920, 720, 390 and 320; no document overflow or clipped visible cards/form controls. Screenshots inspected at desktop and narrow sizes. |
 | Keyboard disclosure and focus | **VERIFIED**: Enter toggles a native disclosure; Tab moves to the next workspace link with a visible solid outline. Not an accessibility certification. |
 | Browser warning/error console | No entries returned by the final captured console query. This is not proof that every browser is error-free. |
 | Earlier release/follow-up/feedback evidence and supplied package | **VERIFIED**: 33 + 3 + 26 evidence hashes and six package file hashes unchanged. |
 
-[Browser QA harness](evidence/design/browser-preview-harness.py), [missing-source fixture](evidence/design/missing-source-fixture.py) and [read-only integrity audit](evidence/design/integrity-audit.py) are evidence utilities. They are not application modules or deployment entry points. The synthetic preview credential is only for this loopback test service and is not a production credential.
+[Browser QA harness](../../../evidence/design/browser-preview-harness.py), [missing-source fixture](../../../evidence/design/missing-source-fixture.py) and [read-only integrity audit](../../../evidence/design/integrity-audit.py) are evidence utilities. They are not application modules or deployment entry points. The synthetic preview credential is only for this loopback test service and is not a production credential.
 
 ## Limits and review
 
@@ -97,6 +97,6 @@ All new browser decisions used a separate ignored SQLite database at loopback `8
 
 The local preview at `http://127.0.0.1:8084/` is left open for candidate review, separate from production tunnel `8081`. If reopening after the test server stops, run `.venv\Scripts\python.exe evidence\design\browser-preview-harness.py`; it creates a new isolated database and blocks provider calls. Use username `design-review` and the explicitly synthetic password in that harness. Do not run the harness on the Linode or bind it publicly.
 
-**User approval is required before deployment because this design request explicitly requires candidate review first.** After approval, a separate deployment gate must test the exact Linux candidate image, obtain a fresh backup of actual current production data, and retain code rollback with the current database. Do not restore an old backup over newer decisions for a code-only rollback. Existing recovery/tunnel instructions remain in [DEMO_RECOVERY.md](DEMO_RECOVERY.md). Judge access and Submit remain user-owned.
+**User approval is required before deployment because this design request explicitly requires candidate review first.** After approval, a separate deployment gate must test the exact Linux candidate image, obtain a fresh backup of actual current production data, and retain code rollback with the current database. Do not restore an old backup over newer decisions for a code-only rollback. Existing recovery/tunnel instructions remain in [DEMO_RECOVERY.md](../../DEMO_RECOVERY.md). Judge access and Submit remain user-owned.
 
-The 60-minute timebox began at `2026-10-11T03:09:56Z`. Verification time and measured elapsed time are recorded in [verification.json](evidence/design/verification.json).
+The 60-minute timebox began at `2026-10-11T03:09:56Z`. Verification time and measured elapsed time are recorded in [verification.json](../../../evidence/design/verification.json).

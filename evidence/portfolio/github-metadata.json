@@ -1,0 +1,9 @@
+{
+  "observed_at_utc": "2026-10-12T02:28:00.336932+00:00",
+  "repository": "anle0429/ClosureCall",
+  "private": true,
+  "visibility": "private",
+  "default_branch": "master",
+  "result": "VERIFIED",
+  "scope": "Read-only metadata for existing authorized remote; no token output/storage or permission change"
+}

@@ -6,7 +6,7 @@ Main 8081 now serves the verified precision design and earlier bounded feedback 
 
 Latest real-source/model workflow was run on a separate remote QA copy: KC NWS zero alerts, modeled AQ available, five Strands tools, natural Normal and explicit test approval/drafts/replay. It does not demonstrate a fresh live-warning branch. The original Flood Watch and warning examples are historical REPLAY, with original synthetic assumptions intact. Original 9 decision packages are unchanged after deployment.
 
-Public exposure/domain work was cancelled; present through the laptop's private SSH tunnel. Tunnel/network or a reload requiring sign-in can interrupt the demo; see [recovery](DEMO_RECOVERY.md). Human spoken rehearsal, full accessibility certification and downloaded memo visual/print QA remain unverified. No real delivery, current local power/water/security verification, official thresholds/authority or agency endorsement. Judge access and Submit remain user-owned; no submission receipt is claimed.
+Public exposure/domain work was cancelled; present through the laptop's private SSH tunnel. Tunnel/network or a reload requiring sign-in can interrupt the demo; see [recovery](../../DEMO_RECOVERY.md). Human spoken rehearsal, full accessibility certification and downloaded memo visual/print QA remain unverified. No real delivery, current local power/water/security verification, official thresholds/authority or agency endorsement. Judge access and Submit remain user-owned; no submission receipt is claimed.
 
 ## Earlier e5f7801 / feedback checkpoint — dated history
 

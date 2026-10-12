@@ -17,6 +17,6 @@ Application source `a5681bcd98400fd75d02670f378a04365459dd7e`; image `sha256:9ab
 
 No new NWS/model invocation, original production evaluation/decision, public exposure, real notification sending or Submit in this checkpoint. Earlier real-source/model proof remains dated evidence in `evidence/precision-release`. Existing env, DB, original backups, immediate prior 4dffaac and earlier e5f7801 retained. Documentation/GitHub progress can advance independently of the frozen deployed source.
 
-![Main refresh control](evidence/work-hours-refresh/main-desktop.jpg)
+![Main refresh control](../../../evidence/work-hours-refresh/main-desktop.jpg)
 
-Use [demo script](DEMO_SCRIPT.md) and [private recovery](DEMO_RECOVERY.md). Refresh is based on the device clock; keep it correct. It does not refresh NWS/AQ or turn historical weather into current evidence.
+Use [demo script](../../DEMO_SCRIPT.md) and [private recovery](../../DEMO_RECOVERY.md). Refresh is based on the device clock; keep it correct. It does not refresh NWS/AQ or turn historical weather into current evidence.
