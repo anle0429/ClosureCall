@@ -1,4 +1,4 @@
-# Direct dependency versions verified on Windows/Python 3.13.9. Linux lock pending.
+# Runtime versions verified on Windows/Python 3.13.9; Linux transitive lock is requirements-linux.lock.
 fastapi==0.143.0
 uvicorn==0.54.0
 httpx==0.28.1

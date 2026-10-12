@@ -10,3 +10,4 @@ backups/
 *.sqlite3*
 *.log
 artifacts/
+node_modules/

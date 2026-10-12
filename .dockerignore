@@ -6,6 +6,7 @@
 data
 backups
 artifacts
+node_modules
 __pycache__
 .pytest_cache
 *.sqlite3*

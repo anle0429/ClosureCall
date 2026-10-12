@@ -1,0 +1,12 @@
+{
+  "name": "closurecall-development-tools",
+  "private": true,
+  "description": "Formatting tools for the existing static frontend; no frontend build step.",
+  "scripts": {
+    "format": "prettier --write app/static/index.html app/static/styles.css app/static/app.js",
+    "format:check": "prettier --check app/static/index.html app/static/styles.css app/static/app.js"
+  },
+  "devDependencies": {
+    "prettier": "3.9.10"
+  }
+}
