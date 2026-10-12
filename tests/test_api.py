@@ -1,9 +1,9 @@
 from dataclasses import replace
-from datetime import timedelta
+from datetime import datetime, timedelta, timezone
 import json
 import pytest
 from fastapi.testclient import TestClient
-from app.services.audit import utcnow
+from app.services.audit import utcnow, parse_time
 from app.services import evaluation
 from app.clients import nws, air_quality
 
@@ -159,7 +159,21 @@ def test_auth_actor_spoof_unknown_fields_and_cross_origin(client, snapshot):
     )
 
 
-def test_work_period_validation(client, snapshot):
+@pytest.mark.parametrize(
+    ("fixed_now", "expected_status"),
+    [
+        # Sunday evening: the upcoming work start is still on the weekend.
+        (datetime(2026, 10, 12, 1, 0, tzinfo=timezone.utc), 422),
+        # Sunday 23:55 Chicago: ten minutes ahead is Monday, a working day.
+        (datetime(2026, 10, 12, 4, 55, tzinfo=timezone.utc), 202),
+    ],
+)
+def test_work_period_validation(
+    client, snapshot, monkeypatch, fixed_now, expected_status
+):
+    import app.main as main
+
+    monkeypatch.setattr(main, "utcnow", lambda: fixed_now)
     payload = {
         "facility_id": "kc-demo",
         **{k: snapshot["work_period"][k] for k in ("start", "end", "special_shift")},
@@ -174,24 +188,21 @@ def test_work_period_validation(client, snapshot):
         ).status_code
         == 422
     )
-    # A weekend work period needs special-shift acknowledgement.
-    now = utcnow()
-    if (
-        now.astimezone(__import__("zoneinfo").ZoneInfo("America/Chicago")).weekday()
-        >= 5
-    ):
-        payload["start"] = (now + timedelta(minutes=10)).isoformat()
-        payload["end"] = (now + timedelta(hours=2)).isoformat()
-        payload["special_shift"] = False
-        assert (
-            client.post(
-                "/api/evaluations",
-                json=payload,
-                auth=AUTH,
-                headers={"Idempotency-Key": "weekend-key"},
-            ).status_code
-            == 422
-        )
+    # The facility-local work start, not today's date, determines the day rule.
+    payload["start"] = (fixed_now + timedelta(minutes=10)).isoformat()
+    payload["end"] = (fixed_now + timedelta(hours=2)).isoformat()
+    payload["special_shift"] = False
+    response = client.post(
+        "/api/evaluations",
+        json=payload,
+        auth=AUTH,
+        headers={"Idempotency-Key": "work-day-boundary-key"},
+    )
+    assert response.status_code == expected_status
+    if expected_status == 202:
+        assert parse_time(
+            main.store.run(response.json()["run_id"])["request"]["start"]
+        ) == parse_time(payload["start"])
 
 
 def test_ui_security_headers_and_no_inner_html(client):
