@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13T08:27:46.174845+00:00",
+  "updated_at": "2026-10-13T09:13:20.911825+00:00",
   "quality_status": "PREP_COMPLETE_PENDING_EXTERNAL",
   "submission_status": "ON_HOLD / NOT_SUBMITTED",
   "runtime_source_commit": "a5681bcd98400fd75d02670f378a04365459dd7e",
@@ -148,7 +148,7 @@
     "pending_external": [
       "Human spoken rehearsal and actual print if used",
       "License/team credits and publication rights",
-      "Public repository/demo access or LinkedIn posting if requested",
+      "Public app/demo access or LinkedIn posting if requested; repository source now public",
       "New deployment approval if requested",
       "User-owned organizer fields/terms/eligibility/Submit/receipt; submission ON_HOLD"
     ],
@@ -194,5 +194,15 @@
     "documentation_checkpoint": "2ba6096b2c102253b5792246993beeaec1c27c22",
     "push_evidence": "evidence/product-review-20261013/push-checkpoint.json",
     "evidence_manifest": "evidence/product-review-20261013/manifest.json"
+  },
+  "repository_publication": {
+    "visibility": "public",
+    "authorized_by": "Explicit user request",
+    "verified_at": "2026-10-13T09:13:20.911825+00:00",
+    "verified_public_commit": "3872da4ca95ef8be3637b9118f3433532ea0b98f",
+    "anonymous_http_status": 200,
+    "evidence": "evidence/publication-20261013/visibility.json",
+    "app_exposure_or_deployment": false,
+    "project_license_selected": false
   }
 }

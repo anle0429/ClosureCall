@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-13T09:13:20.911825+00:00",
+  "repository": "anle0429/ClosureCall",
+  "html_url": "https://github.com/anle0429/ClosureCall",
+  "previous_visibility": "private",
+  "visibility": "public",
+  "private": false,
+  "default_branch": "master",
+  "verified_public_commit": "3872da4ca95ef8be3637b9118f3433532ea0b98f",
+  "visibility_update_http_status": 200,
+  "anonymous_repository_http_status": 200,
+  "anonymous_branch_http_status": 200,
+  "user_authorization": "Explicit request to make the existing ClosureCall repository public",
+  "published_scope": "Existing repository source, branches and Git history; no app deployment or cloud/network change",
+  "project_license_selected": false,
+  "secrets_in_credentials_store_only": true
+}

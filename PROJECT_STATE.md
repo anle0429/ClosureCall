@@ -4,6 +4,8 @@ Mode: **POST_HACKATHON_PORTFOLIO**, explicitly user-directed after the event. Co
 
 ## October 13 product review
 
+Repository publication was explicitly authorized by the user after the review. At 2026-10-13T09:13:20Z, GitHub reported PUBLIC and anonymous repo/master requests returned HTTP 200 for checkpoint 3872da4. Source/history publication only: no Linode deployment, network change, hosted CI or notification. No project license assigned. Evidence: evidence/publication-20261013/visibility.json. Earlier private-repository observations below retain their timestamps.
+
 Current assessment: **reviewable prototype for supervised synthetic demos; not operational deployment for real employees**. [Product review](docs/PRODUCT_REVIEW.md) records the source findings and five next-stage priorities.
 
 Fresh checks: 93 Windows tests from an isolated tracked-source checkout without local env/data, 93 against the existing exact Linux candidate image, Python/frontend format and dependency checks. The provider guard test now always asserts rejection for empty/placeholder keys and unapproved endpoints, independently of real local configuration. Application source remains 3bc1ddd; no backend/UI/policy/dependency change.

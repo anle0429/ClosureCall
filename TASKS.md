@@ -4,6 +4,8 @@ Post-hackathon preparation; submission ON_HOLD. One writer, no production mutati
 
 ## October 13 review and GitHub presentation
 
+- [x] Publish the existing repository under explicit user authorization, after source/history secret checks; verify public repository/master without authentication. Keep deployed app private and retain an unselected project license.
+
 - [x] Inspect product boundaries/source and record a maturity verdict without a fabricated completion percentage.
 - [x] Make the provider-rejection test independent of developer credentials; verify empty/placeholder/unapproved configurations.
 - [x] Run 93-case suite from isolated source without local env/data and on existing Linux candidate image; formatting/dependencies pass.

@@ -1,5 +1,7 @@
 # Bàn giao ClosureCall — portfolio sau hackathon
 
+Ngày 13/10, sau yêu cầu public trực tiếp: repo https://github.com/anle0429/ClosureCall đã PUBLIC; anonymous GET repo/master trả HTTP 200, checkpoint 3872da4. Chỉ public source/branches/history đã review, app Linode vẫn private và chưa deploy candidate. Chưa chọn LICENSE; không đăng LinkedIn hoặc gửi notification. Bằng chứng: evidence/publication-20261013/visibility.json. Các ghi chú private bên dưới là trạng thái trước lần công khai này.
+
 ## Cập nhật ngày 13/10/2026 — đánh giá sản phẩm
 
 Đã review source và xác minh **93 tests Windows** từ checkout tách biệt không có env/DB local, **93 tests Linux** trên image candidate hiện có. Sửa duy nhất test provider từng có thể bỏ qua assertion khi máy đã có key; backend/UI/rules/dependencies không đổi.

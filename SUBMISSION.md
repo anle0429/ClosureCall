@@ -1,6 +1,6 @@
 # ClosureCall — review packet draft
 
-Status: **PREP_COMPLETE_PENDING_EXTERNAL / ON_HOLD / NOT_SUBMITTED**. Purpose: post-hackathon portfolio preparation under the user's latest instruction. No organizer extension, retrospective submission, portal write, public code access or social publication is claimed.
+Status: **PREP_COMPLETE_PENDING_EXTERNAL / ON_HOLD / NOT_SUBMITTED**. Purpose: post-hackathon portfolio preparation. Repository source is public under the owner's October 13 authorization. No organizer extension, retrospective submission, portal write or social post is claimed. The deployed app remains private.
 
 ## Project copy
 
@@ -30,7 +30,7 @@ Status: **PREP_COMPLETE_PENDING_EXTERNAL / ON_HOLD / NOT_SUBMITTED**. Purpose: p
 
 ## Access and remaining publication fields
 
-The existing repository is private (`https://github.com/anle0429/ClosureCall`). Same-private-remote progress is authorized. Localhost/SSH addresses are operator access, not shareable remote demo URLs. Candidate deployment, public visibility/access, social publication, license and team publication rights require the user's separate decision. Registered team/members/tracks, organizer form limits, eligibility, accepted terms and receipt remain **NOT VERIFIED / USER-OWNED**; do not fill them automatically.
+The [repository source](https://github.com/anle0429/ClosureCall) is public, explicitly authorized and verified without authentication on October 13. Localhost/SSH addresses remain private operator access. Candidate deployment, public app access, social posting, license and team credits remain separate decisions. Registered team/members/tracks, organizer fields, eligibility, terms and receipt are **NOT VERIFIED / USER-OWNED**. [Publication proof](evidence/publication-20261013/visibility.json).
 
 All notifications are drafts; deferred follow-up is manual. No OnSolve integration, power/water/security feed, real delivery, federal policy certification, measured impact or guaranteed AI reliability. All old warning/Watch examples are historical after capture. Fresh KC zero-alert proof is dated evidence, not current LIVE weather.
 
@@ -42,6 +42,6 @@ All notifications are drafts; deferred follow-up is manual. No OnSolve integrati
 - [180-second demo/fallback](docs/DEMO_SCRIPT.md), [Vietnamese presenter notes](docs/DEMO_PRESENTER_NOTES.md), [recovery](docs/DEMO_RECOVERY.md), [Q&A](docs/PITCH_QA.md).
 - [LinkedIn draft](docs/LINKEDIN_DRAFT.md), [architecture](docs/ARCHITECTURE.md), [sources](docs/SOURCES.md), [attributions](docs/ATTRIBUTIONS.md).
 
-The packet is this local index plus referenced source/evidence/assets; nothing has been uploaded or posted. Test downloads are explicitly synthetic. Historical live integration remains dated. Do not distribute env, databases/backups, keys, manager credentials or raw provider errors. Repository/private packet history scan scope and checksums are in evidence/portfolio; a scan is not a guarantee of every possible secret. Read before approving public access.
+The packet is this index plus referenced source/evidence/assets, now accessible through the public source repository. Nothing has been submitted to a portal or posted to LinkedIn. Test downloads are synthetic and live integration evidence retains its dates. Env, runtime databases/backups, keys and manager credentials remain outside Git. Fresh pre-publication source/history scan scope is recorded under evidence/publication-20261013; a scan does not guarantee detection of every possible secret.
 
-Private progress: documentation/evidence checkpoint `e8bb341` pushed to `maintenance/portfolio-readiness`; master preserved. [Private branch](https://github.com/anle0429/ClosureCall/tree/maintenance/portfolio-readiness). This is not public judge access, an external publication or a deployment.
+Historical private progress checkpoint: `e8bb341`. Product-review checkpoint `2ba6096` was subsequently fast-forwarded to master; public visibility was verified at `3872da4`. Later documentation commits do not deploy the app. [Review branch](https://github.com/anle0429/ClosureCall/tree/maintenance/portfolio-readiness).

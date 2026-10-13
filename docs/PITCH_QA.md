@@ -13,4 +13,4 @@
 - **Frozen history?** Evidence, rules, roster, AI trace/output, actor/time/reason and drafts. Replay/export do not fetch sources/model. Candidate memo-v2 changes presentation only; production retains memo-v1.
 - **Tamper-proof?** No. Hashes/immutable tables detect ordinary changes; privileged host access is outside that guarantee.
 - **Akamai?** Private FastAPI app and persistent SQLite run on the existing Linode. Dated real Strands calls are retained; local QA calls no provider/model.
-- **Public/deployed/submitted?** Portfolio candidate is undeployed, GitHub private, LinkedIn copy a local draft, submission ON_HOLD. Public access/license/team credits are user decisions.
+- **Public/deployed/submitted?** GitHub source is public under the owner's October 13 authorization. The deployed app remains private and the portfolio candidate is undeployed. LinkedIn copy is a draft; submission remains ON_HOLD. No project license selected.

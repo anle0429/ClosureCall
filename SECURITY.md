@@ -10,4 +10,4 @@ ClosureCall is a prototype for synthetic administrative offices and employees. I
 
 Basic authentication is suitable here only within the private local/tunnel arrangement or an explicitly approved HTTPS setup. Enterprise SSO, independent zone verification, operational resilience certification and a privileged-host tamper-proof audit system are not implemented.
 
-No public vulnerability-reporting address or disclosure program has been designated. If you are a collaborator, report a concern privately through a contact channel already agreed with the maintainer. Do not include credentials, private employee information or raw provider diagnostics in a public issue. Public access and contact details must be chosen before publication.
+No public vulnerability-reporting address or disclosure program has been designated. Report a concern privately through a contact channel already agreed with the maintainer. Do not include credentials, private employee information or raw provider diagnostics in a public issue. Repository source is public; the application remains within its private operator-access boundary.

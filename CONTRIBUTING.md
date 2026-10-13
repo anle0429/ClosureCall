@@ -22,4 +22,4 @@ Run the full suite before a release, then test the exact Linux image if applicat
 
 The manual [verification workflow](.github/workflows/verify.yml) is prepared but has not been dispatched in this pass. It starts no deployments, uses no provider credentials and is disabled for automatic push/PR events. Running hosted CI remains an operator decision.
 
-Keep `.env`, databases, backups, private keys and runtime logs out of Git. Review screenshots and new evidence before staging. Discuss public access, a project license and team publication rights separately; contribution does not itself authorize deployment or social publication.
+Keep `.env`, databases, backups, private keys and runtime logs out of Git. Review screenshots and new evidence before staging. The repository is public under owner authorization; no project license has been selected. Licensing, collaborator privileges, deployment and social posting remain separate owner decisions.

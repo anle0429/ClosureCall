@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-13T09:12:18.070275+00:00",
+  "relative_file_links_checked": 225,
+  "missing": [],
+  "exact_original_git_checkpoint_copies": [
+    "docs/archive/hackathon/DECISIONS_PRE_PORTFOLIO.md",
+    "docs/archive/hackathon/DEMO_RECOVERY_PRE_PORTFOLIO.md",
+    "docs/archive/hackathon/DEMO_SCRIPT_PRE_PORTFOLIO.md",
+    "docs/archive/hackathon/FINAL_HANDOFF_PRE_PORTFOLIO.md",
+    "docs/archive/hackathon/GOAL_PROGRESS_PRE_PORTFOLIO.md",
+    "docs/archive/hackathon/PITCH_QA_PRE_PORTFOLIO.md",
+    "docs/archive/hackathon/PROJECT_STATE_PRE_PORTFOLIO.md",
+    "docs/archive/hackathon/RUNBOOK_PRE_PORTFOLIO.md",
+    "docs/archive/hackathon/SUBMISSION_PRE_PORTFOLIO.md",
+    "docs/archive/hackathon/TASKS_PRE_PORTFOLIO.md",
+    "docs/archive/hackathon/VERIFICATION_PRE_PORTFOLIO.md"
+  ],
+  "scope": "Relative file existence; external URLs/anchors not claimed tested; exact checkpoint copies retain historical link context"
+}

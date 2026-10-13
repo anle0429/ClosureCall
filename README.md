@@ -70,7 +70,7 @@ Node.js is used only for a pinned formatter. There is no frontend framework, bui
 
 Private Linode source `a5681bc` was observed healthy on October 13, 2026. The portfolio application candidate `3bc1ddd` remains **undeployed**. This review changes tests and documentation; application code and dependencies are unchanged. Source, image and evidence scope are pinned in [RELEASE_MANIFEST.json](RELEASE_MANIFEST.json); a GitHub update is separate from deployment.
 
-The repository remains private. Operator SSH access is not a public demo URL. A license, team credits, public access and new deployment remain owner decisions. [GitHub workflow](docs/GITHUB_PROGRESS.md) records the source/documentation distinction. [Review packet](SUBMISSION.md) and [LinkedIn draft](docs/LINKEDIN_DRAFT.md) are prepared copy; neither has been submitted or posted.
+The [repository](https://github.com/anle0429/ClosureCall) is public, authorized by the owner and verified without authentication on October 13, 2026. The deployed application remains private; operator SSH access is not a public demo URL. A project license has not been selected. Team credits and any new deployment remain owner decisions. [GitHub workflow](docs/GITHUB_PROGRESS.md) records the source/documentation distinction. [Review packet](SUBMISSION.md) and [LinkedIn draft](docs/LINKEDIN_DRAFT.md) are prepared copy; neither has been submitted or posted.
 
 ## Scope
 

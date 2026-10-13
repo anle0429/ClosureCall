@@ -7,6 +7,8 @@
 
 ## October 13 product review
 
+- The subsequent user request explicitly authorizes making anle0429/ClosureCall public. Publish existing reviewed source/branches/history after the fresh scan; verify anonymous access. This grants no app exposure, cloud change, LinkedIn post, license choice or deployment. Keep dated private visibility evidence unchanged and record publication separately.
+
 - Judge maturity from workflow, authority, record integrity, reproducibility and operational gaps, rather than a test total or a percentage of “finished.” Use a technical-portfolio/supervised-demo verdict; real-staff operation is a separate stage.
 - Provider guards must be tested with explicit synthetic configuration even when an operator has real credentials. Replace the conditional no-assertion path with empty/placeholder/unapproved endpoint cases. No production provider behavior changed.
 - Verify a tracked-source export without copying env/runtime data, using the existing dependency environment. Do not call that a fresh dependency installation. Mount current tests against the already verified Linux image because application files are unchanged.
