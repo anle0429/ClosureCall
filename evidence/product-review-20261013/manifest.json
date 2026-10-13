@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-10-13T08:29:56.327142+00:00",
+  "reviewed_checkpoint": "2ba6096b2c102253b5792246993beeaec1c27c22",
+  "app_source_commit": "3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
+  "scope": "New review evidence only; SHA-256 of Git index bytes (text normalized to LF), excludes this manifest",
+  "sha256": {
+    "checkout-scope.json": "2569e79c67e36b71346d28c23a9a91995a2a10758630428d474cab1e74ffaed8",
+    "clean-checkout-windows.txt": "418575aad0e3293d52824aaae92685948d1c5f3dcce5e676847c35939aade646",
+    "dependencies.txt": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+    "frontend-format.txt": "5a00ea981fac2cd3c2a6c17e996777e8cf6faf438e4c178306299239c7bca449",
+    "github.json": "be92bf3611c806e47e7317ef21a4d8fbd8f95e936f754a7caa14f61e3230176d",
+    "links.json": "39c7e8654e8b8fa12df321e9eb68cf4b9be1e9903ea622a97cbc5e4cf9aa084f",
+    "linux-existing-candidate.txt": "904494408f5018a1a9dd0f417bed1a4fbc5b41998608da684804088ee2ca9c45",
+    "push-checkpoint.json": "a78bd01c3a703ffc6de3fc01d9422e2cf0ce4df7702e08da8ac4593d0071c2e4",
+    "python-format.txt": "0d481af7b28e69040714c1510e3667b81083cc5cda61630c9be17af890cbd737",
+    "results.json": "5f901a16b9b7d490613cf8655feea7c28212bb672fdfa9e0d1a4fedfaa4d131c",
+    "runtime-read.txt": "ba36baa702a2104e81ff35ce2d483dc70dafa24202260f77e422994da82d85e5",
+    "secret-scan.json": "db2b225ea243fddeb684c159677e29e19424b1f4f97acc9ed4536de678af6652"
+  }
+}

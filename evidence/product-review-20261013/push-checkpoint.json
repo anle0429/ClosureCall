@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-13T08:27:46.174845+00:00",
+  "repository": "anle0429/ClosureCall",
+  "visibility": "private",
+  "reviewed_checkpoint": "2ba6096b2c102253b5792246993beeaec1c27c22",
+  "remote_refs": {
+    "refs/heads/maintenance/portfolio-readiness": "2ba6096b2c102253b5792246993beeaec1c27c22",
+    "refs/heads/master": "2ba6096b2c102253b5792246993beeaec1c27c22"
+  },
+  "fast_forward_from": "d3ea87ed673acb85b26a14a2b7e972f7c9e97471",
+  "private_default_branch_verified": true,
+  "no_force_push": true,
+  "application_source_unchanged": "3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
+  "source_test_sha256": "5f4140d415dfa404e38f5923123ec949703edb762777b3e79da0f207ffc502ed",
+  "old_github_document_archived_exact": true,
+  "user_package_files_unchanged": 6,
+  "deployment_or_publication": false,
+  "scope": "Verified reviewed source/docs checkpoint; later metadata-only follow-up is separate"
+}

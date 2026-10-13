@@ -2,7 +2,7 @@
 
 Repository: [anle0429/ClosureCall](https://github.com/anle0429/ClosureCall), verified **private** on October 13, 2026. Default branch: `master`. Portfolio application source and the private Linode release are distinct; GitHub pushes do not deploy the app.
 
-Prepare changes on a review branch, inspect the diff, run checks and stage named files. The October 13 work continues `maintenance/portfolio-readiness`; its reviewed source/tests/docs will be promoted to the private default branch by fast-forward only if the remote base is unchanged. This is an authorized private progress update, not publication or production deployment.
+Prepare changes on a review branch, inspect the diff, run checks and stage named files. The October 13 work continues `maintenance/portfolio-readiness`; its reviewed tests/docs were fast-forwarded from d3ea87e to private master at checkpoint 2ba6096, independently matched on both remote branches. Later metadata follows that pinned checkpoint. This is an authorized private progress update, not publication or production deployment.
 
 ```sh
 git status --short

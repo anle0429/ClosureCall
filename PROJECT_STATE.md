@@ -8,7 +8,7 @@ Current assessment: **reviewable prototype for supervised synthetic demos; not o
 
 Fresh checks: 93 Windows tests from an isolated tracked-source checkout without local env/data, 93 against the existing exact Linux candidate image, Python/frontend format and dependency checks. The provider guard test now always asserts rejection for empty/placeholder keys and unapproved endpoints, independently of real local configuration. Application source remains 3bc1ddd; no backend/UI/policy/dependency change.
 
-Read-only SSH at 2026-10-13T08:05:18Z observed a5681bc/image9ab42b0 healthy, same start, appuser/read-only/loopback. No deployment/restart or original-data operation. GitHub freshly verified private. Reviewed tests/docs are being prepared for a private default-branch fast-forward; push proof will be recorded after it succeeds. No public access or LinkedIn post.
+Read-only SSH at 2026-10-13T08:05:18Z observed a5681bc/image9ab42b0 healthy, same start, appuser/read-only/loopback. No deployment/restart or original-data operation. GitHub freshly verified private. Reviewed tests/docs checkpoint 2ba6096 was fast-forwarded to private master; both remote branches independently matched. Later metadata follows this pinned checkpoint without deployment. No public access or LinkedIn post.
 
 The following portfolio record describes October 12 checks. Its suite totals and branch observations remain historical.
 

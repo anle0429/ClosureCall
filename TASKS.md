@@ -8,7 +8,7 @@ Post-hackathon preparation; submission ON_HOLD. One writer, no production mutati
 - [x] Make the provider-rejection test independent of developer credentials; verify empty/placeholder/unapproved configurations.
 - [x] Run 93-case suite from isolated source without local env/data and on existing Linux candidate image; formatting/dependencies pass.
 - [x] Improve README, add product review/priorities and replace stale GitHub workflow docs while preserving history.
-- [ ] Check staged content/links/secrets, commit and verify the authorized private branch/default-branch push. Production remains separate.
+- [x] Check staged content/links/secrets and history, commit, then verify the authorized private branch/default-branch fast-forward at checkpoint 2ba6096. Production remains separate.
 
 ## October 12 portfolio gates — completed at that checkpoint
 

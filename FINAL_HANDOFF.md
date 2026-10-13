@@ -4,7 +4,7 @@
 
 Đã review source và xác minh **93 tests Windows** từ checkout tách biệt không có env/DB local, **93 tests Linux** trên image candidate hiện có. Sửa duy nhất test provider từng có thể bỏ qua assertion khi máy đã có key; backend/UI/rules/dependencies không đổi.
 
-Kết luận: phù hợp portfolio kỹ thuật và demo có người giám sát với dữ liệu giả lập; chưa đủ để vận hành với nhân viên thật. README có status/engineering controls rõ hơn, [PRODUCT_REVIEW.md](docs/PRODUCT_REVIEW.md) ghi điểm mạnh/giới hạn/priorities; GitHub workflow cũ được archive. Private default-branch push đang chờ gate kiểm tra cuối, không phải deployment.
+Kết luận: phù hợp portfolio kỹ thuật và demo có người giám sát với dữ liệu giả lập; chưa đủ để vận hành với nhân viên thật. README có status/engineering controls rõ hơn, [PRODUCT_REVIEW.md](docs/PRODUCT_REVIEW.md) ghi điểm mạnh/giới hạn/priorities; GitHub workflow cũ được archive. Đã fast-forward/push lên master private và nhánh review, cùng checkpoint 2ba6096 được đối chiếu độc lập; đây không phải deployment.
 
 SSH read mới xác nhận Linode a5681bc/image9ab42b0 healthy, cùng start/non-root/read-only/loopback. Candidate 3bc1ddd chưa deploy. Không có LIVE/model call mới, public/post/Submit hoặc sửa dữ liệu gốc. Phần bàn giao dưới đây giữ mốc 12/10; push/commit mới sẽ được xác minh riêng.
 

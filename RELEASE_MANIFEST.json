@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-10-13T08:22:11.656208+00:00",
+  "updated_at": "2026-10-13T08:27:46.174845+00:00",
   "quality_status": "PREP_COMPLETE_PENDING_EXTERNAL",
   "submission_status": "ON_HOLD / NOT_SUBMITTED",
   "runtime_source_commit": "a5681bcd98400fd75d02670f378a04365459dd7e",
-  "documentation_commit": "e8bb341bb351da2b810a3e0823e0807c88665d40",
+  "documentation_commit": "2ba6096b2c102253b5792246993beeaec1c27c22",
   "candidate_source_commit": "3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
   "image_id": "sha256:9ab42b0dcdfaee241b3d9156ac5433ecd0da772f29707ec6cb397664f0256b90",
   "image_tag": "closurecall-verified:a5681bcd98400fd75d02670f378a04365459dd7e",
@@ -66,7 +66,7 @@
     ]
   },
   "cutoff": "2026-10-11T08:00:00-05:00",
-  "documentation_commit_resolution": "Documentation/evidence checkpoint e8bb341 independently pushed; later metadata commit does not rebuild/deploy candidate or hash itself",
+  "documentation_commit_resolution": "Reviewed product/tests/documentation checkpoint 2ba6096 independently pushed to private default/review branches; later metadata follow-up is separate and does not rebuild/deploy",
   "baseline_documentation_commit": "607630726fc0004bb2890fe0bff293ee67fecfdc",
   "image_digest": "sha256:9ab42b0dcdfaee241b3d9156ac5433ecd0da772f29707ec6cb397664f0256b90",
   "image_digest_kind": "Docker locally observed image ID; no external registry publication or registry digest claim",
@@ -177,19 +177,22 @@
     "evidence": "evidence/product-review-20261013/results.json",
     "app_source_commit": "3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
     "linux_image_id": "sha256:5fdf4901dc2d30bde0558edf5a1520021145bdce7b3a7fcbd8c5ca5c280c76e8",
-    "tests_source_commit": null,
+    "tests_source_commit": "2ba6096b2c102253b5792246993beeaec1c27c22",
     "test_agent_workspace_sha256": "5f4140d415dfa404e38f5923123ec949703edb762777b3e79da0f207ffc502ed",
     "windows_result": "93 passed in 11.26s",
     "linux_result": "93 passed in 9.24s",
     "application_code_changed": false,
     "test_only_change": true,
-    "private_default_branch_push": "PENDING_VERIFICATION",
+    "private_default_branch_push": "VERIFIED",
     "production_changed": false,
     "scope": "Current offline suites/read-only health; earlier browser/live/restore/backup evidence retains original dates",
     "prior_candidate_suite": {
       "windows": "evidence/portfolio/windows-source-final.txt",
       "linux": "evidence/portfolio/linux-source-final.txt",
       "cases": 91
-    }
+    },
+    "documentation_checkpoint": "2ba6096b2c102253b5792246993beeaec1c27c22",
+    "push_evidence": "evidence/product-review-20261013/push-checkpoint.json",
+    "evidence_manifest": "evidence/product-review-20261013/manifest.json"
   }
 }

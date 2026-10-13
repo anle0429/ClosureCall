@@ -39,7 +39,7 @@ Relevant source: [API/auth](../app/main.py), [manager gate](../app/auth.py), [de
 | 4 — Real-user pilot | Define policy owners, per-user authority, audit/retention/access requirements and expected load | Requirements and authorized threat/operational review, not just a larger test total; one shared manager and one worker remain current limits |
 | 5 — Delivery | Specify a separate draft-to-send adapter and supervisor/deferred handling if requested | Approved transport, consent/channel semantics, idempotency, delivery failure/receipt testing; current app still sends nothing |
 
-These are proposed next-stage work, not features added or implied approvals. No broad refactor, framework migration, automatic CI/deployment, real notification or public access was introduced.
+These are proposed next-stage work, not features added or implied approvals. No broad refactor, framework migration, automatic CI/deployment, real notification or public access was introduced. Reviewed checkpoint 2ba6096 was pushed to private master and the review branch by fast-forward; [push proof](../evidence/product-review-20261013/push-checkpoint.json).
 
 ## Fresh checks and disclosures
 

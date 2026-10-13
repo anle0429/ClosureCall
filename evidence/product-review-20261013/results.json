@@ -36,5 +36,7 @@
   "production_data_operation": false,
   "repository_publication": false,
   "verdict": "REVIEWABLE_PROTOTYPE; real-employee operations require a separate stage",
-  "private_default_branch_push": "PENDING_VERIFICATION"
+  "private_default_branch_push": "VERIFIED",
+  "tests_source_commit": "2ba6096b2c102253b5792246993beeaec1c27c22",
+  "source_test_git_sha256": "5f4140d415dfa404e38f5923123ec949703edb762777b3e79da0f207ffc502ed"
 }
