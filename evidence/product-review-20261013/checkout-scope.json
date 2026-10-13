@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-13T08:04:29.241196+00:00",
+  "base_commit": "7767b0ae32078616fc17d9d8fb075b17a44fc6c2",
+  "source_app_commit": "3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
+  "overlay": "Reviewed tests/test_agent.py only",
+  "overlay_sha256": "5f4140d415dfa404e38f5923123ec949703edb762777b3e79da0f207ffc502ed",
+  "env_copied": false,
+  "database_copied": false,
+  "private_keys_copied": false,
+  "execution_scope": "Fresh tracked-source export using the existing verified dependency environment; not a fresh package installation"
+}

@@ -1,5 +1,15 @@
 # Bàn giao ClosureCall — portfolio sau hackathon
 
+## Cập nhật ngày 13/10/2026 — đánh giá sản phẩm
+
+Đã review source và xác minh **93 tests Windows** từ checkout tách biệt không có env/DB local, **93 tests Linux** trên image candidate hiện có. Sửa duy nhất test provider từng có thể bỏ qua assertion khi máy đã có key; backend/UI/rules/dependencies không đổi.
+
+Kết luận: phù hợp portfolio kỹ thuật và demo có người giám sát với dữ liệu giả lập; chưa đủ để vận hành với nhân viên thật. README có status/engineering controls rõ hơn, [PRODUCT_REVIEW.md](docs/PRODUCT_REVIEW.md) ghi điểm mạnh/giới hạn/priorities; GitHub workflow cũ được archive. Private default-branch push đang chờ gate kiểm tra cuối, không phải deployment.
+
+SSH read mới xác nhận Linode a5681bc/image9ab42b0 healthy, cùng start/non-root/read-only/loopback. Candidate 3bc1ddd chưa deploy. Không có LIVE/model call mới, public/post/Submit hoặc sửa dữ liệu gốc. Phần bàn giao dưới đây giữ mốc 12/10; push/commit mới sẽ được xác minh riêng.
+
+## Bàn giao ngày 12/10/2026
+
 Trạng thái cuối: **PREP_COMPLETE_PENDING_EXTERNAL**, verdict kỹ thuật **ACCEPTABLE_WITH_LIMITATIONS**. Các gate nội bộ/link/secret/history/image/data đã kiểm tra; private branch đã push checkpoint e8bb341, master không đổi; submission vẫn **ON_HOLD / NOT_SUBMITTED**. Deadline thi cũ không được coi là gia hạn. Bạn đã yêu cầu hoàn thiện riêng cho GitHub/LinkedIn sau sự kiện.
 
 Linode giữ nguyên source **a5681bc**, image **9ab42b0...**, healthy/private loopback, cùng start 11:45:50 UTC ngày 11/10. Candidate **3bc1ddd** / image **5fdf4901...** đã kiểm thử, **chưa deploy**. 8084 là bản QA local tách biệt; đánh giá mới có nhãn SYNTHETIC TEST và không gọi provider/model. 8081 cần mở tunnel bằng [hướng dẫn](docs/DEMO_RECOVERY.md); lượt này chưa mở lại.

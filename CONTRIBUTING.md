@@ -16,6 +16,8 @@ Formatters are pinned development tools. [Black](https://black.readthedocs.io/en
 
 For behavior changes, start with a concrete failure and a test that exercises the relevant boundary. API changes need authentication/authority checks. Source handling needs facility/time/applicability coverage. History changes need exact frozen-body comparison and checks that replay calls no source, model or current routing. Keep test fixtures explicitly synthetic.
 
+Verification must be independent of the developer's credentials. Patch explicit synthetic configuration for provider/auth cases; a test should execute its assertions whether or not an operator has configured real keys. A source-only checkout should run offline regression checks without copying local environment files or runtime data. Explain design decisions and verification in each change; do not use generated comments, unnecessary abstractions or speculative dependencies as substitutes for understanding the code.
+
 Run the full suite before a release, then test the exact Linux image if application code changes. A test total does not prove live integration. Record failed checks and limitations; do not skip or weaken assertions to hide them. The deadline tests separately cover startup without output and trace retention after a real worker is ready, while retaining a 0.2s budget and process-termination assertions.
 
 The manual [verification workflow](.github/workflows/verify.yml) is prepared but has not been dispatched in this pass. It starts no deployments, uses no provider credentials and is disabled for automatic push/PR events. Running hosted CI remains an operator decision.

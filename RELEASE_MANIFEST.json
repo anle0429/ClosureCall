@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12T05:27:09.772408+00:00",
+  "updated_at": "2026-10-13T08:22:11.656208+00:00",
   "quality_status": "PREP_COMPLETE_PENDING_EXTERNAL",
   "submission_status": "ON_HOLD / NOT_SUBMITTED",
   "runtime_source_commit": "a5681bcd98400fd75d02670f378a04365459dd7e",
@@ -18,7 +18,7 @@
   },
   "policy_version": "prototype-v1",
   "observed_container_started_at": "2026-10-11T11:45:50.513230916Z",
-  "runtime_verified_at": "2026-10-12T05:13:47Z",
+  "runtime_verified_at": "2026-10-13T08:05:18Z",
   "access": {
     "mode": "PRIVATE_SSH_TUNNEL",
     "server": "172.234.201.174",
@@ -42,10 +42,10 @@
     "candidate_restore_record_count": 9
   },
   "test_evidence": {
-    "windows_candidate": "evidence/portfolio/windows-source-final.txt",
-    "windows_result": "91 passed in 10.85s",
-    "linux_candidate": "evidence/portfolio/linux-source-final.txt",
-    "linux_result": "91 passed in 7.43s",
+    "windows_candidate": "evidence/product-review-20261013/clean-checkout-windows.txt",
+    "windows_result": "93 passed in 11.26s; source export using existing dependency environment",
+    "linux_candidate": "evidence/product-review-20261013/linux-existing-candidate.txt",
+    "linux_result": "93 passed in 9.24s; unchanged existing application image, current tests mounted read-only",
     "live_candidate": [
       "evidence/release/kc-smoke-summary.json",
       "evidence/release/fixed-watch-summary.json"
@@ -170,5 +170,26 @@
     "submission_receipt": null,
     "no_new_test_or_live_call": true
   },
-  "runtime_identity_observed": "evidence/portfolio/runtime-final.txt"
+  "runtime_identity_observed": "evidence/product-review-20261013/runtime-read.txt",
+  "product_review_20261013": {
+    "verdict": "REVIEWABLE_PROTOTYPE; real-employee operations require a separate stage",
+    "report": "docs/PRODUCT_REVIEW.md",
+    "evidence": "evidence/product-review-20261013/results.json",
+    "app_source_commit": "3bc1ddd8cbfe14148fa8a1c8c4c2febb9253fa24",
+    "linux_image_id": "sha256:5fdf4901dc2d30bde0558edf5a1520021145bdce7b3a7fcbd8c5ca5c280c76e8",
+    "tests_source_commit": null,
+    "test_agent_workspace_sha256": "5f4140d415dfa404e38f5923123ec949703edb762777b3e79da0f207ffc502ed",
+    "windows_result": "93 passed in 11.26s",
+    "linux_result": "93 passed in 9.24s",
+    "application_code_changed": false,
+    "test_only_change": true,
+    "private_default_branch_push": "PENDING_VERIFICATION",
+    "production_changed": false,
+    "scope": "Current offline suites/read-only health; earlier browser/live/restore/backup evidence retains original dates",
+    "prior_candidate_suite": {
+      "windows": "evidence/portfolio/windows-source-final.txt",
+      "linux": "evidence/portfolio/linux-source-final.txt",
+      "cases": 91
+    }
+  }
 }

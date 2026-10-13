@@ -1,0 +1,6 @@
+
+> format:check
+> prettier --check app/static/index.html app/static/styles.css app/static/app.js
+
+Checking formatting...
+All matched files use Prettier code style!

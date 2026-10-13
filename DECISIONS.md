@@ -5,6 +5,14 @@
 - Preserve Python/FastAPI/static HTML/CSS/JS/SQLite, one process/worker and one Strands agent. Deterministic services own posture/routing; the manager owns approval. No notification transport, map, new agent, SSO or framework added.
 - Keep source provenance, applicability, time and uncertainty explicit. Prototype mappings/confidence are not USDA/OPM policy or probability. Replay preserves the original policy/roster/decision/drafts rather than applying current bindings.
 
+## October 13 product review
+
+- Judge maturity from workflow, authority, record integrity, reproducibility and operational gaps, rather than a test total or a percentage of “finished.” Use a technical-portfolio/supervised-demo verdict; real-staff operation is a separate stage.
+- Provider guards must be tested with explicit synthetic configuration even when an operator has real credentials. Replace the conditional no-assertion path with empty/placeholder/unapproved endpoint cases. No production provider behavior changed.
+- Verify a tracked-source export without copying env/runtime data, using the existing dependency environment. Do not call that a fresh dependency installation. Mount current tests against the already verified Linux image because application files are unchanged.
+- The user requested a professional GitHub progress update. Promote the reviewed private branch to the existing private default branch by fast-forward only if its base is unchanged. This changes Git presentation, not Linode; no force push, public visibility, CI dispatch or deployment.
+- Retain the first-push document under the historical archive and use one current GitHub workflow. Keep coding assistance truthful; reproducible checks and explained decisions establish maintainability, not ornamental architecture or invented authorship.
+
 ## Post-hackathon portfolio pass
 
 - The user's latest instruction authorizes portfolio work after the historical competition cutoff. Preserve competition-era evidence and running source; a new candidate is undeployed until specifically approved. No implied extension, public access, social post or retrospective submission.

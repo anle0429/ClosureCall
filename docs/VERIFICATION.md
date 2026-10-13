@@ -2,6 +2,14 @@
 
 This page records scope, not a blanket challenge PASS. The release manifest separates the current private runtime from an undeployed portfolio candidate and from documentation checkpoints.
 
+## October 13 product review
+
+Application source remains `3bc1ddd`; only a provider-guard test and documentation changed. The provider test now executes assertions independently of real local credentials: empty key, placeholder key and unapproved endpoint all reject before creating an agent. No production provider change or new live/model call.
+
+Fresh checks: **93 Windows tests passed in 11.26s** from an isolated tracked-source export without local env/DB/keys; **93 passed in 9.24s** against existing exact candidate Linux image `5fdf4901...`, with current tests mounted read-only. Python/frontend format and dependency checks passed. Source export used existing installed dependencies, not a new package installation. [Product assessment and evidence](PRODUCT_REVIEW.md).
+
+Read-only private runtime on October 13: a5681bc/image9ab42b0 healthy with the same start/non-root/read-only/loopback configuration. The candidate remains undeployed. No new browser, source/model integration, printing, human rehearsal, hosted CI, public access or delivery result is inferred. The October 12 record below retains its original suite size and scope.
+
 ## Current pass
 
 - R0 fresh SSH observation: source a5681bc / image 9ab42b0..., healthy, unchanged 2026-10-11 11:45:50 UTC start, private loopback/non-root/read-only. `evidence/portfolio/runtime-r0.txt`.

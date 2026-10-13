@@ -2,6 +2,16 @@
 
 Mode: **POST_HACKATHON_PORTFOLIO**, explicitly user-directed after the event. Competition cutoff is historical; submission **ON_HOLD / NOT_SUBMITTED**. One writer, existing architecture preserved.
 
+## October 13 product review
+
+Current assessment: **reviewable prototype for supervised synthetic demos; not operational deployment for real employees**. [Product review](docs/PRODUCT_REVIEW.md) records the source findings and five next-stage priorities.
+
+Fresh checks: 93 Windows tests from an isolated tracked-source checkout without local env/data, 93 against the existing exact Linux candidate image, Python/frontend format and dependency checks. The provider guard test now always asserts rejection for empty/placeholder keys and unapproved endpoints, independently of real local configuration. Application source remains 3bc1ddd; no backend/UI/policy/dependency change.
+
+Read-only SSH at 2026-10-13T08:05:18Z observed a5681bc/image9ab42b0 healthy, same start, appuser/read-only/loopback. No deployment/restart or original-data operation. GitHub freshly verified private. Reviewed tests/docs are being prepared for a private default-branch fast-forward; push proof will be recorded after it succeeds. No public access or LinkedIn post.
+
+The following portfolio record describes October 12 checks. Its suite totals and branch observations remain historical.
+
 ## Runtime and candidate
 
 Private Linode remains **a5681bcd98400fd75d02670f378a04365459dd7e**, image **sha256:9ab42b0dcdfaee241b3d9156ac5433ecd0da772f29707ec6cb397664f0256b90**. Fresh final SSH/data probes: healthy, unchanged 2026-10-11T11:45:50Z start, appuser/read-only/127.0.0.1:8000; 13 runs/9 decisions/outbox, zero active jobs, all original six tables/nine historical packages unchanged. No production deploy/restart/config/data write.

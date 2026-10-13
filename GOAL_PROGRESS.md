@@ -1,5 +1,7 @@
 # Portfolio readiness progress
 
+Later review, October 13: user requested product maturity assessment and professional GitHub presentation. [PRODUCT_REVIEW.md](docs/PRODUCT_REVIEW.md) records fresh 93-case Windows/Linux checks and a test-only/provider-guard correction. The completed goal ledger below remains the October 12 checkpoint; a separately verified private default-branch update does not redeploy the application.
+
 Mode: **POST_HACKATHON_PORTFOLIO**, explicitly requested after the event. Historical competition deadline: 2026-10-11 08:00 America/Chicago; no extension/retrospective submission claimed. Final status: **PREP_COMPLETE_PENDING_EXTERNAL**. Submission **ON_HOLD / NOT_SUBMITTED**.
 
 ## Current gate ledger

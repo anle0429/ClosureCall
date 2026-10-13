@@ -118,12 +118,28 @@ def test_deadline_terminates_worker_before_any_trace(tmp_path, monkeypatch):
     assert len(spawned) == 1 and spawned[0].returncode is not None
 
 
-def test_provider_placeholder_never_creates_agent(snapshot):
+@pytest.mark.parametrize(
+    ("key", "base_url"),
+    [
+        ("", "https://ws.akamai-workshops.com/v1"),
+        ("replace-local-key", "https://ws.akamai-workshops.com/v1"),
+        ("synthetic-test-key", "https://unapproved.example/v1"),
+    ],
+)
+def test_unconfigured_or_unapproved_provider_never_creates_agent(
+    snapshot, monkeypatch, key, base_url
+):
+    from dataclasses import replace
+    import app.agent.factory as factory
     from app.settings import settings
 
-    if not settings.ai_available:
-        with pytest.raises(ValueError):
-            make_agent(snapshot)
+    monkeypatch.setattr(
+        factory,
+        "settings",
+        replace(settings, inference_key=key, inference_base_url=base_url),
+    )
+    with pytest.raises(ValueError, match="INFERENCE_NOT_CONFIGURED_OR_UNAPPROVED"):
+        factory.make_agent(snapshot)
 
 
 def test_real_sdk_tool_loop_and_hooks_with_synthetic_model(snapshot, monkeypatch):
